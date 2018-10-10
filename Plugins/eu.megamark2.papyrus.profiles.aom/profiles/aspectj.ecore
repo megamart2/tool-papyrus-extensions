@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="aspectj" nsURI="http://megamart2-ecsel.eu/aspectj/" nsPrefix="AspectJ">
+  <eClassifiers xsi:type="ecore:EClass" name="Aspect">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isPrivileged" ordered="false"
+        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="perType" ordered="false"
+        upperBound="-1" eType="#//AspectInstantiationType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="perPointCut" ordered="false"
+        eType="#//PointCut"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="declaredParents" ordered="false"
+        upperBound="-1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Generalization"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="declaredImplements" ordered="false"
+        upperBound="-1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//InterfaceRealization"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="precedes" ordered="false"
+        eType="#//Aspect" eOpposite="#//Aspect/precededBy"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="precededBy" ordered="false"
+        eType="#//Aspect" eOpposite="#//Aspect/precedes"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="AspectInstantiationType">
+    <eLiterals name="perthis"/>
+    <eLiterals name="pertarget" value="1"/>
+    <eLiterals name="percflow" value="2"/>
+    <eLiterals name="percflowbelow" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PointCut">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_StructuralFeature"
+        ordered="false" lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//StructuralFeature"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OperationalPointCut" eSuperTypes="#//PointCut">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operation" ordered="false"
+        lowerBound="1" upperBound="-1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WithinCodePointCut" eSuperTypes="#//OperationalPointCut"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExecutionPointCut" eSuperTypes="#//OperationalPointCut"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CallPointCut" eSuperTypes="#//OperationalPointCut"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PreInitializationPointCut" eSuperTypes="#//ExecutionPointCut"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InitializationPointCut" eSuperTypes="#//ExecutionPointCut"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PropertyPointCut" eSuperTypes="#//PointCut">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="field" ordered="false"
+        lowerBound="1" upperBound="-1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GetPointCut" eSuperTypes="#//PropertyPointCut"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SetPointCut" eSuperTypes="#//PropertyPointCut"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TypePointCut" eSuperTypes="#//PointCut">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" upperBound="-1"
+        eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Type"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ThisPointCut" eSuperTypes="#//TypePointCut"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ArgumentDefiningPointCut">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_StructuralFeature"
+        ordered="false" lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//StructuralFeature"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="argNames" lowerBound="1"
+        upperBound="-1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ArgsPointCut" eSuperTypes="#//TypePointCut"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TargetPointCut" eSuperTypes="#//TypePointCut"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PointCutPointCut" eSuperTypes="#//PointCut">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectedPointCut" ordered="false"
+        lowerBound="1" eType="#//PointCut"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CFlowBelowPointCut" eSuperTypes="#//PointCutPointCut"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CFlowPointCut" eSuperTypes="#//PointCutPointCut"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StaticInitializationPointCut" eSuperTypes="#//TypePointCut"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExceptionPointCut" eSuperTypes="#//TypePointCut"/>
+  <eClassifiers xsi:type="ecore:EClass" name="WithinPointCut" eSuperTypes="#//TypePointCut"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PointCutDisjunction" eSuperTypes="#//PointCut">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="composee" ordered="false"
+        lowerBound="2" upperBound="-1" eType="#//PointCut"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PointCutConjunction" eSuperTypes="#//PointCut">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="composee" ordered="false"
+        lowerBound="2" upperBound="-1" eType="#//PointCut"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PointCutNegation" eSuperTypes="#//PointCut">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="composee" ordered="false"
+        lowerBound="1" eType="#//PointCut"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Advice">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_BehavioralFeature"
+        ordered="false" lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//BehavioralFeature"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="adviceExecution" ordered="false"
+        lowerBound="1" eType="#//AdviceExecutionType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pointcut" ordered="false"
+        lowerBound="1" eType="#//PointCut"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="AdviceExecutionType">
+    <eLiterals name="AroundAdvice"/>
+    <eLiterals name="BeforeAdvice" value="1"/>
+    <eLiterals name="AfterAdvice" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AdviceExecutionPointCut" eSuperTypes="#//PointCut"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StaticCrossCuttingFeature">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Feature" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Feature"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="onType" ordered="false"
+        lowerBound="1" upperBound="-1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Type"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CrossCuttingConcern">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Package" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Package"/>
+  </eClassifiers>
+</ecore:EPackage>

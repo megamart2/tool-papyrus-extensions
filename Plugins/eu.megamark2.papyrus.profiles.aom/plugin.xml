@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension
+         point="org.eclipse.emf.ecore.uri_mapping">
+      <mapping
+            source="pathmap://ASPECTJ_PROFILES/"
+            target="platform:/plugin/eu.megamark2.papyrus.profiles.aom/profiles/">
+      </mapping>
+   </extension>
+   <extension
+         point="org.eclipse.uml2.uml.generated_package">
+      <profile
+            location="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#AspectJ"
+            uri="http://megamart2-ecsel.eu/aspectj">
+      </profile>
+   </extension>
+   <extension
+         point="org.eclipse.papyrus.uml.extensionpoints.UMLProfile">
+      <profile
+            description="UML profile for AspectJ"
+            iconpath="icons/aspect.png"
+            name="AspectJ"
+            path="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml"
+            provider="MegaM@RT Project">
+      </profile>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated aspectj.profile -->
+      <package
+            uri="http://megamart2-ecsel.eu/aspectj"
+            class="org.eclipse.papyrus.aspectj.AspectJPackage"
+            genModel="profiles/aspectj.profile.genmodel"/>
+   </extension>
+
+</plugin>
