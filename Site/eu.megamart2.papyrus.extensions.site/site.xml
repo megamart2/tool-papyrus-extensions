@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/eu.megamart2.papyrus.extensions_1.0.0.201812041543.jar" id="eu.megamart2.papyrus.extensions" version="1.0.0.201812041543">
+      <category name="MegaM@Rt_Papyrus"/>
+   </feature>
+   <category-def name="MegaM@Rt_Papyrus" label="MegaM@Rt Papyrus Extensions"/>
+</site>

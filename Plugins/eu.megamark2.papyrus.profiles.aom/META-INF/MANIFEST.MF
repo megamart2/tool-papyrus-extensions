@@ -1,16 +1,13 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: eu.megamark2.papyrus.profiles.aom;singleton:=true
+Bundle-SymbolicName: eu.megamart2.papyrus.profiles.aom;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: aspectj,
- aspectj.impl,
- aspectj.util,
- org.eclipse.papyrus.aspectj,
+Export-Package: org.eclipse.papyrus.aspectj,
  org.eclipse.papyrus.aspectj.impl,
  org.eclipse.papyrus.aspectj.util
 Require-Bundle: org.eclipse.core.runtime,

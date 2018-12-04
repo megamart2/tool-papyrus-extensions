@@ -87,9 +87,9 @@
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_CE0Pdr2IEeidzutJ3INnWA" key="Author" value="Jesús Gorroñogoitia"/>
         </eAnnotations>
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_CE0PcL2IEeidzutJ3INnWA" source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <references xmi:type="ecore:EPackage" href="/eu.megamark2.papyrus.profiles.aom/aspectj.profile.uml#__-uSgLwPEei55t-yfar7Dg"/>
+          <references xmi:type="ecore:EPackage" href="/eu.megamart2.papyrus.profiles.aom/aspectj.profile.uml#__-uSgLwPEei55t-yfar7Dg"/>
         </eAnnotations>
-        <appliedProfile xmi:type="uml:Profile" href="/eu.megamark2.papyrus.profiles.aom/aspectj.profile.uml#_Q9-jkLv9EeizS8zZTwzhZg"/>
+        <appliedProfile xmi:type="uml:Profile" href="/eu.megamart2.papyrus.profiles.aom/aspectj.profile.uml#_Q9-jkLv9EeizS8zZTwzhZg"/>
       </profileApplication>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_q6PCYL2LEeidzutJ3INnWA" name="types">
@@ -109,9 +109,9 @@
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sFaDxb2FEeidzutJ3INnWA" key="Author" value="Jesús Gorroñogoitia"/>
       </eAnnotations>
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_sFXAcL2FEeidzutJ3INnWA" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="/eu.megamark2.papyrus.profiles.aom/aspectj.profile.uml#__-uSgLwPEei55t-yfar7Dg"/>
+        <references xmi:type="ecore:EPackage" href="/eu.megamart2.papyrus.profiles.aom/aspectj.profile.uml#__-uSgLwPEei55t-yfar7Dg"/>
       </eAnnotations>
-      <appliedProfile xmi:type="uml:Profile" href="/eu.megamark2.papyrus.profiles.aom/aspectj.profile.uml#_Q9-jkLv9EeizS8zZTwzhZg"/>
+      <appliedProfile xmi:type="uml:Profile" href="/eu.megamart2.papyrus.profiles.aom/aspectj.profile.uml#_Q9-jkLv9EeizS8zZTwzhZg"/>
     </profileApplication>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_O8oLML2PEeidzutJ3INnWA">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_EgifcL2SEeidzutJ3INnWA" source="PapyrusVersion">

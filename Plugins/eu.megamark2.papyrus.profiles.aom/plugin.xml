@@ -10,7 +10,7 @@
          point="org.eclipse.emf.ecore.uri_mapping">
       <mapping
             source="pathmap://ASPECTJ_PROFILES/"
-            target="platform:/plugin/eu.megamark2.papyrus.profiles.aom/profiles/">
+            target="platform:/plugin/eu.megamart2.papyrus.profiles.aom/profiles/">
       </mapping>
    </extension>
    <extension
