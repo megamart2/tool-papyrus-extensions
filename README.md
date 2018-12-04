@@ -1,4 +1,4 @@
-# [![MegaM@Rt](images/megamart2-logo.gif)](https://megamart2-ecsel.eu/) MegaM@Rt project: Moka Extensions
+# [![MegaM@Rt](images/megamart2-logo.gif)](https://megamart2-ecsel.eu/) MegaM@Rt project: Papyrus Extensions
 
 This repository contains the code of number of plugins that extend the functionality of Papyrus for Aspect Oriented Modeling (AOM). It also contains an update site to install them.
 
