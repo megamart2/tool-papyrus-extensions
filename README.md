@@ -38,10 +38,10 @@ This will create a *megamart2-papyrus* folder into your local file system
 
 The *MegaM@Rt AspectJ* profile can be apply to model aspects and pointcut/jointpoints for software systems modelled with UML. Following procedure describes how to use the profile in Papyrus UML Editor. As an example, we use the *figure.uml* model shipped within the clonned local repository *megamart2-papyrus* in the location *megamart2-papyrus/Plugins/eu.megamark2.papyrus.profiles.aom/examples*. This figure model is borrowed from [AspectJ documentation](https://www.eclipse.org/aspectj/doc/next/progguide/printable.html#starting-aspectj)
 
-1. Open *figure.pi* by double-clicking
+1. Open *figure.di* by double-clicking
 2. In the *welcome* tab open both the *figures* and *aspect* model views by double-clicking on them
 
-![Figure UML model views](images/figure_model_views.png)
+![Figure UML model views](images/figure-model-views.png)
 
 3. On *aspect* view, click on any blank part of the model. Open the *properties* view. Select the *profile* tab. The *aspectj* profile is already applied. To apply this (or another profile) to the model, click on the *apply registered profile* icon and select **AspectJ** profile from the list. Once accepted, the profile is added to the list of applied profiles
 
