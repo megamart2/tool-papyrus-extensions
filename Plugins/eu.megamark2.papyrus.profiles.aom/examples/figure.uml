@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aspectj="https://megamart2-ecsel.eu/aspectj/" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="https://megamart2-ecsel.eu/aspectj/ ../profiles/aspectj.profile.uml#_OwFNsMJVEeiYIeUYMCpofw">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aspectj="https://megamart2-ecsel.eu/aspectj/" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="https://megamart2-ecsel.eu/aspectj/ pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_OwFNsMJVEeiYIeUYMCpofw">
   <uml:Model xmi:id="_rmbBsL2FEeidzutJ3INnWA" name="figure_model">
     <packageImport xmi:type="uml:PackageImport" xmi:id="_sFgxcL2FEeidzutJ3INnWA">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
@@ -78,18 +78,18 @@
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_1loJ4L2SEeidzutJ3INnWA" name="p" type="_2LrwML2FEeidzutJ3INnWA"/>
         </ownedOperation>
       </packagedElement>
-      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_CEzBUL2IEeidzutJ3INnWA">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_CE0Pcb2IEeidzutJ3INnWA" source="PapyrusVersion">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_CE0Pcr2IEeidzutJ3INnWA" key="Version" value="0.0.1"/>
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_CE0Pc72IEeidzutJ3INnWA" key="Comment" value=""/>
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_CE0PdL2IEeidzutJ3INnWA" key="Copyright" value="Atos Spain S.A."/>
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_CE0Pdb2IEeidzutJ3INnWA" key="Date" value="2018-09-19"/>
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_CE0Pdr2IEeidzutJ3INnWA" key="Author" value="Jesús Gorroñogoitia"/>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_G7M9sPhvEeiZr8yNL9tbQw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_G7WusPhvEeiZr8yNL9tbQw" source="PapyrusVersion">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_G7WusfhvEeiZr8yNL9tbQw" key="Version" value="0.1.0"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_G7WusvhvEeiZr8yNL9tbQw" key="Comment" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_G7Wus_hvEeiZr8yNL9tbQw" key="Copyright" value="@Atos Spain S.A."/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_G7WutPhvEeiZr8yNL9tbQw" key="Date" value="2018-09-27"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_G7WutfhvEeiZr8yNL9tbQw" key="Author" value="Jesús Gorroñogoitia"/>
         </eAnnotations>
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_CE0PcL2IEeidzutJ3INnWA" source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <references xmi:type="ecore:EPackage" href="/eu.megamart2.papyrus.profiles.aom/aspectj.profile.uml#__-uSgLwPEei55t-yfar7Dg"/>
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_G7SdQPhvEeiZr8yNL9tbQw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_OwFNsMJVEeiYIeUYMCpofw"/>
         </eAnnotations>
-        <appliedProfile xmi:type="uml:Profile" href="/eu.megamart2.papyrus.profiles.aom/aspectj.profile.uml#_Q9-jkLv9EeizS8zZTwzhZg"/>
+        <appliedProfile xmi:type="uml:Profile" href="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#AspectJ"/>
       </profileApplication>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_q6PCYL2LEeidzutJ3INnWA" name="types">
@@ -100,19 +100,6 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_JmkvsL2TEeidzutJ3INnWA" name="p" type="_2LrwML2FEeidzutJ3INnWA"/>
       </packagedElement>
     </packagedElement>
-    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_sFUkML2FEeidzutJ3INnWA">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_sFaDwL2FEeidzutJ3INnWA" source="PapyrusVersion">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sFaDwb2FEeidzutJ3INnWA" key="Version" value="0.0.1"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sFaDwr2FEeidzutJ3INnWA" key="Comment" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sFaDw72FEeidzutJ3INnWA" key="Copyright" value="Atos Spain S.A."/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sFaDxL2FEeidzutJ3INnWA" key="Date" value="2018-09-19"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sFaDxb2FEeidzutJ3INnWA" key="Author" value="Jesús Gorroñogoitia"/>
-      </eAnnotations>
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_sFXAcL2FEeidzutJ3INnWA" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="/eu.megamart2.papyrus.profiles.aom/aspectj.profile.uml#__-uSgLwPEei55t-yfar7Dg"/>
-      </eAnnotations>
-      <appliedProfile xmi:type="uml:Profile" href="/eu.megamart2.papyrus.profiles.aom/aspectj.profile.uml#_Q9-jkLv9EeizS8zZTwzhZg"/>
-    </profileApplication>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_O8oLML2PEeidzutJ3INnWA">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_EgifcL2SEeidzutJ3INnWA" source="PapyrusVersion">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Egifcb2SEeidzutJ3INnWA" key="Version" value="0.0.5"/>
@@ -127,14 +114,14 @@
       <appliedProfile xmi:type="uml:Profile" href="../profiles/aspectj.profile.uml#_Q9-jkLv9EeizS8zZTwzhZg"/>
     </profileApplication>
   </uml:Model>
-  <aspectj:Aspect xmi:id="_uUfNoL2JEeidzutJ3INnWA" base_Class="_mUQAoL2JEeidzutJ3INnWA"/>
-  <aspectj:StaticCrossCuttingFeature xmi:id="_MACQgL2KEeidzutJ3INnWA" base_Feature="_IRMAML2KEeidzutJ3INnWA" onType="_2LrwML2FEeidzutJ3INnWA"/>
-  <aspectj:StaticCrossCuttingFeature xmi:id="_Vfm3YL2MEeidzutJ3INnWA" base_Feature="_KjGtkL2MEeidzutJ3INnWA" onType="_2LrwML2FEeidzutJ3INnWA"/>
-  <aspectj:StaticCrossCuttingFeature xmi:id="_WmxTwL2MEeidzutJ3INnWA" base_Feature="_MJRaIL2MEeidzutJ3INnWA" onType="_2LrwML2FEeidzutJ3INnWA"/>
-  <aspectj:CallPointCut xmi:id="_tRMn0L2NEeidzutJ3INnWA" base_StructuralFeature="_qOj9QL2NEeidzutJ3INnWA" operation="_7MfeAL2NEeidzutJ3INnWA _8IfMML2NEeidzutJ3INnWA"/>
-  <aspectj:PointCutConjunction xmi:id="_1O96ML2OEeidzutJ3INnWA" base_StructuralFeature="_x8n_sL2OEeidzutJ3INnWA" composee="_n9q74L2REeidzutJ3INnWA"/>
-  <aspectj:TargetPointCut xmi:id="_n9q74L2REeidzutJ3INnWA" base_StructuralFeature="_FwvVUL2NEeidzutJ3INnWA" type="_2LrwML2FEeidzutJ3INnWA" base_ArgumentDefiningPointCut_StructuralFeature="_FwvVUL2NEeidzutJ3INnWA">
+  <aspectj:StaticCrossCuttingFeature xmi:id="_-gIZYPhvEeiZr8yNL9tbQw" base_Feature="_IRMAML2KEeidzutJ3INnWA" onType="_2LrwML2FEeidzutJ3INnWA"/>
+  <aspectj:TargetPointCut xmi:id="_FHThsPhwEeiZr8yNL9tbQw" base_StructuralFeature="_FwvVUL2NEeidzutJ3INnWA" type="_2LrwML2FEeidzutJ3INnWA" base_ArgumentDefiningPointCut_StructuralFeature="_FwvVUL2NEeidzutJ3INnWA">
     <argNames>p</argNames>
   </aspectj:TargetPointCut>
-  <aspectj:Advice xmi:id="_d_ciwL2SEeidzutJ3INnWA" base_BehavioralFeature="_cf-7IL2SEeidzutJ3INnWA" adviceExecution="AfterAdvice" pointcut="_1O96ML2OEeidzutJ3INnWA"/>
+  <aspectj:CallPointCut xmi:id="_JLtyUPhwEeiZr8yNL9tbQw" base_StructuralFeature="_qOj9QL2NEeidzutJ3INnWA" operation="_7MfeAL2NEeidzutJ3INnWA _8IfMML2NEeidzutJ3INnWA"/>
+  <aspectj:PointCutConjunction xmi:id="_No3TEPhwEeiZr8yNL9tbQw" base_StructuralFeature="_x8n_sL2OEeidzutJ3INnWA" composee="_No3TEPhwEeiZr8yNL9tbQw"/>
+  <aspectj:StaticCrossCuttingFeature xmi:id="_Qmx1sPhwEeiZr8yNL9tbQw" base_Feature="_KjGtkL2MEeidzutJ3INnWA" onType="_2LrwML2FEeidzutJ3INnWA"/>
+  <aspectj:StaticCrossCuttingFeature xmi:id="_StPL4PhwEeiZr8yNL9tbQw" base_Feature="_MJRaIL2MEeidzutJ3INnWA" onType="_2LrwML2FEeidzutJ3INnWA"/>
+  <aspectj:Advice xmi:id="_VJsAMPhwEeiZr8yNL9tbQw" base_BehavioralFeature="_cf-7IL2SEeidzutJ3INnWA" adviceExecution="AfterAdvice" pointcut="_No3TEPhwEeiZr8yNL9tbQw"/>
+  <aspectj:Aspect xmi:id="_KEjCUPhxEeiZr8yNL9tbQw" base_Class="_mUQAoL2JEeidzutJ3INnWA"/>
 </xmi:XMI>

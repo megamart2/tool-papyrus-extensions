@@ -183,7 +183,7 @@
       <element xmi:type="uml:Class" href="figure.uml#_0HhqoL2GEeidzutJ3INnWA"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0Hjf0b2GEeidzutJ3INnWA" x="660" y="60"/>
     </children>
-    <styles xmi:type="notation:StringValueStyle" xmi:id="_rsPV0b2FEeidzutJ3INnWA" name="diagram_compatibility_version" stringValue="1.3.0"/>
+    <styles xmi:type="notation:StringValueStyle" xmi:id="_rsPV0b2FEeidzutJ3INnWA" name="diagram_compatibility_version" stringValue="1.4.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_rsPV0r2FEeidzutJ3INnWA"/>
     <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_rsPV072FEeidzutJ3INnWA" diagramKindId="org.eclipse.papyrus.uml.diagram.class">
       <owner xmi:type="uml:Model" href="figure.uml#_rmbBsL2FEeidzutJ3INnWA"/>
@@ -267,29 +267,29 @@
       <element xmi:type="uml:Class" href="figure.uml#_mUQAoL2JEeidzutJ3INnWA"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wHFzsb2JEeidzutJ3INnWA" x="200" y="40" width="441"/>
     </children>
-    <children xmi:type="notation:Shape" xmi:id="_mrAvAMMUEei7iPnbLmQ7oA" type="StereotypeComment">
-      <styles xmi:type="notation:TitleStyle" xmi:id="_mrAvAcMUEei7iPnbLmQ7oA"/>
-      <styles xmi:type="notation:EObjectValueStyle" xmi:id="_mrMVMMMUEei7iPnbLmQ7oA" name="BASE_ELEMENT">
+    <children xmi:type="notation:Shape" xmi:id="_KE5noPhxEeiZr8yNL9tbQw" type="StereotypeComment">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_KE5nofhxEeiZr8yNL9tbQw"/>
+      <styles xmi:type="notation:EObjectValueStyle" xmi:id="_KE5no_hxEeiZr8yNL9tbQw" name="BASE_ELEMENT">
         <eObjectValue xmi:type="uml:Class" href="figure.uml#_mUQAoL2JEeidzutJ3INnWA"/>
       </styles>
       <element xsi:nil="true"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mrAvAsMUEei7iPnbLmQ7oA" x="400" y="40"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KE5novhxEeiZr8yNL9tbQw" x="400" y="40"/>
     </children>
-    <styles xmi:type="notation:StringValueStyle" xmi:id="_pDlUsb2JEeidzutJ3INnWA" name="diagram_compatibility_version" stringValue="1.3.0"/>
+    <styles xmi:type="notation:StringValueStyle" xmi:id="_pDlUsb2JEeidzutJ3INnWA" name="diagram_compatibility_version" stringValue="1.4.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_pDlUsr2JEeidzutJ3INnWA"/>
     <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_pDlUs72JEeidzutJ3INnWA" diagramKindId="org.eclipse.papyrus.uml.diagram.class">
       <owner xmi:type="uml:Package" href="figure.uml#_9a7TML2HEeidzutJ3INnWA"/>
     </styles>
     <element xmi:type="uml:Package" href="figure.uml#_9a7TML2HEeidzutJ3INnWA"/>
-    <edges xmi:type="notation:Connector" xmi:id="_mrM8QMMUEei7iPnbLmQ7oA" type="StereotypeCommentLink" source="_wHFzsL2JEeidzutJ3INnWA" target="_mrAvAMMUEei7iPnbLmQ7oA">
-      <styles xmi:type="notation:FontStyle" xmi:id="_mrM8QcMUEei7iPnbLmQ7oA"/>
-      <styles xmi:type="notation:EObjectValueStyle" xmi:id="_mrOKYMMUEei7iPnbLmQ7oA" name="BASE_ELEMENT">
+    <edges xmi:type="notation:Connector" xmi:id="_KE6OsPhxEeiZr8yNL9tbQw" type="StereotypeCommentLink" source="_wHFzsL2JEeidzutJ3INnWA" target="_KE5noPhxEeiZr8yNL9tbQw">
+      <styles xmi:type="notation:FontStyle" xmi:id="_KE6OsfhxEeiZr8yNL9tbQw"/>
+      <styles xmi:type="notation:EObjectValueStyle" xmi:id="_KE61wPhxEeiZr8yNL9tbQw" name="BASE_ELEMENT">
         <eObjectValue xmi:type="uml:Class" href="figure.uml#_mUQAoL2JEeidzutJ3INnWA"/>
       </styles>
       <element xsi:nil="true"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_mrM8QsMUEei7iPnbLmQ7oA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_mrNjUMMUEei7iPnbLmQ7oA"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_mrNjUcMUEei7iPnbLmQ7oA"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_KE6OsvhxEeiZr8yNL9tbQw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_KE6Os_hxEeiZr8yNL9tbQw"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_KE6OtPhxEeiZr8yNL9tbQw"/>
     </edges>
   </notation:Diagram>
 </xmi:XMI>
