@@ -265,7 +265,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wHGa0L2JEeidzutJ3INnWA"/>
       </children>
       <element xmi:type="uml:Class" href="figure.uml#_mUQAoL2JEeidzutJ3INnWA"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wHFzsb2JEeidzutJ3INnWA" x="200" y="40" width="441"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wHFzsb2JEeidzutJ3INnWA" width="441"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_KE5noPhxEeiZr8yNL9tbQw" type="StereotypeComment">
       <styles xmi:type="notation:TitleStyle" xmi:id="_KE5nofhxEeiZr8yNL9tbQw"/>
