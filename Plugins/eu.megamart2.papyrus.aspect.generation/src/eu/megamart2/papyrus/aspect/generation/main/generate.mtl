@@ -1,0 +1,15 @@
+[comment encoding = UTF-8 /]
+[module generate('http://www.eclipse.org/uml2/5.0.0/UML')]
+
+[import eu::megamart2::papyrus::aspect::generation::queries::aspectQueries/]
+
+[template public generateElement(aClass : Class)]
+[comment @main/]
+[if (aClass.isAspect())]
+[file (aClass.name.concat('.aj'), false)]
+[aClass.aspectAccess()/] Aspect [aClass.name.toUpperFirst()/]{
+
+}
+[/file]
+[/if]
+[/template]

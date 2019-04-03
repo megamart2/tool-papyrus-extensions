@@ -1,0 +1,12 @@
+[comment encoding = UTF-8 /]
+[module aspectQueries('http://www.eclipse.org/uml2/5.0.0/UML')]
+
+[query public isAspect(clazz : Class) : Boolean =
+invoke('eu.megamart2.papyrus.aspect.generation.queries.AspectQueries',
+'isAspect(org.eclipse.uml2.uml.Class)',
+Sequence{clazz})/]
+
+[query public aspectAccess(clazz : Class) : String =
+invoke('eu.megamart2.papyrus.aspect.generation.queries.AspectQueries',
+'aspectAccess(org.eclipse.uml2.uml.Class)',
+Sequence{clazz})/]

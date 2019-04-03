@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="generate" name="eu.megamart2.papyrus.aspect.generation">
+    <property name="ECLIPSE_HOME" value="../../../../../modeling/eclipse/modeling-2018-09/eclipse"/>
+    <property name="ECLIPSE_WORKSPACE" value="../../../../AcceleoWorkSpace"/>
+
+    <!-- The classpath with only the dependencies used by the project -->
+    <path id="eu.megamart2.papyrus.aspect.generation.libraryclasspath">
+        <pathelement location="${ECLIPSE_WORKSPACE}/eu.megamart2.papyrus.aspect.generation/bin"/>
+    </path>
+
+    <path id="eu.megamart2.papyrus.aspect.generation.classpath">
+        <path refid="eu.megamart2.papyrus.aspect.generation.libraryclasspath"/>
+    </path>
+
+    <!-- The classpath with only the jars available in the plugin folder of Eclipse -->
+    <path id="eu.megamart2.papyrus.aspect.generation.libraryclasspath.alljars">
+        <pathelement location="../eu.megamart2.papyrus.aspect.generation/bin"/>
+        <fileset dir="${ECLIPSE_HOME}/plugins/" includes="*.jar"/>
+    </path>
+
+    <path id="eu.megamart2.papyrus.aspect.generation.classpath.alljars">
+        <path refid="eu.megamart2.papyrus.aspect.generation.libraryclasspath.alljars"/>
+    </path>
+
+    <!-- The default task with the jars used by this project -->
+    <target name="generate">
+        <java classname="eu.megamart2.papyrus.aspect.generation.main.Generate" classpathref="eu.megamart2.papyrus.aspect.generation.classpath">
+            <arg value="${model}"/>
+            <arg value="${target}"/>
+        </java>
+    </target>
+
+    <!--
+        In case of problem you can also try with all the jar available in your Eclipse
+        Keep in mind that having two versions of the same jar can create problems
+    -->
+    <target name="generate.alljars">
+        <java classname="eu.megamart2.papyrus.aspect.generation.main.Generate" classpathref="eu.megamart2.papyrus.aspect.generation.classpath">
+            <arg value="${model}"/>
+            <arg value="${target}"/>
+        </java>
+    </target>
+</project>
