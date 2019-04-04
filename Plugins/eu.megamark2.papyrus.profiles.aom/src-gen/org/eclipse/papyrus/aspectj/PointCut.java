@@ -37,7 +37,7 @@ public interface PointCut extends EObject {
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	StructuralFeature getBase_StructuralFeature();
+	StructuralFeature getBase_PointCut_StructuralFeature();
 
 	/**
 	 * Sets the value of the '{@link org.eclipse.papyrus.aspectj.PointCut#getBase_StructuralFeature <em>Base Structural Feature</em>}' reference.
@@ -47,6 +47,6 @@ public interface PointCut extends EObject {
 	 * @see #getBase_StructuralFeature()
 	 * @generated
 	 */
-	void setBase_StructuralFeature(StructuralFeature value);
+	void setBase_PointCut_StructuralFeature(StructuralFeature value);
 
 } // PointCut

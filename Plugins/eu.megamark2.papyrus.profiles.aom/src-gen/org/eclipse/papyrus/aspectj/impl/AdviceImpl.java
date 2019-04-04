@@ -13,8 +13,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.papyrus.aspectj.Advice;
 import org.eclipse.papyrus.aspectj.AdviceExecutionType;
 import org.eclipse.papyrus.aspectj.AspectJPackage;
-import org.eclipse.papyrus.aspectj.PointCut;
 
+import org.eclipse.papyrus.aspectj.PointCut;
 import org.eclipse.uml2.uml.BehavioralFeature;
 
 /**
@@ -97,44 +97,6 @@ public class AdviceImpl extends MinimalEObjectImpl.Container implements Advice {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BehavioralFeature getBase_BehavioralFeature() {
-		if (base_BehavioralFeature != null && base_BehavioralFeature.eIsProxy()) {
-			InternalEObject oldBase_BehavioralFeature = (InternalEObject)base_BehavioralFeature;
-			base_BehavioralFeature = (BehavioralFeature)eResolveProxy(oldBase_BehavioralFeature);
-			if (base_BehavioralFeature != oldBase_BehavioralFeature) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AspectJPackage.ADVICE__BASE_BEHAVIORAL_FEATURE, oldBase_BehavioralFeature, base_BehavioralFeature));
-			}
-		}
-		return base_BehavioralFeature;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public BehavioralFeature basicGetBase_BehavioralFeature() {
-		return base_BehavioralFeature;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setBase_BehavioralFeature(BehavioralFeature newBase_BehavioralFeature) {
-		BehavioralFeature oldBase_BehavioralFeature = base_BehavioralFeature;
-		base_BehavioralFeature = newBase_BehavioralFeature;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AspectJPackage.ADVICE__BASE_BEHAVIORAL_FEATURE, oldBase_BehavioralFeature, base_BehavioralFeature));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public AdviceExecutionType getAdviceExecution() {
 		return adviceExecution;
 	}
@@ -187,6 +149,44 @@ public class AdviceImpl extends MinimalEObjectImpl.Container implements Advice {
 		pointcut = newPointcut;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, AspectJPackage.ADVICE__POINTCUT, oldPointcut, pointcut));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BehavioralFeature getBase_BehavioralFeature() {
+		if (base_BehavioralFeature != null && base_BehavioralFeature.eIsProxy()) {
+			InternalEObject oldBase_BehavioralFeature = (InternalEObject)base_BehavioralFeature;
+			base_BehavioralFeature = (BehavioralFeature)eResolveProxy(oldBase_BehavioralFeature);
+			if (base_BehavioralFeature != oldBase_BehavioralFeature) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AspectJPackage.ADVICE__BASE_BEHAVIORAL_FEATURE, oldBase_BehavioralFeature, base_BehavioralFeature));
+			}
+		}
+		return base_BehavioralFeature;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BehavioralFeature basicGetBase_BehavioralFeature() {
+		return base_BehavioralFeature;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBase_BehavioralFeature(BehavioralFeature newBase_BehavioralFeature) {
+		BehavioralFeature oldBase_BehavioralFeature = base_BehavioralFeature;
+		base_BehavioralFeature = newBase_BehavioralFeature;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AspectJPackage.ADVICE__BASE_BEHAVIORAL_FEATURE, oldBase_BehavioralFeature, base_BehavioralFeature));
 	}
 
 	/**

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="generate" name="eu.megamart2.papyrus.aspect.generation">
-    <property name="ECLIPSE_HOME" value="../../../../../modeling/eclipse/modeling-2018-09/eclipse"/>
-    <property name="ECLIPSE_WORKSPACE" value="../../../../AcceleoWorkSpace"/>
+    <property name="ECLIPSE_HOME" value="../../../../../Eclipses/modeling-photon/eclipse"/>
+    <property name="ECLIPSE_WORKSPACE" value="../../../../../Workspaces/workspace-megamart"/>
 
     <!-- The classpath with only the dependencies used by the project -->
     <path id="eu.megamart2.papyrus.aspect.generation.libraryclasspath">

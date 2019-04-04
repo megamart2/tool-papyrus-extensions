@@ -285,6 +285,21 @@ public class AspectJSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Static Cross Cutting Feature</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Static Cross Cutting Feature</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStaticCrossCuttingFeature(StaticCrossCuttingFeature object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Aspect</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -315,32 +330,17 @@ public class AspectJSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Operational Point Cut</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Initialization Point Cut</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Operational Point Cut</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Initialization Point Cut</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseOperationalPointCut(OperationalPointCut object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Within Code Point Cut</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Within Code Point Cut</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseWithinCodePointCut(WithinCodePointCut object) {
+	public T caseInitializationPointCut(InitializationPointCut object) {
 		return null;
 	}
 
@@ -360,17 +360,17 @@ public class AspectJSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Call Point Cut</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Operational Point Cut</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Call Point Cut</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Operational Point Cut</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCallPointCut(CallPointCut object) {
+	public T caseOperationalPointCut(OperationalPointCut object) {
 		return null;
 	}
 
@@ -390,17 +390,17 @@ public class AspectJSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Initialization Point Cut</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Set Point Cut</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Initialization Point Cut</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Set Point Cut</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInitializationPointCut(InitializationPointCut object) {
+	public T caseSetPointCut(SetPointCut object) {
 		return null;
 	}
 
@@ -435,32 +435,47 @@ public class AspectJSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Set Point Cut</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Call Point Cut</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Set Point Cut</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Call Point Cut</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSetPointCut(SetPointCut object) {
+	public T caseCallPointCut(CallPointCut object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Type Point Cut</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Within Code Point Cut</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Type Point Cut</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Within Code Point Cut</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTypePointCut(TypePointCut object) {
+	public T caseWithinCodePointCut(WithinCodePointCut object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Argument Defining Point Cut</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Argument Defining Point Cut</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseArgumentDefiningPointCut(ArgumentDefiningPointCut object) {
 		return null;
 	}
 
@@ -480,17 +495,17 @@ public class AspectJSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Argument Defining Point Cut</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Type Point Cut</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Argument Defining Point Cut</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Type Point Cut</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseArgumentDefiningPointCut(ArgumentDefiningPointCut object) {
+	public T caseTypePointCut(TypePointCut object) {
 		return null;
 	}
 
@@ -525,47 +540,32 @@ public class AspectJSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Point Cut Point Cut</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Advice Execution Point Cut</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Point Cut Point Cut</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Advice Execution Point Cut</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePointCutPointCut(PointCutPointCut object) {
+	public T caseAdviceExecutionPointCut(AdviceExecutionPointCut object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>CFlow Below Point Cut</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Advice</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>CFlow Below Point Cut</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Advice</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCFlowBelowPointCut(CFlowBelowPointCut object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>CFlow Point Cut</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>CFlow Point Cut</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseCFlowPointCut(CFlowPointCut object) {
+	public T caseAdvice(Advice object) {
 		return null;
 	}
 
@@ -645,62 +645,32 @@ public class AspectJSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Point Cut Negation</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Point Cut Point Cut</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Point Cut Negation</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Point Cut Point Cut</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePointCutNegation(PointCutNegation object) {
+	public T casePointCutPointCut(PointCutPointCut object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Advice</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>CFlow Below Point Cut</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Advice</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>CFlow Below Point Cut</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAdvice(Advice object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Advice Execution Point Cut</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Advice Execution Point Cut</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAdviceExecutionPointCut(AdviceExecutionPointCut object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Static Cross Cutting Feature</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Static Cross Cutting Feature</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseStaticCrossCuttingFeature(StaticCrossCuttingFeature object) {
+	public T caseCFlowBelowPointCut(CFlowBelowPointCut object) {
 		return null;
 	}
 
@@ -716,6 +686,36 @@ public class AspectJSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCrossCuttingConcern(CrossCuttingConcern object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Point Cut Negation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Point Cut Negation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePointCutNegation(PointCutNegation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>CFlow Point Cut</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>CFlow Point Cut</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCFlowPointCut(CFlowPointCut object) {
 		return null;
 	}
 

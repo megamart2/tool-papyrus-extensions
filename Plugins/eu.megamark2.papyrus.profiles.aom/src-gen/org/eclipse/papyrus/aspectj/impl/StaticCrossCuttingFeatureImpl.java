@@ -81,6 +81,43 @@ public class StaticCrossCuttingFeatureImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Type> getOnType() {
+		if (onType == null) {
+			onType = new EObjectResolvingEList<Type>(Type.class, this, AspectJPackage.STATIC_CROSS_CUTTING_FEATURE__ON_TYPE);
+		}
+		return onType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Type getOnType(String name) {
+		return getOnType(name, false, null);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Type getOnType(String name, boolean ignoreCase, EClass eClass) {
+		onTypeLoop: for (Type onType : getOnType()) {
+			if (eClass != null && !eClass.isInstance(onType))
+				continue onTypeLoop;
+			if (name != null && !(ignoreCase ? name.equalsIgnoreCase(onType.getName()) : name.equals(onType.getName())))
+				continue onTypeLoop;
+			return onType;
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Feature getBase_Feature() {
 		if (base_Feature != null && base_Feature.eIsProxy()) {
 			InternalEObject oldBase_Feature = (InternalEObject)base_Feature;
@@ -112,43 +149,6 @@ public class StaticCrossCuttingFeatureImpl extends MinimalEObjectImpl.Container 
 		base_Feature = newBase_Feature;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, AspectJPackage.STATIC_CROSS_CUTTING_FEATURE__BASE_FEATURE, oldBase_Feature, base_Feature));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Type> getOnType() {
-		if (onType == null) {
-			onType = new EObjectResolvingEList<Type>(Type.class, this, AspectJPackage.STATIC_CROSS_CUTTING_FEATURE__ON_TYPE);
-		}
-		return onType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Type getOnType(String name) {
-		return getOnType(name, false, null);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Type getOnType(String name, boolean ignoreCase, EClass eClass) {
-		onTypeLoop: for (Type onType : getOnType()) {
-			if (eClass != null && !eClass.isInstance(onType))
-				continue onTypeLoop;
-			if (name != null && !(ignoreCase ? name.equalsIgnoreCase(onType.getName()) : name.equals(onType.getName())))
-				continue onTypeLoop;
-			return onType;
-		}
-		return null;
 	}
 
 	/**

@@ -16,7 +16,7 @@
    <extension
          point="org.eclipse.uml2.uml.generated_package">
       <profile
-            location="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#AspectJ"
+            location="pathmap://ASPECTJ_PROFILES/aspectj.profile2.uml#AspectJ"
             uri="http://megamart2-ecsel.eu/aspectj">
       </profile>
    </extension>
@@ -26,7 +26,7 @@
             description="UML profile for AspectJ"
             iconpath="icons/aspect.png"
             name="AspectJ"
-            path="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml"
+            path="pathmap://ASPECTJ_PROFILES/aspectj.profile2.uml"
             provider="MegaM@RT Project">
       </profile>
    </extension>
@@ -36,7 +36,7 @@
       <package
             uri="http://megamart2-ecsel.eu/aspectj"
             class="org.eclipse.papyrus.aspectj.AspectJPackage"
-            genModel="profiles/aspectj.profile.genmodel"/>
+            genModel="profiles/aspectj.profile2.genmodel"/>
    </extension>
 
 </plugin>

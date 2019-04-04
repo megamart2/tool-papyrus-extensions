@@ -335,13 +335,17 @@ public class Generate extends AbstractAcceleoGenerator {
      * 
      * @param resourceSet
      *            The resource set which registry has to be updated.
-     * @generated
+     * @generated NOT
      */
     @Override
     public void registerPackages(ResourceSet resourceSet) {
         super.registerPackages(resourceSet);
         if (!isInWorkspace(org.eclipse.uml2.uml.UMLPackage.class)) {
             resourceSet.getPackageRegistry().put(org.eclipse.uml2.uml.UMLPackage.eINSTANCE.getNsURI(), org.eclipse.uml2.uml.UMLPackage.eINSTANCE);
+        }
+        
+        if (!isInWorkspace(org.eclipse.papyrus.aspectj.AspectJPackage.class)) {
+            resourceSet.getPackageRegistry().put(org.eclipse.papyrus.aspectj.AspectJPackage.eINSTANCE.getNsURI(), org.eclipse.papyrus.aspectj.AspectJPackage.eINSTANCE);
         }
         
         /*

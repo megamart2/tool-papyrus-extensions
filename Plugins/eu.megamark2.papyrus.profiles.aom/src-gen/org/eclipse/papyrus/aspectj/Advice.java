@@ -26,32 +26,6 @@ import org.eclipse.uml2.uml.BehavioralFeature;
  */
 public interface Advice extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Base Behavioral Feature</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Base Behavioral Feature</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Base Behavioral Feature</em>' reference.
-	 * @see #setBase_BehavioralFeature(BehavioralFeature)
-	 * @see org.eclipse.papyrus.aspectj.AspectJPackage#getAdvice_Base_BehavioralFeature()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	BehavioralFeature getBase_BehavioralFeature();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.papyrus.aspectj.Advice#getBase_BehavioralFeature <em>Base Behavioral Feature</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Base Behavioral Feature</em>' reference.
-	 * @see #getBase_BehavioralFeature()
-	 * @generated
-	 */
-	void setBase_BehavioralFeature(BehavioralFeature value);
-
-	/**
 	 * Returns the value of the '<em><b>Advice Execution</b></em>' attribute.
 	 * The literals are from the enumeration {@link org.eclipse.papyrus.aspectj.AdviceExecutionType}.
 	 * <!-- begin-user-doc -->
@@ -105,5 +79,31 @@ public interface Advice extends EObject {
 	 * @generated
 	 */
 	void setPointcut(PointCut value);
+
+	/**
+	 * Returns the value of the '<em><b>Base Behavioral Feature</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Base Behavioral Feature</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Base Behavioral Feature</em>' reference.
+	 * @see #setBase_BehavioralFeature(BehavioralFeature)
+	 * @see org.eclipse.papyrus.aspectj.AspectJPackage#getAdvice_Base_BehavioralFeature()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	BehavioralFeature getBase_BehavioralFeature();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.papyrus.aspectj.Advice#getBase_BehavioralFeature <em>Base Behavioral Feature</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Base Behavioral Feature</em>' reference.
+	 * @see #getBase_BehavioralFeature()
+	 * @generated
+	 */
+	void setBase_BehavioralFeature(BehavioralFeature value);
 
 } // Advice

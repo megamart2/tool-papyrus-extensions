@@ -61,6 +61,13 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass staticCrossCuttingFeatureEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass aspectEClass = null;
 
 	/**
@@ -75,14 +82,7 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass operationalPointCutEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass withinCodePointCutEClass = null;
+	private EClass initializationPointCutEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -96,7 +96,7 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass callPointCutEClass = null;
+	private EClass operationalPointCutEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -110,7 +110,7 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass initializationPointCutEClass = null;
+	private EClass setPointCutEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -131,14 +131,21 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass setPointCutEClass = null;
+	private EClass callPointCutEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass typePointCutEClass = null;
+	private EClass withinCodePointCutEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass argumentDefiningPointCutEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -152,7 +159,7 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass argumentDefiningPointCutEClass = null;
+	private EClass typePointCutEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -173,21 +180,14 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass pointCutPointCutEClass = null;
+	private EClass adviceExecutionPointCutEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass cFlowBelowPointCutEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass cFlowPointCutEClass = null;
+	private EClass adviceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -229,28 +229,14 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass pointCutNegationEClass = null;
+	private EClass pointCutPointCutEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass adviceEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass adviceExecutionPointCutEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass staticCrossCuttingFeatureEClass = null;
+	private EClass cFlowBelowPointCutEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -264,7 +250,14 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum aspectInstantiationTypeEEnum = null;
+	private EClass pointCutNegationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass cFlowPointCutEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -272,6 +265,13 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 	 * @generated
 	 */
 	private EEnum adviceExecutionTypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum aspectInstantiationTypeEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -337,6 +337,33 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(AspectJPackage.eNS_URI, theAspectJPackage);
 		return theAspectJPackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStaticCrossCuttingFeature() {
+		return staticCrossCuttingFeatureEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getStaticCrossCuttingFeature_OnType() {
+		return (EReference)staticCrossCuttingFeatureEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getStaticCrossCuttingFeature_Base_Feature() {
+		return (EReference)staticCrossCuttingFeatureEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -443,6 +470,24 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getInitializationPointCut() {
+		return initializationPointCutEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getExecutionPointCut() {
+		return executionPointCutEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getOperationalPointCut() {
 		return operationalPointCutEClass;
 	}
@@ -461,33 +506,6 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getWithinCodePointCut() {
-		return withinCodePointCutEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getExecutionPointCut() {
-		return executionPointCutEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getCallPointCut() {
-		return callPointCutEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getPreInitializationPointCut() {
 		return preInitializationPointCutEClass;
 	}
@@ -497,8 +515,8 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getInitializationPointCut() {
-		return initializationPointCutEClass;
+	public EClass getSetPointCut() {
+		return setPointCutEClass;
 	}
 
 	/**
@@ -533,8 +551,8 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSetPointCut() {
-		return setPointCutEClass;
+	public EClass getCallPointCut() {
+		return callPointCutEClass;
 	}
 
 	/**
@@ -542,26 +560,8 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTypePointCut() {
-		return typePointCutEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTypePointCut_Type() {
-		return (EReference)typePointCutEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getThisPointCut() {
-		return thisPointCutEClass;
+	public EClass getWithinCodePointCut() {
+		return withinCodePointCutEClass;
 	}
 
 	/**
@@ -596,6 +596,33 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getThisPointCut() {
+		return thisPointCutEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTypePointCut() {
+		return typePointCutEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTypePointCut_Type() {
+		return (EReference)typePointCutEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getArgsPointCut() {
 		return argsPointCutEClass;
 	}
@@ -614,8 +641,8 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getPointCutPointCut() {
-		return pointCutPointCutEClass;
+	public EClass getAdviceExecutionPointCut() {
+		return adviceExecutionPointCutEClass;
 	}
 
 	/**
@@ -623,8 +650,8 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPointCutPointCut_SelectedPointCut() {
-		return (EReference)pointCutPointCutEClass.getEStructuralFeatures().get(0);
+	public EClass getAdvice() {
+		return adviceEClass;
 	}
 
 	/**
@@ -632,8 +659,8 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getCFlowBelowPointCut() {
-		return cFlowBelowPointCutEClass;
+	public EAttribute getAdvice_AdviceExecution() {
+		return (EAttribute)adviceEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -641,8 +668,17 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getCFlowPointCut() {
-		return cFlowPointCutEClass;
+	public EReference getAdvice_Pointcut() {
+		return (EReference)adviceEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAdvice_Base_BehavioralFeature() {
+		return (EReference)adviceEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -713,8 +749,8 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getPointCutNegation() {
-		return pointCutNegationEClass;
+	public EClass getPointCutPointCut() {
+		return pointCutPointCutEClass;
 	}
 
 	/**
@@ -722,8 +758,8 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPointCutNegation_Composee() {
-		return (EReference)pointCutNegationEClass.getEStructuralFeatures().get(0);
+	public EReference getPointCutPointCut_SelectedPointCut() {
+		return (EReference)pointCutPointCutEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -731,71 +767,8 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getAdvice() {
-		return adviceEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getAdvice_Base_BehavioralFeature() {
-		return (EReference)adviceEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getAdvice_AdviceExecution() {
-		return (EAttribute)adviceEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getAdvice_Pointcut() {
-		return (EReference)adviceEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getAdviceExecutionPointCut() {
-		return adviceExecutionPointCutEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getStaticCrossCuttingFeature() {
-		return staticCrossCuttingFeatureEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getStaticCrossCuttingFeature_Base_Feature() {
-		return (EReference)staticCrossCuttingFeatureEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getStaticCrossCuttingFeature_OnType() {
-		return (EReference)staticCrossCuttingFeatureEClass.getEStructuralFeatures().get(1);
+	public EClass getCFlowBelowPointCut() {
+		return cFlowBelowPointCutEClass;
 	}
 
 	/**
@@ -821,8 +794,26 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getAspectInstantiationType() {
-		return aspectInstantiationTypeEEnum;
+	public EClass getPointCutNegation() {
+		return pointCutNegationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPointCutNegation_Composee() {
+		return (EReference)pointCutNegationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCFlowPointCut() {
+		return cFlowPointCutEClass;
 	}
 
 	/**
@@ -832,6 +823,15 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 	 */
 	public EEnum getAdviceExecutionType() {
 		return adviceExecutionTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getAspectInstantiationType() {
+		return aspectInstantiationTypeEEnum;
 	}
 
 	/**

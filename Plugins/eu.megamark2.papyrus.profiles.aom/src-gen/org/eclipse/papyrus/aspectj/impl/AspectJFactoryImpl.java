@@ -130,6 +130,16 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public StaticCrossCuttingFeature createStaticCrossCuttingFeature() {
+		StaticCrossCuttingFeatureImpl staticCrossCuttingFeature = new StaticCrossCuttingFeatureImpl();
+		return staticCrossCuttingFeature;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Aspect createAspect() {
 		AspectImpl aspect = new AspectImpl();
 		return aspect;
@@ -150,19 +160,9 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OperationalPointCut createOperationalPointCut() {
-		OperationalPointCutImpl operationalPointCut = new OperationalPointCutImpl();
-		return operationalPointCut;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public WithinCodePointCut createWithinCodePointCut() {
-		WithinCodePointCutImpl withinCodePointCut = new WithinCodePointCutImpl();
-		return withinCodePointCut;
+	public InitializationPointCut createInitializationPointCut() {
+		InitializationPointCutImpl initializationPointCut = new InitializationPointCutImpl();
+		return initializationPointCut;
 	}
 
 	/**
@@ -180,9 +180,9 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CallPointCut createCallPointCut() {
-		CallPointCutImpl callPointCut = new CallPointCutImpl();
-		return callPointCut;
+	public OperationalPointCut createOperationalPointCut() {
+		OperationalPointCutImpl operationalPointCut = new OperationalPointCutImpl();
+		return operationalPointCut;
 	}
 
 	/**
@@ -200,9 +200,9 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public InitializationPointCut createInitializationPointCut() {
-		InitializationPointCutImpl initializationPointCut = new InitializationPointCutImpl();
-		return initializationPointCut;
+	public SetPointCut createSetPointCut() {
+		SetPointCutImpl setPointCut = new SetPointCutImpl();
+		return setPointCut;
 	}
 
 	/**
@@ -230,9 +230,9 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SetPointCut createSetPointCut() {
-		SetPointCutImpl setPointCut = new SetPointCutImpl();
-		return setPointCut;
+	public CallPointCut createCallPointCut() {
+		CallPointCutImpl callPointCut = new CallPointCutImpl();
+		return callPointCut;
 	}
 
 	/**
@@ -240,9 +240,19 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypePointCut createTypePointCut() {
-		TypePointCutImpl typePointCut = new TypePointCutImpl();
-		return typePointCut;
+	public WithinCodePointCut createWithinCodePointCut() {
+		WithinCodePointCutImpl withinCodePointCut = new WithinCodePointCutImpl();
+		return withinCodePointCut;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ArgumentDefiningPointCut createArgumentDefiningPointCut() {
+		ArgumentDefiningPointCutImpl argumentDefiningPointCut = new ArgumentDefiningPointCutImpl();
+		return argumentDefiningPointCut;
 	}
 
 	/**
@@ -260,9 +270,9 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ArgumentDefiningPointCut createArgumentDefiningPointCut() {
-		ArgumentDefiningPointCutImpl argumentDefiningPointCut = new ArgumentDefiningPointCutImpl();
-		return argumentDefiningPointCut;
+	public TypePointCut createTypePointCut() {
+		TypePointCutImpl typePointCut = new TypePointCutImpl();
+		return typePointCut;
 	}
 
 	/**
@@ -290,9 +300,9 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PointCutPointCut createPointCutPointCut() {
-		PointCutPointCutImpl pointCutPointCut = new PointCutPointCutImpl();
-		return pointCutPointCut;
+	public AdviceExecutionPointCut createAdviceExecutionPointCut() {
+		AdviceExecutionPointCutImpl adviceExecutionPointCut = new AdviceExecutionPointCutImpl();
+		return adviceExecutionPointCut;
 	}
 
 	/**
@@ -300,19 +310,9 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CFlowBelowPointCut createCFlowBelowPointCut() {
-		CFlowBelowPointCutImpl cFlowBelowPointCut = new CFlowBelowPointCutImpl();
-		return cFlowBelowPointCut;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CFlowPointCut createCFlowPointCut() {
-		CFlowPointCutImpl cFlowPointCut = new CFlowPointCutImpl();
-		return cFlowPointCut;
+	public Advice createAdvice() {
+		AdviceImpl advice = new AdviceImpl();
+		return advice;
 	}
 
 	/**
@@ -370,9 +370,9 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PointCutNegation createPointCutNegation() {
-		PointCutNegationImpl pointCutNegation = new PointCutNegationImpl();
-		return pointCutNegation;
+	public PointCutPointCut createPointCutPointCut() {
+		PointCutPointCutImpl pointCutPointCut = new PointCutPointCutImpl();
+		return pointCutPointCut;
 	}
 
 	/**
@@ -380,29 +380,9 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Advice createAdvice() {
-		AdviceImpl advice = new AdviceImpl();
-		return advice;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public AdviceExecutionPointCut createAdviceExecutionPointCut() {
-		AdviceExecutionPointCutImpl adviceExecutionPointCut = new AdviceExecutionPointCutImpl();
-		return adviceExecutionPointCut;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public StaticCrossCuttingFeature createStaticCrossCuttingFeature() {
-		StaticCrossCuttingFeatureImpl staticCrossCuttingFeature = new StaticCrossCuttingFeatureImpl();
-		return staticCrossCuttingFeature;
+	public CFlowBelowPointCut createCFlowBelowPointCut() {
+		CFlowBelowPointCutImpl cFlowBelowPointCut = new CFlowBelowPointCutImpl();
+		return cFlowBelowPointCut;
 	}
 
 	/**
@@ -420,10 +400,9 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AspectInstantiationType createAspectInstantiationTypeFromString(EDataType eDataType, String initialValue) {
-		AspectInstantiationType result = AspectInstantiationType.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
+	public PointCutNegation createPointCutNegation() {
+		PointCutNegationImpl pointCutNegation = new PointCutNegationImpl();
+		return pointCutNegation;
 	}
 
 	/**
@@ -431,8 +410,9 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertAspectInstantiationTypeToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
+	public CFlowPointCut createCFlowPointCut() {
+		CFlowPointCutImpl cFlowPointCut = new CFlowPointCutImpl();
+		return cFlowPointCut;
 	}
 
 	/**
@@ -452,6 +432,26 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 	 * @generated
 	 */
 	public String convertAdviceExecutionTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AspectInstantiationType createAspectInstantiationTypeFromString(EDataType eDataType, String initialValue) {
+		AspectInstantiationType result = AspectInstantiationType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertAspectInstantiationTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

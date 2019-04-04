@@ -29,32 +29,6 @@ import org.eclipse.uml2.uml.Type;
  */
 public interface StaticCrossCuttingFeature extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Base Feature</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Base Feature</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Base Feature</em>' reference.
-	 * @see #setBase_Feature(Feature)
-	 * @see org.eclipse.papyrus.aspectj.AspectJPackage#getStaticCrossCuttingFeature_Base_Feature()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	Feature getBase_Feature();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.papyrus.aspectj.StaticCrossCuttingFeature#getBase_Feature <em>Base Feature</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Base Feature</em>' reference.
-	 * @see #getBase_Feature()
-	 * @generated
-	 */
-	void setBase_Feature(Feature value);
-
-	/**
 	 * Returns the value of the '<em><b>On Type</b></em>' reference list.
 	 * The list contents are of type {@link org.eclipse.uml2.uml.Type}.
 	 * <!-- begin-user-doc -->
@@ -93,5 +67,31 @@ public interface StaticCrossCuttingFeature extends EObject {
 	 * @generated
 	 */
 	Type getOnType(String name, boolean ignoreCase, EClass eClass);
+
+	/**
+	 * Returns the value of the '<em><b>Base Feature</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Base Feature</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Base Feature</em>' reference.
+	 * @see #setBase_Feature(Feature)
+	 * @see org.eclipse.papyrus.aspectj.AspectJPackage#getStaticCrossCuttingFeature_Base_Feature()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	Feature getBase_Feature();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.papyrus.aspectj.StaticCrossCuttingFeature#getBase_Feature <em>Base Feature</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Base Feature</em>' reference.
+	 * @see #getBase_Feature()
+	 * @generated
+	 */
+	void setBase_Feature(Feature value);
 
 } // StaticCrossCuttingFeature

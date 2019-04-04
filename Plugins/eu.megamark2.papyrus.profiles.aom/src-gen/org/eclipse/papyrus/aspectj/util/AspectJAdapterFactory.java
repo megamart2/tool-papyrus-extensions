@@ -204,6 +204,20 @@ public class AspectJAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.aspectj.StaticCrossCuttingFeature <em>Static Cross Cutting Feature</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.aspectj.StaticCrossCuttingFeature
+	 * @generated
+	 */
+	public Adapter createStaticCrossCuttingFeatureAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.aspectj.Aspect <em>Aspect</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -232,30 +246,16 @@ public class AspectJAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.aspectj.OperationalPointCut <em>Operational Point Cut</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.aspectj.InitializationPointCut <em>Initialization Point Cut</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.aspectj.OperationalPointCut
+	 * @see org.eclipse.papyrus.aspectj.InitializationPointCut
 	 * @generated
 	 */
-	public Adapter createOperationalPointCutAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.aspectj.WithinCodePointCut <em>Within Code Point Cut</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.aspectj.WithinCodePointCut
-	 * @generated
-	 */
-	public Adapter createWithinCodePointCutAdapter() {
+	public Adapter createInitializationPointCutAdapter() {
 		return null;
 	}
 
@@ -274,16 +274,16 @@ public class AspectJAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.aspectj.CallPointCut <em>Call Point Cut</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.aspectj.OperationalPointCut <em>Operational Point Cut</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.aspectj.CallPointCut
+	 * @see org.eclipse.papyrus.aspectj.OperationalPointCut
 	 * @generated
 	 */
-	public Adapter createCallPointCutAdapter() {
+	public Adapter createOperationalPointCutAdapter() {
 		return null;
 	}
 
@@ -302,16 +302,16 @@ public class AspectJAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.aspectj.InitializationPointCut <em>Initialization Point Cut</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.aspectj.SetPointCut <em>Set Point Cut</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.aspectj.InitializationPointCut
+	 * @see org.eclipse.papyrus.aspectj.SetPointCut
 	 * @generated
 	 */
-	public Adapter createInitializationPointCutAdapter() {
+	public Adapter createSetPointCutAdapter() {
 		return null;
 	}
 
@@ -344,30 +344,44 @@ public class AspectJAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.aspectj.SetPointCut <em>Set Point Cut</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.aspectj.CallPointCut <em>Call Point Cut</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.aspectj.SetPointCut
+	 * @see org.eclipse.papyrus.aspectj.CallPointCut
 	 * @generated
 	 */
-	public Adapter createSetPointCutAdapter() {
+	public Adapter createCallPointCutAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.aspectj.TypePointCut <em>Type Point Cut</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.aspectj.WithinCodePointCut <em>Within Code Point Cut</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.aspectj.TypePointCut
+	 * @see org.eclipse.papyrus.aspectj.WithinCodePointCut
 	 * @generated
 	 */
-	public Adapter createTypePointCutAdapter() {
+	public Adapter createWithinCodePointCutAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.aspectj.ArgumentDefiningPointCut <em>Argument Defining Point Cut</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.aspectj.ArgumentDefiningPointCut
+	 * @generated
+	 */
+	public Adapter createArgumentDefiningPointCutAdapter() {
 		return null;
 	}
 
@@ -386,16 +400,16 @@ public class AspectJAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.aspectj.ArgumentDefiningPointCut <em>Argument Defining Point Cut</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.aspectj.TypePointCut <em>Type Point Cut</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.aspectj.ArgumentDefiningPointCut
+	 * @see org.eclipse.papyrus.aspectj.TypePointCut
 	 * @generated
 	 */
-	public Adapter createArgumentDefiningPointCutAdapter() {
+	public Adapter createTypePointCutAdapter() {
 		return null;
 	}
 
@@ -428,44 +442,30 @@ public class AspectJAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.aspectj.PointCutPointCut <em>Point Cut Point Cut</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.aspectj.AdviceExecutionPointCut <em>Advice Execution Point Cut</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.aspectj.PointCutPointCut
+	 * @see org.eclipse.papyrus.aspectj.AdviceExecutionPointCut
 	 * @generated
 	 */
-	public Adapter createPointCutPointCutAdapter() {
+	public Adapter createAdviceExecutionPointCutAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.aspectj.CFlowBelowPointCut <em>CFlow Below Point Cut</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.aspectj.Advice <em>Advice</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.aspectj.CFlowBelowPointCut
+	 * @see org.eclipse.papyrus.aspectj.Advice
 	 * @generated
 	 */
-	public Adapter createCFlowBelowPointCutAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.aspectj.CFlowPointCut <em>CFlow Point Cut</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.aspectj.CFlowPointCut
-	 * @generated
-	 */
-	public Adapter createCFlowPointCutAdapter() {
+	public Adapter createAdviceAdapter() {
 		return null;
 	}
 
@@ -540,58 +540,30 @@ public class AspectJAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.aspectj.PointCutNegation <em>Point Cut Negation</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.aspectj.PointCutPointCut <em>Point Cut Point Cut</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.aspectj.PointCutNegation
+	 * @see org.eclipse.papyrus.aspectj.PointCutPointCut
 	 * @generated
 	 */
-	public Adapter createPointCutNegationAdapter() {
+	public Adapter createPointCutPointCutAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.aspectj.Advice <em>Advice</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.aspectj.CFlowBelowPointCut <em>CFlow Below Point Cut</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.aspectj.Advice
+	 * @see org.eclipse.papyrus.aspectj.CFlowBelowPointCut
 	 * @generated
 	 */
-	public Adapter createAdviceAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.aspectj.AdviceExecutionPointCut <em>Advice Execution Point Cut</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.aspectj.AdviceExecutionPointCut
-	 * @generated
-	 */
-	public Adapter createAdviceExecutionPointCutAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.aspectj.StaticCrossCuttingFeature <em>Static Cross Cutting Feature</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.aspectj.StaticCrossCuttingFeature
-	 * @generated
-	 */
-	public Adapter createStaticCrossCuttingFeatureAdapter() {
+	public Adapter createCFlowBelowPointCutAdapter() {
 		return null;
 	}
 
@@ -606,6 +578,34 @@ public class AspectJAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCrossCuttingConcernAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.aspectj.PointCutNegation <em>Point Cut Negation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.aspectj.PointCutNegation
+	 * @generated
+	 */
+	public Adapter createPointCutNegationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.aspectj.CFlowPointCut <em>CFlow Point Cut</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.aspectj.CFlowPointCut
+	 * @generated
+	 */
+	public Adapter createCFlowPointCutAdapter() {
 		return null;
 	}
 

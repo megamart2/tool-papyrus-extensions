@@ -22,6 +22,15 @@ public interface AspectJFactory extends EFactory {
 	AspectJFactory eINSTANCE = org.eclipse.papyrus.aspectj.impl.AspectJFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>Static Cross Cutting Feature</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Static Cross Cutting Feature</em>'.
+	 * @generated
+	 */
+	StaticCrossCuttingFeature createStaticCrossCuttingFeature();
+
+	/**
 	 * Returns a new object of class '<em>Aspect</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -40,22 +49,13 @@ public interface AspectJFactory extends EFactory {
 	PointCut createPointCut();
 
 	/**
-	 * Returns a new object of class '<em>Operational Point Cut</em>'.
+	 * Returns a new object of class '<em>Initialization Point Cut</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Operational Point Cut</em>'.
+	 * @return a new object of class '<em>Initialization Point Cut</em>'.
 	 * @generated
 	 */
-	OperationalPointCut createOperationalPointCut();
-
-	/**
-	 * Returns a new object of class '<em>Within Code Point Cut</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Within Code Point Cut</em>'.
-	 * @generated
-	 */
-	WithinCodePointCut createWithinCodePointCut();
+	InitializationPointCut createInitializationPointCut();
 
 	/**
 	 * Returns a new object of class '<em>Execution Point Cut</em>'.
@@ -67,13 +67,13 @@ public interface AspectJFactory extends EFactory {
 	ExecutionPointCut createExecutionPointCut();
 
 	/**
-	 * Returns a new object of class '<em>Call Point Cut</em>'.
+	 * Returns a new object of class '<em>Operational Point Cut</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Call Point Cut</em>'.
+	 * @return a new object of class '<em>Operational Point Cut</em>'.
 	 * @generated
 	 */
-	CallPointCut createCallPointCut();
+	OperationalPointCut createOperationalPointCut();
 
 	/**
 	 * Returns a new object of class '<em>Pre Initialization Point Cut</em>'.
@@ -85,13 +85,13 @@ public interface AspectJFactory extends EFactory {
 	PreInitializationPointCut createPreInitializationPointCut();
 
 	/**
-	 * Returns a new object of class '<em>Initialization Point Cut</em>'.
+	 * Returns a new object of class '<em>Set Point Cut</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Initialization Point Cut</em>'.
+	 * @return a new object of class '<em>Set Point Cut</em>'.
 	 * @generated
 	 */
-	InitializationPointCut createInitializationPointCut();
+	SetPointCut createSetPointCut();
 
 	/**
 	 * Returns a new object of class '<em>Property Point Cut</em>'.
@@ -112,22 +112,31 @@ public interface AspectJFactory extends EFactory {
 	GetPointCut createGetPointCut();
 
 	/**
-	 * Returns a new object of class '<em>Set Point Cut</em>'.
+	 * Returns a new object of class '<em>Call Point Cut</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Set Point Cut</em>'.
+	 * @return a new object of class '<em>Call Point Cut</em>'.
 	 * @generated
 	 */
-	SetPointCut createSetPointCut();
+	CallPointCut createCallPointCut();
 
 	/**
-	 * Returns a new object of class '<em>Type Point Cut</em>'.
+	 * Returns a new object of class '<em>Within Code Point Cut</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Type Point Cut</em>'.
+	 * @return a new object of class '<em>Within Code Point Cut</em>'.
 	 * @generated
 	 */
-	TypePointCut createTypePointCut();
+	WithinCodePointCut createWithinCodePointCut();
+
+	/**
+	 * Returns a new object of class '<em>Argument Defining Point Cut</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Argument Defining Point Cut</em>'.
+	 * @generated
+	 */
+	ArgumentDefiningPointCut createArgumentDefiningPointCut();
 
 	/**
 	 * Returns a new object of class '<em>This Point Cut</em>'.
@@ -139,13 +148,13 @@ public interface AspectJFactory extends EFactory {
 	ThisPointCut createThisPointCut();
 
 	/**
-	 * Returns a new object of class '<em>Argument Defining Point Cut</em>'.
+	 * Returns a new object of class '<em>Type Point Cut</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Argument Defining Point Cut</em>'.
+	 * @return a new object of class '<em>Type Point Cut</em>'.
 	 * @generated
 	 */
-	ArgumentDefiningPointCut createArgumentDefiningPointCut();
+	TypePointCut createTypePointCut();
 
 	/**
 	 * Returns a new object of class '<em>Args Point Cut</em>'.
@@ -166,31 +175,22 @@ public interface AspectJFactory extends EFactory {
 	TargetPointCut createTargetPointCut();
 
 	/**
-	 * Returns a new object of class '<em>Point Cut Point Cut</em>'.
+	 * Returns a new object of class '<em>Advice Execution Point Cut</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Point Cut Point Cut</em>'.
+	 * @return a new object of class '<em>Advice Execution Point Cut</em>'.
 	 * @generated
 	 */
-	PointCutPointCut createPointCutPointCut();
+	AdviceExecutionPointCut createAdviceExecutionPointCut();
 
 	/**
-	 * Returns a new object of class '<em>CFlow Below Point Cut</em>'.
+	 * Returns a new object of class '<em>Advice</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>CFlow Below Point Cut</em>'.
+	 * @return a new object of class '<em>Advice</em>'.
 	 * @generated
 	 */
-	CFlowBelowPointCut createCFlowBelowPointCut();
-
-	/**
-	 * Returns a new object of class '<em>CFlow Point Cut</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>CFlow Point Cut</em>'.
-	 * @generated
-	 */
-	CFlowPointCut createCFlowPointCut();
+	Advice createAdvice();
 
 	/**
 	 * Returns a new object of class '<em>Static Initialization Point Cut</em>'.
@@ -238,40 +238,22 @@ public interface AspectJFactory extends EFactory {
 	PointCutConjunction createPointCutConjunction();
 
 	/**
-	 * Returns a new object of class '<em>Point Cut Negation</em>'.
+	 * Returns a new object of class '<em>Point Cut Point Cut</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Point Cut Negation</em>'.
+	 * @return a new object of class '<em>Point Cut Point Cut</em>'.
 	 * @generated
 	 */
-	PointCutNegation createPointCutNegation();
+	PointCutPointCut createPointCutPointCut();
 
 	/**
-	 * Returns a new object of class '<em>Advice</em>'.
+	 * Returns a new object of class '<em>CFlow Below Point Cut</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Advice</em>'.
+	 * @return a new object of class '<em>CFlow Below Point Cut</em>'.
 	 * @generated
 	 */
-	Advice createAdvice();
-
-	/**
-	 * Returns a new object of class '<em>Advice Execution Point Cut</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Advice Execution Point Cut</em>'.
-	 * @generated
-	 */
-	AdviceExecutionPointCut createAdviceExecutionPointCut();
-
-	/**
-	 * Returns a new object of class '<em>Static Cross Cutting Feature</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Static Cross Cutting Feature</em>'.
-	 * @generated
-	 */
-	StaticCrossCuttingFeature createStaticCrossCuttingFeature();
+	CFlowBelowPointCut createCFlowBelowPointCut();
 
 	/**
 	 * Returns a new object of class '<em>Cross Cutting Concern</em>'.
@@ -281,6 +263,24 @@ public interface AspectJFactory extends EFactory {
 	 * @generated
 	 */
 	CrossCuttingConcern createCrossCuttingConcern();
+
+	/**
+	 * Returns a new object of class '<em>Point Cut Negation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Point Cut Negation</em>'.
+	 * @generated
+	 */
+	PointCutNegation createPointCutNegation();
+
+	/**
+	 * Returns a new object of class '<em>CFlow Point Cut</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>CFlow Point Cut</em>'.
+	 * @generated
+	 */
+	CFlowPointCut createCFlowPointCut();
 
 	/**
 	 * Returns the package supported by this factory.

@@ -93,7 +93,7 @@ public interface Aspect extends EObject {
 	 * The literals are from the enumeration {@link org.eclipse.papyrus.aspectj.AspectInstantiationType}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Per Type</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>Per Type</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

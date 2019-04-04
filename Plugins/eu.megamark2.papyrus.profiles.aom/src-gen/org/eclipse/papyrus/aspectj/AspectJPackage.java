@@ -58,6 +58,16 @@ public interface AspectJPackage extends EPackage {
 	AspectJPackage eINSTANCE = org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl.init();
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.StaticCrossCuttingFeatureImpl <em>Static Cross Cutting Feature</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.aspectj.impl.StaticCrossCuttingFeatureImpl
+	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getStaticCrossCuttingFeature()
+	 * @generated
+	 */
+	int STATIC_CROSS_CUTTING_FEATURE = 27;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.AspectImpl <em>Aspect</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -241,6 +251,76 @@ public interface AspectJPackage extends EPackage {
 	int OPERATIONAL_POINT_CUT_OPERATION_COUNT = POINT_CUT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.ExecutionPointCutImpl <em>Execution Point Cut</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.aspectj.impl.ExecutionPointCutImpl
+	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getExecutionPointCut()
+	 * @generated
+	 */
+	int EXECUTION_POINT_CUT = 4;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.InitializationPointCutImpl <em>Initialization Point Cut</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.aspectj.impl.InitializationPointCutImpl
+	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getInitializationPointCut()
+	 * @generated
+	 */
+	int INITIALIZATION_POINT_CUT = 7;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.PreInitializationPointCutImpl <em>Pre Initialization Point Cut</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.aspectj.impl.PreInitializationPointCutImpl
+	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getPreInitializationPointCut()
+	 * @generated
+	 */
+	int PRE_INITIALIZATION_POINT_CUT = 6;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.PropertyPointCutImpl <em>Property Point Cut</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.aspectj.impl.PropertyPointCutImpl
+	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getPropertyPointCut()
+	 * @generated
+	 */
+	int PROPERTY_POINT_CUT = 8;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.SetPointCutImpl <em>Set Point Cut</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.aspectj.impl.SetPointCutImpl
+	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getSetPointCut()
+	 * @generated
+	 */
+	int SET_POINT_CUT = 10;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.GetPointCutImpl <em>Get Point Cut</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.aspectj.impl.GetPointCutImpl
+	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getGetPointCut()
+	 * @generated
+	 */
+	int GET_POINT_CUT = 9;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.CallPointCutImpl <em>Call Point Cut</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.aspectj.impl.CallPointCutImpl
+	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getCallPointCut()
+	 * @generated
+	 */
+	int CALL_POINT_CUT = 5;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.WithinCodePointCutImpl <em>Within Code Point Cut</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -287,16 +367,6 @@ public interface AspectJPackage extends EPackage {
 	int WITHIN_CODE_POINT_CUT_OPERATION_COUNT = OPERATIONAL_POINT_CUT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.ExecutionPointCutImpl <em>Execution Point Cut</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.aspectj.impl.ExecutionPointCutImpl
-	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getExecutionPointCut()
-	 * @generated
-	 */
-	int EXECUTION_POINT_CUT = 4;
-
-	/**
 	 * The feature id for the '<em><b>Base Structural Feature</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -331,16 +401,6 @@ public interface AspectJPackage extends EPackage {
 	 * @ordered
 	 */
 	int EXECUTION_POINT_CUT_OPERATION_COUNT = OPERATIONAL_POINT_CUT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.CallPointCutImpl <em>Call Point Cut</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.aspectj.impl.CallPointCutImpl
-	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getCallPointCut()
-	 * @generated
-	 */
-	int CALL_POINT_CUT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Base Structural Feature</b></em>' reference.
@@ -379,16 +439,6 @@ public interface AspectJPackage extends EPackage {
 	int CALL_POINT_CUT_OPERATION_COUNT = OPERATIONAL_POINT_CUT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.PreInitializationPointCutImpl <em>Pre Initialization Point Cut</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.aspectj.impl.PreInitializationPointCutImpl
-	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getPreInitializationPointCut()
-	 * @generated
-	 */
-	int PRE_INITIALIZATION_POINT_CUT = 6;
-
-	/**
 	 * The feature id for the '<em><b>Base Structural Feature</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -423,16 +473,6 @@ public interface AspectJPackage extends EPackage {
 	 * @ordered
 	 */
 	int PRE_INITIALIZATION_POINT_CUT_OPERATION_COUNT = EXECUTION_POINT_CUT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.InitializationPointCutImpl <em>Initialization Point Cut</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.aspectj.impl.InitializationPointCutImpl
-	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getInitializationPointCut()
-	 * @generated
-	 */
-	int INITIALIZATION_POINT_CUT = 7;
 
 	/**
 	 * The feature id for the '<em><b>Base Structural Feature</b></em>' reference.
@@ -471,16 +511,6 @@ public interface AspectJPackage extends EPackage {
 	int INITIALIZATION_POINT_CUT_OPERATION_COUNT = EXECUTION_POINT_CUT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.PropertyPointCutImpl <em>Property Point Cut</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.aspectj.impl.PropertyPointCutImpl
-	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getPropertyPointCut()
-	 * @generated
-	 */
-	int PROPERTY_POINT_CUT = 8;
-
-	/**
 	 * The feature id for the '<em><b>Base Structural Feature</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -515,16 +545,6 @@ public interface AspectJPackage extends EPackage {
 	 * @ordered
 	 */
 	int PROPERTY_POINT_CUT_OPERATION_COUNT = POINT_CUT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.GetPointCutImpl <em>Get Point Cut</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.aspectj.impl.GetPointCutImpl
-	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getGetPointCut()
-	 * @generated
-	 */
-	int GET_POINT_CUT = 9;
 
 	/**
 	 * The feature id for the '<em><b>Base Structural Feature</b></em>' reference.
@@ -563,16 +583,6 @@ public interface AspectJPackage extends EPackage {
 	int GET_POINT_CUT_OPERATION_COUNT = PROPERTY_POINT_CUT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.SetPointCutImpl <em>Set Point Cut</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.aspectj.impl.SetPointCutImpl
-	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getSetPointCut()
-	 * @generated
-	 */
-	int SET_POINT_CUT = 10;
-
-	/**
 	 * The feature id for the '<em><b>Base Structural Feature</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -607,6 +617,26 @@ public interface AspectJPackage extends EPackage {
 	 * @ordered
 	 */
 	int SET_POINT_CUT_OPERATION_COUNT = PROPERTY_POINT_CUT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.ArgumentDefiningPointCutImpl <em>Argument Defining Point Cut</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.aspectj.impl.ArgumentDefiningPointCutImpl
+	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getArgumentDefiningPointCut()
+	 * @generated
+	 */
+	int ARGUMENT_DEFINING_POINT_CUT = 13;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.ThisPointCutImpl <em>This Point Cut</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.aspectj.impl.ThisPointCutImpl
+	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getThisPointCut()
+	 * @generated
+	 */
+	int THIS_POINT_CUT = 12;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.TypePointCutImpl <em>Type Point Cut</em>}' class.
@@ -655,16 +685,6 @@ public interface AspectJPackage extends EPackage {
 	int TYPE_POINT_CUT_OPERATION_COUNT = POINT_CUT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.ThisPointCutImpl <em>This Point Cut</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.aspectj.impl.ThisPointCutImpl
-	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getThisPointCut()
-	 * @generated
-	 */
-	int THIS_POINT_CUT = 12;
-
-	/**
 	 * The feature id for the '<em><b>Base Structural Feature</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -699,16 +719,6 @@ public interface AspectJPackage extends EPackage {
 	 * @ordered
 	 */
 	int THIS_POINT_CUT_OPERATION_COUNT = TYPE_POINT_CUT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.ArgumentDefiningPointCutImpl <em>Argument Defining Point Cut</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.aspectj.impl.ArgumentDefiningPointCutImpl
-	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getArgumentDefiningPointCut()
-	 * @generated
-	 */
-	int ARGUMENT_DEFINING_POINT_CUT = 13;
 
 	/**
 	 * The feature id for the '<em><b>Base Structural Feature</b></em>' reference.
@@ -839,6 +849,76 @@ public interface AspectJPackage extends EPackage {
 	int TARGET_POINT_CUT_OPERATION_COUNT = TYPE_POINT_CUT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.AdviceExecutionPointCutImpl <em>Advice Execution Point Cut</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.aspectj.impl.AdviceExecutionPointCutImpl
+	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getAdviceExecutionPointCut()
+	 * @generated
+	 */
+	int ADVICE_EXECUTION_POINT_CUT = 26;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.AdviceImpl <em>Advice</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.aspectj.impl.AdviceImpl
+	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getAdvice()
+	 * @generated
+	 */
+	int ADVICE = 25;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.StaticInitializationPointCutImpl <em>Static Initialization Point Cut</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.aspectj.impl.StaticInitializationPointCutImpl
+	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getStaticInitializationPointCut()
+	 * @generated
+	 */
+	int STATIC_INITIALIZATION_POINT_CUT = 19;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.ExceptionPointCutImpl <em>Exception Point Cut</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.aspectj.impl.ExceptionPointCutImpl
+	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getExceptionPointCut()
+	 * @generated
+	 */
+	int EXCEPTION_POINT_CUT = 20;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.WithinPointCutImpl <em>Within Point Cut</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.aspectj.impl.WithinPointCutImpl
+	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getWithinPointCut()
+	 * @generated
+	 */
+	int WITHIN_POINT_CUT = 21;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.PointCutDisjunctionImpl <em>Point Cut Disjunction</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.aspectj.impl.PointCutDisjunctionImpl
+	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getPointCutDisjunction()
+	 * @generated
+	 */
+	int POINT_CUT_DISJUNCTION = 22;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.PointCutConjunctionImpl <em>Point Cut Conjunction</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.aspectj.impl.PointCutConjunctionImpl
+	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getPointCutConjunction()
+	 * @generated
+	 */
+	int POINT_CUT_CONJUNCTION = 23;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.PointCutPointCutImpl <em>Point Cut Point Cut</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -931,6 +1011,26 @@ public interface AspectJPackage extends EPackage {
 	int CFLOW_BELOW_POINT_CUT_OPERATION_COUNT = POINT_CUT_POINT_CUT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.CrossCuttingConcernImpl <em>Cross Cutting Concern</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.aspectj.impl.CrossCuttingConcernImpl
+	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getCrossCuttingConcern()
+	 * @generated
+	 */
+	int CROSS_CUTTING_CONCERN = 28;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.PointCutNegationImpl <em>Point Cut Negation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.aspectj.impl.PointCutNegationImpl
+	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getPointCutNegation()
+	 * @generated
+	 */
+	int POINT_CUT_NEGATION = 24;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.CFlowPointCutImpl <em>CFlow Point Cut</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -977,16 +1077,6 @@ public interface AspectJPackage extends EPackage {
 	int CFLOW_POINT_CUT_OPERATION_COUNT = POINT_CUT_POINT_CUT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.StaticInitializationPointCutImpl <em>Static Initialization Point Cut</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.aspectj.impl.StaticInitializationPointCutImpl
-	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getStaticInitializationPointCut()
-	 * @generated
-	 */
-	int STATIC_INITIALIZATION_POINT_CUT = 19;
-
-	/**
 	 * The feature id for the '<em><b>Base Structural Feature</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1021,16 +1111,6 @@ public interface AspectJPackage extends EPackage {
 	 * @ordered
 	 */
 	int STATIC_INITIALIZATION_POINT_CUT_OPERATION_COUNT = TYPE_POINT_CUT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.ExceptionPointCutImpl <em>Exception Point Cut</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.aspectj.impl.ExceptionPointCutImpl
-	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getExceptionPointCut()
-	 * @generated
-	 */
-	int EXCEPTION_POINT_CUT = 20;
 
 	/**
 	 * The feature id for the '<em><b>Base Structural Feature</b></em>' reference.
@@ -1069,16 +1149,6 @@ public interface AspectJPackage extends EPackage {
 	int EXCEPTION_POINT_CUT_OPERATION_COUNT = TYPE_POINT_CUT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.WithinPointCutImpl <em>Within Point Cut</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.aspectj.impl.WithinPointCutImpl
-	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getWithinPointCut()
-	 * @generated
-	 */
-	int WITHIN_POINT_CUT = 21;
-
-	/**
 	 * The feature id for the '<em><b>Base Structural Feature</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1113,16 +1183,6 @@ public interface AspectJPackage extends EPackage {
 	 * @ordered
 	 */
 	int WITHIN_POINT_CUT_OPERATION_COUNT = TYPE_POINT_CUT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.PointCutDisjunctionImpl <em>Point Cut Disjunction</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.aspectj.impl.PointCutDisjunctionImpl
-	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getPointCutDisjunction()
-	 * @generated
-	 */
-	int POINT_CUT_DISJUNCTION = 22;
 
 	/**
 	 * The feature id for the '<em><b>Base Structural Feature</b></em>' reference.
@@ -1161,16 +1221,6 @@ public interface AspectJPackage extends EPackage {
 	int POINT_CUT_DISJUNCTION_OPERATION_COUNT = POINT_CUT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.PointCutConjunctionImpl <em>Point Cut Conjunction</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.aspectj.impl.PointCutConjunctionImpl
-	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getPointCutConjunction()
-	 * @generated
-	 */
-	int POINT_CUT_CONJUNCTION = 23;
-
-	/**
 	 * The feature id for the '<em><b>Base Structural Feature</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1207,16 +1257,6 @@ public interface AspectJPackage extends EPackage {
 	int POINT_CUT_CONJUNCTION_OPERATION_COUNT = POINT_CUT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.PointCutNegationImpl <em>Point Cut Negation</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.aspectj.impl.PointCutNegationImpl
-	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getPointCutNegation()
-	 * @generated
-	 */
-	int POINT_CUT_NEGATION = 24;
-
-	/**
 	 * The feature id for the '<em><b>Base Structural Feature</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1251,16 +1291,6 @@ public interface AspectJPackage extends EPackage {
 	 * @ordered
 	 */
 	int POINT_CUT_NEGATION_OPERATION_COUNT = POINT_CUT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.AdviceImpl <em>Advice</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.aspectj.impl.AdviceImpl
-	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getAdvice()
-	 * @generated
-	 */
-	int ADVICE = 25;
 
 	/**
 	 * The feature id for the '<em><b>Base Behavioral Feature</b></em>' reference.
@@ -1308,16 +1338,6 @@ public interface AspectJPackage extends EPackage {
 	int ADVICE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.AdviceExecutionPointCutImpl <em>Advice Execution Point Cut</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.aspectj.impl.AdviceExecutionPointCutImpl
-	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getAdviceExecutionPointCut()
-	 * @generated
-	 */
-	int ADVICE_EXECUTION_POINT_CUT = 26;
-
-	/**
 	 * The feature id for the '<em><b>Base Structural Feature</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1343,16 +1363,6 @@ public interface AspectJPackage extends EPackage {
 	 * @ordered
 	 */
 	int ADVICE_EXECUTION_POINT_CUT_OPERATION_COUNT = POINT_CUT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.StaticCrossCuttingFeatureImpl <em>Static Cross Cutting Feature</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.aspectj.impl.StaticCrossCuttingFeatureImpl
-	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getStaticCrossCuttingFeature()
-	 * @generated
-	 */
-	int STATIC_CROSS_CUTTING_FEATURE = 27;
 
 	/**
 	 * The feature id for the '<em><b>Base Feature</b></em>' reference.
@@ -1391,16 +1401,6 @@ public interface AspectJPackage extends EPackage {
 	int STATIC_CROSS_CUTTING_FEATURE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.CrossCuttingConcernImpl <em>Cross Cutting Concern</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.aspectj.impl.CrossCuttingConcernImpl
-	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getCrossCuttingConcern()
-	 * @generated
-	 */
-	int CROSS_CUTTING_CONCERN = 28;
-
-	/**
 	 * The feature id for the '<em><b>Base Package</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1428,16 +1428,6 @@ public interface AspectJPackage extends EPackage {
 	int CROSS_CUTTING_CONCERN_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.AspectInstantiationType <em>Aspect Instantiation Type</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.aspectj.AspectInstantiationType
-	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getAspectInstantiationType()
-	 * @generated
-	 */
-	int ASPECT_INSTANTIATION_TYPE = 29;
-
-	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.AdviceExecutionType <em>Advice Execution Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1447,6 +1437,48 @@ public interface AspectJPackage extends EPackage {
 	 */
 	int ADVICE_EXECUTION_TYPE = 30;
 
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.AspectInstantiationType <em>Aspect Instantiation Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.aspectj.AspectInstantiationType
+	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getAspectInstantiationType()
+	 * @generated
+	 */
+	int ASPECT_INSTANTIATION_TYPE = 29;
+
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.StaticCrossCuttingFeature <em>Static Cross Cutting Feature</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Static Cross Cutting Feature</em>'.
+	 * @see org.eclipse.papyrus.aspectj.StaticCrossCuttingFeature
+	 * @generated
+	 */
+	EClass getStaticCrossCuttingFeature();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.eclipse.papyrus.aspectj.StaticCrossCuttingFeature#getOnType <em>On Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>On Type</em>'.
+	 * @see org.eclipse.papyrus.aspectj.StaticCrossCuttingFeature#getOnType()
+	 * @see #getStaticCrossCuttingFeature()
+	 * @generated
+	 */
+	EReference getStaticCrossCuttingFeature_OnType();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.aspectj.StaticCrossCuttingFeature#getBase_Feature <em>Base Feature</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Base Feature</em>'.
+	 * @see org.eclipse.papyrus.aspectj.StaticCrossCuttingFeature#getBase_Feature()
+	 * @see #getStaticCrossCuttingFeature()
+	 * @generated
+	 */
+	EReference getStaticCrossCuttingFeature_Base_Feature();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.Aspect <em>Aspect</em>}'.
@@ -1568,6 +1600,26 @@ public interface AspectJPackage extends EPackage {
 	EReference getPointCut_Base_StructuralFeature();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.InitializationPointCut <em>Initialization Point Cut</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Initialization Point Cut</em>'.
+	 * @see org.eclipse.papyrus.aspectj.InitializationPointCut
+	 * @generated
+	 */
+	EClass getInitializationPointCut();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.ExecutionPointCut <em>Execution Point Cut</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Execution Point Cut</em>'.
+	 * @see org.eclipse.papyrus.aspectj.ExecutionPointCut
+	 * @generated
+	 */
+	EClass getExecutionPointCut();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.OperationalPointCut <em>Operational Point Cut</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1589,36 +1641,6 @@ public interface AspectJPackage extends EPackage {
 	EReference getOperationalPointCut_Operation();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.WithinCodePointCut <em>Within Code Point Cut</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Within Code Point Cut</em>'.
-	 * @see org.eclipse.papyrus.aspectj.WithinCodePointCut
-	 * @generated
-	 */
-	EClass getWithinCodePointCut();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.ExecutionPointCut <em>Execution Point Cut</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Execution Point Cut</em>'.
-	 * @see org.eclipse.papyrus.aspectj.ExecutionPointCut
-	 * @generated
-	 */
-	EClass getExecutionPointCut();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.CallPointCut <em>Call Point Cut</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Call Point Cut</em>'.
-	 * @see org.eclipse.papyrus.aspectj.CallPointCut
-	 * @generated
-	 */
-	EClass getCallPointCut();
-
-	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.PreInitializationPointCut <em>Pre Initialization Point Cut</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1629,14 +1651,14 @@ public interface AspectJPackage extends EPackage {
 	EClass getPreInitializationPointCut();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.InitializationPointCut <em>Initialization Point Cut</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.SetPointCut <em>Set Point Cut</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Initialization Point Cut</em>'.
-	 * @see org.eclipse.papyrus.aspectj.InitializationPointCut
+	 * @return the meta object for class '<em>Set Point Cut</em>'.
+	 * @see org.eclipse.papyrus.aspectj.SetPointCut
 	 * @generated
 	 */
-	EClass getInitializationPointCut();
+	EClass getSetPointCut();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.PropertyPointCut <em>Property Point Cut</em>}'.
@@ -1670,45 +1692,24 @@ public interface AspectJPackage extends EPackage {
 	EClass getGetPointCut();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.SetPointCut <em>Set Point Cut</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.CallPointCut <em>Call Point Cut</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Set Point Cut</em>'.
-	 * @see org.eclipse.papyrus.aspectj.SetPointCut
+	 * @return the meta object for class '<em>Call Point Cut</em>'.
+	 * @see org.eclipse.papyrus.aspectj.CallPointCut
 	 * @generated
 	 */
-	EClass getSetPointCut();
+	EClass getCallPointCut();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.TypePointCut <em>Type Point Cut</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.WithinCodePointCut <em>Within Code Point Cut</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Type Point Cut</em>'.
-	 * @see org.eclipse.papyrus.aspectj.TypePointCut
+	 * @return the meta object for class '<em>Within Code Point Cut</em>'.
+	 * @see org.eclipse.papyrus.aspectj.WithinCodePointCut
 	 * @generated
 	 */
-	EClass getTypePointCut();
-
-	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.papyrus.aspectj.TypePointCut#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Type</em>'.
-	 * @see org.eclipse.papyrus.aspectj.TypePointCut#getType()
-	 * @see #getTypePointCut()
-	 * @generated
-	 */
-	EReference getTypePointCut_Type();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.ThisPointCut <em>This Point Cut</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>This Point Cut</em>'.
-	 * @see org.eclipse.papyrus.aspectj.ThisPointCut
-	 * @generated
-	 */
-	EClass getThisPointCut();
+	EClass getWithinCodePointCut();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.ArgumentDefiningPointCut <em>Argument Defining Point Cut</em>}'.
@@ -1743,6 +1744,37 @@ public interface AspectJPackage extends EPackage {
 	EAttribute getArgumentDefiningPointCut_ArgNames();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.ThisPointCut <em>This Point Cut</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>This Point Cut</em>'.
+	 * @see org.eclipse.papyrus.aspectj.ThisPointCut
+	 * @generated
+	 */
+	EClass getThisPointCut();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.TypePointCut <em>Type Point Cut</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Type Point Cut</em>'.
+	 * @see org.eclipse.papyrus.aspectj.TypePointCut
+	 * @generated
+	 */
+	EClass getTypePointCut();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.eclipse.papyrus.aspectj.TypePointCut#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Type</em>'.
+	 * @see org.eclipse.papyrus.aspectj.TypePointCut#getType()
+	 * @see #getTypePointCut()
+	 * @generated
+	 */
+	EReference getTypePointCut_Type();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.ArgsPointCut <em>Args Point Cut</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1763,45 +1795,57 @@ public interface AspectJPackage extends EPackage {
 	EClass getTargetPointCut();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.PointCutPointCut <em>Point Cut Point Cut</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.AdviceExecutionPointCut <em>Advice Execution Point Cut</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Point Cut Point Cut</em>'.
-	 * @see org.eclipse.papyrus.aspectj.PointCutPointCut
+	 * @return the meta object for class '<em>Advice Execution Point Cut</em>'.
+	 * @see org.eclipse.papyrus.aspectj.AdviceExecutionPointCut
 	 * @generated
 	 */
-	EClass getPointCutPointCut();
+	EClass getAdviceExecutionPointCut();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.aspectj.PointCutPointCut#getSelectedPointCut <em>Selected Point Cut</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.Advice <em>Advice</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Selected Point Cut</em>'.
-	 * @see org.eclipse.papyrus.aspectj.PointCutPointCut#getSelectedPointCut()
-	 * @see #getPointCutPointCut()
+	 * @return the meta object for class '<em>Advice</em>'.
+	 * @see org.eclipse.papyrus.aspectj.Advice
 	 * @generated
 	 */
-	EReference getPointCutPointCut_SelectedPointCut();
+	EClass getAdvice();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.CFlowBelowPointCut <em>CFlow Below Point Cut</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.aspectj.Advice#getAdviceExecution <em>Advice Execution</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>CFlow Below Point Cut</em>'.
-	 * @see org.eclipse.papyrus.aspectj.CFlowBelowPointCut
+	 * @return the meta object for the attribute '<em>Advice Execution</em>'.
+	 * @see org.eclipse.papyrus.aspectj.Advice#getAdviceExecution()
+	 * @see #getAdvice()
 	 * @generated
 	 */
-	EClass getCFlowBelowPointCut();
+	EAttribute getAdvice_AdviceExecution();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.CFlowPointCut <em>CFlow Point Cut</em>}'.
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.aspectj.Advice#getPointcut <em>Pointcut</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>CFlow Point Cut</em>'.
-	 * @see org.eclipse.papyrus.aspectj.CFlowPointCut
+	 * @return the meta object for the reference '<em>Pointcut</em>'.
+	 * @see org.eclipse.papyrus.aspectj.Advice#getPointcut()
+	 * @see #getAdvice()
 	 * @generated
 	 */
-	EClass getCFlowPointCut();
+	EReference getAdvice_Pointcut();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.aspectj.Advice#getBase_BehavioralFeature <em>Base Behavioral Feature</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Base Behavioral Feature</em>'.
+	 * @see org.eclipse.papyrus.aspectj.Advice#getBase_BehavioralFeature()
+	 * @see #getAdvice()
+	 * @generated
+	 */
+	EReference getAdvice_Base_BehavioralFeature();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.StaticInitializationPointCut <em>Static Initialization Point Cut</em>}'.
@@ -1876,110 +1920,35 @@ public interface AspectJPackage extends EPackage {
 	EReference getPointCutConjunction_Composee();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.PointCutNegation <em>Point Cut Negation</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.PointCutPointCut <em>Point Cut Point Cut</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Point Cut Negation</em>'.
-	 * @see org.eclipse.papyrus.aspectj.PointCutNegation
+	 * @return the meta object for class '<em>Point Cut Point Cut</em>'.
+	 * @see org.eclipse.papyrus.aspectj.PointCutPointCut
 	 * @generated
 	 */
-	EClass getPointCutNegation();
+	EClass getPointCutPointCut();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.aspectj.PointCutNegation#getComposee <em>Composee</em>}'.
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.aspectj.PointCutPointCut#getSelectedPointCut <em>Selected Point Cut</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Composee</em>'.
-	 * @see org.eclipse.papyrus.aspectj.PointCutNegation#getComposee()
-	 * @see #getPointCutNegation()
+	 * @return the meta object for the reference '<em>Selected Point Cut</em>'.
+	 * @see org.eclipse.papyrus.aspectj.PointCutPointCut#getSelectedPointCut()
+	 * @see #getPointCutPointCut()
 	 * @generated
 	 */
-	EReference getPointCutNegation_Composee();
+	EReference getPointCutPointCut_SelectedPointCut();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.Advice <em>Advice</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.CFlowBelowPointCut <em>CFlow Below Point Cut</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Advice</em>'.
-	 * @see org.eclipse.papyrus.aspectj.Advice
+	 * @return the meta object for class '<em>CFlow Below Point Cut</em>'.
+	 * @see org.eclipse.papyrus.aspectj.CFlowBelowPointCut
 	 * @generated
 	 */
-	EClass getAdvice();
-
-	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.aspectj.Advice#getBase_BehavioralFeature <em>Base Behavioral Feature</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Base Behavioral Feature</em>'.
-	 * @see org.eclipse.papyrus.aspectj.Advice#getBase_BehavioralFeature()
-	 * @see #getAdvice()
-	 * @generated
-	 */
-	EReference getAdvice_Base_BehavioralFeature();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.aspectj.Advice#getAdviceExecution <em>Advice Execution</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Advice Execution</em>'.
-	 * @see org.eclipse.papyrus.aspectj.Advice#getAdviceExecution()
-	 * @see #getAdvice()
-	 * @generated
-	 */
-	EAttribute getAdvice_AdviceExecution();
-
-	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.aspectj.Advice#getPointcut <em>Pointcut</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Pointcut</em>'.
-	 * @see org.eclipse.papyrus.aspectj.Advice#getPointcut()
-	 * @see #getAdvice()
-	 * @generated
-	 */
-	EReference getAdvice_Pointcut();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.AdviceExecutionPointCut <em>Advice Execution Point Cut</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Advice Execution Point Cut</em>'.
-	 * @see org.eclipse.papyrus.aspectj.AdviceExecutionPointCut
-	 * @generated
-	 */
-	EClass getAdviceExecutionPointCut();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.StaticCrossCuttingFeature <em>Static Cross Cutting Feature</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Static Cross Cutting Feature</em>'.
-	 * @see org.eclipse.papyrus.aspectj.StaticCrossCuttingFeature
-	 * @generated
-	 */
-	EClass getStaticCrossCuttingFeature();
-
-	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.aspectj.StaticCrossCuttingFeature#getBase_Feature <em>Base Feature</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Base Feature</em>'.
-	 * @see org.eclipse.papyrus.aspectj.StaticCrossCuttingFeature#getBase_Feature()
-	 * @see #getStaticCrossCuttingFeature()
-	 * @generated
-	 */
-	EReference getStaticCrossCuttingFeature_Base_Feature();
-
-	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.papyrus.aspectj.StaticCrossCuttingFeature#getOnType <em>On Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>On Type</em>'.
-	 * @see org.eclipse.papyrus.aspectj.StaticCrossCuttingFeature#getOnType()
-	 * @see #getStaticCrossCuttingFeature()
-	 * @generated
-	 */
-	EReference getStaticCrossCuttingFeature_OnType();
+	EClass getCFlowBelowPointCut();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.CrossCuttingConcern <em>Cross Cutting Concern</em>}'.
@@ -2003,14 +1972,35 @@ public interface AspectJPackage extends EPackage {
 	EReference getCrossCuttingConcern_Base_Package();
 
 	/**
-	 * Returns the meta object for enum '{@link org.eclipse.papyrus.aspectj.AspectInstantiationType <em>Aspect Instantiation Type</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.PointCutNegation <em>Point Cut Negation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Aspect Instantiation Type</em>'.
-	 * @see org.eclipse.papyrus.aspectj.AspectInstantiationType
+	 * @return the meta object for class '<em>Point Cut Negation</em>'.
+	 * @see org.eclipse.papyrus.aspectj.PointCutNegation
 	 * @generated
 	 */
-	EEnum getAspectInstantiationType();
+	EClass getPointCutNegation();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.aspectj.PointCutNegation#getComposee <em>Composee</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Composee</em>'.
+	 * @see org.eclipse.papyrus.aspectj.PointCutNegation#getComposee()
+	 * @see #getPointCutNegation()
+	 * @generated
+	 */
+	EReference getPointCutNegation_Composee();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.CFlowPointCut <em>CFlow Point Cut</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>CFlow Point Cut</em>'.
+	 * @see org.eclipse.papyrus.aspectj.CFlowPointCut
+	 * @generated
+	 */
+	EClass getCFlowPointCut();
 
 	/**
 	 * Returns the meta object for enum '{@link org.eclipse.papyrus.aspectj.AdviceExecutionType <em>Advice Execution Type</em>}'.
@@ -2021,6 +2011,16 @@ public interface AspectJPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getAdviceExecutionType();
+
+	/**
+	 * Returns the meta object for enum '{@link org.eclipse.papyrus.aspectj.AspectInstantiationType <em>Aspect Instantiation Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Aspect Instantiation Type</em>'.
+	 * @see org.eclipse.papyrus.aspectj.AspectInstantiationType
+	 * @generated
+	 */
+	EEnum getAspectInstantiationType();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -2045,6 +2045,32 @@ public interface AspectJPackage extends EPackage {
 	 * @generated
 	 */
 	interface Literals {
+		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.StaticCrossCuttingFeatureImpl <em>Static Cross Cutting Feature</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.aspectj.impl.StaticCrossCuttingFeatureImpl
+		 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getStaticCrossCuttingFeature()
+		 * @generated
+		 */
+		EClass STATIC_CROSS_CUTTING_FEATURE = eINSTANCE.getStaticCrossCuttingFeature();
+
+		/**
+		 * The meta object literal for the '<em><b>On Type</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STATIC_CROSS_CUTTING_FEATURE__ON_TYPE = eINSTANCE.getStaticCrossCuttingFeature_OnType();
+
+		/**
+		 * The meta object literal for the '<em><b>Base Feature</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STATIC_CROSS_CUTTING_FEATURE__BASE_FEATURE = eINSTANCE.getStaticCrossCuttingFeature_Base_Feature();
+
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.AspectImpl <em>Aspect</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -2138,6 +2164,26 @@ public interface AspectJPackage extends EPackage {
 		EReference POINT_CUT__BASE_STRUCTURAL_FEATURE = eINSTANCE.getPointCut_Base_StructuralFeature();
 
 		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.InitializationPointCutImpl <em>Initialization Point Cut</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.aspectj.impl.InitializationPointCutImpl
+		 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getInitializationPointCut()
+		 * @generated
+		 */
+		EClass INITIALIZATION_POINT_CUT = eINSTANCE.getInitializationPointCut();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.ExecutionPointCutImpl <em>Execution Point Cut</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.aspectj.impl.ExecutionPointCutImpl
+		 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getExecutionPointCut()
+		 * @generated
+		 */
+		EClass EXECUTION_POINT_CUT = eINSTANCE.getExecutionPointCut();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.OperationalPointCutImpl <em>Operational Point Cut</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2156,36 +2202,6 @@ public interface AspectJPackage extends EPackage {
 		EReference OPERATIONAL_POINT_CUT__OPERATION = eINSTANCE.getOperationalPointCut_Operation();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.WithinCodePointCutImpl <em>Within Code Point Cut</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.aspectj.impl.WithinCodePointCutImpl
-		 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getWithinCodePointCut()
-		 * @generated
-		 */
-		EClass WITHIN_CODE_POINT_CUT = eINSTANCE.getWithinCodePointCut();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.ExecutionPointCutImpl <em>Execution Point Cut</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.aspectj.impl.ExecutionPointCutImpl
-		 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getExecutionPointCut()
-		 * @generated
-		 */
-		EClass EXECUTION_POINT_CUT = eINSTANCE.getExecutionPointCut();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.CallPointCutImpl <em>Call Point Cut</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.aspectj.impl.CallPointCutImpl
-		 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getCallPointCut()
-		 * @generated
-		 */
-		EClass CALL_POINT_CUT = eINSTANCE.getCallPointCut();
-
-		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.PreInitializationPointCutImpl <em>Pre Initialization Point Cut</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2196,14 +2212,14 @@ public interface AspectJPackage extends EPackage {
 		EClass PRE_INITIALIZATION_POINT_CUT = eINSTANCE.getPreInitializationPointCut();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.InitializationPointCutImpl <em>Initialization Point Cut</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.SetPointCutImpl <em>Set Point Cut</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.aspectj.impl.InitializationPointCutImpl
-		 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getInitializationPointCut()
+		 * @see org.eclipse.papyrus.aspectj.impl.SetPointCutImpl
+		 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getSetPointCut()
 		 * @generated
 		 */
-		EClass INITIALIZATION_POINT_CUT = eINSTANCE.getInitializationPointCut();
+		EClass SET_POINT_CUT = eINSTANCE.getSetPointCut();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.PropertyPointCutImpl <em>Property Point Cut</em>}' class.
@@ -2234,42 +2250,24 @@ public interface AspectJPackage extends EPackage {
 		EClass GET_POINT_CUT = eINSTANCE.getGetPointCut();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.SetPointCutImpl <em>Set Point Cut</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.CallPointCutImpl <em>Call Point Cut</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.aspectj.impl.SetPointCutImpl
-		 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getSetPointCut()
+		 * @see org.eclipse.papyrus.aspectj.impl.CallPointCutImpl
+		 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getCallPointCut()
 		 * @generated
 		 */
-		EClass SET_POINT_CUT = eINSTANCE.getSetPointCut();
+		EClass CALL_POINT_CUT = eINSTANCE.getCallPointCut();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.TypePointCutImpl <em>Type Point Cut</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.WithinCodePointCutImpl <em>Within Code Point Cut</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.aspectj.impl.TypePointCutImpl
-		 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getTypePointCut()
+		 * @see org.eclipse.papyrus.aspectj.impl.WithinCodePointCutImpl
+		 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getWithinCodePointCut()
 		 * @generated
 		 */
-		EClass TYPE_POINT_CUT = eINSTANCE.getTypePointCut();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TYPE_POINT_CUT__TYPE = eINSTANCE.getTypePointCut_Type();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.ThisPointCutImpl <em>This Point Cut</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.aspectj.impl.ThisPointCutImpl
-		 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getThisPointCut()
-		 * @generated
-		 */
-		EClass THIS_POINT_CUT = eINSTANCE.getThisPointCut();
+		EClass WITHIN_CODE_POINT_CUT = eINSTANCE.getWithinCodePointCut();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.ArgumentDefiningPointCutImpl <em>Argument Defining Point Cut</em>}' class.
@@ -2298,6 +2296,34 @@ public interface AspectJPackage extends EPackage {
 		EAttribute ARGUMENT_DEFINING_POINT_CUT__ARG_NAMES = eINSTANCE.getArgumentDefiningPointCut_ArgNames();
 
 		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.ThisPointCutImpl <em>This Point Cut</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.aspectj.impl.ThisPointCutImpl
+		 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getThisPointCut()
+		 * @generated
+		 */
+		EClass THIS_POINT_CUT = eINSTANCE.getThisPointCut();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.TypePointCutImpl <em>Type Point Cut</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.aspectj.impl.TypePointCutImpl
+		 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getTypePointCut()
+		 * @generated
+		 */
+		EClass TYPE_POINT_CUT = eINSTANCE.getTypePointCut();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TYPE_POINT_CUT__TYPE = eINSTANCE.getTypePointCut_Type();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.ArgsPointCutImpl <em>Args Point Cut</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2318,42 +2344,48 @@ public interface AspectJPackage extends EPackage {
 		EClass TARGET_POINT_CUT = eINSTANCE.getTargetPointCut();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.PointCutPointCutImpl <em>Point Cut Point Cut</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.AdviceExecutionPointCutImpl <em>Advice Execution Point Cut</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.aspectj.impl.PointCutPointCutImpl
-		 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getPointCutPointCut()
+		 * @see org.eclipse.papyrus.aspectj.impl.AdviceExecutionPointCutImpl
+		 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getAdviceExecutionPointCut()
 		 * @generated
 		 */
-		EClass POINT_CUT_POINT_CUT = eINSTANCE.getPointCutPointCut();
+		EClass ADVICE_EXECUTION_POINT_CUT = eINSTANCE.getAdviceExecutionPointCut();
 
 		/**
-		 * The meta object literal for the '<em><b>Selected Point Cut</b></em>' reference feature.
+		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.AdviceImpl <em>Advice</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.aspectj.impl.AdviceImpl
+		 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getAdvice()
 		 * @generated
 		 */
-		EReference POINT_CUT_POINT_CUT__SELECTED_POINT_CUT = eINSTANCE.getPointCutPointCut_SelectedPointCut();
+		EClass ADVICE = eINSTANCE.getAdvice();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.CFlowBelowPointCutImpl <em>CFlow Below Point Cut</em>}' class.
+		 * The meta object literal for the '<em><b>Advice Execution</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.aspectj.impl.CFlowBelowPointCutImpl
-		 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getCFlowBelowPointCut()
 		 * @generated
 		 */
-		EClass CFLOW_BELOW_POINT_CUT = eINSTANCE.getCFlowBelowPointCut();
+		EAttribute ADVICE__ADVICE_EXECUTION = eINSTANCE.getAdvice_AdviceExecution();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.CFlowPointCutImpl <em>CFlow Point Cut</em>}' class.
+		 * The meta object literal for the '<em><b>Pointcut</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.aspectj.impl.CFlowPointCutImpl
-		 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getCFlowPointCut()
 		 * @generated
 		 */
-		EClass CFLOW_POINT_CUT = eINSTANCE.getCFlowPointCut();
+		EReference ADVICE__POINTCUT = eINSTANCE.getAdvice_Pointcut();
+
+		/**
+		 * The meta object literal for the '<em><b>Base Behavioral Feature</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ADVICE__BASE_BEHAVIORAL_FEATURE = eINSTANCE.getAdvice_Base_BehavioralFeature();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.StaticInitializationPointCutImpl <em>Static Initialization Point Cut</em>}' class.
@@ -2422,92 +2454,32 @@ public interface AspectJPackage extends EPackage {
 		EReference POINT_CUT_CONJUNCTION__COMPOSEE = eINSTANCE.getPointCutConjunction_Composee();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.PointCutNegationImpl <em>Point Cut Negation</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.PointCutPointCutImpl <em>Point Cut Point Cut</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.aspectj.impl.PointCutNegationImpl
-		 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getPointCutNegation()
+		 * @see org.eclipse.papyrus.aspectj.impl.PointCutPointCutImpl
+		 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getPointCutPointCut()
 		 * @generated
 		 */
-		EClass POINT_CUT_NEGATION = eINSTANCE.getPointCutNegation();
+		EClass POINT_CUT_POINT_CUT = eINSTANCE.getPointCutPointCut();
 
 		/**
-		 * The meta object literal for the '<em><b>Composee</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Selected Point Cut</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference POINT_CUT_NEGATION__COMPOSEE = eINSTANCE.getPointCutNegation_Composee();
+		EReference POINT_CUT_POINT_CUT__SELECTED_POINT_CUT = eINSTANCE.getPointCutPointCut_SelectedPointCut();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.AdviceImpl <em>Advice</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.CFlowBelowPointCutImpl <em>CFlow Below Point Cut</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.aspectj.impl.AdviceImpl
-		 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getAdvice()
+		 * @see org.eclipse.papyrus.aspectj.impl.CFlowBelowPointCutImpl
+		 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getCFlowBelowPointCut()
 		 * @generated
 		 */
-		EClass ADVICE = eINSTANCE.getAdvice();
-
-		/**
-		 * The meta object literal for the '<em><b>Base Behavioral Feature</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ADVICE__BASE_BEHAVIORAL_FEATURE = eINSTANCE.getAdvice_Base_BehavioralFeature();
-
-		/**
-		 * The meta object literal for the '<em><b>Advice Execution</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ADVICE__ADVICE_EXECUTION = eINSTANCE.getAdvice_AdviceExecution();
-
-		/**
-		 * The meta object literal for the '<em><b>Pointcut</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ADVICE__POINTCUT = eINSTANCE.getAdvice_Pointcut();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.AdviceExecutionPointCutImpl <em>Advice Execution Point Cut</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.aspectj.impl.AdviceExecutionPointCutImpl
-		 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getAdviceExecutionPointCut()
-		 * @generated
-		 */
-		EClass ADVICE_EXECUTION_POINT_CUT = eINSTANCE.getAdviceExecutionPointCut();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.StaticCrossCuttingFeatureImpl <em>Static Cross Cutting Feature</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.aspectj.impl.StaticCrossCuttingFeatureImpl
-		 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getStaticCrossCuttingFeature()
-		 * @generated
-		 */
-		EClass STATIC_CROSS_CUTTING_FEATURE = eINSTANCE.getStaticCrossCuttingFeature();
-
-		/**
-		 * The meta object literal for the '<em><b>Base Feature</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference STATIC_CROSS_CUTTING_FEATURE__BASE_FEATURE = eINSTANCE.getStaticCrossCuttingFeature_Base_Feature();
-
-		/**
-		 * The meta object literal for the '<em><b>On Type</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference STATIC_CROSS_CUTTING_FEATURE__ON_TYPE = eINSTANCE.getStaticCrossCuttingFeature_OnType();
+		EClass CFLOW_BELOW_POINT_CUT = eINSTANCE.getCFlowBelowPointCut();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.CrossCuttingConcernImpl <em>Cross Cutting Concern</em>}' class.
@@ -2528,14 +2500,32 @@ public interface AspectJPackage extends EPackage {
 		EReference CROSS_CUTTING_CONCERN__BASE_PACKAGE = eINSTANCE.getCrossCuttingConcern_Base_Package();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.AspectInstantiationType <em>Aspect Instantiation Type</em>}' enum.
+		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.PointCutNegationImpl <em>Point Cut Negation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.aspectj.AspectInstantiationType
-		 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getAspectInstantiationType()
+		 * @see org.eclipse.papyrus.aspectj.impl.PointCutNegationImpl
+		 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getPointCutNegation()
 		 * @generated
 		 */
-		EEnum ASPECT_INSTANTIATION_TYPE = eINSTANCE.getAspectInstantiationType();
+		EClass POINT_CUT_NEGATION = eINSTANCE.getPointCutNegation();
+
+		/**
+		 * The meta object literal for the '<em><b>Composee</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference POINT_CUT_NEGATION__COMPOSEE = eINSTANCE.getPointCutNegation_Composee();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.CFlowPointCutImpl <em>CFlow Point Cut</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.aspectj.impl.CFlowPointCutImpl
+		 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getCFlowPointCut()
+		 * @generated
+		 */
+		EClass CFLOW_POINT_CUT = eINSTANCE.getCFlowPointCut();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.AdviceExecutionType <em>Advice Execution Type</em>}' enum.
@@ -2546,6 +2536,16 @@ public interface AspectJPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum ADVICE_EXECUTION_TYPE = eINSTANCE.getAdviceExecutionType();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.AspectInstantiationType <em>Aspect Instantiation Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.aspectj.AspectInstantiationType
+		 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getAspectInstantiationType()
+		 * @generated
+		 */
+		EEnum ASPECT_INSTANTIATION_TYPE = eINSTANCE.getAspectInstantiationType();
 
 	}
 
