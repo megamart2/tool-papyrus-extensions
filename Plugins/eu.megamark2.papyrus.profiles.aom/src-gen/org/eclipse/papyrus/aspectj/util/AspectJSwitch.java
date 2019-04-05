@@ -84,6 +84,40 @@ public class AspectJSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case AspectJPackage.POINT_CUT_DISJUCTION: {
+				PointCutDisjuction pointCutDisjuction = (PointCutDisjuction)theEObject;
+				T result = casePointCutDisjuction(pointCutDisjuction);
+				if (result == null) result = casePointCut(pointCutDisjuction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AspectJPackage.POINT_CUT_CONJUCTION: {
+				PointCutConjuction pointCutConjuction = (PointCutConjuction)theEObject;
+				T result = casePointCutConjuction(pointCutConjuction);
+				if (result == null) result = casePointCut(pointCutConjuction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AspectJPackage.POINT_CUT_NEGATION: {
+				PointCutNegation pointCutNegation = (PointCutNegation)theEObject;
+				T result = casePointCutNegation(pointCutNegation);
+				if (result == null) result = casePointCut(pointCutNegation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AspectJPackage.ADVICE: {
+				Advice advice = (Advice)theEObject;
+				T result = caseAdvice(advice);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AspectJPackage.POINT_CUT_POINT_CUT: {
+				PointCutPointCut pointCutPointCut = (PointCutPointCut)theEObject;
+				T result = casePointCutPointCut(pointCutPointCut);
+				if (result == null) result = casePointCut(pointCutPointCut);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case AspectJPackage.INITIALIZATION_POINT_CUT: {
 				InitializationPointCut initializationPointCut = (InitializationPointCut)theEObject;
 				T result = caseInitializationPointCut(initializationPointCut);
@@ -165,8 +199,8 @@ public class AspectJSwitch<T> extends Switch<T> {
 			case AspectJPackage.THIS_POINT_CUT: {
 				ThisPointCut thisPointCut = (ThisPointCut)theEObject;
 				T result = caseThisPointCut(thisPointCut);
-				if (result == null) result = caseArgumentDefiningPointCut(thisPointCut);
 				if (result == null) result = caseTypePointCut(thisPointCut);
+				if (result == null) result = caseArgumentDefiningPointCut(thisPointCut);
 				if (result == null) result = casePointCut(thisPointCut);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -181,8 +215,8 @@ public class AspectJSwitch<T> extends Switch<T> {
 			case AspectJPackage.ARGS_POINT_CUT: {
 				ArgsPointCut argsPointCut = (ArgsPointCut)theEObject;
 				T result = caseArgsPointCut(argsPointCut);
-				if (result == null) result = caseArgumentDefiningPointCut(argsPointCut);
 				if (result == null) result = caseTypePointCut(argsPointCut);
+				if (result == null) result = caseArgumentDefiningPointCut(argsPointCut);
 				if (result == null) result = casePointCut(argsPointCut);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -190,8 +224,8 @@ public class AspectJSwitch<T> extends Switch<T> {
 			case AspectJPackage.TARGET_POINT_CUT: {
 				TargetPointCut targetPointCut = (TargetPointCut)theEObject;
 				T result = caseTargetPointCut(targetPointCut);
-				if (result == null) result = caseArgumentDefiningPointCut(targetPointCut);
 				if (result == null) result = caseTypePointCut(targetPointCut);
+				if (result == null) result = caseArgumentDefiningPointCut(targetPointCut);
 				if (result == null) result = casePointCut(targetPointCut);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -200,12 +234,6 @@ public class AspectJSwitch<T> extends Switch<T> {
 				AdviceExecutionPointCut adviceExecutionPointCut = (AdviceExecutionPointCut)theEObject;
 				T result = caseAdviceExecutionPointCut(adviceExecutionPointCut);
 				if (result == null) result = casePointCut(adviceExecutionPointCut);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case AspectJPackage.ADVICE: {
-				Advice advice = (Advice)theEObject;
-				T result = caseAdvice(advice);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -233,13 +261,6 @@ public class AspectJSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case AspectJPackage.POINT_CUT_POINT_CUT: {
-				PointCutPointCut pointCutPointCut = (PointCutPointCut)theEObject;
-				T result = casePointCutPointCut(pointCutPointCut);
-				if (result == null) result = casePointCut(pointCutPointCut);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case AspectJPackage.CFLOW_BELOW_POINT_CUT: {
 				CFlowBelowPointCut cFlowBelowPointCut = (CFlowBelowPointCut)theEObject;
 				T result = caseCFlowBelowPointCut(cFlowBelowPointCut);
@@ -254,32 +275,11 @@ public class AspectJSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case AspectJPackage.POINT_CUT_DISJUCTION: {
-				PointCutDisjuction pointCutDisjuction = (PointCutDisjuction)theEObject;
-				T result = casePointCutDisjuction(pointCutDisjuction);
-				if (result == null) result = casePointCut(pointCutDisjuction);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case AspectJPackage.POINT_CUT_NEGATION: {
-				PointCutNegation pointCutNegation = (PointCutNegation)theEObject;
-				T result = casePointCutNegation(pointCutNegation);
-				if (result == null) result = casePointCut(pointCutNegation);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case AspectJPackage.CFLOW_POINT_CUT: {
 				CFlowPointCut cFlowPointCut = (CFlowPointCut)theEObject;
 				T result = caseCFlowPointCut(cFlowPointCut);
 				if (result == null) result = casePointCutPointCut(cFlowPointCut);
 				if (result == null) result = casePointCut(cFlowPointCut);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case AspectJPackage.POINT_CUT_CONJUCTION: {
-				PointCutConjuction pointCutConjuction = (PointCutConjuction)theEObject;
-				T result = casePointCutConjuction(pointCutConjuction);
-				if (result == null) result = casePointCut(pointCutConjuction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

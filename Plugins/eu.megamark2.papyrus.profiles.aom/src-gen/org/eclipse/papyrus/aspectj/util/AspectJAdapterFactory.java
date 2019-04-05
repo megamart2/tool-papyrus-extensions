@@ -80,6 +80,26 @@ public class AspectJAdapterFactory extends AdapterFactoryImpl {
 				return createPointCutAdapter();
 			}
 			@Override
+			public Adapter casePointCutDisjuction(PointCutDisjuction object) {
+				return createPointCutDisjuctionAdapter();
+			}
+			@Override
+			public Adapter casePointCutConjuction(PointCutConjuction object) {
+				return createPointCutConjuctionAdapter();
+			}
+			@Override
+			public Adapter casePointCutNegation(PointCutNegation object) {
+				return createPointCutNegationAdapter();
+			}
+			@Override
+			public Adapter caseAdvice(Advice object) {
+				return createAdviceAdapter();
+			}
+			@Override
+			public Adapter casePointCutPointCut(PointCutPointCut object) {
+				return createPointCutPointCutAdapter();
+			}
+			@Override
 			public Adapter caseInitializationPointCut(InitializationPointCut object) {
 				return createInitializationPointCutAdapter();
 			}
@@ -140,10 +160,6 @@ public class AspectJAdapterFactory extends AdapterFactoryImpl {
 				return createAdviceExecutionPointCutAdapter();
 			}
 			@Override
-			public Adapter caseAdvice(Advice object) {
-				return createAdviceAdapter();
-			}
-			@Override
 			public Adapter caseStaticInitializationPointCut(StaticInitializationPointCut object) {
 				return createStaticInitializationPointCutAdapter();
 			}
@@ -156,10 +172,6 @@ public class AspectJAdapterFactory extends AdapterFactoryImpl {
 				return createWithinPointCutAdapter();
 			}
 			@Override
-			public Adapter casePointCutPointCut(PointCutPointCut object) {
-				return createPointCutPointCutAdapter();
-			}
-			@Override
 			public Adapter caseCFlowBelowPointCut(CFlowBelowPointCut object) {
 				return createCFlowBelowPointCutAdapter();
 			}
@@ -168,20 +180,8 @@ public class AspectJAdapterFactory extends AdapterFactoryImpl {
 				return createCrossCuttingConcernAdapter();
 			}
 			@Override
-			public Adapter casePointCutDisjuction(PointCutDisjuction object) {
-				return createPointCutDisjuctionAdapter();
-			}
-			@Override
-			public Adapter casePointCutNegation(PointCutNegation object) {
-				return createPointCutNegationAdapter();
-			}
-			@Override
 			public Adapter caseCFlowPointCut(CFlowPointCut object) {
 				return createCFlowPointCutAdapter();
-			}
-			@Override
-			public Adapter casePointCutConjuction(PointCutConjuction object) {
-				return createPointCutConjuctionAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {

@@ -13,5 +13,5 @@ package org.eclipse.papyrus.aspectj;
  * @model
  * @generated
  */
-public interface TargetPointCut extends ArgumentDefiningPointCut, TypePointCut {
+public interface TargetPointCut extends TypePointCut, ArgumentDefiningPointCut {
 } // TargetPointCut

@@ -22,6 +22,7 @@ package org.eclipse.papyrus.aspectj;
 public interface PointCutPointCut extends PointCut {
 	/**
 	 * Returns the value of the '<em><b>Selected Point Cut</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.papyrus.aspectj.PointCut#getSelectedBy <em>Selected By</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Selected Point Cut</em>' reference isn't clear,
@@ -31,7 +32,8 @@ public interface PointCutPointCut extends PointCut {
 	 * @return the value of the '<em>Selected Point Cut</em>' reference.
 	 * @see #setSelectedPointCut(PointCut)
 	 * @see org.eclipse.papyrus.aspectj.AspectJPackage#getPointCutPointCut_SelectedPointCut()
-	 * @model required="true" ordered="false"
+	 * @see org.eclipse.papyrus.aspectj.PointCut#getSelectedBy
+	 * @model opposite="selectedBy" required="true" ordered="false"
 	 * @generated
 	 */
 	PointCut getSelectedPointCut();

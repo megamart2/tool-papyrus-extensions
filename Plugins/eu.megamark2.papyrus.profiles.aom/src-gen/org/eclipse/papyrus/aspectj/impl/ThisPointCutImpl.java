@@ -9,13 +9,11 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.papyrus.aspectj.ArgumentDefiningPointCut;
 import org.eclipse.papyrus.aspectj.AspectJPackage;
-import org.eclipse.papyrus.aspectj.PointCut;
 import org.eclipse.papyrus.aspectj.ThisPointCut;
-import org.eclipse.papyrus.aspectj.TypePointCut;
 import org.eclipse.uml2.uml.StructuralFeature;
-import org.eclipse.uml2.uml.Type;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,32 +23,31 @@ import org.eclipse.uml2.uml.Type;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.papyrus.aspectj.impl.ThisPointCutImpl#getBase_PointCut_StructuralFeature <em>Base Point Cut Structural Feature</em>}</li>
- *   <li>{@link org.eclipse.papyrus.aspectj.impl.ThisPointCutImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.aspectj.impl.ThisPointCutImpl#getBase_StructuralFeature <em>Base Structural Feature</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.aspectj.impl.ThisPointCutImpl#getArgNames <em>Arg Names</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ThisPointCutImpl extends ArgumentDefiningPointCutImpl implements ThisPointCut {
+public class ThisPointCutImpl extends TypePointCutImpl implements ThisPointCut {
 	/**
-	 * The cached value of the '{@link #getBase_PointCut_StructuralFeature() <em>Base Point Cut Structural Feature</em>}' reference.
+	 * The cached value of the '{@link #getBase_StructuralFeature() <em>Base Structural Feature</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBase_PointCut_StructuralFeature()
+	 * @see #getBase_StructuralFeature()
 	 * @generated
 	 * @ordered
 	 */
-	protected StructuralFeature base_PointCut_StructuralFeature;
+	protected StructuralFeature base_StructuralFeature;
 	/**
-	 * The cached value of the '{@link #getType() <em>Type</em>}' reference list.
+	 * The cached value of the '{@link #getArgNames() <em>Arg Names</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getType()
+	 * @see #getArgNames()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Type> type;
-
+	protected EList<String> argNames;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -75,16 +72,16 @@ public class ThisPointCutImpl extends ArgumentDefiningPointCutImpl implements Th
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public StructuralFeature getBase_PointCut_StructuralFeature() {
-		if (base_PointCut_StructuralFeature != null && base_PointCut_StructuralFeature.eIsProxy()) {
-			InternalEObject oldBase_PointCut_StructuralFeature = (InternalEObject)base_PointCut_StructuralFeature;
-			base_PointCut_StructuralFeature = (StructuralFeature)eResolveProxy(oldBase_PointCut_StructuralFeature);
-			if (base_PointCut_StructuralFeature != oldBase_PointCut_StructuralFeature) {
+	public StructuralFeature getBase_StructuralFeature() {
+		if (base_StructuralFeature != null && base_StructuralFeature.eIsProxy()) {
+			InternalEObject oldBase_StructuralFeature = (InternalEObject)base_StructuralFeature;
+			base_StructuralFeature = (StructuralFeature)eResolveProxy(oldBase_StructuralFeature);
+			if (base_StructuralFeature != oldBase_StructuralFeature) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AspectJPackage.THIS_POINT_CUT__BASE_POINT_CUT_STRUCTURAL_FEATURE, oldBase_PointCut_StructuralFeature, base_PointCut_StructuralFeature));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AspectJPackage.THIS_POINT_CUT__BASE_STRUCTURAL_FEATURE, oldBase_StructuralFeature, base_StructuralFeature));
 			}
 		}
-		return base_PointCut_StructuralFeature;
+		return base_StructuralFeature;
 	}
 
 	/**
@@ -92,8 +89,8 @@ public class ThisPointCutImpl extends ArgumentDefiningPointCutImpl implements Th
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public StructuralFeature basicGetBase_PointCut_StructuralFeature() {
-		return base_PointCut_StructuralFeature;
+	public StructuralFeature basicGetBase_StructuralFeature() {
+		return base_StructuralFeature;
 	}
 
 	/**
@@ -101,11 +98,11 @@ public class ThisPointCutImpl extends ArgumentDefiningPointCutImpl implements Th
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBase_PointCut_StructuralFeature(StructuralFeature newBase_PointCut_StructuralFeature) {
-		StructuralFeature oldBase_PointCut_StructuralFeature = base_PointCut_StructuralFeature;
-		base_PointCut_StructuralFeature = newBase_PointCut_StructuralFeature;
+	public void setBase_StructuralFeature(StructuralFeature newBase_StructuralFeature) {
+		StructuralFeature oldBase_StructuralFeature = base_StructuralFeature;
+		base_StructuralFeature = newBase_StructuralFeature;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AspectJPackage.THIS_POINT_CUT__BASE_POINT_CUT_STRUCTURAL_FEATURE, oldBase_PointCut_StructuralFeature, base_PointCut_StructuralFeature));
+			eNotify(new ENotificationImpl(this, Notification.SET, AspectJPackage.THIS_POINT_CUT__BASE_STRUCTURAL_FEATURE, oldBase_StructuralFeature, base_StructuralFeature));
 	}
 
 	/**
@@ -113,36 +110,11 @@ public class ThisPointCutImpl extends ArgumentDefiningPointCutImpl implements Th
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Type> getType() {
-		if (type == null) {
-			type = new EObjectResolvingEList<Type>(Type.class, this, AspectJPackage.THIS_POINT_CUT__TYPE);
+	public EList<String> getArgNames() {
+		if (argNames == null) {
+			argNames = new EDataTypeUniqueEList<String>(String.class, this, AspectJPackage.THIS_POINT_CUT__ARG_NAMES);
 		}
-		return type;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Type getType(String name) {
-		return getType(name, false, null);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Type getType(String name, boolean ignoreCase, EClass eClass) {
-		typeLoop: for (Type type : getType()) {
-			if (eClass != null && !eClass.isInstance(type))
-				continue typeLoop;
-			if (name != null && !(ignoreCase ? name.equalsIgnoreCase(type.getName()) : name.equals(type.getName())))
-				continue typeLoop;
-			return type;
-		}
-		return null;
+		return argNames;
 	}
 
 	/**
@@ -153,11 +125,11 @@ public class ThisPointCutImpl extends ArgumentDefiningPointCutImpl implements Th
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case AspectJPackage.THIS_POINT_CUT__BASE_POINT_CUT_STRUCTURAL_FEATURE:
-				if (resolve) return getBase_PointCut_StructuralFeature();
-				return basicGetBase_PointCut_StructuralFeature();
-			case AspectJPackage.THIS_POINT_CUT__TYPE:
-				return getType();
+			case AspectJPackage.THIS_POINT_CUT__BASE_STRUCTURAL_FEATURE:
+				if (resolve) return getBase_StructuralFeature();
+				return basicGetBase_StructuralFeature();
+			case AspectJPackage.THIS_POINT_CUT__ARG_NAMES:
+				return getArgNames();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -171,12 +143,12 @@ public class ThisPointCutImpl extends ArgumentDefiningPointCutImpl implements Th
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case AspectJPackage.THIS_POINT_CUT__BASE_POINT_CUT_STRUCTURAL_FEATURE:
-				setBase_PointCut_StructuralFeature((StructuralFeature)newValue);
+			case AspectJPackage.THIS_POINT_CUT__BASE_STRUCTURAL_FEATURE:
+				setBase_StructuralFeature((StructuralFeature)newValue);
 				return;
-			case AspectJPackage.THIS_POINT_CUT__TYPE:
-				getType().clear();
-				getType().addAll((Collection<? extends Type>)newValue);
+			case AspectJPackage.THIS_POINT_CUT__ARG_NAMES:
+				getArgNames().clear();
+				getArgNames().addAll((Collection<? extends String>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -190,11 +162,11 @@ public class ThisPointCutImpl extends ArgumentDefiningPointCutImpl implements Th
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case AspectJPackage.THIS_POINT_CUT__BASE_POINT_CUT_STRUCTURAL_FEATURE:
-				setBase_PointCut_StructuralFeature((StructuralFeature)null);
+			case AspectJPackage.THIS_POINT_CUT__BASE_STRUCTURAL_FEATURE:
+				setBase_StructuralFeature((StructuralFeature)null);
 				return;
-			case AspectJPackage.THIS_POINT_CUT__TYPE:
-				getType().clear();
+			case AspectJPackage.THIS_POINT_CUT__ARG_NAMES:
+				getArgNames().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -208,10 +180,10 @@ public class ThisPointCutImpl extends ArgumentDefiningPointCutImpl implements Th
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case AspectJPackage.THIS_POINT_CUT__BASE_POINT_CUT_STRUCTURAL_FEATURE:
-				return base_PointCut_StructuralFeature != null;
-			case AspectJPackage.THIS_POINT_CUT__TYPE:
-				return type != null && !type.isEmpty();
+			case AspectJPackage.THIS_POINT_CUT__BASE_STRUCTURAL_FEATURE:
+				return base_StructuralFeature != null;
+			case AspectJPackage.THIS_POINT_CUT__ARG_NAMES:
+				return argNames != null && !argNames.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -223,15 +195,10 @@ public class ThisPointCutImpl extends ArgumentDefiningPointCutImpl implements Th
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == PointCut.class) {
+		if (baseClass == ArgumentDefiningPointCut.class) {
 			switch (derivedFeatureID) {
-				case AspectJPackage.THIS_POINT_CUT__BASE_POINT_CUT_STRUCTURAL_FEATURE: return AspectJPackage.POINT_CUT__BASE_POINT_CUT_STRUCTURAL_FEATURE;
-				default: return -1;
-			}
-		}
-		if (baseClass == TypePointCut.class) {
-			switch (derivedFeatureID) {
-				case AspectJPackage.THIS_POINT_CUT__TYPE: return AspectJPackage.TYPE_POINT_CUT__TYPE;
+				case AspectJPackage.THIS_POINT_CUT__BASE_STRUCTURAL_FEATURE: return AspectJPackage.ARGUMENT_DEFINING_POINT_CUT__BASE_STRUCTURAL_FEATURE;
+				case AspectJPackage.THIS_POINT_CUT__ARG_NAMES: return AspectJPackage.ARGUMENT_DEFINING_POINT_CUT__ARG_NAMES;
 				default: return -1;
 			}
 		}
@@ -245,19 +212,30 @@ public class ThisPointCutImpl extends ArgumentDefiningPointCutImpl implements Th
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == PointCut.class) {
+		if (baseClass == ArgumentDefiningPointCut.class) {
 			switch (baseFeatureID) {
-				case AspectJPackage.POINT_CUT__BASE_POINT_CUT_STRUCTURAL_FEATURE: return AspectJPackage.THIS_POINT_CUT__BASE_POINT_CUT_STRUCTURAL_FEATURE;
-				default: return -1;
-			}
-		}
-		if (baseClass == TypePointCut.class) {
-			switch (baseFeatureID) {
-				case AspectJPackage.TYPE_POINT_CUT__TYPE: return AspectJPackage.THIS_POINT_CUT__TYPE;
+				case AspectJPackage.ARGUMENT_DEFINING_POINT_CUT__BASE_STRUCTURAL_FEATURE: return AspectJPackage.THIS_POINT_CUT__BASE_STRUCTURAL_FEATURE;
+				case AspectJPackage.ARGUMENT_DEFINING_POINT_CUT__ARG_NAMES: return AspectJPackage.THIS_POINT_CUT__ARG_NAMES;
 				default: return -1;
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (argNames: ");
+		result.append(argNames);
+		result.append(')');
+		return result.toString();
 	}
 
 } //ThisPointCutImpl

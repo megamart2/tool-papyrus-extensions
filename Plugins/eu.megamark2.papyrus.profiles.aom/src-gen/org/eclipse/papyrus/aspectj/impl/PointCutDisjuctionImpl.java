@@ -4,12 +4,14 @@ package org.eclipse.papyrus.aspectj.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.papyrus.aspectj.AspectJPackage;
 import org.eclipse.papyrus.aspectj.PointCut;
 import org.eclipse.papyrus.aspectj.PointCutDisjuction;
@@ -64,9 +66,38 @@ public class PointCutDisjuctionImpl extends PointCutImpl implements PointCutDisj
 	 */
 	public EList<PointCut> getComposee() {
 		if (composee == null) {
-			composee = new EObjectResolvingEList<PointCut>(PointCut.class, this, AspectJPackage.POINT_CUT_DISJUCTION__COMPOSEE);
+			composee = new EObjectWithInverseResolvingEList.ManyInverse<PointCut>(PointCut.class, this, AspectJPackage.POINT_CUT_DISJUCTION__COMPOSEE, AspectJPackage.POINT_CUT__COMPOSITE);
 		}
 		return composee;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case AspectJPackage.POINT_CUT_DISJUCTION__COMPOSEE:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getComposee()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case AspectJPackage.POINT_CUT_DISJUCTION__COMPOSEE:
+				return ((InternalEList<?>)getComposee()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

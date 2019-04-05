@@ -39,6 +39,30 @@
   <eClassifiers xsi:type="ecore:EClass" name="PointCut">
     <eStructuralFeatures xsi:type="ecore:EReference" name="base_PointCut_StructuralFeature"
         ordered="false" lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//StructuralFeature"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="composite" ordered="false"
+        upperBound="-1" eType="#//PointCutDisjuction" eOpposite="#//PointCutDisjuction/composee"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="advice" ordered="false"
+        upperBound="-1" eType="#//Advice" eOpposite="#//Advice/pointcut"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectedBy" ordered="false"
+        upperBound="-1" eType="#//PointCutPointCut" eOpposite="#//PointCutPointCut/selectedPointCut"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PointCutDisjuction" eSuperTypes="#//PointCut">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="composee" ordered="false"
+        lowerBound="2" upperBound="-1" eType="#//PointCut" eOpposite="#//PointCut/composite"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PointCutConjuction" eSuperTypes="#//PointCut"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PointCutNegation" eSuperTypes="#//PointCut"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Advice">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="adviceExecution" ordered="false"
+        lowerBound="1" eType="#//AdviceExecutionType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_BehavioralFeature"
+        ordered="false" lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//BehavioralFeature"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pointcut" ordered="false"
+        lowerBound="1" eType="#//PointCut" eOpposite="#//PointCut/advice"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PointCutPointCut" eSuperTypes="#//PointCut">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectedPointCut" ordered="false"
+        lowerBound="1" eType="#//PointCut" eOpposite="#//PointCut/selectedBy"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InitializationPointCut" eSuperTypes="#//ExecutionPointCut"/>
   <eClassifiers xsi:type="ecore:EClass" name="ExecutionPointCut" eSuperTypes="#//OperationalPointCut"/>
@@ -61,45 +85,21 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="argNames" ordered="false"
         lowerBound="1" upperBound="-1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ThisPointCut" eSuperTypes="#//ArgumentDefiningPointCut #//TypePointCut"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ThisPointCut" eSuperTypes="#//TypePointCut #//ArgumentDefiningPointCut"/>
   <eClassifiers xsi:type="ecore:EClass" name="TypePointCut" eSuperTypes="#//PointCut">
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" ordered="false" lowerBound="1"
         upperBound="-1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Type"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ArgsPointCut" eSuperTypes="#//ArgumentDefiningPointCut #//TypePointCut"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TargetPointCut" eSuperTypes="#//ArgumentDefiningPointCut #//TypePointCut"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ArgsPointCut" eSuperTypes="#//TypePointCut #//ArgumentDefiningPointCut"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TargetPointCut" eSuperTypes="#//TypePointCut #//ArgumentDefiningPointCut"/>
   <eClassifiers xsi:type="ecore:EClass" name="AdviceExecutionPointCut" eSuperTypes="#//PointCut"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Advice">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="adviceExecution" ordered="false"
-        lowerBound="1" eType="#//AdviceExecutionType"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="base_BehavioralFeature"
-        ordered="false" lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//BehavioralFeature"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pointcut" ordered="false"
-        lowerBound="1" eType="#//PointCut"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StaticInitializationPointCut" eSuperTypes="#//TypePointCut"/>
   <eClassifiers xsi:type="ecore:EClass" name="ExceptionPointCut" eSuperTypes="#//TypePointCut"/>
   <eClassifiers xsi:type="ecore:EClass" name="WithinPointCut" eSuperTypes="#//TypePointCut"/>
-  <eClassifiers xsi:type="ecore:EClass" name="PointCutPointCut" eSuperTypes="#//PointCut">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="selectedPointCut" ordered="false"
-        lowerBound="1" eType="#//PointCut"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CFlowBelowPointCut" eSuperTypes="#//PointCutPointCut"/>
   <eClassifiers xsi:type="ecore:EClass" name="CrossCuttingConcern">
     <eStructuralFeatures xsi:type="ecore:EReference" name="base_Package" ordered="false"
         lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Package"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PointCutDisjuction" eSuperTypes="#//PointCut">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="composee" ordered="false"
-        lowerBound="2" upperBound="-1" eType="#//PointCut"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PointCutNegation" eSuperTypes="#//PointCut">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="composee" ordered="false"
-        lowerBound="1" eType="#//PointCut"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CFlowPointCut" eSuperTypes="#//PointCutPointCut"/>
-  <eClassifiers xsi:type="ecore:EClass" name="PointCutConjuction" eSuperTypes="#//PointCut">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="composee" ordered="false"
-        lowerBound="2" upperBound="-1" eType="#//PointCut"/>
-  </eClassifiers>
 </ecore:EPackage>
