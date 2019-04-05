@@ -42,7 +42,7 @@
         upperBound="-1" eType="#//CompositionPointCut"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PointCut" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="base_StructuralFeature"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_PointCut_StructuralFeature"
         ordered="false" lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//StructuralFeature"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CompositionPointCut" abstract="true"
@@ -72,13 +72,13 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="argNames" unique="false"
         lowerBound="1" upperBound="-1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ThisPointCut" eSuperTypes="#//ArgumentDefiningPointCut"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ThisPointCut" eSuperTypes="#//TypePointCut #//ArgumentDefiningPointCut"/>
   <eClassifiers xsi:type="ecore:EClass" name="TypePointCut" abstract="true" eSuperTypes="#//IndividualPointCut">
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" unique="false" lowerBound="1"
         upperBound="-1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Type"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ArgsPointCut" eSuperTypes="#//ArgumentDefiningPointCut"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TargetPointCut" eSuperTypes="#//ArgumentDefiningPointCut"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ArgsPointCut" eSuperTypes="#//TypePointCut #//ArgumentDefiningPointCut"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TargetPointCut" eSuperTypes="#//TypePointCut #//ArgumentDefiningPointCut"/>
   <eClassifiers xsi:type="ecore:EClass" name="AdviceExecutionPointCut" eSuperTypes="#//IndividualPointCut"/>
   <eClassifiers xsi:type="ecore:EClass" name="Advice">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="adviceExecution" ordered="false"

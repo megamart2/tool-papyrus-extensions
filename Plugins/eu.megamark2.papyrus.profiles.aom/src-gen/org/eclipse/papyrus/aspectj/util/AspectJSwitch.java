@@ -188,7 +188,10 @@ public class AspectJSwitch<T> extends Switch<T> {
 			case AspectJPackage.THIS_POINT_CUT: {
 				ThisPointCut thisPointCut = (ThisPointCut)theEObject;
 				T result = caseThisPointCut(thisPointCut);
+				if (result == null) result = caseTypePointCut(thisPointCut);
 				if (result == null) result = caseArgumentDefiningPointCut(thisPointCut);
+				if (result == null) result = caseIndividualPointCut(thisPointCut);
+				if (result == null) result = casePointCut(thisPointCut);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -203,14 +206,20 @@ public class AspectJSwitch<T> extends Switch<T> {
 			case AspectJPackage.ARGS_POINT_CUT: {
 				ArgsPointCut argsPointCut = (ArgsPointCut)theEObject;
 				T result = caseArgsPointCut(argsPointCut);
+				if (result == null) result = caseTypePointCut(argsPointCut);
 				if (result == null) result = caseArgumentDefiningPointCut(argsPointCut);
+				if (result == null) result = caseIndividualPointCut(argsPointCut);
+				if (result == null) result = casePointCut(argsPointCut);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case AspectJPackage.TARGET_POINT_CUT: {
 				TargetPointCut targetPointCut = (TargetPointCut)theEObject;
 				T result = caseTargetPointCut(targetPointCut);
+				if (result == null) result = caseTypePointCut(targetPointCut);
 				if (result == null) result = caseArgumentDefiningPointCut(targetPointCut);
+				if (result == null) result = caseIndividualPointCut(targetPointCut);
+				if (result == null) result = casePointCut(targetPointCut);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

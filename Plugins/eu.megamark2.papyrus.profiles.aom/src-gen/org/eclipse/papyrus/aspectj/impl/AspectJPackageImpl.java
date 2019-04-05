@@ -495,7 +495,7 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPointCut_Base_StructuralFeature() {
+	public EReference getPointCut_Base_PointCut_StructuralFeature() {
 		return (EReference)pointCutEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -905,7 +905,7 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 		createEReference(individualPointCutEClass, INDIVIDUAL_POINT_CUT__COMPOSITE);
 
 		pointCutEClass = createEClass(POINT_CUT);
-		createEReference(pointCutEClass, POINT_CUT__BASE_STRUCTURAL_FEATURE);
+		createEReference(pointCutEClass, POINT_CUT__BASE_POINT_CUT_STRUCTURAL_FEATURE);
 
 		compositionPointCutEClass = createEClass(COMPOSITION_POINT_CUT);
 		createEReference(compositionPointCutEClass, COMPOSITION_POINT_CUT__COMPOSEE);
@@ -1020,9 +1020,12 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 		getPointCutEClass.getESuperTypes().add(this.getPropertyPointCut());
 		callPointCutEClass.getESuperTypes().add(this.getOperationalPointCut());
 		withinCodePointCutEClass.getESuperTypes().add(this.getOperationalPointCut());
+		thisPointCutEClass.getESuperTypes().add(this.getTypePointCut());
 		thisPointCutEClass.getESuperTypes().add(this.getArgumentDefiningPointCut());
 		typePointCutEClass.getESuperTypes().add(this.getIndividualPointCut());
+		argsPointCutEClass.getESuperTypes().add(this.getTypePointCut());
 		argsPointCutEClass.getESuperTypes().add(this.getArgumentDefiningPointCut());
+		targetPointCutEClass.getESuperTypes().add(this.getTypePointCut());
 		targetPointCutEClass.getESuperTypes().add(this.getArgumentDefiningPointCut());
 		adviceExecutionPointCutEClass.getESuperTypes().add(this.getIndividualPointCut());
 		staticInitializationPointCutEClass.getESuperTypes().add(this.getTypePointCut());
@@ -1054,7 +1057,7 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 		initEReference(getIndividualPointCut_Composite(), this.getCompositionPointCut(), null, "composite", null, 0, -1, IndividualPointCut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(pointCutEClass, PointCut.class, "PointCut", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPointCut_Base_StructuralFeature(), theUMLPackage.getStructuralFeature(), null, "base_StructuralFeature", null, 1, 1, PointCut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getPointCut_Base_PointCut_StructuralFeature(), theUMLPackage.getStructuralFeature(), null, "base_PointCut_StructuralFeature", null, 1, 1, PointCut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(compositionPointCutEClass, CompositionPointCut.class, "CompositionPointCut", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCompositionPointCut_Composee(), this.getIndividualPointCut(), null, "composee", null, 1, -1, CompositionPointCut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

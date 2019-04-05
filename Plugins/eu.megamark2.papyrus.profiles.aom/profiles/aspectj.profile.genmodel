@@ -73,7 +73,7 @@
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="aspectj.ecore#//PointCut">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference aspectj.ecore#//PointCut/base_StructuralFeature"/>
+          propertySortChoices="true" ecoreFeature="ecore:EReference aspectj.ecore#//PointCut/base_PointCut_StructuralFeature"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="aspectj.ecore#//CompositionPointCut">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"

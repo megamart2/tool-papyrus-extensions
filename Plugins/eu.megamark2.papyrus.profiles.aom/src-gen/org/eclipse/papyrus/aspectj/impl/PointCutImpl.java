@@ -19,22 +19,21 @@ import org.eclipse.uml2.uml.StructuralFeature;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.papyrus.aspectj.impl.PointCutImpl#getBase_StructuralFeature <em>Base Structural Feature</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.aspectj.impl.PointCutImpl#getBase_PointCut_StructuralFeature <em>Base Point Cut Structural Feature</em>}</li>
  * </ul>
  *
  * @generated
  */
 public abstract class PointCutImpl extends MinimalEObjectImpl.Container implements PointCut {
 	/**
-	 * The cached value of the '{@link #getBase_StructuralFeature() <em>Base Structural Feature</em>}' reference.
+	 * The cached value of the '{@link #getBase_PointCut_StructuralFeature() <em>Base Point Cut Structural Feature</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBase_StructuralFeature()
+	 * @see #getBase_PointCut_StructuralFeature()
 	 * @generated
 	 * @ordered
 	 */
-	protected StructuralFeature base_StructuralFeature;
-
+	protected StructuralFeature base_PointCut_StructuralFeature;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -59,16 +58,16 @@ public abstract class PointCutImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public StructuralFeature getBase_StructuralFeature() {
-		if (base_StructuralFeature != null && base_StructuralFeature.eIsProxy()) {
-			InternalEObject oldBase_StructuralFeature = (InternalEObject)base_StructuralFeature;
-			base_StructuralFeature = (StructuralFeature)eResolveProxy(oldBase_StructuralFeature);
-			if (base_StructuralFeature != oldBase_StructuralFeature) {
+	public StructuralFeature getBase_PointCut_StructuralFeature() {
+		if (base_PointCut_StructuralFeature != null && base_PointCut_StructuralFeature.eIsProxy()) {
+			InternalEObject oldBase_PointCut_StructuralFeature = (InternalEObject)base_PointCut_StructuralFeature;
+			base_PointCut_StructuralFeature = (StructuralFeature)eResolveProxy(oldBase_PointCut_StructuralFeature);
+			if (base_PointCut_StructuralFeature != oldBase_PointCut_StructuralFeature) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AspectJPackage.POINT_CUT__BASE_STRUCTURAL_FEATURE, oldBase_StructuralFeature, base_StructuralFeature));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AspectJPackage.POINT_CUT__BASE_POINT_CUT_STRUCTURAL_FEATURE, oldBase_PointCut_StructuralFeature, base_PointCut_StructuralFeature));
 			}
 		}
-		return base_StructuralFeature;
+		return base_PointCut_StructuralFeature;
 	}
 
 	/**
@@ -76,8 +75,8 @@ public abstract class PointCutImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public StructuralFeature basicGetBase_StructuralFeature() {
-		return base_StructuralFeature;
+	public StructuralFeature basicGetBase_PointCut_StructuralFeature() {
+		return base_PointCut_StructuralFeature;
 	}
 
 	/**
@@ -85,11 +84,11 @@ public abstract class PointCutImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBase_StructuralFeature(StructuralFeature newBase_StructuralFeature) {
-		StructuralFeature oldBase_StructuralFeature = base_StructuralFeature;
-		base_StructuralFeature = newBase_StructuralFeature;
+	public void setBase_PointCut_StructuralFeature(StructuralFeature newBase_PointCut_StructuralFeature) {
+		StructuralFeature oldBase_PointCut_StructuralFeature = base_PointCut_StructuralFeature;
+		base_PointCut_StructuralFeature = newBase_PointCut_StructuralFeature;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AspectJPackage.POINT_CUT__BASE_STRUCTURAL_FEATURE, oldBase_StructuralFeature, base_StructuralFeature));
+			eNotify(new ENotificationImpl(this, Notification.SET, AspectJPackage.POINT_CUT__BASE_POINT_CUT_STRUCTURAL_FEATURE, oldBase_PointCut_StructuralFeature, base_PointCut_StructuralFeature));
 	}
 
 	/**
@@ -100,9 +99,9 @@ public abstract class PointCutImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case AspectJPackage.POINT_CUT__BASE_STRUCTURAL_FEATURE:
-				if (resolve) return getBase_StructuralFeature();
-				return basicGetBase_StructuralFeature();
+			case AspectJPackage.POINT_CUT__BASE_POINT_CUT_STRUCTURAL_FEATURE:
+				if (resolve) return getBase_PointCut_StructuralFeature();
+				return basicGetBase_PointCut_StructuralFeature();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -115,8 +114,8 @@ public abstract class PointCutImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case AspectJPackage.POINT_CUT__BASE_STRUCTURAL_FEATURE:
-				setBase_StructuralFeature((StructuralFeature)newValue);
+			case AspectJPackage.POINT_CUT__BASE_POINT_CUT_STRUCTURAL_FEATURE:
+				setBase_PointCut_StructuralFeature((StructuralFeature)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -130,8 +129,8 @@ public abstract class PointCutImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case AspectJPackage.POINT_CUT__BASE_STRUCTURAL_FEATURE:
-				setBase_StructuralFeature((StructuralFeature)null);
+			case AspectJPackage.POINT_CUT__BASE_POINT_CUT_STRUCTURAL_FEATURE:
+				setBase_PointCut_StructuralFeature((StructuralFeature)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -145,8 +144,8 @@ public abstract class PointCutImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case AspectJPackage.POINT_CUT__BASE_STRUCTURAL_FEATURE:
-				return base_StructuralFeature != null;
+			case AspectJPackage.POINT_CUT__BASE_POINT_CUT_STRUCTURAL_FEATURE:
+				return base_PointCut_StructuralFeature != null;
 		}
 		return super.eIsSet(featureID);
 	}
