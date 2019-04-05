@@ -30,7 +30,7 @@ import org.eclipse.uml2.uml.Type;
  *
  * @generated
  */
-public class OperationalPointCutImpl extends IndividualPointCutImpl implements OperationalPointCut {
+public abstract class OperationalPointCutImpl extends IndividualPointCutImpl implements OperationalPointCut {
 	/**
 	 * The cached value of the '{@link #getOperation() <em>Operation</em>}' reference list.
 	 * <!-- begin-user-doc -->

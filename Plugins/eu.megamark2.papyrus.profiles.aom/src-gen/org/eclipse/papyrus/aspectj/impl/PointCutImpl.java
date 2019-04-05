@@ -24,7 +24,7 @@ import org.eclipse.uml2.uml.StructuralFeature;
  *
  * @generated
  */
-public class PointCutImpl extends MinimalEObjectImpl.Container implements PointCut {
+public abstract class PointCutImpl extends MinimalEObjectImpl.Container implements PointCut {
 	/**
 	 * The cached value of the '{@link #getBase_StructuralFeature() <em>Base Structural Feature</em>}' reference.
 	 * <!-- begin-user-doc -->

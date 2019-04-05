@@ -1050,27 +1050,27 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 		initEReference(getAspect_Precedes(), this.getAspect(), this.getAspect_PrecededBy(), "precedes", null, 0, 1, Aspect.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getAspect_PrecededBy(), this.getAspect(), this.getAspect_Precedes(), "precededBy", null, 0, 1, Aspect.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEClass(individualPointCutEClass, IndividualPointCut.class, "IndividualPointCut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(individualPointCutEClass, IndividualPointCut.class, "IndividualPointCut", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getIndividualPointCut_Composite(), this.getCompositionPointCut(), null, "composite", null, 0, -1, IndividualPointCut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEClass(pointCutEClass, PointCut.class, "PointCut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(pointCutEClass, PointCut.class, "PointCut", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPointCut_Base_StructuralFeature(), theUMLPackage.getStructuralFeature(), null, "base_StructuralFeature", null, 1, 1, PointCut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEClass(compositionPointCutEClass, CompositionPointCut.class, "CompositionPointCut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(compositionPointCutEClass, CompositionPointCut.class, "CompositionPointCut", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCompositionPointCut_Composee(), this.getIndividualPointCut(), null, "composee", null, 1, -1, CompositionPointCut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(initializationPointCutEClass, InitializationPointCut.class, "InitializationPointCut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(executionPointCutEClass, ExecutionPointCut.class, "ExecutionPointCut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(executionPointCutEClass, ExecutionPointCut.class, "ExecutionPointCut", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(operationalPointCutEClass, OperationalPointCut.class, "OperationalPointCut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(operationalPointCutEClass, OperationalPointCut.class, "OperationalPointCut", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOperationalPointCut_Operation(), theUMLPackage.getOperation(), null, "operation", null, 1, -1, OperationalPointCut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(preInitializationPointCutEClass, PreInitializationPointCut.class, "PreInitializationPointCut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(setPointCutEClass, SetPointCut.class, "SetPointCut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(propertyPointCutEClass, PropertyPointCut.class, "PropertyPointCut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(propertyPointCutEClass, PropertyPointCut.class, "PropertyPointCut", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPropertyPointCut_Field(), theUMLPackage.getProperty(), null, "field", null, 1, -1, PropertyPointCut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(getPointCutEClass, GetPointCut.class, "GetPointCut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1079,13 +1079,13 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 
 		initEClass(withinCodePointCutEClass, WithinCodePointCut.class, "WithinCodePointCut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(argumentDefiningPointCutEClass, ArgumentDefiningPointCut.class, "ArgumentDefiningPointCut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(argumentDefiningPointCutEClass, ArgumentDefiningPointCut.class, "ArgumentDefiningPointCut", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getArgumentDefiningPointCut_Base_StructuralFeature(), theUMLPackage.getStructuralFeature(), null, "base_StructuralFeature", null, 1, 1, ArgumentDefiningPointCut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getArgumentDefiningPointCut_ArgNames(), theTypesPackage.getString(), "argNames", null, 1, -1, ArgumentDefiningPointCut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(thisPointCutEClass, ThisPointCut.class, "ThisPointCut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(typePointCutEClass, TypePointCut.class, "TypePointCut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(typePointCutEClass, TypePointCut.class, "TypePointCut", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTypePointCut_Type(), theUMLPackage.getType(), null, "type", null, 1, -1, TypePointCut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(argsPointCutEClass, ArgsPointCut.class, "ArgsPointCut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1105,7 +1105,7 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 
 		initEClass(withinPointCutEClass, WithinPointCut.class, "WithinPointCut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(pointCutPointCutEClass, PointCutPointCut.class, "PointCutPointCut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(pointCutPointCutEClass, PointCutPointCut.class, "PointCutPointCut", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPointCutPointCut_SelectedPointCut(), this.getIndividualPointCut(), null, "selectedPointCut", null, 1, 1, PointCutPointCut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(cFlowBelowPointCutEClass, CFlowBelowPointCut.class, "CFlowBelowPointCut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

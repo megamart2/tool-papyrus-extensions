@@ -20,7 +20,7 @@ import org.eclipse.uml2.uml.Type;
  * </ul>
  *
  * @see org.eclipse.papyrus.aspectj.AspectJPackage#getOperationalPointCut()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface OperationalPointCut extends IndividualPointCut {

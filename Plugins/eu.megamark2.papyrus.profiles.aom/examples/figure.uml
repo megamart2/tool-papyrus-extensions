@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ActionLanguage="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile" xmlns:AspectJ="http://megamart2-ecsel.eu/aspectj/" xmlns:BackupProfile="http:///schemas/BackupProfile/_J7IFgKInEeS_KNX0nfvIVQ/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ http://megamart2-ecsel.eu/aspectj/ pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_0VvJUFejEemr-8VDxDYRnQ http:///schemas/BackupProfile/_J7IFgKInEeS_KNX0nfvIVQ/1 pathmap://PAPYRUS_BACKUP_PROFILE/backup-profile.profile.uml#_J7IFgaInEeS_KNX0nfvIVQ">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ActionLanguage="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile" xmlns:AspectJ="http://megamart2-ecsel.eu/aspectj/" xmlns:BackupProfile="http:///schemas/BackupProfile/_J7IFgKInEeS_KNX0nfvIVQ/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ http://megamart2-ecsel.eu/aspectj/ pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_DL8y0FeoEemS0p4q-Pd9VA http:///schemas/BackupProfile/_J7IFgKInEeS_KNX0nfvIVQ/1 pathmap://PAPYRUS_BACKUP_PROFILE/backup-profile.profile.uml#_J7IFgaInEeS_KNX0nfvIVQ">
   <uml:Model xmi:id="_2E8YwFeFEemxMtse52fEfg" name="figure">
     <packageImport xmi:type="uml:PackageImport" xmi:id="_2j6zwFeFEemxMtse52fEfg">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
@@ -353,15 +353,15 @@ class SampleAspect {
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_Es0M0FehEemtZ4vNsrJPQA" name="Drawable"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_2jt_cFeFEemxMtse52fEfg">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JDqUcFelEemOt6f_tKPp1Q" source="PapyrusVersion">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JDqUcVelEemOt6f_tKPp1Q" key="Version" value="0.0.9"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JDqUclelEemOt6f_tKPp1Q" key="Comment" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JDqUc1elEemOt6f_tKPp1Q" key="Copyright" value="Atos Spain S.A 2019"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JDqUdFelEemOt6f_tKPp1Q" key="Date" value="2019-04-05"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JDqUdVelEemOt6f_tKPp1Q" key="Author" value="Jesús Gorroñogoitia"/>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_64erUFeoEem8kJMGOiSHvw" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_64erUVeoEem8kJMGOiSHvw" key="Version" value="0.0.11"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_64erUleoEem8kJMGOiSHvw" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_64erU1eoEem8kJMGOiSHvw" key="Copyright" value="Atos Spain S.A. 2019"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_64erVFeoEem8kJMGOiSHvw" key="Date" value="2019-04-05"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_64erVVeoEem8kJMGOiSHvw" key="Author" value="Jesús Gorroñogoitia"/>
       </eAnnotations>
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2jumgFeFEemxMtse52fEfg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_0VvJUFejEemr-8VDxDYRnQ"/>
+        <references xmi:type="ecore:EPackage" href="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_DL8y0FeoEemS0p4q-Pd9VA"/>
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_wW2AAFbhEemeMqmugX5-_g"/>
     </profileApplication>
@@ -381,12 +381,12 @@ class SampleAspect {
   <AspectJ:Aspect xmi:id="_O5ym4FeQEem-AJQ4r1Gbrw" base_Class="_Jh32EFeHEemxMtse52fEfg" isPrivileged="true" declaredParents="_BIApUFehEemtZ4vNsrJPQA" declaredImplements="_HMRR0FehEemtZ4vNsrJPQA"/>
   <AspectJ:CrossCuttingConcern xmi:id="_3e-QUFeREemoGpIsli9z-A" base_Package="_-9dRkFeFEemxMtse52fEfg"/>
   <AspectJ:StaticCrossCuttingFeature xmi:id="_Q7QoAFeTEemoGpIsli9z-A" onType="_K2LMAFeGEemxMtse52fEfg _LtQlAFeGEemxMtse52fEfg" base_Feature="_q2f4cFeHEemxMtse52fEfg"/>
-  <AspectJ:SetPointCut xmi:id="_wV0xcFeTEemoGpIsli9z-A" base_PointCut_StructuralFeature="_C79ckFeIEemxMtse52fEfg" field="_kpIMsFeGEemxMtse52fEfg _lkqn4FeGEemxMtse52fEfg"/>
+  <AspectJ:SetPointCut xmi:id="_wV0xcFeTEemoGpIsli9z-A" base_PointCut_StructuralFeature="_C79ckFeIEemxMtse52fEfg" composite="_h3Lb8FemEemC-djVBjsxJg" field="_kpIMsFeGEemxMtse52fEfg _lkqn4FeGEemxMtse52fEfg"/>
   <ActionLanguage:TextualRepresentation xmi:id="_OyYoQFeZEemSiZfDg_TEPg" base_Comment="_OyXaIFeZEemSiZfDg_TEPg" language="Alf"/>
   <BackupProfile:Backup xmi:id="_OyadcFeZEemSiZfDg_TEPg" timestamp="2019-04-05 14:45:51.793" state="MERGED" base_Comment="_OyXaIFeZEemSiZfDg_TEPg"/>
   <ActionLanguage:TextualRepresentation xmi:id="_OygkEFeZEemSiZfDg_TEPg" base_Comment="_OyfV8FeZEemSiZfDg_TEPg" language="Alf"/>
   <BackupProfile:Backup xmi:id="_OyhLIFeZEemSiZfDg_TEPg" timestamp="2019-04-05 14:45:51.438" state="MERGED" base_Comment="_OyfV8FeZEemSiZfDg_TEPg"/>
-  <AspectJ:ArgsPointCut xmi:id="_V_jZkFeZEemSiZfDg_TEPg" base_StructuralFeature="_OJrpgFeZEemSiZfDg_TEPg" base_PointCut_StructuralFeature="_OJrpgFeZEemSiZfDg_TEPg">
+  <AspectJ:ArgsPointCut xmi:id="_V_jZkFeZEemSiZfDg_TEPg" base_StructuralFeature="_OJrpgFeZEemSiZfDg_TEPg" base_PointCut_StructuralFeature="_OJrpgFeZEemSiZfDg_TEPg" composite="_h3Lb8FemEemC-djVBjsxJg">
     <argNames>inX</argNames>
     <argNames>inY</argNames>
     <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
@@ -400,4 +400,5 @@ class SampleAspect {
   <BackupProfile:Backup xmi:id="_-5-EcFegEemtZ4vNsrJPQA" timestamp="2019-04-05 14:47:38.164" state="MERGED" base_Comment="_-58PQFegEemtZ4vNsrJPQA"/>
   <ActionLanguage:TextualRepresentation xmi:id="_BNBFIFehEemtZ4vNsrJPQA" base_Comment="_BNAeEFehEemtZ4vNsrJPQA" language="Alf"/>
   <BackupProfile:Backup xmi:id="_BNBsMFehEemtZ4vNsrJPQA" timestamp="2019-04-05 14:47:49.545" state="MERGED" base_Comment="_BNAeEFehEemtZ4vNsrJPQA"/>
+  <AspectJ:PointCutConjuction xmi:id="_h3Lb8FemEemC-djVBjsxJg" base_PointCut_StructuralFeature="_XrVl8FeZEemSiZfDg_TEPg" composee="_wV0xcFeTEemoGpIsli9z-A _V_jZkFeZEemSiZfDg_TEPg"/>
 </xmi:XMI>

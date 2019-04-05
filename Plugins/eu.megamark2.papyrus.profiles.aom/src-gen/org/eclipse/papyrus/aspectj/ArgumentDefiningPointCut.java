@@ -22,7 +22,7 @@ import org.eclipse.uml2.uml.StructuralFeature;
  * </ul>
  *
  * @see org.eclipse.papyrus.aspectj.AspectJPackage#getArgumentDefiningPointCut()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface ArgumentDefiningPointCut extends EObject {

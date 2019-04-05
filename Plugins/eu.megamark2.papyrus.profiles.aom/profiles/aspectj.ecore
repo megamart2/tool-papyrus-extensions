@@ -36,41 +36,44 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="precededBy" ordered="false"
         eType="#//Aspect" eOpposite="#//Aspect/precedes"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IndividualPointCut" eSuperTypes="#//PointCut">
+  <eClassifiers xsi:type="ecore:EClass" name="IndividualPointCut" abstract="true"
+      eSuperTypes="#//PointCut">
     <eStructuralFeatures xsi:type="ecore:EReference" name="composite" ordered="false"
         upperBound="-1" eType="#//CompositionPointCut"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PointCut">
+  <eClassifiers xsi:type="ecore:EClass" name="PointCut" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="base_StructuralFeature"
         ordered="false" lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//StructuralFeature"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CompositionPointCut" eSuperTypes="#//PointCut">
+  <eClassifiers xsi:type="ecore:EClass" name="CompositionPointCut" abstract="true"
+      eSuperTypes="#//PointCut">
     <eStructuralFeatures xsi:type="ecore:EReference" name="composee" ordered="false"
         lowerBound="1" upperBound="-1" eType="#//IndividualPointCut"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InitializationPointCut" eSuperTypes="#//ExecutionPointCut"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ExecutionPointCut" eSuperTypes="#//OperationalPointCut"/>
-  <eClassifiers xsi:type="ecore:EClass" name="OperationalPointCut" eSuperTypes="#//IndividualPointCut">
+  <eClassifiers xsi:type="ecore:EClass" name="ExecutionPointCut" abstract="true" eSuperTypes="#//OperationalPointCut"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OperationalPointCut" abstract="true"
+      eSuperTypes="#//IndividualPointCut">
     <eStructuralFeatures xsi:type="ecore:EReference" name="operation" ordered="false"
         lowerBound="1" upperBound="-1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PreInitializationPointCut" eSuperTypes="#//ExecutionPointCut"/>
   <eClassifiers xsi:type="ecore:EClass" name="SetPointCut" eSuperTypes="#//PropertyPointCut"/>
-  <eClassifiers xsi:type="ecore:EClass" name="PropertyPointCut" eSuperTypes="#//IndividualPointCut">
+  <eClassifiers xsi:type="ecore:EClass" name="PropertyPointCut" abstract="true" eSuperTypes="#//IndividualPointCut">
     <eStructuralFeatures xsi:type="ecore:EReference" name="field" ordered="false"
         lowerBound="1" upperBound="-1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GetPointCut" eSuperTypes="#//PropertyPointCut"/>
   <eClassifiers xsi:type="ecore:EClass" name="CallPointCut" eSuperTypes="#//OperationalPointCut"/>
   <eClassifiers xsi:type="ecore:EClass" name="WithinCodePointCut" eSuperTypes="#//OperationalPointCut"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ArgumentDefiningPointCut">
+  <eClassifiers xsi:type="ecore:EClass" name="ArgumentDefiningPointCut" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="base_StructuralFeature"
         ordered="false" lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//StructuralFeature"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="argNames" unique="false"
         lowerBound="1" upperBound="-1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ThisPointCut" eSuperTypes="#//ArgumentDefiningPointCut"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TypePointCut" eSuperTypes="#//IndividualPointCut">
+  <eClassifiers xsi:type="ecore:EClass" name="TypePointCut" abstract="true" eSuperTypes="#//IndividualPointCut">
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" unique="false" lowerBound="1"
         upperBound="-1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Type"/>
   </eClassifiers>
@@ -88,7 +91,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="StaticInitializationPointCut" eSuperTypes="#//TypePointCut"/>
   <eClassifiers xsi:type="ecore:EClass" name="ExceptionPointCut" eSuperTypes="#//TypePointCut"/>
   <eClassifiers xsi:type="ecore:EClass" name="WithinPointCut" eSuperTypes="#//TypePointCut"/>
-  <eClassifiers xsi:type="ecore:EClass" name="PointCutPointCut" eSuperTypes="#//IndividualPointCut">
+  <eClassifiers xsi:type="ecore:EClass" name="PointCutPointCut" abstract="true" eSuperTypes="#//IndividualPointCut">
     <eStructuralFeatures xsi:type="ecore:EReference" name="selectedPointCut" ordered="false"
         lowerBound="1" eType="#//IndividualPointCut"/>
   </eClassifiers>

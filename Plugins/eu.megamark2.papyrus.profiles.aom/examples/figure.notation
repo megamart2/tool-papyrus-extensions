@@ -274,7 +274,10 @@
               <element xmi:type="uml:Property" href="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_X5RXcFedEemlk6nvLsCbVg"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_Zm5sA1efEemtZ4vNsrJPQA"/>
             </children>
-            <children xmi:type="notation:DecorationNode" xmi:id="_Zm5sAFefEemtZ4vNsrJPQA" visible="false" type="StereotypePropertyBrace">
+            <children xmi:type="notation:DecorationNode" xmi:id="_Zm5sAFefEemtZ4vNsrJPQA" type="StereotypePropertyBrace">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HEaHkFenEemC-djVBjsxJg" source="PapyrusCSSForceValue">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_HEauoFenEemC-djVBjsxJg" key="visible" value="true"/>
+              </eAnnotations>
               <element xmi:type="uml:Property" href="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#__W7qElecEemlk6nvLsCbVg"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_Zm5sAVefEemtZ4vNsrJPQA"/>
             </children>
@@ -291,7 +294,10 @@
             <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_-74lcFefEemtZ4vNsrJPQA" source="PapyrusCSSForceValue">
               <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_-74lcVefEemtZ4vNsrJPQA" key="visible" value="true"/>
             </eAnnotations>
-            <children xmi:type="notation:DecorationNode" xmi:id="_Zm_LklefEemtZ4vNsrJPQA" visible="false" type="StereotypePropertyBrace">
+            <children xmi:type="notation:DecorationNode" xmi:id="_Zm_LklefEemtZ4vNsrJPQA" type="StereotypePropertyBrace">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_LZi70FenEemC-djVBjsxJg" source="PapyrusCSSForceValue">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LZi70VenEemC-djVBjsxJg" key="visible" value="true"/>
+              </eAnnotations>
               <element xmi:type="uml:Property" href="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#__W7qElecEemlk6nvLsCbVg"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_Zm_Lk1efEemtZ4vNsrJPQA"/>
             </children>
@@ -307,7 +313,19 @@
           <element xmi:type="uml:Property" href="figure.uml#_OJrpgFeZEemSiZfDg_TEPg"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_OzKEUVeZEemSiZfDg_TEPg"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_Xvj-oFeZEemSiZfDg_TEPg" type="Property_ClassAttributeLabel">
+        <children xmi:type="notation:Shape" xmi:id="_Xvj-oFeZEemSiZfDg_TEPg" type="Property_ClassAttributeLabel" fontName="dgjhw">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_sAOvkFemEemC-djVBjsxJg" source="ShadowFigure">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sAOvkVemEemC-djVBjsxJg" key="ShadowFigure_Value" value="false"/>
+          </eAnnotations>
+          <children xmi:type="notation:BasicCompartment" xmi:id="__8Y8A1emEemC-djVBjsxJg" type="StereotypeBrace">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_CDHX8FenEemC-djVBjsxJg" source="PapyrusCSSForceValue">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_CDHX8VenEemC-djVBjsxJg" key="visible" value="true"/>
+            </eAnnotations>
+            <styles xmi:type="notation:TitleStyle" xmi:id="__8Y8BFemEemC-djVBjsxJg"/>
+            <styles xmi:type="notation:StringValueStyle" xmi:id="__8Y8BVemEemC-djVBjsxJg" name="stereotype" stringValue="aspectj::PointCutConjuction"/>
+            <element xmi:type="uml:Stereotype" href="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_qIKhIFbqEemLl-b4hcTIIQ"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__8Y8BlemEemC-djVBjsxJg"/>
+          </children>
           <element xmi:type="uml:Property" href="figure.uml#_XrVl8FeZEemSiZfDg_TEPg"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_Xvj-oVeZEemSiZfDg_TEPg"/>
         </children>

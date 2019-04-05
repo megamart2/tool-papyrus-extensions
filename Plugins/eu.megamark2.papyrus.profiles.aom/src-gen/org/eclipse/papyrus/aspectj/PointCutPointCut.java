@@ -16,7 +16,7 @@ package org.eclipse.papyrus.aspectj;
  * </ul>
  *
  * @see org.eclipse.papyrus.aspectj.AspectJPackage#getPointCutPointCut()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface PointCutPointCut extends IndividualPointCut {

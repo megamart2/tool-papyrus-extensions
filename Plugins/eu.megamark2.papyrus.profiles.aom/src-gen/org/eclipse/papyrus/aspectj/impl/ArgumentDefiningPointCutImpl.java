@@ -34,7 +34,7 @@ import org.eclipse.uml2.uml.StructuralFeature;
  *
  * @generated
  */
-public class ArgumentDefiningPointCutImpl extends MinimalEObjectImpl.Container implements ArgumentDefiningPointCut {
+public abstract class ArgumentDefiningPointCutImpl extends MinimalEObjectImpl.Container implements ArgumentDefiningPointCut {
 	/**
 	 * The cached value of the '{@link #getBase_StructuralFeature() <em>Base Structural Feature</em>}' reference.
 	 * <!-- begin-user-doc -->

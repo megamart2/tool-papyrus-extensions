@@ -18,7 +18,7 @@ import org.eclipse.uml2.uml.StructuralFeature;
  * </ul>
  *
  * @see org.eclipse.papyrus.aspectj.AspectJPackage#getPointCut()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface PointCut extends EObject {

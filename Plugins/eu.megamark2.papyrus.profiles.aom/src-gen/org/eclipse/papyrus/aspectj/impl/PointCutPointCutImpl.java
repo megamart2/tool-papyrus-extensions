@@ -25,7 +25,7 @@ import org.eclipse.papyrus.aspectj.PointCutPointCut;
  *
  * @generated
  */
-public class PointCutPointCutImpl extends IndividualPointCutImpl implements PointCutPointCut {
+public abstract class PointCutPointCutImpl extends IndividualPointCutImpl implements PointCutPointCut {
 	/**
 	 * The cached value of the '{@link #getSelectedPointCut() <em>Selected Point Cut</em>}' reference.
 	 * <!-- begin-user-doc -->

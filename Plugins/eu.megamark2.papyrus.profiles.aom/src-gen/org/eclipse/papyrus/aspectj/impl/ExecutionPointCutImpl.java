@@ -14,7 +14,7 @@ import org.eclipse.papyrus.aspectj.ExecutionPointCut;
  *
  * @generated
  */
-public class ExecutionPointCutImpl extends OperationalPointCutImpl implements ExecutionPointCut {
+public abstract class ExecutionPointCutImpl extends OperationalPointCutImpl implements ExecutionPointCut {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

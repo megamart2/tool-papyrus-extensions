@@ -59,21 +59,13 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 		switch (eClass.getClassifierID()) {
 			case AspectJPackage.STATIC_CROSS_CUTTING_FEATURE: return createStaticCrossCuttingFeature();
 			case AspectJPackage.ASPECT: return createAspect();
-			case AspectJPackage.INDIVIDUAL_POINT_CUT: return createIndividualPointCut();
-			case AspectJPackage.POINT_CUT: return createPointCut();
-			case AspectJPackage.COMPOSITION_POINT_CUT: return createCompositionPointCut();
 			case AspectJPackage.INITIALIZATION_POINT_CUT: return createInitializationPointCut();
-			case AspectJPackage.EXECUTION_POINT_CUT: return createExecutionPointCut();
-			case AspectJPackage.OPERATIONAL_POINT_CUT: return createOperationalPointCut();
 			case AspectJPackage.PRE_INITIALIZATION_POINT_CUT: return createPreInitializationPointCut();
 			case AspectJPackage.SET_POINT_CUT: return createSetPointCut();
-			case AspectJPackage.PROPERTY_POINT_CUT: return createPropertyPointCut();
 			case AspectJPackage.GET_POINT_CUT: return createGetPointCut();
 			case AspectJPackage.CALL_POINT_CUT: return createCallPointCut();
 			case AspectJPackage.WITHIN_CODE_POINT_CUT: return createWithinCodePointCut();
-			case AspectJPackage.ARGUMENT_DEFINING_POINT_CUT: return createArgumentDefiningPointCut();
 			case AspectJPackage.THIS_POINT_CUT: return createThisPointCut();
-			case AspectJPackage.TYPE_POINT_CUT: return createTypePointCut();
 			case AspectJPackage.ARGS_POINT_CUT: return createArgsPointCut();
 			case AspectJPackage.TARGET_POINT_CUT: return createTargetPointCut();
 			case AspectJPackage.ADVICE_EXECUTION_POINT_CUT: return createAdviceExecutionPointCut();
@@ -81,7 +73,6 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 			case AspectJPackage.STATIC_INITIALIZATION_POINT_CUT: return createStaticInitializationPointCut();
 			case AspectJPackage.EXCEPTION_POINT_CUT: return createExceptionPointCut();
 			case AspectJPackage.WITHIN_POINT_CUT: return createWithinPointCut();
-			case AspectJPackage.POINT_CUT_POINT_CUT: return createPointCutPointCut();
 			case AspectJPackage.CFLOW_BELOW_POINT_CUT: return createCFlowBelowPointCut();
 			case AspectJPackage.CROSS_CUTTING_CONCERN: return createCrossCuttingConcern();
 			case AspectJPackage.POINT_CUT_DISJUCTION: return createPointCutDisjuction();
@@ -152,59 +143,9 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IndividualPointCut createIndividualPointCut() {
-		IndividualPointCutImpl individualPointCut = new IndividualPointCutImpl();
-		return individualPointCut;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PointCut createPointCut() {
-		PointCutImpl pointCut = new PointCutImpl();
-		return pointCut;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CompositionPointCut createCompositionPointCut() {
-		CompositionPointCutImpl compositionPointCut = new CompositionPointCutImpl();
-		return compositionPointCut;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public InitializationPointCut createInitializationPointCut() {
 		InitializationPointCutImpl initializationPointCut = new InitializationPointCutImpl();
 		return initializationPointCut;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ExecutionPointCut createExecutionPointCut() {
-		ExecutionPointCutImpl executionPointCut = new ExecutionPointCutImpl();
-		return executionPointCut;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public OperationalPointCut createOperationalPointCut() {
-		OperationalPointCutImpl operationalPointCut = new OperationalPointCutImpl();
-		return operationalPointCut;
 	}
 
 	/**
@@ -225,16 +166,6 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 	public SetPointCut createSetPointCut() {
 		SetPointCutImpl setPointCut = new SetPointCutImpl();
 		return setPointCut;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PropertyPointCut createPropertyPointCut() {
-		PropertyPointCutImpl propertyPointCut = new PropertyPointCutImpl();
-		return propertyPointCut;
 	}
 
 	/**
@@ -272,29 +203,9 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ArgumentDefiningPointCut createArgumentDefiningPointCut() {
-		ArgumentDefiningPointCutImpl argumentDefiningPointCut = new ArgumentDefiningPointCutImpl();
-		return argumentDefiningPointCut;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public ThisPointCut createThisPointCut() {
 		ThisPointCutImpl thisPointCut = new ThisPointCutImpl();
 		return thisPointCut;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TypePointCut createTypePointCut() {
-		TypePointCutImpl typePointCut = new TypePointCutImpl();
-		return typePointCut;
 	}
 
 	/**
@@ -365,16 +276,6 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 	public WithinPointCut createWithinPointCut() {
 		WithinPointCutImpl withinPointCut = new WithinPointCutImpl();
 		return withinPointCut;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PointCutPointCut createPointCutPointCut() {
-		PointCutPointCutImpl pointCutPointCut = new PointCutPointCutImpl();
-		return pointCutPointCut;
 	}
 
 	/**

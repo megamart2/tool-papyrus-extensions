@@ -22,7 +22,7 @@ import org.eclipse.uml2.uml.Type;
  * </ul>
  *
  * @see org.eclipse.papyrus.aspectj.AspectJPackage#getPropertyPointCut()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface PropertyPointCut extends IndividualPointCut {

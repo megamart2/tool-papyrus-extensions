@@ -10,7 +10,7 @@ package org.eclipse.papyrus.aspectj;
  *
  *
  * @see org.eclipse.papyrus.aspectj.AspectJPackage#getExecutionPointCut()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface ExecutionPointCut extends OperationalPointCut {
