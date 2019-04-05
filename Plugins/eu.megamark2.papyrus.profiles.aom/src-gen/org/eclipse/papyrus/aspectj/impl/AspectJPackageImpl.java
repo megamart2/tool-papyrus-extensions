@@ -479,17 +479,8 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPointCut_Advice() {
+	public EReference getPointCut_Composition() {
 		return (EReference)pointCutEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getPointCut_SelectedBy() {
-		return (EReference)pointCutEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -812,6 +803,15 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getPointCutNegation_Composee() {
+		return (EReference)pointCutNegationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCFlowPointCut() {
 		return cFlowPointCutEClass;
 	}
@@ -823,6 +823,15 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 	 */
 	public EClass getPointCutConjuction() {
 		return pointCutConjuctionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPointCutConjuction_Composee() {
+		return (EReference)pointCutConjuctionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -888,23 +897,16 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 		pointCutEClass = createEClass(POINT_CUT);
 		createEReference(pointCutEClass, POINT_CUT__BASE_POINT_CUT_STRUCTURAL_FEATURE);
 		createEReference(pointCutEClass, POINT_CUT__COMPOSITE);
-		createEReference(pointCutEClass, POINT_CUT__ADVICE);
-		createEReference(pointCutEClass, POINT_CUT__SELECTED_BY);
+		createEReference(pointCutEClass, POINT_CUT__COMPOSITION);
+
+		pointCutConjuctionEClass = createEClass(POINT_CUT_CONJUCTION);
+		createEReference(pointCutConjuctionEClass, POINT_CUT_CONJUCTION__COMPOSEE);
 
 		pointCutDisjuctionEClass = createEClass(POINT_CUT_DISJUCTION);
 		createEReference(pointCutDisjuctionEClass, POINT_CUT_DISJUCTION__COMPOSEE);
 
-		pointCutConjuctionEClass = createEClass(POINT_CUT_CONJUCTION);
-
 		pointCutNegationEClass = createEClass(POINT_CUT_NEGATION);
-
-		adviceEClass = createEClass(ADVICE);
-		createEAttribute(adviceEClass, ADVICE__ADVICE_EXECUTION);
-		createEReference(adviceEClass, ADVICE__BASE_BEHAVIORAL_FEATURE);
-		createEReference(adviceEClass, ADVICE__POINTCUT);
-
-		pointCutPointCutEClass = createEClass(POINT_CUT_POINT_CUT);
-		createEReference(pointCutPointCutEClass, POINT_CUT_POINT_CUT__SELECTED_POINT_CUT);
+		createEReference(pointCutNegationEClass, POINT_CUT_NEGATION__COMPOSEE);
 
 		initializationPointCutEClass = createEClass(INITIALIZATION_POINT_CUT);
 
@@ -941,11 +943,19 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 
 		adviceExecutionPointCutEClass = createEClass(ADVICE_EXECUTION_POINT_CUT);
 
+		adviceEClass = createEClass(ADVICE);
+		createEAttribute(adviceEClass, ADVICE__ADVICE_EXECUTION);
+		createEReference(adviceEClass, ADVICE__BASE_BEHAVIORAL_FEATURE);
+		createEReference(adviceEClass, ADVICE__POINTCUT);
+
 		staticInitializationPointCutEClass = createEClass(STATIC_INITIALIZATION_POINT_CUT);
 
 		exceptionPointCutEClass = createEClass(EXCEPTION_POINT_CUT);
 
 		withinPointCutEClass = createEClass(WITHIN_POINT_CUT);
+
+		pointCutPointCutEClass = createEClass(POINT_CUT_POINT_CUT);
+		createEReference(pointCutPointCutEClass, POINT_CUT_POINT_CUT__SELECTED_POINT_CUT);
 
 		cFlowBelowPointCutEClass = createEClass(CFLOW_BELOW_POINT_CUT);
 
@@ -991,10 +1001,9 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		pointCutDisjuctionEClass.getESuperTypes().add(this.getPointCut());
 		pointCutConjuctionEClass.getESuperTypes().add(this.getPointCut());
+		pointCutDisjuctionEClass.getESuperTypes().add(this.getPointCut());
 		pointCutNegationEClass.getESuperTypes().add(this.getPointCut());
-		pointCutPointCutEClass.getESuperTypes().add(this.getPointCut());
 		initializationPointCutEClass.getESuperTypes().add(this.getExecutionPointCut());
 		executionPointCutEClass.getESuperTypes().add(this.getOperationalPointCut());
 		operationalPointCutEClass.getESuperTypes().add(this.getPointCut());
@@ -1015,6 +1024,7 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 		staticInitializationPointCutEClass.getESuperTypes().add(this.getTypePointCut());
 		exceptionPointCutEClass.getESuperTypes().add(this.getTypePointCut());
 		withinPointCutEClass.getESuperTypes().add(this.getTypePointCut());
+		pointCutPointCutEClass.getESuperTypes().add(this.getPointCut());
 		cFlowBelowPointCutEClass.getESuperTypes().add(this.getPointCutPointCut());
 		cFlowPointCutEClass.getESuperTypes().add(this.getPointCutPointCut());
 
@@ -1035,24 +1045,17 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 
 		initEClass(pointCutEClass, PointCut.class, "PointCut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPointCut_Base_PointCut_StructuralFeature(), theUMLPackage.getStructuralFeature(), null, "base_PointCut_StructuralFeature", null, 1, 1, PointCut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getPointCut_Composite(), this.getPointCutDisjuction(), this.getPointCutDisjuction_Composee(), "composite", null, 0, -1, PointCut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getPointCut_Advice(), this.getAdvice(), this.getAdvice_Pointcut(), "advice", null, 0, -1, PointCut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getPointCut_SelectedBy(), this.getPointCutPointCut(), this.getPointCutPointCut_SelectedPointCut(), "selectedBy", null, 0, -1, PointCut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(pointCutDisjuctionEClass, PointCutDisjuction.class, "PointCutDisjuction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPointCutDisjuction_Composee(), this.getPointCut(), this.getPointCut_Composite(), "composee", null, 2, -1, PointCutDisjuction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getPointCut_Composite(), this.getPointCutConjuction(), null, "composite", null, 0, -1, PointCut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getPointCut_Composition(), this.getPointCutNegation(), null, "composition", null, 1, 1, PointCut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(pointCutConjuctionEClass, PointCutConjuction.class, "PointCutConjuction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPointCutConjuction_Composee(), this.getPointCut(), null, "composee", null, 2, -1, PointCutConjuction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(pointCutDisjuctionEClass, PointCutDisjuction.class, "PointCutDisjuction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPointCutDisjuction_Composee(), this.getPointCut(), null, "composee", null, 2, -1, PointCutDisjuction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(pointCutNegationEClass, PointCutNegation.class, "PointCutNegation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(adviceEClass, Advice.class, "Advice", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAdvice_AdviceExecution(), this.getAdviceExecutionType(), "adviceExecution", null, 1, 1, Advice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getAdvice_Base_BehavioralFeature(), theUMLPackage.getBehavioralFeature(), null, "base_BehavioralFeature", null, 1, 1, Advice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getAdvice_Pointcut(), this.getPointCut(), this.getPointCut_Advice(), "pointcut", null, 1, 1, Advice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(pointCutPointCutEClass, PointCutPointCut.class, "PointCutPointCut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPointCutPointCut_SelectedPointCut(), this.getPointCut(), this.getPointCut_SelectedBy(), "selectedPointCut", null, 1, 1, PointCutPointCut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getPointCutNegation_Composee(), this.getPointCut(), null, "composee", null, 1, 1, PointCutNegation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(initializationPointCutEClass, InitializationPointCut.class, "InitializationPointCut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1076,12 +1079,12 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 
 		initEClass(argumentDefiningPointCutEClass, ArgumentDefiningPointCut.class, "ArgumentDefiningPointCut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getArgumentDefiningPointCut_Base_StructuralFeature(), theUMLPackage.getStructuralFeature(), null, "base_StructuralFeature", null, 1, 1, ArgumentDefiningPointCut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getArgumentDefiningPointCut_ArgNames(), theTypesPackage.getString(), "argNames", null, 1, -1, ArgumentDefiningPointCut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getArgumentDefiningPointCut_ArgNames(), theTypesPackage.getString(), "argNames", null, 1, -1, ArgumentDefiningPointCut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(thisPointCutEClass, ThisPointCut.class, "ThisPointCut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(typePointCutEClass, TypePointCut.class, "TypePointCut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTypePointCut_Type(), theUMLPackage.getType(), null, "type", null, 1, -1, TypePointCut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getTypePointCut_Type(), theUMLPackage.getType(), null, "type", null, 1, -1, TypePointCut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(argsPointCutEClass, ArgsPointCut.class, "ArgsPointCut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1089,11 +1092,19 @@ public class AspectJPackageImpl extends EPackageImpl implements AspectJPackage {
 
 		initEClass(adviceExecutionPointCutEClass, AdviceExecutionPointCut.class, "AdviceExecutionPointCut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(adviceEClass, Advice.class, "Advice", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAdvice_AdviceExecution(), this.getAdviceExecutionType(), "adviceExecution", null, 1, 1, Advice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getAdvice_Base_BehavioralFeature(), theUMLPackage.getBehavioralFeature(), null, "base_BehavioralFeature", null, 1, 1, Advice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getAdvice_Pointcut(), this.getPointCut(), null, "pointcut", null, 1, 1, Advice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
 		initEClass(staticInitializationPointCutEClass, StaticInitializationPointCut.class, "StaticInitializationPointCut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(exceptionPointCutEClass, ExceptionPointCut.class, "ExceptionPointCut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(withinPointCutEClass, WithinPointCut.class, "WithinPointCut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(pointCutPointCutEClass, PointCutPointCut.class, "PointCutPointCut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPointCutPointCut_SelectedPointCut(), this.getPointCut(), null, "selectedPointCut", null, 1, 1, PointCutPointCut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(cFlowBelowPointCutEClass, CFlowBelowPointCut.class, "CFlowBelowPointCut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

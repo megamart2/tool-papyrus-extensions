@@ -232,22 +232,13 @@ public interface AspectJPackage extends EPackage {
 	int POINT_CUT__COMPOSITE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Advice</b></em>' reference list.
+	 * The feature id for the '<em><b>Composition</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POINT_CUT__ADVICE = 2;
-
-	/**
-	 * The feature id for the '<em><b>Selected By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINT_CUT__SELECTED_BY = 3;
+	int POINT_CUT__COMPOSITION = 2;
 
 	/**
 	 * The number of structural features of the '<em>Point Cut</em>' class.
@@ -256,7 +247,7 @@ public interface AspectJPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POINT_CUT_FEATURE_COUNT = 4;
+	int POINT_CUT_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Point Cut</em>' class.
@@ -275,7 +266,7 @@ public interface AspectJPackage extends EPackage {
 	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getOperationalPointCut()
 	 * @generated
 	 */
-	int OPERATIONAL_POINT_CUT = 10;
+	int OPERATIONAL_POINT_CUT = 8;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.ExecutionPointCutImpl <em>Execution Point Cut</em>}' class.
@@ -285,7 +276,7 @@ public interface AspectJPackage extends EPackage {
 	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getExecutionPointCut()
 	 * @generated
 	 */
-	int EXECUTION_POINT_CUT = 9;
+	int EXECUTION_POINT_CUT = 7;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.InitializationPointCutImpl <em>Initialization Point Cut</em>}' class.
@@ -295,7 +286,7 @@ public interface AspectJPackage extends EPackage {
 	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getInitializationPointCut()
 	 * @generated
 	 */
-	int INITIALIZATION_POINT_CUT = 8;
+	int INITIALIZATION_POINT_CUT = 6;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.PreInitializationPointCutImpl <em>Pre Initialization Point Cut</em>}' class.
@@ -305,7 +296,7 @@ public interface AspectJPackage extends EPackage {
 	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getPreInitializationPointCut()
 	 * @generated
 	 */
-	int PRE_INITIALIZATION_POINT_CUT = 11;
+	int PRE_INITIALIZATION_POINT_CUT = 9;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.PropertyPointCutImpl <em>Property Point Cut</em>}' class.
@@ -315,7 +306,7 @@ public interface AspectJPackage extends EPackage {
 	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getPropertyPointCut()
 	 * @generated
 	 */
-	int PROPERTY_POINT_CUT = 13;
+	int PROPERTY_POINT_CUT = 11;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.SetPointCutImpl <em>Set Point Cut</em>}' class.
@@ -325,7 +316,7 @@ public interface AspectJPackage extends EPackage {
 	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getSetPointCut()
 	 * @generated
 	 */
-	int SET_POINT_CUT = 12;
+	int SET_POINT_CUT = 10;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.GetPointCutImpl <em>Get Point Cut</em>}' class.
@@ -335,7 +326,7 @@ public interface AspectJPackage extends EPackage {
 	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getGetPointCut()
 	 * @generated
 	 */
-	int GET_POINT_CUT = 14;
+	int GET_POINT_CUT = 12;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.CallPointCutImpl <em>Call Point Cut</em>}' class.
@@ -345,7 +336,7 @@ public interface AspectJPackage extends EPackage {
 	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getCallPointCut()
 	 * @generated
 	 */
-	int CALL_POINT_CUT = 15;
+	int CALL_POINT_CUT = 13;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.WithinCodePointCutImpl <em>Within Code Point Cut</em>}' class.
@@ -355,7 +346,7 @@ public interface AspectJPackage extends EPackage {
 	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getWithinCodePointCut()
 	 * @generated
 	 */
-	int WITHIN_CODE_POINT_CUT = 16;
+	int WITHIN_CODE_POINT_CUT = 14;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.ArgumentDefiningPointCutImpl <em>Argument Defining Point Cut</em>}' class.
@@ -365,7 +356,7 @@ public interface AspectJPackage extends EPackage {
 	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getArgumentDefiningPointCut()
 	 * @generated
 	 */
-	int ARGUMENT_DEFINING_POINT_CUT = 17;
+	int ARGUMENT_DEFINING_POINT_CUT = 15;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.ThisPointCutImpl <em>This Point Cut</em>}' class.
@@ -375,7 +366,7 @@ public interface AspectJPackage extends EPackage {
 	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getThisPointCut()
 	 * @generated
 	 */
-	int THIS_POINT_CUT = 18;
+	int THIS_POINT_CUT = 16;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.TypePointCutImpl <em>Type Point Cut</em>}' class.
@@ -385,7 +376,7 @@ public interface AspectJPackage extends EPackage {
 	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getTypePointCut()
 	 * @generated
 	 */
-	int TYPE_POINT_CUT = 19;
+	int TYPE_POINT_CUT = 17;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.ArgsPointCutImpl <em>Args Point Cut</em>}' class.
@@ -395,7 +386,7 @@ public interface AspectJPackage extends EPackage {
 	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getArgsPointCut()
 	 * @generated
 	 */
-	int ARGS_POINT_CUT = 20;
+	int ARGS_POINT_CUT = 18;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.TargetPointCutImpl <em>Target Point Cut</em>}' class.
@@ -405,7 +396,7 @@ public interface AspectJPackage extends EPackage {
 	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getTargetPointCut()
 	 * @generated
 	 */
-	int TARGET_POINT_CUT = 21;
+	int TARGET_POINT_CUT = 19;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.AdviceExecutionPointCutImpl <em>Advice Execution Point Cut</em>}' class.
@@ -415,7 +406,7 @@ public interface AspectJPackage extends EPackage {
 	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getAdviceExecutionPointCut()
 	 * @generated
 	 */
-	int ADVICE_EXECUTION_POINT_CUT = 22;
+	int ADVICE_EXECUTION_POINT_CUT = 20;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.AdviceImpl <em>Advice</em>}' class.
@@ -425,7 +416,7 @@ public interface AspectJPackage extends EPackage {
 	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getAdvice()
 	 * @generated
 	 */
-	int ADVICE = 6;
+	int ADVICE = 21;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.StaticInitializationPointCutImpl <em>Static Initialization Point Cut</em>}' class.
@@ -435,7 +426,7 @@ public interface AspectJPackage extends EPackage {
 	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getStaticInitializationPointCut()
 	 * @generated
 	 */
-	int STATIC_INITIALIZATION_POINT_CUT = 23;
+	int STATIC_INITIALIZATION_POINT_CUT = 22;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.ExceptionPointCutImpl <em>Exception Point Cut</em>}' class.
@@ -445,7 +436,7 @@ public interface AspectJPackage extends EPackage {
 	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getExceptionPointCut()
 	 * @generated
 	 */
-	int EXCEPTION_POINT_CUT = 24;
+	int EXCEPTION_POINT_CUT = 23;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.WithinPointCutImpl <em>Within Point Cut</em>}' class.
@@ -455,7 +446,7 @@ public interface AspectJPackage extends EPackage {
 	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getWithinPointCut()
 	 * @generated
 	 */
-	int WITHIN_POINT_CUT = 25;
+	int WITHIN_POINT_CUT = 24;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.PointCutPointCutImpl <em>Point Cut Point Cut</em>}' class.
@@ -465,7 +456,7 @@ public interface AspectJPackage extends EPackage {
 	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getPointCutPointCut()
 	 * @generated
 	 */
-	int POINT_CUT_POINT_CUT = 7;
+	int POINT_CUT_POINT_CUT = 25;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.CFlowBelowPointCutImpl <em>CFlow Below Point Cut</em>}' class.
@@ -495,70 +486,7 @@ public interface AspectJPackage extends EPackage {
 	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getPointCutDisjuction()
 	 * @generated
 	 */
-	int POINT_CUT_DISJUCTION = 3;
-
-	/**
-	 * The feature id for the '<em><b>Base Point Cut Structural Feature</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINT_CUT_DISJUCTION__BASE_POINT_CUT_STRUCTURAL_FEATURE = POINT_CUT__BASE_POINT_CUT_STRUCTURAL_FEATURE;
-
-	/**
-	 * The feature id for the '<em><b>Composite</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINT_CUT_DISJUCTION__COMPOSITE = POINT_CUT__COMPOSITE;
-
-	/**
-	 * The feature id for the '<em><b>Advice</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINT_CUT_DISJUCTION__ADVICE = POINT_CUT__ADVICE;
-
-	/**
-	 * The feature id for the '<em><b>Selected By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINT_CUT_DISJUCTION__SELECTED_BY = POINT_CUT__SELECTED_BY;
-
-	/**
-	 * The feature id for the '<em><b>Composee</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINT_CUT_DISJUCTION__COMPOSEE = POINT_CUT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Point Cut Disjuction</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINT_CUT_DISJUCTION_FEATURE_COUNT = POINT_CUT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Point Cut Disjuction</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINT_CUT_DISJUCTION_OPERATION_COUNT = POINT_CUT_OPERATION_COUNT + 0;
+	int POINT_CUT_DISJUCTION = 4;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.aspectj.impl.PointCutNegationImpl <em>Point Cut Negation</em>}' class.
@@ -588,7 +516,7 @@ public interface AspectJPackage extends EPackage {
 	 * @see org.eclipse.papyrus.aspectj.impl.AspectJPackageImpl#getPointCutConjuction()
 	 * @generated
 	 */
-	int POINT_CUT_CONJUCTION = 4;
+	int POINT_CUT_CONJUCTION = 3;
 
 	/**
 	 * The feature id for the '<em><b>Base Point Cut Structural Feature</b></em>' reference.
@@ -609,22 +537,22 @@ public interface AspectJPackage extends EPackage {
 	int POINT_CUT_CONJUCTION__COMPOSITE = POINT_CUT__COMPOSITE;
 
 	/**
-	 * The feature id for the '<em><b>Advice</b></em>' reference list.
+	 * The feature id for the '<em><b>Composition</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POINT_CUT_CONJUCTION__ADVICE = POINT_CUT__ADVICE;
+	int POINT_CUT_CONJUCTION__COMPOSITION = POINT_CUT__COMPOSITION;
 
 	/**
-	 * The feature id for the '<em><b>Selected By</b></em>' reference list.
+	 * The feature id for the '<em><b>Composee</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POINT_CUT_CONJUCTION__SELECTED_BY = POINT_CUT__SELECTED_BY;
+	int POINT_CUT_CONJUCTION__COMPOSEE = POINT_CUT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Point Cut Conjuction</em>' class.
@@ -633,7 +561,7 @@ public interface AspectJPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POINT_CUT_CONJUCTION_FEATURE_COUNT = POINT_CUT_FEATURE_COUNT + 0;
+	int POINT_CUT_CONJUCTION_FEATURE_COUNT = POINT_CUT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Point Cut Conjuction</em>' class.
@@ -643,6 +571,60 @@ public interface AspectJPackage extends EPackage {
 	 * @ordered
 	 */
 	int POINT_CUT_CONJUCTION_OPERATION_COUNT = POINT_CUT_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Base Point Cut Structural Feature</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_CUT_DISJUCTION__BASE_POINT_CUT_STRUCTURAL_FEATURE = POINT_CUT__BASE_POINT_CUT_STRUCTURAL_FEATURE;
+
+	/**
+	 * The feature id for the '<em><b>Composite</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_CUT_DISJUCTION__COMPOSITE = POINT_CUT__COMPOSITE;
+
+	/**
+	 * The feature id for the '<em><b>Composition</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_CUT_DISJUCTION__COMPOSITION = POINT_CUT__COMPOSITION;
+
+	/**
+	 * The feature id for the '<em><b>Composee</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_CUT_DISJUCTION__COMPOSEE = POINT_CUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Point Cut Disjuction</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_CUT_DISJUCTION_FEATURE_COUNT = POINT_CUT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Point Cut Disjuction</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_CUT_DISJUCTION_OPERATION_COUNT = POINT_CUT_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Base Point Cut Structural Feature</b></em>' reference.
@@ -663,22 +645,22 @@ public interface AspectJPackage extends EPackage {
 	int POINT_CUT_NEGATION__COMPOSITE = POINT_CUT__COMPOSITE;
 
 	/**
-	 * The feature id for the '<em><b>Advice</b></em>' reference list.
+	 * The feature id for the '<em><b>Composition</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POINT_CUT_NEGATION__ADVICE = POINT_CUT__ADVICE;
+	int POINT_CUT_NEGATION__COMPOSITION = POINT_CUT__COMPOSITION;
 
 	/**
-	 * The feature id for the '<em><b>Selected By</b></em>' reference list.
+	 * The feature id for the '<em><b>Composee</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POINT_CUT_NEGATION__SELECTED_BY = POINT_CUT__SELECTED_BY;
+	int POINT_CUT_NEGATION__COMPOSEE = POINT_CUT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Point Cut Negation</em>' class.
@@ -687,7 +669,7 @@ public interface AspectJPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POINT_CUT_NEGATION_FEATURE_COUNT = POINT_CUT_FEATURE_COUNT + 0;
+	int POINT_CUT_NEGATION_FEATURE_COUNT = POINT_CUT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Point Cut Negation</em>' class.
@@ -697,114 +679,6 @@ public interface AspectJPackage extends EPackage {
 	 * @ordered
 	 */
 	int POINT_CUT_NEGATION_OPERATION_COUNT = POINT_CUT_OPERATION_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Advice Execution</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADVICE__ADVICE_EXECUTION = 0;
-
-	/**
-	 * The feature id for the '<em><b>Base Behavioral Feature</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADVICE__BASE_BEHAVIORAL_FEATURE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Pointcut</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADVICE__POINTCUT = 2;
-
-	/**
-	 * The number of structural features of the '<em>Advice</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADVICE_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Advice</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADVICE_OPERATION_COUNT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Base Point Cut Structural Feature</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINT_CUT_POINT_CUT__BASE_POINT_CUT_STRUCTURAL_FEATURE = POINT_CUT__BASE_POINT_CUT_STRUCTURAL_FEATURE;
-
-	/**
-	 * The feature id for the '<em><b>Composite</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINT_CUT_POINT_CUT__COMPOSITE = POINT_CUT__COMPOSITE;
-
-	/**
-	 * The feature id for the '<em><b>Advice</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINT_CUT_POINT_CUT__ADVICE = POINT_CUT__ADVICE;
-
-	/**
-	 * The feature id for the '<em><b>Selected By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINT_CUT_POINT_CUT__SELECTED_BY = POINT_CUT__SELECTED_BY;
-
-	/**
-	 * The feature id for the '<em><b>Selected Point Cut</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINT_CUT_POINT_CUT__SELECTED_POINT_CUT = POINT_CUT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Point Cut Point Cut</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINT_CUT_POINT_CUT_FEATURE_COUNT = POINT_CUT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Point Cut Point Cut</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINT_CUT_POINT_CUT_OPERATION_COUNT = POINT_CUT_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Base Point Cut Structural Feature</b></em>' reference.
@@ -825,22 +699,13 @@ public interface AspectJPackage extends EPackage {
 	int OPERATIONAL_POINT_CUT__COMPOSITE = POINT_CUT__COMPOSITE;
 
 	/**
-	 * The feature id for the '<em><b>Advice</b></em>' reference list.
+	 * The feature id for the '<em><b>Composition</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATIONAL_POINT_CUT__ADVICE = POINT_CUT__ADVICE;
-
-	/**
-	 * The feature id for the '<em><b>Selected By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPERATIONAL_POINT_CUT__SELECTED_BY = POINT_CUT__SELECTED_BY;
+	int OPERATIONAL_POINT_CUT__COMPOSITION = POINT_CUT__COMPOSITION;
 
 	/**
 	 * The feature id for the '<em><b>Operation</b></em>' reference list.
@@ -888,22 +753,13 @@ public interface AspectJPackage extends EPackage {
 	int EXECUTION_POINT_CUT__COMPOSITE = OPERATIONAL_POINT_CUT__COMPOSITE;
 
 	/**
-	 * The feature id for the '<em><b>Advice</b></em>' reference list.
+	 * The feature id for the '<em><b>Composition</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTION_POINT_CUT__ADVICE = OPERATIONAL_POINT_CUT__ADVICE;
-
-	/**
-	 * The feature id for the '<em><b>Selected By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTION_POINT_CUT__SELECTED_BY = OPERATIONAL_POINT_CUT__SELECTED_BY;
+	int EXECUTION_POINT_CUT__COMPOSITION = OPERATIONAL_POINT_CUT__COMPOSITION;
 
 	/**
 	 * The feature id for the '<em><b>Operation</b></em>' reference list.
@@ -951,22 +807,13 @@ public interface AspectJPackage extends EPackage {
 	int INITIALIZATION_POINT_CUT__COMPOSITE = EXECUTION_POINT_CUT__COMPOSITE;
 
 	/**
-	 * The feature id for the '<em><b>Advice</b></em>' reference list.
+	 * The feature id for the '<em><b>Composition</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INITIALIZATION_POINT_CUT__ADVICE = EXECUTION_POINT_CUT__ADVICE;
-
-	/**
-	 * The feature id for the '<em><b>Selected By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INITIALIZATION_POINT_CUT__SELECTED_BY = EXECUTION_POINT_CUT__SELECTED_BY;
+	int INITIALIZATION_POINT_CUT__COMPOSITION = EXECUTION_POINT_CUT__COMPOSITION;
 
 	/**
 	 * The feature id for the '<em><b>Operation</b></em>' reference list.
@@ -1014,22 +861,13 @@ public interface AspectJPackage extends EPackage {
 	int PRE_INITIALIZATION_POINT_CUT__COMPOSITE = EXECUTION_POINT_CUT__COMPOSITE;
 
 	/**
-	 * The feature id for the '<em><b>Advice</b></em>' reference list.
+	 * The feature id for the '<em><b>Composition</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRE_INITIALIZATION_POINT_CUT__ADVICE = EXECUTION_POINT_CUT__ADVICE;
-
-	/**
-	 * The feature id for the '<em><b>Selected By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRE_INITIALIZATION_POINT_CUT__SELECTED_BY = EXECUTION_POINT_CUT__SELECTED_BY;
+	int PRE_INITIALIZATION_POINT_CUT__COMPOSITION = EXECUTION_POINT_CUT__COMPOSITION;
 
 	/**
 	 * The feature id for the '<em><b>Operation</b></em>' reference list.
@@ -1077,22 +915,13 @@ public interface AspectJPackage extends EPackage {
 	int PROPERTY_POINT_CUT__COMPOSITE = POINT_CUT__COMPOSITE;
 
 	/**
-	 * The feature id for the '<em><b>Advice</b></em>' reference list.
+	 * The feature id for the '<em><b>Composition</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROPERTY_POINT_CUT__ADVICE = POINT_CUT__ADVICE;
-
-	/**
-	 * The feature id for the '<em><b>Selected By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROPERTY_POINT_CUT__SELECTED_BY = POINT_CUT__SELECTED_BY;
+	int PROPERTY_POINT_CUT__COMPOSITION = POINT_CUT__COMPOSITION;
 
 	/**
 	 * The feature id for the '<em><b>Field</b></em>' reference list.
@@ -1140,22 +969,13 @@ public interface AspectJPackage extends EPackage {
 	int SET_POINT_CUT__COMPOSITE = PROPERTY_POINT_CUT__COMPOSITE;
 
 	/**
-	 * The feature id for the '<em><b>Advice</b></em>' reference list.
+	 * The feature id for the '<em><b>Composition</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SET_POINT_CUT__ADVICE = PROPERTY_POINT_CUT__ADVICE;
-
-	/**
-	 * The feature id for the '<em><b>Selected By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SET_POINT_CUT__SELECTED_BY = PROPERTY_POINT_CUT__SELECTED_BY;
+	int SET_POINT_CUT__COMPOSITION = PROPERTY_POINT_CUT__COMPOSITION;
 
 	/**
 	 * The feature id for the '<em><b>Field</b></em>' reference list.
@@ -1203,22 +1023,13 @@ public interface AspectJPackage extends EPackage {
 	int GET_POINT_CUT__COMPOSITE = PROPERTY_POINT_CUT__COMPOSITE;
 
 	/**
-	 * The feature id for the '<em><b>Advice</b></em>' reference list.
+	 * The feature id for the '<em><b>Composition</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GET_POINT_CUT__ADVICE = PROPERTY_POINT_CUT__ADVICE;
-
-	/**
-	 * The feature id for the '<em><b>Selected By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GET_POINT_CUT__SELECTED_BY = PROPERTY_POINT_CUT__SELECTED_BY;
+	int GET_POINT_CUT__COMPOSITION = PROPERTY_POINT_CUT__COMPOSITION;
 
 	/**
 	 * The feature id for the '<em><b>Field</b></em>' reference list.
@@ -1266,22 +1077,13 @@ public interface AspectJPackage extends EPackage {
 	int CALL_POINT_CUT__COMPOSITE = OPERATIONAL_POINT_CUT__COMPOSITE;
 
 	/**
-	 * The feature id for the '<em><b>Advice</b></em>' reference list.
+	 * The feature id for the '<em><b>Composition</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CALL_POINT_CUT__ADVICE = OPERATIONAL_POINT_CUT__ADVICE;
-
-	/**
-	 * The feature id for the '<em><b>Selected By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALL_POINT_CUT__SELECTED_BY = OPERATIONAL_POINT_CUT__SELECTED_BY;
+	int CALL_POINT_CUT__COMPOSITION = OPERATIONAL_POINT_CUT__COMPOSITION;
 
 	/**
 	 * The feature id for the '<em><b>Operation</b></em>' reference list.
@@ -1329,22 +1131,13 @@ public interface AspectJPackage extends EPackage {
 	int WITHIN_CODE_POINT_CUT__COMPOSITE = OPERATIONAL_POINT_CUT__COMPOSITE;
 
 	/**
-	 * The feature id for the '<em><b>Advice</b></em>' reference list.
+	 * The feature id for the '<em><b>Composition</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WITHIN_CODE_POINT_CUT__ADVICE = OPERATIONAL_POINT_CUT__ADVICE;
-
-	/**
-	 * The feature id for the '<em><b>Selected By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WITHIN_CODE_POINT_CUT__SELECTED_BY = OPERATIONAL_POINT_CUT__SELECTED_BY;
+	int WITHIN_CODE_POINT_CUT__COMPOSITION = OPERATIONAL_POINT_CUT__COMPOSITION;
 
 	/**
 	 * The feature id for the '<em><b>Operation</b></em>' reference list.
@@ -1428,22 +1221,13 @@ public interface AspectJPackage extends EPackage {
 	int TYPE_POINT_CUT__COMPOSITE = POINT_CUT__COMPOSITE;
 
 	/**
-	 * The feature id for the '<em><b>Advice</b></em>' reference list.
+	 * The feature id for the '<em><b>Composition</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TYPE_POINT_CUT__ADVICE = POINT_CUT__ADVICE;
-
-	/**
-	 * The feature id for the '<em><b>Selected By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TYPE_POINT_CUT__SELECTED_BY = POINT_CUT__SELECTED_BY;
+	int TYPE_POINT_CUT__COMPOSITION = POINT_CUT__COMPOSITION;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference list.
@@ -1491,22 +1275,13 @@ public interface AspectJPackage extends EPackage {
 	int THIS_POINT_CUT__COMPOSITE = TYPE_POINT_CUT__COMPOSITE;
 
 	/**
-	 * The feature id for the '<em><b>Advice</b></em>' reference list.
+	 * The feature id for the '<em><b>Composition</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int THIS_POINT_CUT__ADVICE = TYPE_POINT_CUT__ADVICE;
-
-	/**
-	 * The feature id for the '<em><b>Selected By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int THIS_POINT_CUT__SELECTED_BY = TYPE_POINT_CUT__SELECTED_BY;
+	int THIS_POINT_CUT__COMPOSITION = TYPE_POINT_CUT__COMPOSITION;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference list.
@@ -1572,22 +1347,13 @@ public interface AspectJPackage extends EPackage {
 	int ARGS_POINT_CUT__COMPOSITE = TYPE_POINT_CUT__COMPOSITE;
 
 	/**
-	 * The feature id for the '<em><b>Advice</b></em>' reference list.
+	 * The feature id for the '<em><b>Composition</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARGS_POINT_CUT__ADVICE = TYPE_POINT_CUT__ADVICE;
-
-	/**
-	 * The feature id for the '<em><b>Selected By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARGS_POINT_CUT__SELECTED_BY = TYPE_POINT_CUT__SELECTED_BY;
+	int ARGS_POINT_CUT__COMPOSITION = TYPE_POINT_CUT__COMPOSITION;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference list.
@@ -1653,22 +1419,13 @@ public interface AspectJPackage extends EPackage {
 	int TARGET_POINT_CUT__COMPOSITE = TYPE_POINT_CUT__COMPOSITE;
 
 	/**
-	 * The feature id for the '<em><b>Advice</b></em>' reference list.
+	 * The feature id for the '<em><b>Composition</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TARGET_POINT_CUT__ADVICE = TYPE_POINT_CUT__ADVICE;
-
-	/**
-	 * The feature id for the '<em><b>Selected By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TARGET_POINT_CUT__SELECTED_BY = TYPE_POINT_CUT__SELECTED_BY;
+	int TARGET_POINT_CUT__COMPOSITION = TYPE_POINT_CUT__COMPOSITION;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference list.
@@ -1734,22 +1491,13 @@ public interface AspectJPackage extends EPackage {
 	int ADVICE_EXECUTION_POINT_CUT__COMPOSITE = POINT_CUT__COMPOSITE;
 
 	/**
-	 * The feature id for the '<em><b>Advice</b></em>' reference list.
+	 * The feature id for the '<em><b>Composition</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ADVICE_EXECUTION_POINT_CUT__ADVICE = POINT_CUT__ADVICE;
-
-	/**
-	 * The feature id for the '<em><b>Selected By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADVICE_EXECUTION_POINT_CUT__SELECTED_BY = POINT_CUT__SELECTED_BY;
+	int ADVICE_EXECUTION_POINT_CUT__COMPOSITION = POINT_CUT__COMPOSITION;
 
 	/**
 	 * The number of structural features of the '<em>Advice Execution Point Cut</em>' class.
@@ -1770,6 +1518,51 @@ public interface AspectJPackage extends EPackage {
 	int ADVICE_EXECUTION_POINT_CUT_OPERATION_COUNT = POINT_CUT_OPERATION_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Advice Execution</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADVICE__ADVICE_EXECUTION = 0;
+
+	/**
+	 * The feature id for the '<em><b>Base Behavioral Feature</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADVICE__BASE_BEHAVIORAL_FEATURE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Pointcut</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADVICE__POINTCUT = 2;
+
+	/**
+	 * The number of structural features of the '<em>Advice</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADVICE_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Advice</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADVICE_OPERATION_COUNT = 0;
+
+	/**
 	 * The feature id for the '<em><b>Base Point Cut Structural Feature</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1788,22 +1581,13 @@ public interface AspectJPackage extends EPackage {
 	int STATIC_INITIALIZATION_POINT_CUT__COMPOSITE = TYPE_POINT_CUT__COMPOSITE;
 
 	/**
-	 * The feature id for the '<em><b>Advice</b></em>' reference list.
+	 * The feature id for the '<em><b>Composition</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATIC_INITIALIZATION_POINT_CUT__ADVICE = TYPE_POINT_CUT__ADVICE;
-
-	/**
-	 * The feature id for the '<em><b>Selected By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATIC_INITIALIZATION_POINT_CUT__SELECTED_BY = TYPE_POINT_CUT__SELECTED_BY;
+	int STATIC_INITIALIZATION_POINT_CUT__COMPOSITION = TYPE_POINT_CUT__COMPOSITION;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference list.
@@ -1851,22 +1635,13 @@ public interface AspectJPackage extends EPackage {
 	int EXCEPTION_POINT_CUT__COMPOSITE = TYPE_POINT_CUT__COMPOSITE;
 
 	/**
-	 * The feature id for the '<em><b>Advice</b></em>' reference list.
+	 * The feature id for the '<em><b>Composition</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXCEPTION_POINT_CUT__ADVICE = TYPE_POINT_CUT__ADVICE;
-
-	/**
-	 * The feature id for the '<em><b>Selected By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXCEPTION_POINT_CUT__SELECTED_BY = TYPE_POINT_CUT__SELECTED_BY;
+	int EXCEPTION_POINT_CUT__COMPOSITION = TYPE_POINT_CUT__COMPOSITION;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference list.
@@ -1914,22 +1689,13 @@ public interface AspectJPackage extends EPackage {
 	int WITHIN_POINT_CUT__COMPOSITE = TYPE_POINT_CUT__COMPOSITE;
 
 	/**
-	 * The feature id for the '<em><b>Advice</b></em>' reference list.
+	 * The feature id for the '<em><b>Composition</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WITHIN_POINT_CUT__ADVICE = TYPE_POINT_CUT__ADVICE;
-
-	/**
-	 * The feature id for the '<em><b>Selected By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WITHIN_POINT_CUT__SELECTED_BY = TYPE_POINT_CUT__SELECTED_BY;
+	int WITHIN_POINT_CUT__COMPOSITION = TYPE_POINT_CUT__COMPOSITION;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference list.
@@ -1965,6 +1731,60 @@ public interface AspectJPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
+	int POINT_CUT_POINT_CUT__BASE_POINT_CUT_STRUCTURAL_FEATURE = POINT_CUT__BASE_POINT_CUT_STRUCTURAL_FEATURE;
+
+	/**
+	 * The feature id for the '<em><b>Composite</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_CUT_POINT_CUT__COMPOSITE = POINT_CUT__COMPOSITE;
+
+	/**
+	 * The feature id for the '<em><b>Composition</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_CUT_POINT_CUT__COMPOSITION = POINT_CUT__COMPOSITION;
+
+	/**
+	 * The feature id for the '<em><b>Selected Point Cut</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_CUT_POINT_CUT__SELECTED_POINT_CUT = POINT_CUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Point Cut Point Cut</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_CUT_POINT_CUT_FEATURE_COUNT = POINT_CUT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Point Cut Point Cut</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_CUT_POINT_CUT_OPERATION_COUNT = POINT_CUT_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Base Point Cut Structural Feature</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
 	int CFLOW_BELOW_POINT_CUT__BASE_POINT_CUT_STRUCTURAL_FEATURE = POINT_CUT_POINT_CUT__BASE_POINT_CUT_STRUCTURAL_FEATURE;
 
 	/**
@@ -1977,22 +1797,13 @@ public interface AspectJPackage extends EPackage {
 	int CFLOW_BELOW_POINT_CUT__COMPOSITE = POINT_CUT_POINT_CUT__COMPOSITE;
 
 	/**
-	 * The feature id for the '<em><b>Advice</b></em>' reference list.
+	 * The feature id for the '<em><b>Composition</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CFLOW_BELOW_POINT_CUT__ADVICE = POINT_CUT_POINT_CUT__ADVICE;
-
-	/**
-	 * The feature id for the '<em><b>Selected By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CFLOW_BELOW_POINT_CUT__SELECTED_BY = POINT_CUT_POINT_CUT__SELECTED_BY;
+	int CFLOW_BELOW_POINT_CUT__COMPOSITION = POINT_CUT_POINT_CUT__COMPOSITION;
 
 	/**
 	 * The feature id for the '<em><b>Selected Point Cut</b></em>' reference.
@@ -2067,22 +1878,13 @@ public interface AspectJPackage extends EPackage {
 	int CFLOW_POINT_CUT__COMPOSITE = POINT_CUT_POINT_CUT__COMPOSITE;
 
 	/**
-	 * The feature id for the '<em><b>Advice</b></em>' reference list.
+	 * The feature id for the '<em><b>Composition</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CFLOW_POINT_CUT__ADVICE = POINT_CUT_POINT_CUT__ADVICE;
-
-	/**
-	 * The feature id for the '<em><b>Selected By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CFLOW_POINT_CUT__SELECTED_BY = POINT_CUT_POINT_CUT__SELECTED_BY;
+	int CFLOW_POINT_CUT__COMPOSITION = POINT_CUT_POINT_CUT__COMPOSITION;
 
 	/**
 	 * The feature id for the '<em><b>Selected Point Cut</b></em>' reference.
@@ -2295,26 +2097,15 @@ public interface AspectJPackage extends EPackage {
 	EReference getPointCut_Composite();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.papyrus.aspectj.PointCut#getAdvice <em>Advice</em>}'.
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.aspectj.PointCut#getComposition <em>Composition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Advice</em>'.
-	 * @see org.eclipse.papyrus.aspectj.PointCut#getAdvice()
+	 * @return the meta object for the reference '<em>Composition</em>'.
+	 * @see org.eclipse.papyrus.aspectj.PointCut#getComposition()
 	 * @see #getPointCut()
 	 * @generated
 	 */
-	EReference getPointCut_Advice();
-
-	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.papyrus.aspectj.PointCut#getSelectedBy <em>Selected By</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Selected By</em>'.
-	 * @see org.eclipse.papyrus.aspectj.PointCut#getSelectedBy()
-	 * @see #getPointCut()
-	 * @generated
-	 */
-	EReference getPointCut_SelectedBy();
+	EReference getPointCut_Composition();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.InitializationPointCut <em>Initialization Point Cut</em>}'.
@@ -2678,6 +2469,17 @@ public interface AspectJPackage extends EPackage {
 	EClass getPointCutNegation();
 
 	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.aspectj.PointCutNegation#getComposee <em>Composee</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Composee</em>'.
+	 * @see org.eclipse.papyrus.aspectj.PointCutNegation#getComposee()
+	 * @see #getPointCutNegation()
+	 * @generated
+	 */
+	EReference getPointCutNegation_Composee();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.aspectj.CFlowPointCut <em>CFlow Point Cut</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2696,6 +2498,17 @@ public interface AspectJPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getPointCutConjuction();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.eclipse.papyrus.aspectj.PointCutConjuction#getComposee <em>Composee</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Composee</em>'.
+	 * @see org.eclipse.papyrus.aspectj.PointCutConjuction#getComposee()
+	 * @see #getPointCutConjuction()
+	 * @generated
+	 */
+	EReference getPointCutConjuction_Composee();
 
 	/**
 	 * Returns the meta object for enum '{@link org.eclipse.papyrus.aspectj.AdviceExecutionType <em>Advice Execution Type</em>}'.
@@ -2867,20 +2680,12 @@ public interface AspectJPackage extends EPackage {
 		EReference POINT_CUT__COMPOSITE = eINSTANCE.getPointCut_Composite();
 
 		/**
-		 * The meta object literal for the '<em><b>Advice</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Composition</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference POINT_CUT__ADVICE = eINSTANCE.getPointCut_Advice();
-
-		/**
-		 * The meta object literal for the '<em><b>Selected By</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference POINT_CUT__SELECTED_BY = eINSTANCE.getPointCut_SelectedBy();
+		EReference POINT_CUT__COMPOSITION = eINSTANCE.getPointCut_Composition();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.InitializationPointCutImpl <em>Initialization Point Cut</em>}' class.
@@ -3211,6 +3016,14 @@ public interface AspectJPackage extends EPackage {
 		EClass POINT_CUT_NEGATION = eINSTANCE.getPointCutNegation();
 
 		/**
+		 * The meta object literal for the '<em><b>Composee</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference POINT_CUT_NEGATION__COMPOSEE = eINSTANCE.getPointCutNegation_Composee();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.impl.CFlowPointCutImpl <em>CFlow Point Cut</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3229,6 +3042,14 @@ public interface AspectJPackage extends EPackage {
 		 * @generated
 		 */
 		EClass POINT_CUT_CONJUCTION = eINSTANCE.getPointCutConjuction();
+
+		/**
+		 * The meta object literal for the '<em><b>Composee</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference POINT_CUT_CONJUCTION__COMPOSEE = eINSTANCE.getPointCutConjuction_Composee();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.aspectj.AdviceExecutionType <em>Advice Execution Type</em>}' enum.

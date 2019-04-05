@@ -60,11 +60,9 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 			case AspectJPackage.STATIC_CROSS_CUTTING_FEATURE: return createStaticCrossCuttingFeature();
 			case AspectJPackage.ASPECT: return createAspect();
 			case AspectJPackage.POINT_CUT: return createPointCut();
-			case AspectJPackage.POINT_CUT_DISJUCTION: return createPointCutDisjuction();
 			case AspectJPackage.POINT_CUT_CONJUCTION: return createPointCutConjuction();
+			case AspectJPackage.POINT_CUT_DISJUCTION: return createPointCutDisjuction();
 			case AspectJPackage.POINT_CUT_NEGATION: return createPointCutNegation();
-			case AspectJPackage.ADVICE: return createAdvice();
-			case AspectJPackage.POINT_CUT_POINT_CUT: return createPointCutPointCut();
 			case AspectJPackage.INITIALIZATION_POINT_CUT: return createInitializationPointCut();
 			case AspectJPackage.EXECUTION_POINT_CUT: return createExecutionPointCut();
 			case AspectJPackage.OPERATIONAL_POINT_CUT: return createOperationalPointCut();
@@ -80,9 +78,11 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 			case AspectJPackage.ARGS_POINT_CUT: return createArgsPointCut();
 			case AspectJPackage.TARGET_POINT_CUT: return createTargetPointCut();
 			case AspectJPackage.ADVICE_EXECUTION_POINT_CUT: return createAdviceExecutionPointCut();
+			case AspectJPackage.ADVICE: return createAdvice();
 			case AspectJPackage.STATIC_INITIALIZATION_POINT_CUT: return createStaticInitializationPointCut();
 			case AspectJPackage.EXCEPTION_POINT_CUT: return createExceptionPointCut();
 			case AspectJPackage.WITHIN_POINT_CUT: return createWithinPointCut();
+			case AspectJPackage.POINT_CUT_POINT_CUT: return createPointCutPointCut();
 			case AspectJPackage.CFLOW_BELOW_POINT_CUT: return createCFlowBelowPointCut();
 			case AspectJPackage.CROSS_CUTTING_CONCERN: return createCrossCuttingConcern();
 			case AspectJPackage.CFLOW_POINT_CUT: return createCFlowPointCut();

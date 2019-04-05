@@ -82,7 +82,6 @@ public interface Advice extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Pointcut</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.papyrus.aspectj.PointCut#getAdvice <em>Advice</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Pointcut</em>' reference isn't clear,
@@ -92,8 +91,7 @@ public interface Advice extends EObject {
 	 * @return the value of the '<em>Pointcut</em>' reference.
 	 * @see #setPointcut(PointCut)
 	 * @see org.eclipse.papyrus.aspectj.AspectJPackage#getAdvice_Pointcut()
-	 * @see org.eclipse.papyrus.aspectj.PointCut#getAdvice
-	 * @model opposite="advice" required="true" ordered="false"
+	 * @model required="true" ordered="false"
 	 * @generated
 	 */
 	PointCut getPointcut();

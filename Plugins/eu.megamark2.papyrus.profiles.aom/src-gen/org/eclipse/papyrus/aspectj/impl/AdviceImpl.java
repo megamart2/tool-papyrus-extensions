@@ -3,8 +3,6 @@
 package org.eclipse.papyrus.aspectj.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -183,63 +181,11 @@ public class AdviceImpl extends MinimalEObjectImpl.Container implements Advice {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPointcut(PointCut newPointcut, NotificationChain msgs) {
+	public void setPointcut(PointCut newPointcut) {
 		PointCut oldPointcut = pointcut;
 		pointcut = newPointcut;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AspectJPackage.ADVICE__POINTCUT, oldPointcut, newPointcut);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPointcut(PointCut newPointcut) {
-		if (newPointcut != pointcut) {
-			NotificationChain msgs = null;
-			if (pointcut != null)
-				msgs = ((InternalEObject)pointcut).eInverseRemove(this, AspectJPackage.POINT_CUT__ADVICE, PointCut.class, msgs);
-			if (newPointcut != null)
-				msgs = ((InternalEObject)newPointcut).eInverseAdd(this, AspectJPackage.POINT_CUT__ADVICE, PointCut.class, msgs);
-			msgs = basicSetPointcut(newPointcut, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AspectJPackage.ADVICE__POINTCUT, newPointcut, newPointcut));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case AspectJPackage.ADVICE__POINTCUT:
-				if (pointcut != null)
-					msgs = ((InternalEObject)pointcut).eInverseRemove(this, AspectJPackage.POINT_CUT__ADVICE, PointCut.class, msgs);
-				return basicSetPointcut((PointCut)otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case AspectJPackage.ADVICE__POINTCUT:
-				return basicSetPointcut(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AspectJPackage.ADVICE__POINTCUT, oldPointcut, pointcut));
 	}
 
 	/**

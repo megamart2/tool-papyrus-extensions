@@ -14,8 +14,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
-
+import org.eclipse.emf.ecore.util.EDataTypeEList;
 import org.eclipse.papyrus.aspectj.ArgumentDefiningPointCut;
 import org.eclipse.papyrus.aspectj.AspectJPackage;
 
@@ -120,7 +119,7 @@ public class ArgumentDefiningPointCutImpl extends MinimalEObjectImpl.Container i
 	 */
 	public EList<String> getArgNames() {
 		if (argNames == null) {
-			argNames = new EDataTypeUniqueEList<String>(String.class, this, AspectJPackage.ARGUMENT_DEFINING_POINT_CUT__ARG_NAMES);
+			argNames = new EDataTypeEList<String>(String.class, this, AspectJPackage.ARGUMENT_DEFINING_POINT_CUT__ARG_NAMES);
 		}
 		return argNames;
 	}

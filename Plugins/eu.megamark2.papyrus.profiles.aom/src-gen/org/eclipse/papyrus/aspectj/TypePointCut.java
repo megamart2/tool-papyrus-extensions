@@ -36,7 +36,7 @@ public interface TypePointCut extends PointCut {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' reference list.
 	 * @see org.eclipse.papyrus.aspectj.AspectJPackage#getTypePointCut_Type()
-	 * @model required="true" ordered="false"
+	 * @model required="true"
 	 * @generated
 	 */
 	EList<Type> getType();

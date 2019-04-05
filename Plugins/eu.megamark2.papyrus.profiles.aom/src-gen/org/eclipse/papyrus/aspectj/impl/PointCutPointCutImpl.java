@@ -3,8 +3,6 @@
 package org.eclipse.papyrus.aspectj.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -88,63 +86,11 @@ public class PointCutPointCutImpl extends PointCutImpl implements PointCutPointC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSelectedPointCut(PointCut newSelectedPointCut, NotificationChain msgs) {
+	public void setSelectedPointCut(PointCut newSelectedPointCut) {
 		PointCut oldSelectedPointCut = selectedPointCut;
 		selectedPointCut = newSelectedPointCut;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AspectJPackage.POINT_CUT_POINT_CUT__SELECTED_POINT_CUT, oldSelectedPointCut, newSelectedPointCut);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSelectedPointCut(PointCut newSelectedPointCut) {
-		if (newSelectedPointCut != selectedPointCut) {
-			NotificationChain msgs = null;
-			if (selectedPointCut != null)
-				msgs = ((InternalEObject)selectedPointCut).eInverseRemove(this, AspectJPackage.POINT_CUT__SELECTED_BY, PointCut.class, msgs);
-			if (newSelectedPointCut != null)
-				msgs = ((InternalEObject)newSelectedPointCut).eInverseAdd(this, AspectJPackage.POINT_CUT__SELECTED_BY, PointCut.class, msgs);
-			msgs = basicSetSelectedPointCut(newSelectedPointCut, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AspectJPackage.POINT_CUT_POINT_CUT__SELECTED_POINT_CUT, newSelectedPointCut, newSelectedPointCut));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case AspectJPackage.POINT_CUT_POINT_CUT__SELECTED_POINT_CUT:
-				if (selectedPointCut != null)
-					msgs = ((InternalEObject)selectedPointCut).eInverseRemove(this, AspectJPackage.POINT_CUT__SELECTED_BY, PointCut.class, msgs);
-				return basicSetSelectedPointCut((PointCut)otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case AspectJPackage.POINT_CUT_POINT_CUT__SELECTED_POINT_CUT:
-				return basicSetSelectedPointCut(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AspectJPackage.POINT_CUT_POINT_CUT__SELECTED_POINT_CUT, oldSelectedPointCut, selectedPointCut));
 	}
 
 	/**

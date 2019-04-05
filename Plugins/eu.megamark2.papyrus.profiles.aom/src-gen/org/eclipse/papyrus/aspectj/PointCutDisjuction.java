@@ -24,7 +24,6 @@ public interface PointCutDisjuction extends PointCut {
 	/**
 	 * Returns the value of the '<em><b>Composee</b></em>' reference list.
 	 * The list contents are of type {@link org.eclipse.papyrus.aspectj.PointCut}.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.papyrus.aspectj.PointCut#getComposite <em>Composite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Composee</em>' reference list isn't clear,
@@ -33,8 +32,7 @@ public interface PointCutDisjuction extends PointCut {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Composee</em>' reference list.
 	 * @see org.eclipse.papyrus.aspectj.AspectJPackage#getPointCutDisjuction_Composee()
-	 * @see org.eclipse.papyrus.aspectj.PointCut#getComposite
-	 * @model opposite="composite" lower="2" ordered="false"
+	 * @model lower="2" ordered="false"
 	 * @generated
 	 */
 	EList<PointCut> getComposee();

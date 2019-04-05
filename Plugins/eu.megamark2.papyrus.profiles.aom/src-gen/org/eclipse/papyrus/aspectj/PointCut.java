@@ -18,8 +18,7 @@ import org.eclipse.uml2.uml.StructuralFeature;
  * <ul>
  *   <li>{@link org.eclipse.papyrus.aspectj.PointCut#getBase_PointCut_StructuralFeature <em>Base Point Cut Structural Feature</em>}</li>
  *   <li>{@link org.eclipse.papyrus.aspectj.PointCut#getComposite <em>Composite</em>}</li>
- *   <li>{@link org.eclipse.papyrus.aspectj.PointCut#getAdvice <em>Advice</em>}</li>
- *   <li>{@link org.eclipse.papyrus.aspectj.PointCut#getSelectedBy <em>Selected By</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.aspectj.PointCut#getComposition <em>Composition</em>}</li>
  * </ul>
  *
  * @see org.eclipse.papyrus.aspectj.AspectJPackage#getPointCut()
@@ -55,8 +54,7 @@ public interface PointCut extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Composite</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.papyrus.aspectj.PointCutDisjuction}.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.papyrus.aspectj.PointCutDisjuction#getComposee <em>Composee</em>}'.
+	 * The list contents are of type {@link org.eclipse.papyrus.aspectj.PointCutConjuction}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Composite</em>' reference list isn't clear,
@@ -65,46 +63,35 @@ public interface PointCut extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Composite</em>' reference list.
 	 * @see org.eclipse.papyrus.aspectj.AspectJPackage#getPointCut_Composite()
-	 * @see org.eclipse.papyrus.aspectj.PointCutDisjuction#getComposee
-	 * @model opposite="composee" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
-	EList<PointCutDisjuction> getComposite();
+	EList<PointCutConjuction> getComposite();
 
 	/**
-	 * Returns the value of the '<em><b>Advice</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.papyrus.aspectj.Advice}.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.papyrus.aspectj.Advice#getPointcut <em>Pointcut</em>}'.
+	 * Returns the value of the '<em><b>Composition</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Advice</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Composition</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Advice</em>' reference list.
-	 * @see org.eclipse.papyrus.aspectj.AspectJPackage#getPointCut_Advice()
-	 * @see org.eclipse.papyrus.aspectj.Advice#getPointcut
-	 * @model opposite="pointcut" ordered="false"
+	 * @return the value of the '<em>Composition</em>' reference.
+	 * @see #setComposition(PointCutNegation)
+	 * @see org.eclipse.papyrus.aspectj.AspectJPackage#getPointCut_Composition()
+	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	EList<Advice> getAdvice();
+	PointCutNegation getComposition();
 
 	/**
-	 * Returns the value of the '<em><b>Selected By</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.papyrus.aspectj.PointCutPointCut}.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.papyrus.aspectj.PointCutPointCut#getSelectedPointCut <em>Selected Point Cut</em>}'.
+	 * Sets the value of the '{@link org.eclipse.papyrus.aspectj.PointCut#getComposition <em>Composition</em>}' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Selected By</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Selected By</em>' reference list.
-	 * @see org.eclipse.papyrus.aspectj.AspectJPackage#getPointCut_SelectedBy()
-	 * @see org.eclipse.papyrus.aspectj.PointCutPointCut#getSelectedPointCut
-	 * @model opposite="selectedPointCut" ordered="false"
+	 * @param value the new value of the '<em>Composition</em>' reference.
+	 * @see #getComposition()
 	 * @generated
 	 */
-	EList<PointCutPointCut> getSelectedBy();
+	void setComposition(PointCutNegation value);
 
 } // PointCut

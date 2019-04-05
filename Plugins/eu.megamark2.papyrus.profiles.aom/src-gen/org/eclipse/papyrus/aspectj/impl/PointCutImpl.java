@@ -4,8 +4,6 @@ package org.eclipse.papyrus.aspectj.impl;
 
 import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -13,14 +11,12 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.papyrus.aspectj.Advice;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.papyrus.aspectj.AspectJPackage;
 import org.eclipse.papyrus.aspectj.PointCut;
 
-import org.eclipse.papyrus.aspectj.PointCutDisjuction;
-import org.eclipse.papyrus.aspectj.PointCutPointCut;
+import org.eclipse.papyrus.aspectj.PointCutConjuction;
+import org.eclipse.papyrus.aspectj.PointCutNegation;
 import org.eclipse.uml2.uml.StructuralFeature;
 
 /**
@@ -33,8 +29,7 @@ import org.eclipse.uml2.uml.StructuralFeature;
  * <ul>
  *   <li>{@link org.eclipse.papyrus.aspectj.impl.PointCutImpl#getBase_PointCut_StructuralFeature <em>Base Point Cut Structural Feature</em>}</li>
  *   <li>{@link org.eclipse.papyrus.aspectj.impl.PointCutImpl#getComposite <em>Composite</em>}</li>
- *   <li>{@link org.eclipse.papyrus.aspectj.impl.PointCutImpl#getAdvice <em>Advice</em>}</li>
- *   <li>{@link org.eclipse.papyrus.aspectj.impl.PointCutImpl#getSelectedBy <em>Selected By</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.aspectj.impl.PointCutImpl#getComposition <em>Composition</em>}</li>
  * </ul>
  *
  * @generated
@@ -57,25 +52,16 @@ public class PointCutImpl extends MinimalEObjectImpl.Container implements PointC
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<PointCutDisjuction> composite;
+	protected EList<PointCutConjuction> composite;
 	/**
-	 * The cached value of the '{@link #getAdvice() <em>Advice</em>}' reference list.
+	 * The cached value of the '{@link #getComposition() <em>Composition</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAdvice()
+	 * @see #getComposition()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Advice> advice;
-	/**
-	 * The cached value of the '{@link #getSelectedBy() <em>Selected By</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSelectedBy()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<PointCutPointCut> selectedBy;
+	protected PointCutNegation composition;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -138,9 +124,9 @@ public class PointCutImpl extends MinimalEObjectImpl.Container implements PointC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<PointCutDisjuction> getComposite() {
+	public EList<PointCutConjuction> getComposite() {
 		if (composite == null) {
-			composite = new EObjectWithInverseResolvingEList.ManyInverse<PointCutDisjuction>(PointCutDisjuction.class, this, AspectJPackage.POINT_CUT__COMPOSITE, AspectJPackage.POINT_CUT_DISJUCTION__COMPOSEE);
+			composite = new EObjectResolvingEList<PointCutConjuction>(PointCutConjuction.class, this, AspectJPackage.POINT_CUT__COMPOSITE);
 		}
 		return composite;
 	}
@@ -150,11 +136,16 @@ public class PointCutImpl extends MinimalEObjectImpl.Container implements PointC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Advice> getAdvice() {
-		if (advice == null) {
-			advice = new EObjectWithInverseResolvingEList<Advice>(Advice.class, this, AspectJPackage.POINT_CUT__ADVICE, AspectJPackage.ADVICE__POINTCUT);
+	public PointCutNegation getComposition() {
+		if (composition != null && composition.eIsProxy()) {
+			InternalEObject oldComposition = (InternalEObject)composition;
+			composition = (PointCutNegation)eResolveProxy(oldComposition);
+			if (composition != oldComposition) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AspectJPackage.POINT_CUT__COMPOSITION, oldComposition, composition));
+			}
 		}
-		return advice;
+		return composition;
 	}
 
 	/**
@@ -162,11 +153,8 @@ public class PointCutImpl extends MinimalEObjectImpl.Container implements PointC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<PointCutPointCut> getSelectedBy() {
-		if (selectedBy == null) {
-			selectedBy = new EObjectWithInverseResolvingEList<PointCutPointCut>(PointCutPointCut.class, this, AspectJPackage.POINT_CUT__SELECTED_BY, AspectJPackage.POINT_CUT_POINT_CUT__SELECTED_POINT_CUT);
-		}
-		return selectedBy;
+	public PointCutNegation basicGetComposition() {
+		return composition;
 	}
 
 	/**
@@ -174,36 +162,11 @@ public class PointCutImpl extends MinimalEObjectImpl.Container implements PointC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case AspectJPackage.POINT_CUT__COMPOSITE:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getComposite()).basicAdd(otherEnd, msgs);
-			case AspectJPackage.POINT_CUT__ADVICE:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getAdvice()).basicAdd(otherEnd, msgs);
-			case AspectJPackage.POINT_CUT__SELECTED_BY:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSelectedBy()).basicAdd(otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case AspectJPackage.POINT_CUT__COMPOSITE:
-				return ((InternalEList<?>)getComposite()).basicRemove(otherEnd, msgs);
-			case AspectJPackage.POINT_CUT__ADVICE:
-				return ((InternalEList<?>)getAdvice()).basicRemove(otherEnd, msgs);
-			case AspectJPackage.POINT_CUT__SELECTED_BY:
-				return ((InternalEList<?>)getSelectedBy()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+	public void setComposition(PointCutNegation newComposition) {
+		PointCutNegation oldComposition = composition;
+		composition = newComposition;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AspectJPackage.POINT_CUT__COMPOSITION, oldComposition, composition));
 	}
 
 	/**
@@ -219,10 +182,9 @@ public class PointCutImpl extends MinimalEObjectImpl.Container implements PointC
 				return basicGetBase_PointCut_StructuralFeature();
 			case AspectJPackage.POINT_CUT__COMPOSITE:
 				return getComposite();
-			case AspectJPackage.POINT_CUT__ADVICE:
-				return getAdvice();
-			case AspectJPackage.POINT_CUT__SELECTED_BY:
-				return getSelectedBy();
+			case AspectJPackage.POINT_CUT__COMPOSITION:
+				if (resolve) return getComposition();
+				return basicGetComposition();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -241,15 +203,10 @@ public class PointCutImpl extends MinimalEObjectImpl.Container implements PointC
 				return;
 			case AspectJPackage.POINT_CUT__COMPOSITE:
 				getComposite().clear();
-				getComposite().addAll((Collection<? extends PointCutDisjuction>)newValue);
+				getComposite().addAll((Collection<? extends PointCutConjuction>)newValue);
 				return;
-			case AspectJPackage.POINT_CUT__ADVICE:
-				getAdvice().clear();
-				getAdvice().addAll((Collection<? extends Advice>)newValue);
-				return;
-			case AspectJPackage.POINT_CUT__SELECTED_BY:
-				getSelectedBy().clear();
-				getSelectedBy().addAll((Collection<? extends PointCutPointCut>)newValue);
+			case AspectJPackage.POINT_CUT__COMPOSITION:
+				setComposition((PointCutNegation)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -269,11 +226,8 @@ public class PointCutImpl extends MinimalEObjectImpl.Container implements PointC
 			case AspectJPackage.POINT_CUT__COMPOSITE:
 				getComposite().clear();
 				return;
-			case AspectJPackage.POINT_CUT__ADVICE:
-				getAdvice().clear();
-				return;
-			case AspectJPackage.POINT_CUT__SELECTED_BY:
-				getSelectedBy().clear();
+			case AspectJPackage.POINT_CUT__COMPOSITION:
+				setComposition((PointCutNegation)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -291,10 +245,8 @@ public class PointCutImpl extends MinimalEObjectImpl.Container implements PointC
 				return base_PointCut_StructuralFeature != null;
 			case AspectJPackage.POINT_CUT__COMPOSITE:
 				return composite != null && !composite.isEmpty();
-			case AspectJPackage.POINT_CUT__ADVICE:
-				return advice != null && !advice.isEmpty();
-			case AspectJPackage.POINT_CUT__SELECTED_BY:
-				return selectedBy != null && !selectedBy.isEmpty();
+			case AspectJPackage.POINT_CUT__COMPOSITION:
+				return composition != null;
 		}
 		return super.eIsSet(featureID);
 	}

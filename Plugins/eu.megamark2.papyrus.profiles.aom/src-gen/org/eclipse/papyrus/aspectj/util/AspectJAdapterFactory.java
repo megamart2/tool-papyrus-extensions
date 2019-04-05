@@ -80,24 +80,16 @@ public class AspectJAdapterFactory extends AdapterFactoryImpl {
 				return createPointCutAdapter();
 			}
 			@Override
-			public Adapter casePointCutDisjuction(PointCutDisjuction object) {
-				return createPointCutDisjuctionAdapter();
-			}
-			@Override
 			public Adapter casePointCutConjuction(PointCutConjuction object) {
 				return createPointCutConjuctionAdapter();
 			}
 			@Override
+			public Adapter casePointCutDisjuction(PointCutDisjuction object) {
+				return createPointCutDisjuctionAdapter();
+			}
+			@Override
 			public Adapter casePointCutNegation(PointCutNegation object) {
 				return createPointCutNegationAdapter();
-			}
-			@Override
-			public Adapter caseAdvice(Advice object) {
-				return createAdviceAdapter();
-			}
-			@Override
-			public Adapter casePointCutPointCut(PointCutPointCut object) {
-				return createPointCutPointCutAdapter();
 			}
 			@Override
 			public Adapter caseInitializationPointCut(InitializationPointCut object) {
@@ -160,6 +152,10 @@ public class AspectJAdapterFactory extends AdapterFactoryImpl {
 				return createAdviceExecutionPointCutAdapter();
 			}
 			@Override
+			public Adapter caseAdvice(Advice object) {
+				return createAdviceAdapter();
+			}
+			@Override
 			public Adapter caseStaticInitializationPointCut(StaticInitializationPointCut object) {
 				return createStaticInitializationPointCutAdapter();
 			}
@@ -170,6 +166,10 @@ public class AspectJAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseWithinPointCut(WithinPointCut object) {
 				return createWithinPointCutAdapter();
+			}
+			@Override
+			public Adapter casePointCutPointCut(PointCutPointCut object) {
+				return createPointCutPointCutAdapter();
 			}
 			@Override
 			public Adapter caseCFlowBelowPointCut(CFlowBelowPointCut object) {
