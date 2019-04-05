@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:AspectJ="http://megamart2-ecsel.eu/aspectj/" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://megamart2-ecsel.eu/aspectj/ pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_DL8y0FeoEemS0p4q-Pd9VA">
+  <uml:Model xmi:id="_2E8YwFeFEemxMtse52fEfg" name="figure">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_2j6zwFeFEemxMtse52fEfg">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_6LGV0FeFEemxMtse52fEfg" name="figures">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_xAl3oFeREemoGpIsli9z-A">
+        <body>/**package figures {
+
+}*/
+package figures {
+
+/**class FigureElement {
+
+	protected setXY(in newX: Integer, in newY: Integer);
+	public draw();
+
+}*/
+public class FigureElement {
+
+		protected setXY(in newX: Integer, in newY: Integer);
+		public draw();
+
+	}
+
+	/**class MyObserver {
+
+}*/
+public class MyObserver {
+
+	}
+
+	/**class Point {
+
+	private x: Integer;
+	private y: Integer;
+
+}*/
+public class Point {
+
+		private x: Integer;
+		private y: Integer;
+
+	}
+
+	/**class Figure {
+
+	public makeLine();
+	public makePoint();
+
+}*/
+public class Figure {
+
+		public makeLine(): Line;
+		public makePoint(): Point;
+
+	}
+
+	/**class Line {
+
+	private p1: Point;
+	private p2: Point;
+
+}*/
+public class Line {
+
+		private p1: Point;
+		private p2: Point;
+
+	}
+
+}</body>
+      </ownedComment>
+      <packagedElement xmi:type="uml:Class" xmi:id="_C4lqYFeGEemxMtse52fEfg" name="FigureElement">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_C6fu4FeGEemxMtse52fEfg">
+          <body>class FigureElement {
+
+	protected setXY(in newX: Integer, in newY: Integer);
+	public draw();
+
+}</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_xAei4FeREemoGpIsli9z-A">
+          <body>namespace figures;
+
+/**class FigureElement {
+
+	protected setXY(in newX: Integer, in newY: Integer);
+	public draw();
+
+}*/
+class FigureElement {
+
+	protected setXY(in newX: Integer, in newY: Integer);
+	public draw();
+
+}</body>
+        </ownedComment>
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_HMRR0FehEemtZ4vNsrJPQA" client="_C4lqYFeGEemxMtse52fEfg" supplier="_Es0M0FehEemtZ4vNsrJPQA" contract="_Es0M0FehEemtZ4vNsrJPQA"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_GkAMMFeGEemxMtse52fEfg" name="setXY" visibility="protected">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_9wM-0FeGEemxMtse52fEfg" name="newX">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_AJACMFeHEemxMtse52fEfg" name="newY">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_ICQS4FeGEemxMtse52fEfg" name="draw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Jn_hoFeGEemxMtse52fEfg" name="Figure">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_JpXaoFeGEemxMtse52fEfg">
+          <body>class Figure {
+
+	public makeLine();
+	public makePoint();
+
+}</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_xHE6IFeREemoGpIsli9z-A">
+          <body>namespace figures;
+
+/**class Figure {
+
+	public makeLine();
+	public makePoint();
+
+}*/
+class Figure {
+
+	public makeLine(): Line;
+	public makePoint(): Point;
+
+}</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_BNAeEFehEemtZ4vNsrJPQA">
+          <body>namespace figures;
+
+/**class Figure {
+
+	public makeLine();
+	public makePoint();
+
+}*/
+class Figure specializes Drawing {
+
+	public makeLine(): Line;
+	public makePoint(): Point;
+
+}</body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_BIApUFehEemtZ4vNsrJPQA" general="_-2mnYFegEemtZ4vNsrJPQA"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_wvKKYFeGEemxMtse52fEfg" name="makeLine">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_2DHXUFeGEemxMtse52fEfg" type="_K2LMAFeGEemxMtse52fEfg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_x7yVkFeGEemxMtse52fEfg" name="makePoint">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_4lSZIFeGEemxMtse52fEfg" type="_LtQlAFeGEemxMtse52fEfg" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_K2LMAFeGEemxMtse52fEfg" name="Line">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_K3O78FeGEemxMtse52fEfg">
+          <body>class Line {
+
+	private p1: Point;
+	private p2: Point;
+
+}</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_xOdUgFeREemoGpIsli9z-A">
+          <body>namespace figures;
+
+/**class Line {
+
+	private p1: Point;
+	private p2: Point;
+
+}*/
+class Line {
+
+	private p1: Point;
+	private p2: Point;
+
+}</body>
+        </ownedComment>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_XFRmIFeGEemxMtse52fEfg" name="p1" visibility="private" type="_LtQlAFeGEemxMtse52fEfg"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_f1DZsFeGEemxMtse52fEfg" name="p2" visibility="private" type="_LtQlAFeGEemxMtse52fEfg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_LtQlAFeGEemxMtse52fEfg" name="Point">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_LuU8AFeGEemxMtse52fEfg">
+          <body>class Point {
+
+	private x: Integer;
+	private y: Integer;
+
+}</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_xUnm4FeREemoGpIsli9z-A">
+          <body>namespace figures;
+
+/**class Point {
+
+	private x: Integer;
+	private y: Integer;
+
+}*/
+class Point {
+
+	private x: Integer;
+	private y: Integer;
+
+}</body>
+        </ownedComment>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_kpIMsFeGEemxMtse52fEfg" name="x" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_lkqn4FeGEemxMtse52fEfg" name="y" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_P3l3cFeGEemxMtse52fEfg" name="MyObserver">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_P5FsQFeGEemxMtse52fEfg">
+          <body>class MyObserver {
+
+}</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_xbwwsFeREemoGpIsli9z-A">
+          <body>namespace figures;
+
+/**class MyObserver {
+
+}*/
+class MyObserver {
+
+}</body>
+        </ownedComment>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_-9dRkFeFEemxMtse52fEfg" name="aspects">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_OyfV8FeZEemSiZfDg_TEPg">
+        <body>@aspectj::CrossCuttingConcern package aspects {
+
+/**namespace aspects;
+
+@aspectj::Aspect class SampleAspect {
+
+	@aspectj::StaticCrossCuttingFeature
+	public observers: MyObserver;
+	public setXYPointCut: any;
+
+}*/
+@aspectj::Aspect
+public class SampleAspect {
+
+		@aspectj::StaticCrossCuttingFeature
+		public observers: figures::MyObserver;
+		@aspectj::SetPointCut
+		public setXY_PointCut: any;
+		@aspectj::ArgsPointCut
+		public twoIntArgs_PointCut: any;
+		@aspectj::PointCutConjuction
+		public observePoint_PointCut: any;
+		@aspectj::CallPointCut
+		public makeLine_PointCut: any;
+		@aspectj::StaticCrossCuttingFeature
+		public addObserver(in obs: figures::MyObserver);
+		@aspectj::StaticCrossCuttingFeature
+		public removeObserver(in obs: figures::MyObserver);
+		@aspectj::Advice
+		public pointChange(in inA: Integer, in inB: Integer);
+		@aspectj::Advice
+		public newLine();
+
+	}
+
+}</body>
+      </ownedComment>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Jh32EFeHEemxMtse52fEfg" name="SampleAspect">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_JkqrYFeHEemxMtse52fEfg">
+          <body>namespace aspects;
+
+@aspectj::Aspect class SampleAspect {
+
+	@aspectj::StaticCrossCuttingFeature
+	public observers: MyObserver;
+	public setXYPointCut: any;
+
+}</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_OyXaIFeZEemSiZfDg_TEPg">
+          <body>namespace aspects;
+
+/**namespace aspects;
+
+@aspectj::Aspect class SampleAspect {
+
+	@aspectj::StaticCrossCuttingFeature
+	public observers: MyObserver;
+	public setXYPointCut: any;
+
+}*/
+@aspectj::Aspect
+class SampleAspect {
+
+	@aspectj::StaticCrossCuttingFeature
+	public observers: figures::MyObserver;
+	@aspectj::SetPointCut
+	public setXY_PointCut: any;
+	@aspectj::ArgsPointCut
+	public twoIntArgs_PointCut: any;
+	@aspectj::PointCutConjuction
+	public observePoint_PointCut: any;
+	@aspectj::CallPointCut
+	public makeLine_PointCut: any;
+	@aspectj::StaticCrossCuttingFeature
+	public addObserver(in obs: figures::MyObserver);
+	@aspectj::StaticCrossCuttingFeature
+	public removeObserver(in obs: figures::MyObserver);
+	@aspectj::Advice
+	public pointChange(in inA: Integer, in inB: Integer);
+	@aspectj::Advice
+	public newLine();
+
+}</body>
+        </ownedComment>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_q2f4cFeHEemxMtse52fEfg" name="observers" type="_P3l3cFeGEemxMtse52fEfg"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_C79ckFeIEemxMtse52fEfg" name="setXY_PointCut"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_OJrpgFeZEemSiZfDg_TEPg" name="twoIntArgs_PointCut"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_XrVl8FeZEemSiZfDg_TEPg" name="observePoint_PointCut"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_dj4tsFeZEemSiZfDg_TEPg" name="makeLine_PointCut"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_sasw8FeZEemSiZfDg_TEPg" name="addObserver">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_e5ACUFegEemtZ4vNsrJPQA" name="obs" type="_P3l3cFeGEemxMtse52fEfg"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_uNtmsFeZEemSiZfDg_TEPg" name="removeObserver">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_hPVnkFegEemtZ4vNsrJPQA" name="obs" type="_P3l3cFeGEemxMtse52fEfg"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_vndn4FeZEemSiZfDg_TEPg" name="pointChange">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_sKyogFegEemtZ4vNsrJPQA" name="inA">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_vLjq0FegEemtZ4vNsrJPQA" name="inB">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_xJeNMFeZEemSiZfDg_TEPg" name="newLine"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_-2mnYFegEemtZ4vNsrJPQA" name="Drawing">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_-58PQFegEemtZ4vNsrJPQA">
+        <body>class Drawing {
+
+}</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_Es0M0FehEemtZ4vNsrJPQA" name="Drawable"/>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_2jt_cFeFEemxMtse52fEfg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_64erUFeoEem8kJMGOiSHvw" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_64erUVeoEem8kJMGOiSHvw" key="Version" value="0.0.11"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_64erUleoEem8kJMGOiSHvw" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_64erU1eoEem8kJMGOiSHvw" key="Copyright" value="Atos Spain S.A. 2019"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_64erVFeoEem8kJMGOiSHvw" key="Date" value="2019-04-05"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_64erVVeoEem8kJMGOiSHvw" key="Author" value="Jesús Gorroñogoitia"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2jumgFeFEemxMtse52fEfg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_DL8y0FeoEemS0p4q-Pd9VA"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_wW2AAFbhEemeMqmugX5-_g"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_6MjHUFeFEemxMtse52fEfg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6MjHUVeFEemxMtse52fEfg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_6NC2kFeFEemxMtse52fEfg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6NDdoFeFEemxMtse52fEfg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_BACKUP_PROFILE/backup-profile.profile.uml#_J7IFgaInEeS_KNX0nfvIVQ"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_BACKUP_PROFILE/backup-profile.profile.uml#_74TbUKFzEeS_KNX0nfvIVQ"/>
+    </profileApplication>
+  </uml:Model>
+  <AspectJ:Aspect xmi:id="_O5ym4FeQEem-AJQ4r1Gbrw" base_Class="_Jh32EFeHEemxMtse52fEfg" isPrivileged="true" declaredParents="_BIApUFehEemtZ4vNsrJPQA" declaredImplements="_HMRR0FehEemtZ4vNsrJPQA"/>
+  <AspectJ:CrossCuttingConcern xmi:id="_3e-QUFeREemoGpIsli9z-A" base_Package="_-9dRkFeFEemxMtse52fEfg"/>
+  <AspectJ:StaticCrossCuttingFeature xmi:id="_Q7QoAFeTEemoGpIsli9z-A" onType="_K2LMAFeGEemxMtse52fEfg _LtQlAFeGEemxMtse52fEfg" base_Feature="_q2f4cFeHEemxMtse52fEfg"/>
+  <AspectJ:SetPointCut xmi:id="_wV0xcFeTEemoGpIsli9z-A" base_PointCut_StructuralFeature="_C79ckFeIEemxMtse52fEfg" composite="_h3Lb8FemEemC-djVBjsxJg" field="_kpIMsFeGEemxMtse52fEfg _lkqn4FeGEemxMtse52fEfg"/>
+  <AspectJ:ArgsPointCut xmi:id="_V_jZkFeZEemSiZfDg_TEPg" base_StructuralFeature="_OJrpgFeZEemSiZfDg_TEPg" base_PointCut_StructuralFeature="_OJrpgFeZEemSiZfDg_TEPg" composite="_h3Lb8FemEemC-djVBjsxJg">
+    <argNames>inX</argNames>
+    <argNames>inY</argNames>
+    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </AspectJ:ArgsPointCut>
+  <AspectJ:CallPointCut xmi:id="_nvSxwFeZEemSiZfDg_TEPg" base_PointCut_StructuralFeature="_dj4tsFeZEemSiZfDg_TEPg" operation="_wvKKYFeGEemxMtse52fEfg"/>
+  <AspectJ:StaticCrossCuttingFeature xmi:id="_zmZioFeZEemSiZfDg_TEPg" onType="_K2LMAFeGEemxMtse52fEfg _LtQlAFeGEemxMtse52fEfg" base_Feature="_sasw8FeZEemSiZfDg_TEPg"/>
+  <AspectJ:StaticCrossCuttingFeature xmi:id="_0VuGwFeZEemSiZfDg_TEPg" onType="_K2LMAFeGEemxMtse52fEfg _LtQlAFeGEemxMtse52fEfg" base_Feature="_uNtmsFeZEemSiZfDg_TEPg"/>
+  <AspectJ:Advice xmi:id="_1TtZAFeZEemSiZfDg_TEPg" adviceExecution="BeforeAdvice" base_BehavioralFeature="_vndn4FeZEemSiZfDg_TEPg"/>
+  <AspectJ:Advice xmi:id="_2E7akFeZEemSiZfDg_TEPg" adviceExecution="BeforeAdvice" base_BehavioralFeature="_xJeNMFeZEemSiZfDg_TEPg" pointcut="_nvSxwFeZEemSiZfDg_TEPg"/>
+  <AspectJ:PointCutConjuction xmi:id="_h3Lb8FemEemC-djVBjsxJg" base_PointCut_StructuralFeature="_XrVl8FeZEemSiZfDg_TEPg" composee="_wV0xcFeTEemoGpIsli9z-A _V_jZkFeZEemSiZfDg_TEPg"/>
+</xmi:XMI>
