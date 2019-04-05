@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:AspectJ="http://megamart2-ecsel.eu/aspectj/" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://megamart2-ecsel.eu/aspectj/ pathmap://ASPECTJ_PROFILES/aspectj.profile2.uml#_RLEegFb3EemdUq6b4Xfhcg">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:AspectJ="http://megamart2-ecsel.eu/aspectj/" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://megamart2-ecsel.eu/aspectj/ ../profiles/aspectj.profile.uml#_RLEegFb3EemdUq6b4Xfhcg">
   <uml:Model xmi:id="_rmbBsL2FEeidzutJ3INnWA" name="figure_model">
     <packageImport xmi:type="uml:PackageImport" xmi:id="_sFgxcL2FEeidzutJ3INnWA">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
@@ -78,18 +78,18 @@
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_1loJ4L2SEeidzutJ3INnWA" name="p" type="_2LrwML2FEeidzutJ3INnWA"/>
         </ownedOperation>
       </packagedElement>
-      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_dA14kFd5Eemzm8VdaPZQsQ">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_dA3twFd5Eemzm8VdaPZQsQ" source="PapyrusVersion">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dA3twVd5Eemzm8VdaPZQsQ" key="Version" value="0.0.4"/>
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dA3twld5Eemzm8VdaPZQsQ" key="Comment" value=""/>
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dA3tw1d5Eemzm8VdaPZQsQ" key="Copyright" value="@Atos Origin S.A."/>
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dA3txFd5Eemzm8VdaPZQsQ" key="Date" value="2019-04-04"/>
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dA3txVd5Eemzm8VdaPZQsQ" key="Author" value="Jesús Gorroñogoitia"/>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_wE8skFeCEemxMtse52fEfg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wFA-AFeCEemxMtse52fEfg" source="PapyrusVersion">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wFA-AVeCEemxMtse52fEfg" key="Version" value="0.0.4"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wFA-AleCEemxMtse52fEfg" key="Comment" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wFA-A1eCEemxMtse52fEfg" key="Copyright" value="@Atos Origin S.A."/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wFA-BFeCEemxMtse52fEfg" key="Date" value="2019-04-04"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wFA-BVeCEemxMtse52fEfg" key="Author" value="Jesús Gorroñogoitia"/>
         </eAnnotations>
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_dA3GsFd5Eemzm8VdaPZQsQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <references xmi:type="ecore:EPackage" href="pathmap://ASPECTJ_PROFILES/aspectj.profile2.uml#_RLEegFb3EemdUq6b4Xfhcg"/>
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wE_I0FeCEemxMtse52fEfg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_RLEegFb3EemdUq6b4Xfhcg"/>
         </eAnnotations>
-        <appliedProfile xmi:type="uml:Profile" href="pathmap://ASPECTJ_PROFILES/aspectj.profile2.uml#_wW2AAFbhEemeMqmugX5-_g"/>
+        <appliedProfile xmi:type="uml:Profile" href="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_wW2AAFbhEemeMqmugX5-_g"/>
       </profileApplication>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_q6PCYL2LEeidzutJ3INnWA" name="types">
@@ -113,13 +113,22 @@
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="../profiles/aspectj.profile.uml#_Q9-jkLv9EeizS8zZTwzhZg"/>
     </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_rFP4YFeCEemxMtse52fEfg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rFjaYFeCEemxMtse52fEfg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../profiles/aspectj.profile.uml#_RLEegFb3EemdUq6b4Xfhcg"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="../profiles/aspectj.profile.uml#_wW2AAFbhEemeMqmugX5-_g"/>
+    </profileApplication>
   </uml:Model>
   <AspectJ:StaticCrossCuttingFeature xmi:id="_h0DI4Fd5Eemzm8VdaPZQsQ" onType="_2LrwML2FEeidzutJ3INnWA" base_Feature="_IRMAML2KEeidzutJ3INnWA"/>
   <AspectJ:TargetPointCut xmi:id="_jLom4Fd5Eemzm8VdaPZQsQ" base_StructuralFeature="_FwvVUL2NEeidzutJ3INnWA" base_PointCut_StructuralFeature="_FwvVUL2NEeidzutJ3INnWA" type="_2LrwML2FEeidzutJ3INnWA">
     <argNames>p</argNames>
   </AspectJ:TargetPointCut>
   <AspectJ:CallPointCut xmi:id="_kv6dEFd5Eemzm8VdaPZQsQ" base_PointCut_StructuralFeature="_qOj9QL2NEeidzutJ3INnWA" operation="_7MfeAL2NEeidzutJ3INnWA _8IfMML2NEeidzutJ3INnWA"/>
-  <AspectJ:PointCutConjuction xmi:id="_mqf6cFd5Eemzm8VdaPZQsQ" base_PointCut_StructuralFeature="_x8n_sL2OEeidzutJ3INnWA" composee="_jLom4Fd5Eemzm8VdaPZQsQ"/>
+  <AspectJ:PointCutConjuction xmi:id="_mqf6cFd5Eemzm8VdaPZQsQ" base_PointCut_StructuralFeature="_x8n_sL2OEeidzutJ3INnWA">
+    <composee xmi:type="AspectJ:TargetPointCut" href=""/>
+    <composee xmi:type="AspectJ:CallPointCut" href="#_kv6dEFd5Eemzm8VdaPZQsQ"/>
+  </AspectJ:PointCutConjuction>
   <AspectJ:StaticCrossCuttingFeature xmi:id="_oKpekFd5Eemzm8VdaPZQsQ" onType="_2LrwML2FEeidzutJ3INnWA" base_Feature="_KjGtkL2MEeidzutJ3INnWA"/>
   <AspectJ:StaticCrossCuttingFeature xmi:id="_o7pdsFd5Eemzm8VdaPZQsQ" onType="_2LrwML2FEeidzutJ3INnWA" base_Feature="_MJRaIL2MEeidzutJ3INnWA"/>
   <AspectJ:Advice xmi:id="_qHIZYFd5Eemzm8VdaPZQsQ" adviceExecution="AfterAdvice" base_BehavioralFeature="_cf-7IL2SEeidzutJ3INnWA" pointcut="_mqf6cFd5Eemzm8VdaPZQsQ"/>

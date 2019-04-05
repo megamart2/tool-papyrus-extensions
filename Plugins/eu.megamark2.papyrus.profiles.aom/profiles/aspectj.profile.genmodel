@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/uml2/2.2.0/GenModel"
-    modelDirectory="/eu.megamart2.papyrus.profiles.aom/src-gen" modelPluginID="eu.megamart2.papyrus.profiles.aom"
+    modelDirectory="/eu.megamart2.papyrus.profiles.aom/src-gen" editDirectory="/eu.megamart2.papyrus.profiles.aom.edit/src-gen"
+    editorDirectory="/eu.megamart2.papyrus.profiles.aom.editor/src-gen" modelPluginID="eu.megamart2.papyrus.profiles.aom"
     modelName="Aspectj" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
-    importerID="org.eclipse.uml2.uml.ecore.importer" complianceLevel="8.0" copyrightFields="false"
-    usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../org.eclipse.uml2.types/model/Types.genmodel#//types ../../org.eclipse.uml2.uml/model/UML.genmodel#//uml"
+    testsDirectory="/eu.megamart2.papyrus.profiles.aom.tests/src-gen" importerID="org.eclipse.uml2.uml.ecore.importer"
+    complianceLevel="8.0" copyrightFields="false" usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../org.eclipse.uml2.types/model/Types.genmodel#//types ../../org.eclipse.uml2.uml/model/UML.genmodel#//uml"
     operationReflection="true" importOrganizing="true">
   <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/org.eclipse.uml2.uml.ecore.importer">
     <details key="OPPOSITE_ROLE_NAMES" value="IGNORE"/>
@@ -30,7 +31,7 @@
     <details key="INVOCATION_DELEGATES" value="IGNORE"/>
     <details key="VALIDATION_DELEGATES" value="IGNORE"/>
   </genAnnotations>
-  <foreignModel>aspectj.profile2.uml</foreignModel>
+  <foreignModel>aspectj.profile.uml</foreignModel>
   <genPackages xsi:type="genmodel:GenPackage" prefix="AspectJ" basePackage="org.eclipse.papyrus"
       disposableProviderFactory="true" ecorePackage="aspectj.ecore#/">
     <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="aspectj.ecore#//AdviceExecutionType">
