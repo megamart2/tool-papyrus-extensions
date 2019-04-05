@@ -133,22 +133,6 @@ class Figure {
 
 }</body>
         </ownedComment>
-        <ownedComment xmi:type="uml:Comment" xmi:id="_BNAeEFehEemtZ4vNsrJPQA">
-          <body>namespace figures;
-
-/**class Figure {
-
-	public makeLine();
-	public makePoint();
-
-}*/
-class Figure specializes Drawing {
-
-	public makeLine(): Line;
-	public makePoint(): Point;
-
-}</body>
-        </ownedComment>
         <generalization xmi:type="uml:Generalization" xmi:id="_BIApUFehEemtZ4vNsrJPQA" general="_-2mnYFegEemtZ4vNsrJPQA"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_wvKKYFeGEemxMtse52fEfg" name="makeLine">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_2DHXUFeGEemxMtse52fEfg" type="_K2LMAFeGEemxMtse52fEfg" direction="return"/>
@@ -236,44 +220,6 @@ class MyObserver {
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_-9dRkFeFEemxMtse52fEfg" name="aspects">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_OyfV8FeZEemSiZfDg_TEPg">
-        <body>@aspectj::CrossCuttingConcern package aspects {
-
-/**namespace aspects;
-
-@aspectj::Aspect class SampleAspect {
-
-	@aspectj::StaticCrossCuttingFeature
-	public observers: MyObserver;
-	public setXYPointCut: any;
-
-}*/
-@aspectj::Aspect
-public class SampleAspect {
-
-		@aspectj::StaticCrossCuttingFeature
-		public observers: figures::MyObserver;
-		@aspectj::SetPointCut
-		public setXY_PointCut: any;
-		@aspectj::ArgsPointCut
-		public twoIntArgs_PointCut: any;
-		@aspectj::PointCutConjuction
-		public observePoint_PointCut: any;
-		@aspectj::CallPointCut
-		public makeLine_PointCut: any;
-		@aspectj::StaticCrossCuttingFeature
-		public addObserver(in obs: figures::MyObserver);
-		@aspectj::StaticCrossCuttingFeature
-		public removeObserver(in obs: figures::MyObserver);
-		@aspectj::Advice
-		public pointChange(in inA: Integer, in inB: Integer);
-		@aspectj::Advice
-		public newLine();
-
-	}
-
-}</body>
-      </ownedComment>
       <packagedElement xmi:type="uml:Class" xmi:id="_Jh32EFeHEemxMtse52fEfg" name="SampleAspect">
         <ownedComment xmi:type="uml:Comment" xmi:id="_JkqrYFeHEemxMtse52fEfg">
           <body>namespace aspects;
@@ -283,42 +229,6 @@ public class SampleAspect {
 	@aspectj::StaticCrossCuttingFeature
 	public observers: MyObserver;
 	public setXYPointCut: any;
-
-}</body>
-        </ownedComment>
-        <ownedComment xmi:type="uml:Comment" xmi:id="_OyXaIFeZEemSiZfDg_TEPg">
-          <body>namespace aspects;
-
-/**namespace aspects;
-
-@aspectj::Aspect class SampleAspect {
-
-	@aspectj::StaticCrossCuttingFeature
-	public observers: MyObserver;
-	public setXYPointCut: any;
-
-}*/
-@aspectj::Aspect
-class SampleAspect {
-
-	@aspectj::StaticCrossCuttingFeature
-	public observers: figures::MyObserver;
-	@aspectj::SetPointCut
-	public setXY_PointCut: any;
-	@aspectj::ArgsPointCut
-	public twoIntArgs_PointCut: any;
-	@aspectj::PointCutConjuction
-	public observePoint_PointCut: any;
-	@aspectj::CallPointCut
-	public makeLine_PointCut: any;
-	@aspectj::StaticCrossCuttingFeature
-	public addObserver(in obs: figures::MyObserver);
-	@aspectj::StaticCrossCuttingFeature
-	public removeObserver(in obs: figures::MyObserver);
-	@aspectj::Advice
-	public pointChange(in inA: Integer, in inB: Integer);
-	@aspectj::Advice
-	public newLine();
 
 }</body>
         </ownedComment>
@@ -344,13 +254,7 @@ class SampleAspect {
         <ownedOperation xmi:type="uml:Operation" xmi:id="_xJeNMFeZEemSiZfDg_TEPg" name="newLine"/>
       </packagedElement>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_-2mnYFegEemtZ4vNsrJPQA" name="Drawing">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_-58PQFegEemtZ4vNsrJPQA">
-        <body>class Drawing {
-
-}</body>
-      </ownedComment>
-    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_-2mnYFegEemtZ4vNsrJPQA" name="Drawing"/>
     <packagedElement xmi:type="uml:Interface" xmi:id="_Es0M0FehEemtZ4vNsrJPQA" name="Drawable"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_2jt_cFeFEemxMtse52fEfg">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_64erUFeoEem8kJMGOiSHvw" source="PapyrusVersion">
@@ -365,27 +269,11 @@ class SampleAspect {
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_wW2AAFbhEemeMqmugX5-_g"/>
     </profileApplication>
-    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_6MjHUFeFEemxMtse52fEfg">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6MjHUVeFEemxMtse52fEfg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
-      </eAnnotations>
-      <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
-    </profileApplication>
-    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_6NC2kFeFEemxMtse52fEfg">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6NDdoFeFEemxMtse52fEfg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_BACKUP_PROFILE/backup-profile.profile.uml#_J7IFgaInEeS_KNX0nfvIVQ"/>
-      </eAnnotations>
-      <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_BACKUP_PROFILE/backup-profile.profile.uml#_74TbUKFzEeS_KNX0nfvIVQ"/>
-    </profileApplication>
   </uml:Model>
   <AspectJ:Aspect xmi:id="_O5ym4FeQEem-AJQ4r1Gbrw" base_Class="_Jh32EFeHEemxMtse52fEfg" isPrivileged="true" declaredParents="_BIApUFehEemtZ4vNsrJPQA" declaredImplements="_HMRR0FehEemtZ4vNsrJPQA"/>
   <AspectJ:CrossCuttingConcern xmi:id="_3e-QUFeREemoGpIsli9z-A" base_Package="_-9dRkFeFEemxMtse52fEfg"/>
   <AspectJ:StaticCrossCuttingFeature xmi:id="_Q7QoAFeTEemoGpIsli9z-A" onType="_K2LMAFeGEemxMtse52fEfg _LtQlAFeGEemxMtse52fEfg" base_Feature="_q2f4cFeHEemxMtse52fEfg"/>
   <AspectJ:SetPointCut xmi:id="_wV0xcFeTEemoGpIsli9z-A" base_PointCut_StructuralFeature="_C79ckFeIEemxMtse52fEfg" composite="_h3Lb8FemEemC-djVBjsxJg" field="_kpIMsFeGEemxMtse52fEfg _lkqn4FeGEemxMtse52fEfg"/>
-  <ActionLanguage:TextualRepresentation xmi:id="_OyYoQFeZEemSiZfDg_TEPg" base_Comment="_OyXaIFeZEemSiZfDg_TEPg" language="Alf"/>
-  <BackupProfile:Backup xmi:id="_OyadcFeZEemSiZfDg_TEPg" timestamp="2019-04-05 14:45:51.793" state="MERGED" base_Comment="_OyXaIFeZEemSiZfDg_TEPg"/>
-  <ActionLanguage:TextualRepresentation xmi:id="_OygkEFeZEemSiZfDg_TEPg" base_Comment="_OyfV8FeZEemSiZfDg_TEPg" language="Alf"/>
-  <BackupProfile:Backup xmi:id="_OyhLIFeZEemSiZfDg_TEPg" timestamp="2019-04-05 14:45:51.438" state="MERGED" base_Comment="_OyfV8FeZEemSiZfDg_TEPg"/>
   <AspectJ:ArgsPointCut xmi:id="_V_jZkFeZEemSiZfDg_TEPg" base_StructuralFeature="_OJrpgFeZEemSiZfDg_TEPg" base_PointCut_StructuralFeature="_OJrpgFeZEemSiZfDg_TEPg" composite="_h3Lb8FemEemC-djVBjsxJg">
     <argNames>inX</argNames>
     <argNames>inY</argNames>
@@ -396,9 +284,5 @@ class SampleAspect {
   <AspectJ:StaticCrossCuttingFeature xmi:id="_0VuGwFeZEemSiZfDg_TEPg" onType="_K2LMAFeGEemxMtse52fEfg _LtQlAFeGEemxMtse52fEfg" base_Feature="_uNtmsFeZEemSiZfDg_TEPg"/>
   <AspectJ:Advice xmi:id="_1TtZAFeZEemSiZfDg_TEPg" adviceExecution="BeforeAdvice" base_BehavioralFeature="_vndn4FeZEemSiZfDg_TEPg"/>
   <AspectJ:Advice xmi:id="_2E7akFeZEemSiZfDg_TEPg" adviceExecution="BeforeAdvice" base_BehavioralFeature="_xJeNMFeZEemSiZfDg_TEPg" pointcut="_nvSxwFeZEemSiZfDg_TEPg"/>
-  <ActionLanguage:TextualRepresentation xmi:id="_-582UFegEemtZ4vNsrJPQA" base_Comment="_-58PQFegEemtZ4vNsrJPQA" language="Alf"/>
-  <BackupProfile:Backup xmi:id="_-5-EcFegEemtZ4vNsrJPQA" timestamp="2019-04-05 14:47:38.164" state="MERGED" base_Comment="_-58PQFegEemtZ4vNsrJPQA"/>
-  <ActionLanguage:TextualRepresentation xmi:id="_BNBFIFehEemtZ4vNsrJPQA" base_Comment="_BNAeEFehEemtZ4vNsrJPQA" language="Alf"/>
-  <BackupProfile:Backup xmi:id="_BNBsMFehEemtZ4vNsrJPQA" timestamp="2019-04-05 14:47:49.545" state="MERGED" base_Comment="_BNAeEFehEemtZ4vNsrJPQA"/>
   <AspectJ:PointCutConjuction xmi:id="_h3Lb8FemEemC-djVBjsxJg" base_PointCut_StructuralFeature="_XrVl8FeZEemSiZfDg_TEPg" composee="_wV0xcFeTEemoGpIsli9z-A _V_jZkFeZEemSiZfDg_TEPg"/>
 </xmi:XMI>
