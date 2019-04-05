@@ -63,7 +63,7 @@ public interface ArgumentDefiningPointCut extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Arg Names</em>' attribute list.
 	 * @see org.eclipse.papyrus.aspectj.AspectJPackage#getArgumentDefiningPointCut_ArgNames()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true"
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
 	EList<String> getArgNames();

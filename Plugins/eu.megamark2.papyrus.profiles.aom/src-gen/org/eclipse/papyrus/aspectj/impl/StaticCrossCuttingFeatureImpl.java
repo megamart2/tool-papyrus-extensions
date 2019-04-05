@@ -30,23 +30,13 @@ import org.eclipse.uml2.uml.Type;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.papyrus.aspectj.impl.StaticCrossCuttingFeatureImpl#getBase_Feature <em>Base Feature</em>}</li>
  *   <li>{@link org.eclipse.papyrus.aspectj.impl.StaticCrossCuttingFeatureImpl#getOnType <em>On Type</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.aspectj.impl.StaticCrossCuttingFeatureImpl#getBase_Feature <em>Base Feature</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class StaticCrossCuttingFeatureImpl extends MinimalEObjectImpl.Container implements StaticCrossCuttingFeature {
-	/**
-	 * The cached value of the '{@link #getBase_Feature() <em>Base Feature</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBase_Feature()
-	 * @generated
-	 * @ordered
-	 */
-	protected Feature base_Feature;
-
 	/**
 	 * The cached value of the '{@link #getOnType() <em>On Type</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -56,6 +46,16 @@ public class StaticCrossCuttingFeatureImpl extends MinimalEObjectImpl.Container 
 	 * @ordered
 	 */
 	protected EList<Type> onType;
+
+	/**
+	 * The cached value of the '{@link #getBase_Feature() <em>Base Feature</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBase_Feature()
+	 * @generated
+	 * @ordered
+	 */
+	protected Feature base_Feature;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -159,11 +159,11 @@ public class StaticCrossCuttingFeatureImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case AspectJPackage.STATIC_CROSS_CUTTING_FEATURE__ON_TYPE:
+				return getOnType();
 			case AspectJPackage.STATIC_CROSS_CUTTING_FEATURE__BASE_FEATURE:
 				if (resolve) return getBase_Feature();
 				return basicGetBase_Feature();
-			case AspectJPackage.STATIC_CROSS_CUTTING_FEATURE__ON_TYPE:
-				return getOnType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -177,12 +177,12 @@ public class StaticCrossCuttingFeatureImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case AspectJPackage.STATIC_CROSS_CUTTING_FEATURE__BASE_FEATURE:
-				setBase_Feature((Feature)newValue);
-				return;
 			case AspectJPackage.STATIC_CROSS_CUTTING_FEATURE__ON_TYPE:
 				getOnType().clear();
 				getOnType().addAll((Collection<? extends Type>)newValue);
+				return;
+			case AspectJPackage.STATIC_CROSS_CUTTING_FEATURE__BASE_FEATURE:
+				setBase_Feature((Feature)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -196,11 +196,11 @@ public class StaticCrossCuttingFeatureImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case AspectJPackage.STATIC_CROSS_CUTTING_FEATURE__BASE_FEATURE:
-				setBase_Feature((Feature)null);
-				return;
 			case AspectJPackage.STATIC_CROSS_CUTTING_FEATURE__ON_TYPE:
 				getOnType().clear();
+				return;
+			case AspectJPackage.STATIC_CROSS_CUTTING_FEATURE__BASE_FEATURE:
+				setBase_Feature((Feature)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -214,10 +214,10 @@ public class StaticCrossCuttingFeatureImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case AspectJPackage.STATIC_CROSS_CUTTING_FEATURE__BASE_FEATURE:
-				return base_Feature != null;
 			case AspectJPackage.STATIC_CROSS_CUTTING_FEATURE__ON_TYPE:
 				return onType != null && !onType.isEmpty();
+			case AspectJPackage.STATIC_CROSS_CUTTING_FEATURE__BASE_FEATURE:
+				return base_Feature != null;
 		}
 		return super.eIsSet(featureID);
 	}

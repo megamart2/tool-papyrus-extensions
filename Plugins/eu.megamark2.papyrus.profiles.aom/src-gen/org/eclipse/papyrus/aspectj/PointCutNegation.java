@@ -20,7 +20,6 @@ package org.eclipse.papyrus.aspectj;
  * @generated
  */
 public interface PointCutNegation extends PointCut {
-
 	/**
 	 * Returns the value of the '<em><b>Composee</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -46,4 +45,5 @@ public interface PointCutNegation extends PointCut {
 	 * @generated
 	 */
 	void setComposee(PointCut value);
+
 } // PointCutNegation

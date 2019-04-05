@@ -88,8 +88,7 @@ public interface Aspect extends EObject {
 	void setIsPrivileged(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Per Type</b></em>' attribute list.
-	 * The list contents are of type {@link org.eclipse.papyrus.aspectj.AspectInstantiationType}.
+	 * Returns the value of the '<em><b>Per Type</b></em>' attribute.
 	 * The literals are from the enumeration {@link org.eclipse.papyrus.aspectj.AspectInstantiationType}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -97,13 +96,25 @@ public interface Aspect extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Per Type</em>' attribute list.
+	 * @return the value of the '<em>Per Type</em>' attribute.
 	 * @see org.eclipse.papyrus.aspectj.AspectInstantiationType
+	 * @see #setPerType(AspectInstantiationType)
 	 * @see org.eclipse.papyrus.aspectj.AspectJPackage#getAspect_PerType()
-	 * @model ordered="false"
+	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	EList<AspectInstantiationType> getPerType();
+	AspectInstantiationType getPerType();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.papyrus.aspectj.Aspect#getPerType <em>Per Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Per Type</em>' attribute.
+	 * @see org.eclipse.papyrus.aspectj.AspectInstantiationType
+	 * @see #getPerType()
+	 * @generated
+	 */
+	void setPerType(AspectInstantiationType value);
 
 	/**
 	 * Returns the value of the '<em><b>Per Point Cut</b></em>' reference.

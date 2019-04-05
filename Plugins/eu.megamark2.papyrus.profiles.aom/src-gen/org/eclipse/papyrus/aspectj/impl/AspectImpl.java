@@ -5,8 +5,8 @@ package org.eclipse.papyrus.aspectj.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -15,7 +15,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import org.eclipse.papyrus.aspectj.Aspect;
@@ -80,14 +79,24 @@ public class AspectImpl extends MinimalEObjectImpl.Container implements Aspect {
 	protected boolean isPrivileged = IS_PRIVILEGED_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getPerType() <em>Per Type</em>}' attribute list.
+	 * The default value of the '{@link #getPerType() <em>Per Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPerType()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<AspectInstantiationType> perType;
+	protected static final AspectInstantiationType PER_TYPE_EDEFAULT = AspectInstantiationType.PERTHIS;
+
+	/**
+	 * The cached value of the '{@link #getPerType() <em>Per Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPerType()
+	 * @generated
+	 * @ordered
+	 */
+	protected AspectInstantiationType perType = PER_TYPE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getPerPointCut() <em>Per Point Cut</em>}' reference.
@@ -222,11 +231,20 @@ public class AspectImpl extends MinimalEObjectImpl.Container implements Aspect {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<AspectInstantiationType> getPerType() {
-		if (perType == null) {
-			perType = new EDataTypeUniqueEList<AspectInstantiationType>(AspectInstantiationType.class, this, AspectJPackage.ASPECT__PER_TYPE);
-		}
+	public AspectInstantiationType getPerType() {
 		return perType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPerType(AspectInstantiationType newPerType) {
+		AspectInstantiationType oldPerType = perType;
+		perType = newPerType == null ? PER_TYPE_EDEFAULT : newPerType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AspectJPackage.ASPECT__PER_TYPE, oldPerType, perType));
 	}
 
 	/**
@@ -534,8 +552,7 @@ public class AspectImpl extends MinimalEObjectImpl.Container implements Aspect {
 				setIsPrivileged((Boolean)newValue);
 				return;
 			case AspectJPackage.ASPECT__PER_TYPE:
-				getPerType().clear();
-				getPerType().addAll((Collection<? extends AspectInstantiationType>)newValue);
+				setPerType((AspectInstantiationType)newValue);
 				return;
 			case AspectJPackage.ASPECT__PER_POINT_CUT:
 				setPerPointCut((PointCut)newValue);
@@ -573,7 +590,7 @@ public class AspectImpl extends MinimalEObjectImpl.Container implements Aspect {
 				setIsPrivileged(IS_PRIVILEGED_EDEFAULT);
 				return;
 			case AspectJPackage.ASPECT__PER_TYPE:
-				getPerType().clear();
+				setPerType(PER_TYPE_EDEFAULT);
 				return;
 			case AspectJPackage.ASPECT__PER_POINT_CUT:
 				setPerPointCut((PointCut)null);
@@ -607,7 +624,7 @@ public class AspectImpl extends MinimalEObjectImpl.Container implements Aspect {
 			case AspectJPackage.ASPECT__IS_PRIVILEGED:
 				return isPrivileged != IS_PRIVILEGED_EDEFAULT;
 			case AspectJPackage.ASPECT__PER_TYPE:
-				return perType != null && !perType.isEmpty();
+				return perType != PER_TYPE_EDEFAULT;
 			case AspectJPackage.ASPECT__PER_POINT_CUT:
 				return perPointCut != null;
 			case AspectJPackage.ASPECT__DECLARED_PARENTS:
@@ -631,7 +648,7 @@ public class AspectImpl extends MinimalEObjectImpl.Container implements Aspect {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (isPrivileged: ");
 		result.append(isPrivileged);
 		result.append(", perType: ");

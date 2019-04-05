@@ -57,35 +57,35 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+			case AspectJPackage.STATIC_CROSS_CUTTING_FEATURE: return createStaticCrossCuttingFeature();
 			case AspectJPackage.ASPECT: return createAspect();
 			case AspectJPackage.POINT_CUT: return createPointCut();
-			case AspectJPackage.OPERATIONAL_POINT_CUT: return createOperationalPointCut();
-			case AspectJPackage.WITHIN_CODE_POINT_CUT: return createWithinCodePointCut();
-			case AspectJPackage.EXECUTION_POINT_CUT: return createExecutionPointCut();
-			case AspectJPackage.CALL_POINT_CUT: return createCallPointCut();
-			case AspectJPackage.PRE_INITIALIZATION_POINT_CUT: return createPreInitializationPointCut();
 			case AspectJPackage.INITIALIZATION_POINT_CUT: return createInitializationPointCut();
+			case AspectJPackage.EXECUTION_POINT_CUT: return createExecutionPointCut();
+			case AspectJPackage.OPERATIONAL_POINT_CUT: return createOperationalPointCut();
+			case AspectJPackage.PRE_INITIALIZATION_POINT_CUT: return createPreInitializationPointCut();
+			case AspectJPackage.SET_POINT_CUT: return createSetPointCut();
 			case AspectJPackage.PROPERTY_POINT_CUT: return createPropertyPointCut();
 			case AspectJPackage.GET_POINT_CUT: return createGetPointCut();
-			case AspectJPackage.SET_POINT_CUT: return createSetPointCut();
-			case AspectJPackage.TYPE_POINT_CUT: return createTypePointCut();
-			case AspectJPackage.THIS_POINT_CUT: return createThisPointCut();
+			case AspectJPackage.CALL_POINT_CUT: return createCallPointCut();
+			case AspectJPackage.WITHIN_CODE_POINT_CUT: return createWithinCodePointCut();
 			case AspectJPackage.ARGUMENT_DEFINING_POINT_CUT: return createArgumentDefiningPointCut();
+			case AspectJPackage.THIS_POINT_CUT: return createThisPointCut();
+			case AspectJPackage.TYPE_POINT_CUT: return createTypePointCut();
 			case AspectJPackage.ARGS_POINT_CUT: return createArgsPointCut();
 			case AspectJPackage.TARGET_POINT_CUT: return createTargetPointCut();
-			case AspectJPackage.POINT_CUT_POINT_CUT: return createPointCutPointCut();
-			case AspectJPackage.CFLOW_BELOW_POINT_CUT: return createCFlowBelowPointCut();
-			case AspectJPackage.CFLOW_POINT_CUT: return createCFlowPointCut();
+			case AspectJPackage.ADVICE_EXECUTION_POINT_CUT: return createAdviceExecutionPointCut();
+			case AspectJPackage.ADVICE: return createAdvice();
 			case AspectJPackage.STATIC_INITIALIZATION_POINT_CUT: return createStaticInitializationPointCut();
 			case AspectJPackage.EXCEPTION_POINT_CUT: return createExceptionPointCut();
 			case AspectJPackage.WITHIN_POINT_CUT: return createWithinPointCut();
-			case AspectJPackage.POINT_CUT_DISJUNCTION: return createPointCutDisjunction();
-			case AspectJPackage.POINT_CUT_CONJUNCTION: return createPointCutConjunction();
-			case AspectJPackage.POINT_CUT_NEGATION: return createPointCutNegation();
-			case AspectJPackage.ADVICE: return createAdvice();
-			case AspectJPackage.ADVICE_EXECUTION_POINT_CUT: return createAdviceExecutionPointCut();
-			case AspectJPackage.STATIC_CROSS_CUTTING_FEATURE: return createStaticCrossCuttingFeature();
+			case AspectJPackage.POINT_CUT_POINT_CUT: return createPointCutPointCut();
+			case AspectJPackage.CFLOW_BELOW_POINT_CUT: return createCFlowBelowPointCut();
 			case AspectJPackage.CROSS_CUTTING_CONCERN: return createCrossCuttingConcern();
+			case AspectJPackage.POINT_CUT_DISJUCTION: return createPointCutDisjuction();
+			case AspectJPackage.POINT_CUT_NEGATION: return createPointCutNegation();
+			case AspectJPackage.CFLOW_POINT_CUT: return createCFlowPointCut();
+			case AspectJPackage.POINT_CUT_CONJUCTION: return createPointCutConjuction();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -99,10 +99,10 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case AspectJPackage.ASPECT_INSTANTIATION_TYPE:
-				return createAspectInstantiationTypeFromString(eDataType, initialValue);
 			case AspectJPackage.ADVICE_EXECUTION_TYPE:
 				return createAdviceExecutionTypeFromString(eDataType, initialValue);
+			case AspectJPackage.ASPECT_INSTANTIATION_TYPE:
+				return createAspectInstantiationTypeFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -116,10 +116,10 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case AspectJPackage.ASPECT_INSTANTIATION_TYPE:
-				return convertAspectInstantiationTypeToString(eDataType, instanceValue);
 			case AspectJPackage.ADVICE_EXECUTION_TYPE:
 				return convertAdviceExecutionTypeToString(eDataType, instanceValue);
+			case AspectJPackage.ASPECT_INSTANTIATION_TYPE:
+				return convertAspectInstantiationTypeToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -350,26 +350,6 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PointCutDisjunction createPointCutDisjunction() {
-		PointCutDisjunctionImpl pointCutDisjunction = new PointCutDisjunctionImpl();
-		return pointCutDisjunction;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PointCutConjunction createPointCutConjunction() {
-		PointCutConjunctionImpl pointCutConjunction = new PointCutConjunctionImpl();
-		return pointCutConjunction;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public PointCutPointCut createPointCutPointCut() {
 		PointCutPointCutImpl pointCutPointCut = new PointCutPointCutImpl();
 		return pointCutPointCut;
@@ -400,6 +380,16 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public PointCutDisjuction createPointCutDisjuction() {
+		PointCutDisjuctionImpl pointCutDisjuction = new PointCutDisjuctionImpl();
+		return pointCutDisjuction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public PointCutNegation createPointCutNegation() {
 		PointCutNegationImpl pointCutNegation = new PointCutNegationImpl();
 		return pointCutNegation;
@@ -413,6 +403,16 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 	public CFlowPointCut createCFlowPointCut() {
 		CFlowPointCutImpl cFlowPointCut = new CFlowPointCutImpl();
 		return cFlowPointCut;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PointCutConjuction createPointCutConjuction() {
+		PointCutConjuctionImpl pointCutConjuction = new PointCutConjuctionImpl();
+		return pointCutConjuction;
 	}
 
 	/**

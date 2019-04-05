@@ -15,8 +15,8 @@ import org.eclipse.uml2.uml.BehavioralFeature;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.papyrus.aspectj.Advice#getBase_BehavioralFeature <em>Base Behavioral Feature</em>}</li>
  *   <li>{@link org.eclipse.papyrus.aspectj.Advice#getAdviceExecution <em>Advice Execution</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.aspectj.Advice#getBase_BehavioralFeature <em>Base Behavioral Feature</em>}</li>
  *   <li>{@link org.eclipse.papyrus.aspectj.Advice#getPointcut <em>Pointcut</em>}</li>
  * </ul>
  *
@@ -55,32 +55,6 @@ public interface Advice extends EObject {
 	void setAdviceExecution(AdviceExecutionType value);
 
 	/**
-	 * Returns the value of the '<em><b>Pointcut</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Pointcut</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Pointcut</em>' reference.
-	 * @see #setPointcut(PointCut)
-	 * @see org.eclipse.papyrus.aspectj.AspectJPackage#getAdvice_Pointcut()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	PointCut getPointcut();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.papyrus.aspectj.Advice#getPointcut <em>Pointcut</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Pointcut</em>' reference.
-	 * @see #getPointcut()
-	 * @generated
-	 */
-	void setPointcut(PointCut value);
-
-	/**
 	 * Returns the value of the '<em><b>Base Behavioral Feature</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -105,5 +79,31 @@ public interface Advice extends EObject {
 	 * @generated
 	 */
 	void setBase_BehavioralFeature(BehavioralFeature value);
+
+	/**
+	 * Returns the value of the '<em><b>Pointcut</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Pointcut</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Pointcut</em>' reference.
+	 * @see #setPointcut(PointCut)
+	 * @see org.eclipse.papyrus.aspectj.AspectJPackage#getAdvice_Pointcut()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	PointCut getPointcut();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.papyrus.aspectj.Advice#getPointcut <em>Pointcut</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Pointcut</em>' reference.
+	 * @see #getPointcut()
+	 * @generated
+	 */
+	void setPointcut(PointCut value);
 
 } // Advice

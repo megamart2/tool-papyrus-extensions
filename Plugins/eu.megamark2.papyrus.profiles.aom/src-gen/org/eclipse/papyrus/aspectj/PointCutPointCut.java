@@ -20,7 +20,6 @@ package org.eclipse.papyrus.aspectj;
  * @generated
  */
 public interface PointCutPointCut extends PointCut {
-
 	/**
 	 * Returns the value of the '<em><b>Selected Point Cut</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -46,4 +45,5 @@ public interface PointCutPointCut extends PointCut {
 	 * @generated
 	 */
 	void setSelectedPointCut(PointCut value);
+
 } // PointCutPointCut

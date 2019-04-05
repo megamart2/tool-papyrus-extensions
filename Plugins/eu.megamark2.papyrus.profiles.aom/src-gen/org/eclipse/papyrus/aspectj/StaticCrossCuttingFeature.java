@@ -19,8 +19,8 @@ import org.eclipse.uml2.uml.Type;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.papyrus.aspectj.StaticCrossCuttingFeature#getBase_Feature <em>Base Feature</em>}</li>
  *   <li>{@link org.eclipse.papyrus.aspectj.StaticCrossCuttingFeature#getOnType <em>On Type</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.aspectj.StaticCrossCuttingFeature#getBase_Feature <em>Base Feature</em>}</li>
  * </ul>
  *
  * @see org.eclipse.papyrus.aspectj.AspectJPackage#getStaticCrossCuttingFeature()
