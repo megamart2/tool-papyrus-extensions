@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.papyrus.aspectj.AspectJPackage;
-import org.eclipse.papyrus.aspectj.PointCut;
+import org.eclipse.papyrus.aspectj.IndividualPointCut;
 import org.eclipse.papyrus.aspectj.PointCutPointCut;
 
 /**
@@ -25,7 +25,7 @@ import org.eclipse.papyrus.aspectj.PointCutPointCut;
  *
  * @generated
  */
-public class PointCutPointCutImpl extends PointCutImpl implements PointCutPointCut {
+public class PointCutPointCutImpl extends IndividualPointCutImpl implements PointCutPointCut {
 	/**
 	 * The cached value of the '{@link #getSelectedPointCut() <em>Selected Point Cut</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -34,7 +34,7 @@ public class PointCutPointCutImpl extends PointCutImpl implements PointCutPointC
 	 * @generated
 	 * @ordered
 	 */
-	protected PointCut selectedPointCut;
+	protected IndividualPointCut selectedPointCut;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -60,10 +60,10 @@ public class PointCutPointCutImpl extends PointCutImpl implements PointCutPointC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PointCut getSelectedPointCut() {
+	public IndividualPointCut getSelectedPointCut() {
 		if (selectedPointCut != null && selectedPointCut.eIsProxy()) {
 			InternalEObject oldSelectedPointCut = (InternalEObject)selectedPointCut;
-			selectedPointCut = (PointCut)eResolveProxy(oldSelectedPointCut);
+			selectedPointCut = (IndividualPointCut)eResolveProxy(oldSelectedPointCut);
 			if (selectedPointCut != oldSelectedPointCut) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AspectJPackage.POINT_CUT_POINT_CUT__SELECTED_POINT_CUT, oldSelectedPointCut, selectedPointCut));
@@ -77,7 +77,7 @@ public class PointCutPointCutImpl extends PointCutImpl implements PointCutPointC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PointCut basicGetSelectedPointCut() {
+	public IndividualPointCut basicGetSelectedPointCut() {
 		return selectedPointCut;
 	}
 
@@ -86,8 +86,8 @@ public class PointCutPointCutImpl extends PointCutImpl implements PointCutPointC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSelectedPointCut(PointCut newSelectedPointCut) {
-		PointCut oldSelectedPointCut = selectedPointCut;
+	public void setSelectedPointCut(IndividualPointCut newSelectedPointCut) {
+		IndividualPointCut oldSelectedPointCut = selectedPointCut;
 		selectedPointCut = newSelectedPointCut;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, AspectJPackage.POINT_CUT_POINT_CUT__SELECTED_POINT_CUT, oldSelectedPointCut, selectedPointCut));
@@ -117,7 +117,7 @@ public class PointCutPointCutImpl extends PointCutImpl implements PointCutPointC
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case AspectJPackage.POINT_CUT_POINT_CUT__SELECTED_POINT_CUT:
-				setSelectedPointCut((PointCut)newValue);
+				setSelectedPointCut((IndividualPointCut)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -132,7 +132,7 @@ public class PointCutPointCutImpl extends PointCutImpl implements PointCutPointC
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case AspectJPackage.POINT_CUT_POINT_CUT__SELECTED_POINT_CUT:
-				setSelectedPointCut((PointCut)null);
+				setSelectedPointCut((IndividualPointCut)null);
 				return;
 		}
 		super.eUnset(featureID);

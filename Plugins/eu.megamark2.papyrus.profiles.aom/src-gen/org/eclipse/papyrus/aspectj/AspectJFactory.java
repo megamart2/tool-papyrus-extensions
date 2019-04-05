@@ -40,6 +40,15 @@ public interface AspectJFactory extends EFactory {
 	Aspect createAspect();
 
 	/**
+	 * Returns a new object of class '<em>Individual Point Cut</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Individual Point Cut</em>'.
+	 * @generated
+	 */
+	IndividualPointCut createIndividualPointCut();
+
+	/**
 	 * Returns a new object of class '<em>Point Cut</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -47,6 +56,15 @@ public interface AspectJFactory extends EFactory {
 	 * @generated
 	 */
 	PointCut createPointCut();
+
+	/**
+	 * Returns a new object of class '<em>Composition Point Cut</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Composition Point Cut</em>'.
+	 * @generated
+	 */
+	CompositionPointCut createCompositionPointCut();
 
 	/**
 	 * Returns a new object of class '<em>Initialization Point Cut</em>'.

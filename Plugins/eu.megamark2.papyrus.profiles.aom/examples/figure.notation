@@ -308,27 +308,6 @@
           <layoutConstraint xmi:type="notation:Location" xmi:id="_OzKEUVeZEemSiZfDg_TEPg"/>
         </children>
         <children xmi:type="notation:Shape" xmi:id="_Xvj-oFeZEemSiZfDg_TEPg" type="Property_ClassAttributeLabel">
-          <children xmi:type="notation:BasicCompartment" xmi:id="_ZnC18FefEemtZ4vNsrJPQA" type="StereotypeBrace">
-            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Mu8ssFegEemtZ4vNsrJPQA" source="PapyrusCSSForceValue">
-              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Mu9TwFegEemtZ4vNsrJPQA" key="visible" value="true"/>
-            </eAnnotations>
-            <children xmi:type="notation:DecorationNode" xmi:id="_ZnDdAlefEemtZ4vNsrJPQA" visible="false" type="StereotypePropertyBrace">
-              <element xmi:type="uml:Property" href="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_WP2_ElecEemlk6nvLsCbVg"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_ZnDdA1efEemtZ4vNsrJPQA"/>
-            </children>
-            <children xmi:type="notation:DecorationNode" xmi:id="_ZnEEEFefEemtZ4vNsrJPQA" visible="false" type="StereotypePropertyBrace">
-              <element xmi:type="uml:Property" href="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#__W7qElecEemlk6nvLsCbVg"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_ZnEEEVefEemtZ4vNsrJPQA"/>
-            </children>
-            <children xmi:type="notation:DecorationNode" xmi:id="_ZnEEElefEemtZ4vNsrJPQA" visible="false" type="StereotypePropertyBrace">
-              <element xmi:type="uml:Property" href="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_X5RXcFedEemlk6nvLsCbVg"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_ZnEEE1efEemtZ4vNsrJPQA"/>
-            </children>
-            <styles xmi:type="notation:TitleStyle" xmi:id="_ZnC18VefEemtZ4vNsrJPQA"/>
-            <styles xmi:type="notation:StringValueStyle" xmi:id="_ZnC18lefEemtZ4vNsrJPQA" name="stereotype" stringValue="aspectj::PointCutConjuction"/>
-            <element xmi:type="uml:Stereotype" href="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_qIKhIFbqEemLl-b4hcTIIQ"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZnC181efEemtZ4vNsrJPQA"/>
-          </children>
           <element xmi:type="uml:Property" href="figure.uml#_XrVl8FeZEemSiZfDg_TEPg"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_Xvj-oVeZEemSiZfDg_TEPg"/>
         </children>

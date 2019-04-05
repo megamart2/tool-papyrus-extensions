@@ -67,25 +67,17 @@
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference aspectj.ecore#//Aspect/precededBy"/>
     </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="aspectj.ecore#//IndividualPointCut">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference aspectj.ecore#//IndividualPointCut/composite"/>
+    </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="aspectj.ecore#//PointCut">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference aspectj.ecore#//PointCut/base_PointCut_StructuralFeature"/>
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference aspectj.ecore#//PointCut/composite"/>
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference aspectj.ecore#//PointCut/composition"/>
+          propertySortChoices="true" ecoreFeature="ecore:EReference aspectj.ecore#//PointCut/base_StructuralFeature"/>
     </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="aspectj.ecore#//PointCutConjuction">
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="aspectj.ecore#//CompositionPointCut">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference aspectj.ecore#//PointCutConjuction/composee"/>
-    </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="aspectj.ecore#//PointCutDisjuction">
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference aspectj.ecore#//PointCutDisjuction/composee"/>
-    </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="aspectj.ecore#//PointCutNegation">
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference aspectj.ecore#//PointCutNegation/composee"/>
+          propertySortChoices="true" ecoreFeature="ecore:EReference aspectj.ecore#//CompositionPointCut/composee"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="aspectj.ecore#//InitializationPointCut"/>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="aspectj.ecore#//ExecutionPointCut"/>
@@ -134,6 +126,9 @@
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference aspectj.ecore#//CrossCuttingConcern/base_Package"/>
     </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="aspectj.ecore#//PointCutDisjuction"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="aspectj.ecore#//PointCutNegation"/>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="aspectj.ecore#//CFlowPointCut"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="aspectj.ecore#//PointCutConjuction"/>
   </genPackages>
 </genmodel:GenModel>

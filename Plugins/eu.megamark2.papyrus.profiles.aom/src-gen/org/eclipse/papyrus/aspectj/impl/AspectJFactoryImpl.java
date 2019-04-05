@@ -59,10 +59,9 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 		switch (eClass.getClassifierID()) {
 			case AspectJPackage.STATIC_CROSS_CUTTING_FEATURE: return createStaticCrossCuttingFeature();
 			case AspectJPackage.ASPECT: return createAspect();
+			case AspectJPackage.INDIVIDUAL_POINT_CUT: return createIndividualPointCut();
 			case AspectJPackage.POINT_CUT: return createPointCut();
-			case AspectJPackage.POINT_CUT_CONJUCTION: return createPointCutConjuction();
-			case AspectJPackage.POINT_CUT_DISJUCTION: return createPointCutDisjuction();
-			case AspectJPackage.POINT_CUT_NEGATION: return createPointCutNegation();
+			case AspectJPackage.COMPOSITION_POINT_CUT: return createCompositionPointCut();
 			case AspectJPackage.INITIALIZATION_POINT_CUT: return createInitializationPointCut();
 			case AspectJPackage.EXECUTION_POINT_CUT: return createExecutionPointCut();
 			case AspectJPackage.OPERATIONAL_POINT_CUT: return createOperationalPointCut();
@@ -85,7 +84,10 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 			case AspectJPackage.POINT_CUT_POINT_CUT: return createPointCutPointCut();
 			case AspectJPackage.CFLOW_BELOW_POINT_CUT: return createCFlowBelowPointCut();
 			case AspectJPackage.CROSS_CUTTING_CONCERN: return createCrossCuttingConcern();
+			case AspectJPackage.POINT_CUT_DISJUCTION: return createPointCutDisjuction();
+			case AspectJPackage.POINT_CUT_NEGATION: return createPointCutNegation();
 			case AspectJPackage.CFLOW_POINT_CUT: return createCFlowPointCut();
+			case AspectJPackage.POINT_CUT_CONJUCTION: return createPointCutConjuction();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -150,9 +152,29 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public IndividualPointCut createIndividualPointCut() {
+		IndividualPointCutImpl individualPointCut = new IndividualPointCutImpl();
+		return individualPointCut;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public PointCut createPointCut() {
 		PointCutImpl pointCut = new PointCutImpl();
 		return pointCut;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CompositionPointCut createCompositionPointCut() {
+		CompositionPointCutImpl compositionPointCut = new CompositionPointCutImpl();
+		return compositionPointCut;
 	}
 
 	/**

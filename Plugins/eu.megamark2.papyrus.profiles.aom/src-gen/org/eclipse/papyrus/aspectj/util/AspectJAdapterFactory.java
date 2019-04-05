@@ -76,20 +76,16 @@ public class AspectJAdapterFactory extends AdapterFactoryImpl {
 				return createAspectAdapter();
 			}
 			@Override
+			public Adapter caseIndividualPointCut(IndividualPointCut object) {
+				return createIndividualPointCutAdapter();
+			}
+			@Override
 			public Adapter casePointCut(PointCut object) {
 				return createPointCutAdapter();
 			}
 			@Override
-			public Adapter casePointCutConjuction(PointCutConjuction object) {
-				return createPointCutConjuctionAdapter();
-			}
-			@Override
-			public Adapter casePointCutDisjuction(PointCutDisjuction object) {
-				return createPointCutDisjuctionAdapter();
-			}
-			@Override
-			public Adapter casePointCutNegation(PointCutNegation object) {
-				return createPointCutNegationAdapter();
+			public Adapter caseCompositionPointCut(CompositionPointCut object) {
+				return createCompositionPointCutAdapter();
 			}
 			@Override
 			public Adapter caseInitializationPointCut(InitializationPointCut object) {
@@ -180,8 +176,20 @@ public class AspectJAdapterFactory extends AdapterFactoryImpl {
 				return createCrossCuttingConcernAdapter();
 			}
 			@Override
+			public Adapter casePointCutDisjuction(PointCutDisjuction object) {
+				return createPointCutDisjuctionAdapter();
+			}
+			@Override
+			public Adapter casePointCutNegation(PointCutNegation object) {
+				return createPointCutNegationAdapter();
+			}
+			@Override
 			public Adapter caseCFlowPointCut(CFlowPointCut object) {
 				return createCFlowPointCutAdapter();
+			}
+			@Override
+			public Adapter casePointCutConjuction(PointCutConjuction object) {
+				return createPointCutConjuctionAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -232,6 +240,20 @@ public class AspectJAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.aspectj.IndividualPointCut <em>Individual Point Cut</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.aspectj.IndividualPointCut
+	 * @generated
+	 */
+	public Adapter createIndividualPointCutAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.aspectj.PointCut <em>Point Cut</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -242,6 +264,20 @@ public class AspectJAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPointCutAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.aspectj.CompositionPointCut <em>Composition Point Cut</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.aspectj.CompositionPointCut
+	 * @generated
+	 */
+	public Adapter createCompositionPointCutAdapter() {
 		return null;
 	}
 
