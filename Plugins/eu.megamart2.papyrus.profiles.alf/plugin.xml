@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ActionLanguage-Profile.profile -->
+      <package
+            uri="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile"
+            class="eu.megamart2.papyrus.profiles.alf.ActionLanguage.ActionLanguagePackage"
+            genModel="profiles/ActionLanguage-Profile.profile.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated backup-profile.profile -->
+      <package
+            uri="http:///schemas/BackupProfile/_J7IFgKInEeS_KNX0nfvIVQ/1"
+            class="eu.megamart2.papyrus.profiles.alf.BackupProfile.BackupProfilePackage"
+            genModel="profiles/backup-profile.profile.genmodel"/>
+   </extension>
+
+</plugin>
