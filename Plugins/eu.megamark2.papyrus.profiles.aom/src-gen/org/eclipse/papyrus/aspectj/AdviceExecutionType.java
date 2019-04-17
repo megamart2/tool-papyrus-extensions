@@ -19,79 +19,129 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum AdviceExecutionType implements Enumerator {
 	/**
-	 * The '<em><b>Around Advice</b></em>' literal object.
+	 * The '<em><b>Around</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #AROUND_ADVICE_VALUE
+	 * @see #AROUND_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	AROUND_ADVICE(0, "AroundAdvice", "AroundAdvice"),
+	AROUND(0, "Around", "Around"),
 
 	/**
-	 * The '<em><b>Before Advice</b></em>' literal object.
+	 * The '<em><b>Before</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #BEFORE_ADVICE_VALUE
+	 * @see #BEFORE_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	BEFORE_ADVICE(1, "BeforeAdvice", "BeforeAdvice"),
+	BEFORE(1, "Before", "Before"),
 
 	/**
-	 * The '<em><b>After Advice</b></em>' literal object.
+	 * The '<em><b>After</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #AFTER_ADVICE_VALUE
+	 * @see #AFTER_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	AFTER_ADVICE(2, "AfterAdvice", "AfterAdvice");
+	AFTER(2, "After", "After"),
 
 	/**
-	 * The '<em><b>Around Advice</b></em>' literal value.
+	 * The '<em><b>After Returning</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #AFTER_RETURNING_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	AFTER_RETURNING(3, "After_Returning", "After_Returning"),
+
+	/**
+	 * The '<em><b>After Throwing</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #AFTER_THROWING_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	AFTER_THROWING(4, "After_Throwing", "After_Throwing");
+
+	/**
+	 * The '<em><b>Around</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Around Advice</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>Around</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #AROUND_ADVICE
-	 * @model name="AroundAdvice"
+	 * @see #AROUND
+	 * @model name="Around"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int AROUND_ADVICE_VALUE = 0;
+	public static final int AROUND_VALUE = 0;
 
 	/**
-	 * The '<em><b>Before Advice</b></em>' literal value.
+	 * The '<em><b>Before</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Before Advice</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>Before</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #BEFORE_ADVICE
-	 * @model name="BeforeAdvice"
+	 * @see #BEFORE
+	 * @model name="Before"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int BEFORE_ADVICE_VALUE = 1;
+	public static final int BEFORE_VALUE = 1;
 
 	/**
-	 * The '<em><b>After Advice</b></em>' literal value.
+	 * The '<em><b>After</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>After Advice</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>After</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #AFTER_ADVICE
-	 * @model name="AfterAdvice"
+	 * @see #AFTER
+	 * @model name="After"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int AFTER_ADVICE_VALUE = 2;
+	public static final int AFTER_VALUE = 2;
+
+	/**
+	 * The '<em><b>After Returning</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>After Returning</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #AFTER_RETURNING
+	 * @model name="After_Returning"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int AFTER_RETURNING_VALUE = 3;
+
+	/**
+	 * The '<em><b>After Throwing</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>After Throwing</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #AFTER_THROWING
+	 * @model name="After_Throwing"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int AFTER_THROWING_VALUE = 4;
 
 	/**
 	 * An array of all the '<em><b>Advice Execution Type</b></em>' enumerators.
@@ -101,9 +151,11 @@ public enum AdviceExecutionType implements Enumerator {
 	 */
 	private static final AdviceExecutionType[] VALUES_ARRAY =
 		new AdviceExecutionType[] {
-			AROUND_ADVICE,
-			BEFORE_ADVICE,
-			AFTER_ADVICE,
+			AROUND,
+			BEFORE,
+			AFTER,
+			AFTER_RETURNING,
+			AFTER_THROWING,
 		};
 
 	/**
@@ -160,9 +212,11 @@ public enum AdviceExecutionType implements Enumerator {
 	 */
 	public static AdviceExecutionType get(int value) {
 		switch (value) {
-			case AROUND_ADVICE_VALUE: return AROUND_ADVICE;
-			case BEFORE_ADVICE_VALUE: return BEFORE_ADVICE;
-			case AFTER_ADVICE_VALUE: return AFTER_ADVICE;
+			case AROUND_VALUE: return AROUND;
+			case BEFORE_VALUE: return BEFORE;
+			case AFTER_VALUE: return AFTER;
+			case AFTER_RETURNING_VALUE: return AFTER_RETURNING;
+			case AFTER_THROWING_VALUE: return AFTER_THROWING;
 		}
 		return null;
 	}

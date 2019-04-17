@@ -28,7 +28,7 @@ import org.eclipse.uml2.uml.Type;
  *
  * @generated
  */
-public abstract class TypePointCutImpl extends IndividualPointCutImpl implements TypePointCut {
+public abstract class TypePointCutImpl extends PointCutImpl implements TypePointCut {
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' reference list.
 	 * <!-- begin-user-doc -->

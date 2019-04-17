@@ -23,7 +23,7 @@ import org.eclipse.uml2.uml.Type;
  * @model abstract="true"
  * @generated
  */
-public interface OperationalPointCut extends IndividualPointCut {
+public interface OperationalPointCut extends PointCut {
 	/**
 	 * Returns the value of the '<em><b>Operation</b></em>' reference list.
 	 * The list contents are of type {@link org.eclipse.uml2.uml.Operation}.

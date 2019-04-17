@@ -14,7 +14,7 @@ import org.eclipse.papyrus.aspectj.AspectJPackage;
  *
  * @generated
  */
-public class AdviceExecutionPointCutImpl extends IndividualPointCutImpl implements AdviceExecutionPointCut {
+public class AdviceExecutionPointCutImpl extends PointCutImpl implements AdviceExecutionPointCut {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

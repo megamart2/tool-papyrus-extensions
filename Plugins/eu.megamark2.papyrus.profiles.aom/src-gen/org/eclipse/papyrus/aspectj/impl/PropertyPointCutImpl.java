@@ -29,7 +29,7 @@ import org.eclipse.uml2.uml.Type;
  *
  * @generated
  */
-public abstract class PropertyPointCutImpl extends IndividualPointCutImpl implements PropertyPointCut {
+public abstract class PropertyPointCutImpl extends PointCutImpl implements PropertyPointCut {
 	/**
 	 * The cached value of the '{@link #getField() <em>Field</em>}' reference list.
 	 * <!-- begin-user-doc -->

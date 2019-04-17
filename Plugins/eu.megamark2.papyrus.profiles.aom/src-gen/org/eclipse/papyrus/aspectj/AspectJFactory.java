@@ -40,6 +40,15 @@ public interface AspectJFactory extends EFactory {
 	Aspect createAspect();
 
 	/**
+	 * Returns a new object of class '<em>Composite Point Cut</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Composite Point Cut</em>'.
+	 * @generated
+	 */
+	CompositePointCut createCompositePointCut();
+
+	/**
 	 * Returns a new object of class '<em>Initialization Point Cut</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -184,24 +193,6 @@ public interface AspectJFactory extends EFactory {
 	CrossCuttingConcern createCrossCuttingConcern();
 
 	/**
-	 * Returns a new object of class '<em>Point Cut Disjuction</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Point Cut Disjuction</em>'.
-	 * @generated
-	 */
-	PointCutDisjuction createPointCutDisjuction();
-
-	/**
-	 * Returns a new object of class '<em>Point Cut Negation</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Point Cut Negation</em>'.
-	 * @generated
-	 */
-	PointCutNegation createPointCutNegation();
-
-	/**
 	 * Returns a new object of class '<em>CFlow Point Cut</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -209,15 +200,6 @@ public interface AspectJFactory extends EFactory {
 	 * @generated
 	 */
 	CFlowPointCut createCFlowPointCut();
-
-	/**
-	 * Returns a new object of class '<em>Point Cut Conjuction</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Point Cut Conjuction</em>'.
-	 * @generated
-	 */
-	PointCutConjuction createPointCutConjuction();
 
 	/**
 	 * Returns the package supported by this factory.

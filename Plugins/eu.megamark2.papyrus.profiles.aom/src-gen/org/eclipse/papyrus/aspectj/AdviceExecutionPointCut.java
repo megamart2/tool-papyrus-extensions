@@ -13,5 +13,5 @@ package org.eclipse.papyrus.aspectj;
  * @model
  * @generated
  */
-public interface AdviceExecutionPointCut extends IndividualPointCut {
+public interface AdviceExecutionPointCut extends PointCut {
 } // AdviceExecutionPointCut

@@ -2,7 +2,10 @@
  */
 package org.eclipse.papyrus.aspectj;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
+
 import org.eclipse.uml2.uml.StructuralFeature;
 
 /**
@@ -15,6 +18,7 @@ import org.eclipse.uml2.uml.StructuralFeature;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.papyrus.aspectj.PointCut#getBase_PointCut_StructuralFeature <em>Base Point Cut Structural Feature</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.aspectj.PointCut#getComposite <em>Composite</em>}</li>
  * </ul>
  *
  * @see org.eclipse.papyrus.aspectj.AspectJPackage#getPointCut()
@@ -22,7 +26,6 @@ import org.eclipse.uml2.uml.StructuralFeature;
  * @generated
  */
 public interface PointCut extends EObject {
-
 	/**
 	 * Returns the value of the '<em><b>Base Point Cut Structural Feature</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -48,5 +51,21 @@ public interface PointCut extends EObject {
 	 * @generated
 	 */
 	void setBase_PointCut_StructuralFeature(StructuralFeature value);
+
+	/**
+	 * Returns the value of the '<em><b>Composite</b></em>' reference list.
+	 * The list contents are of type {@link org.eclipse.papyrus.aspectj.CompositePointCut}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Composite</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Composite</em>' reference list.
+	 * @see org.eclipse.papyrus.aspectj.AspectJPackage#getPointCut_Composite()
+	 * @model ordered="false"
+	 * @generated
+	 */
+	EList<CompositePointCut> getComposite();
 
 } // PointCut

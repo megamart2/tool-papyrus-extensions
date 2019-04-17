@@ -3,15 +3,22 @@
 package org.eclipse.papyrus.aspectj.impl;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EDataTypeEList;
+
 import org.eclipse.papyrus.aspectj.ArgumentDefiningPointCut;
 import org.eclipse.papyrus.aspectj.AspectJPackage;
 import org.eclipse.papyrus.aspectj.TargetPointCut;
+
 import org.eclipse.uml2.uml.StructuralFeature;
 
 /**
@@ -38,6 +45,7 @@ public class TargetPointCutImpl extends TypePointCutImpl implements TargetPointC
 	 * @ordered
 	 */
 	protected StructuralFeature base_StructuralFeature;
+
 	/**
 	 * The cached value of the '{@link #getArgNames() <em>Arg Names</em>}' attribute list.
 	 * <!-- begin-user-doc -->

@@ -25,7 +25,7 @@ import org.eclipse.uml2.uml.Type;
  * @model abstract="true"
  * @generated
  */
-public interface PropertyPointCut extends IndividualPointCut {
+public interface PropertyPointCut extends PointCut {
 	/**
 	 * Returns the value of the '<em><b>Field</b></em>' reference list.
 	 * The list contents are of type {@link org.eclipse.uml2.uml.Property}.

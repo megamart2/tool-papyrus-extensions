@@ -125,12 +125,12 @@ public interface Aspect extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Per Point Cut</em>' reference.
-	 * @see #setPerPointCut(IndividualPointCut)
+	 * @see #setPerPointCut(PointCut)
 	 * @see org.eclipse.papyrus.aspectj.AspectJPackage#getAspect_PerPointCut()
 	 * @model ordered="false"
 	 * @generated
 	 */
-	IndividualPointCut getPerPointCut();
+	PointCut getPerPointCut();
 
 	/**
 	 * Sets the value of the '{@link org.eclipse.papyrus.aspectj.Aspect#getPerPointCut <em>Per Point Cut</em>}' reference.
@@ -140,7 +140,7 @@ public interface Aspect extends EObject {
 	 * @see #getPerPointCut()
 	 * @generated
 	 */
-	void setPerPointCut(IndividualPointCut value);
+	void setPerPointCut(PointCut value);
 
 	/**
 	 * Returns the value of the '<em><b>Declared Parents</b></em>' reference list.

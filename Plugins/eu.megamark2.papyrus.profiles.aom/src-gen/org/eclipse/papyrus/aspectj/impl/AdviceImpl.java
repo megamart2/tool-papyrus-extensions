@@ -3,6 +3,7 @@
 package org.eclipse.papyrus.aspectj.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -40,7 +41,7 @@ public class AdviceImpl extends MinimalEObjectImpl.Container implements Advice {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final AdviceExecutionType ADVICE_EXECUTION_EDEFAULT = AdviceExecutionType.AROUND_ADVICE;
+	protected static final AdviceExecutionType ADVICE_EXECUTION_EDEFAULT = AdviceExecutionType.AROUND;
 
 	/**
 	 * The cached value of the '{@link #getAdviceExecution() <em>Advice Execution</em>}' attribute.

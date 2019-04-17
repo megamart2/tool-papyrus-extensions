@@ -24,7 +24,7 @@ import org.eclipse.uml2.uml.Type;
  * @model abstract="true"
  * @generated
  */
-public interface TypePointCut extends IndividualPointCut {
+public interface TypePointCut extends PointCut {
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' reference list.
 	 * The list contents are of type {@link org.eclipse.uml2.uml.Type}.

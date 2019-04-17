@@ -20,7 +20,8 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.papyrus.aspectj.Aspect;
 import org.eclipse.papyrus.aspectj.AspectInstantiationType;
 import org.eclipse.papyrus.aspectj.AspectJPackage;
-import org.eclipse.papyrus.aspectj.IndividualPointCut;
+import org.eclipse.papyrus.aspectj.PointCut;
+
 import org.eclipse.uml2.uml.Classifier;
 import org.eclipse.uml2.uml.Generalization;
 import org.eclipse.uml2.uml.Interface;
@@ -105,7 +106,7 @@ public class AspectImpl extends MinimalEObjectImpl.Container implements Aspect {
 	 * @generated
 	 * @ordered
 	 */
-	protected IndividualPointCut perPointCut;
+	protected PointCut perPointCut;
 
 	/**
 	 * The cached value of the '{@link #getDeclaredParents() <em>Declared Parents</em>}' reference list.
@@ -251,10 +252,10 @@ public class AspectImpl extends MinimalEObjectImpl.Container implements Aspect {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IndividualPointCut getPerPointCut() {
+	public PointCut getPerPointCut() {
 		if (perPointCut != null && perPointCut.eIsProxy()) {
 			InternalEObject oldPerPointCut = (InternalEObject)perPointCut;
-			perPointCut = (IndividualPointCut)eResolveProxy(oldPerPointCut);
+			perPointCut = (PointCut)eResolveProxy(oldPerPointCut);
 			if (perPointCut != oldPerPointCut) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AspectJPackage.ASPECT__PER_POINT_CUT, oldPerPointCut, perPointCut));
@@ -268,7 +269,7 @@ public class AspectImpl extends MinimalEObjectImpl.Container implements Aspect {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IndividualPointCut basicGetPerPointCut() {
+	public PointCut basicGetPerPointCut() {
 		return perPointCut;
 	}
 
@@ -277,8 +278,8 @@ public class AspectImpl extends MinimalEObjectImpl.Container implements Aspect {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPerPointCut(IndividualPointCut newPerPointCut) {
-		IndividualPointCut oldPerPointCut = perPointCut;
+	public void setPerPointCut(PointCut newPerPointCut) {
+		PointCut oldPerPointCut = perPointCut;
 		perPointCut = newPerPointCut;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, AspectJPackage.ASPECT__PER_POINT_CUT, oldPerPointCut, perPointCut));
@@ -554,7 +555,7 @@ public class AspectImpl extends MinimalEObjectImpl.Container implements Aspect {
 				setPerType((AspectInstantiationType)newValue);
 				return;
 			case AspectJPackage.ASPECT__PER_POINT_CUT:
-				setPerPointCut((IndividualPointCut)newValue);
+				setPerPointCut((PointCut)newValue);
 				return;
 			case AspectJPackage.ASPECT__DECLARED_PARENTS:
 				getDeclaredParents().clear();
@@ -592,7 +593,7 @@ public class AspectImpl extends MinimalEObjectImpl.Container implements Aspect {
 				setPerType(PER_TYPE_EDEFAULT);
 				return;
 			case AspectJPackage.ASPECT__PER_POINT_CUT:
-				setPerPointCut((IndividualPointCut)null);
+				setPerPointCut((PointCut)null);
 				return;
 			case AspectJPackage.ASPECT__DECLARED_PARENTS:
 				getDeclaredParents().clear();

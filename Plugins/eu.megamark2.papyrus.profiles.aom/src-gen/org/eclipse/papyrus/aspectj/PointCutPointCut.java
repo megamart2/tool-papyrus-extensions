@@ -19,7 +19,7 @@ package org.eclipse.papyrus.aspectj;
  * @model abstract="true"
  * @generated
  */
-public interface PointCutPointCut extends IndividualPointCut {
+public interface PointCutPointCut extends PointCut {
 	/**
 	 * Returns the value of the '<em><b>Selected Point Cut</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -29,12 +29,12 @@ public interface PointCutPointCut extends IndividualPointCut {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Selected Point Cut</em>' reference.
-	 * @see #setSelectedPointCut(IndividualPointCut)
+	 * @see #setSelectedPointCut(PointCut)
 	 * @see org.eclipse.papyrus.aspectj.AspectJPackage#getPointCutPointCut_SelectedPointCut()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	IndividualPointCut getSelectedPointCut();
+	PointCut getSelectedPointCut();
 
 	/**
 	 * Sets the value of the '{@link org.eclipse.papyrus.aspectj.PointCutPointCut#getSelectedPointCut <em>Selected Point Cut</em>}' reference.
@@ -44,6 +44,6 @@ public interface PointCutPointCut extends IndividualPointCut {
 	 * @see #getSelectedPointCut()
 	 * @generated
 	 */
-	void setSelectedPointCut(IndividualPointCut value);
+	void setSelectedPointCut(PointCut value);
 
 } // PointCutPointCut

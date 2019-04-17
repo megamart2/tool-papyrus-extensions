@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
+
 import org.eclipse.papyrus.aspectj.ArgumentDefiningPointCut;
 import org.eclipse.papyrus.aspectj.AspectJPackage;
 

@@ -59,6 +59,7 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 		switch (eClass.getClassifierID()) {
 			case AspectJPackage.STATIC_CROSS_CUTTING_FEATURE: return createStaticCrossCuttingFeature();
 			case AspectJPackage.ASPECT: return createAspect();
+			case AspectJPackage.COMPOSITE_POINT_CUT: return createCompositePointCut();
 			case AspectJPackage.INITIALIZATION_POINT_CUT: return createInitializationPointCut();
 			case AspectJPackage.PRE_INITIALIZATION_POINT_CUT: return createPreInitializationPointCut();
 			case AspectJPackage.SET_POINT_CUT: return createSetPointCut();
@@ -75,10 +76,7 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 			case AspectJPackage.WITHIN_POINT_CUT: return createWithinPointCut();
 			case AspectJPackage.CFLOW_BELOW_POINT_CUT: return createCFlowBelowPointCut();
 			case AspectJPackage.CROSS_CUTTING_CONCERN: return createCrossCuttingConcern();
-			case AspectJPackage.POINT_CUT_DISJUCTION: return createPointCutDisjuction();
-			case AspectJPackage.POINT_CUT_NEGATION: return createPointCutNegation();
 			case AspectJPackage.CFLOW_POINT_CUT: return createCFlowPointCut();
-			case AspectJPackage.POINT_CUT_CONJUCTION: return createPointCutConjuction();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -96,6 +94,8 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 				return createAdviceExecutionTypeFromString(eDataType, initialValue);
 			case AspectJPackage.ASPECT_INSTANTIATION_TYPE:
 				return createAspectInstantiationTypeFromString(eDataType, initialValue);
+			case AspectJPackage.POINT_CUT_COMPOSITION_TYPE:
+				return createPointCutCompositionTypeFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -113,6 +113,8 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 				return convertAdviceExecutionTypeToString(eDataType, instanceValue);
 			case AspectJPackage.ASPECT_INSTANTIATION_TYPE:
 				return convertAspectInstantiationTypeToString(eDataType, instanceValue);
+			case AspectJPackage.POINT_CUT_COMPOSITION_TYPE:
+				return convertPointCutCompositionTypeToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -136,6 +138,16 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 	public Aspect createAspect() {
 		AspectImpl aspect = new AspectImpl();
 		return aspect;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CompositePointCut createCompositePointCut() {
+		CompositePointCutImpl compositePointCut = new CompositePointCutImpl();
+		return compositePointCut;
 	}
 
 	/**
@@ -303,39 +315,9 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PointCutDisjuction createPointCutDisjuction() {
-		PointCutDisjuctionImpl pointCutDisjuction = new PointCutDisjuctionImpl();
-		return pointCutDisjuction;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PointCutNegation createPointCutNegation() {
-		PointCutNegationImpl pointCutNegation = new PointCutNegationImpl();
-		return pointCutNegation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public CFlowPointCut createCFlowPointCut() {
 		CFlowPointCutImpl cFlowPointCut = new CFlowPointCutImpl();
 		return cFlowPointCut;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PointCutConjuction createPointCutConjuction() {
-		PointCutConjuctionImpl pointCutConjuction = new PointCutConjuctionImpl();
-		return pointCutConjuction;
 	}
 
 	/**
@@ -375,6 +357,26 @@ public class AspectJFactoryImpl extends EFactoryImpl implements AspectJFactory {
 	 * @generated
 	 */
 	public String convertAspectInstantiationTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PointCutCompositionType createPointCutCompositionTypeFromString(EDataType eDataType, String initialValue) {
+		PointCutCompositionType result = PointCutCompositionType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertPointCutCompositionTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

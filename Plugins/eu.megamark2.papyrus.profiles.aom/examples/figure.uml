@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ActionLanguage="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile" xmlns:AspectJ="http://megamart2-ecsel.eu/aspectj/" xmlns:BackupProfile="http:///schemas/BackupProfile/_J7IFgKInEeS_KNX0nfvIVQ/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ http://megamart2-ecsel.eu/aspectj/ pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_Fx09QGDaEemlDdyzDhgfdg http:///schemas/BackupProfile/_J7IFgKInEeS_KNX0nfvIVQ/1 pathmap://PAPYRUS_BACKUP_PROFILE/backup-profile.profile.uml#_J7IFgaInEeS_KNX0nfvIVQ">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ActionLanguage="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile" xmlns:AspectJ="http://megamart2-ecsel.eu/aspectj/" xmlns:BackupProfile="http:///schemas/BackupProfile/_J7IFgKInEeS_KNX0nfvIVQ/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ http://megamart2-ecsel.eu/aspectj/ pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_QOXFYGENEemKstVB93PqIA http:///schemas/BackupProfile/_J7IFgKInEeS_KNX0nfvIVQ/1 pathmap://PAPYRUS_BACKUP_PROFILE/backup-profile.profile.uml#_J7IFgaInEeS_KNX0nfvIVQ">
   <uml:Model xmi:id="_2E8YwFeFEemxMtse52fEfg" name="PointObserving">
     <packageImport xmi:type="uml:PackageImport" xmi:id="_2j6zwFeFEemxMtse52fEfg">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
@@ -407,15 +407,15 @@ class Aspect1 {
     <packagedElement xmi:type="uml:Class" xmi:id="_-2mnYFegEemtZ4vNsrJPQA" name="Drawing"/>
     <packagedElement xmi:type="uml:Interface" xmi:id="_Es0M0FehEemtZ4vNsrJPQA" name="Drawable"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_2jt_cFeFEemxMtse52fEfg">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_g-zq8GDlEemStaWSTI_sIg" source="PapyrusVersion">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_g-zq8WDlEemStaWSTI_sIg" key="Version" value="0.0.14"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_g-zq8mDlEemStaWSTI_sIg" key="Comment" value="UML profile for AspectJ"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_g-zq82DlEemStaWSTI_sIg" key="Copyright" value="@Atos Spain S.A. 2019"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_g-zq9GDlEemStaWSTI_sIg" key="Date" value="2019-04-17"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_g-zq9WDlEemStaWSTI_sIg" key="Author" value="Jesús Gorroñogoitia"/>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_VVaCQGEOEemjiqw2DoK6eg" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VVaCQWEOEemjiqw2DoK6eg" key="Version" value="0.0.15"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VVaCQmEOEemjiqw2DoK6eg" key="Comment" value="@Atos Spain S.A. 2019"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VVaCQ2EOEemjiqw2DoK6eg" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VVaCRGEOEemjiqw2DoK6eg" key="Date" value="2019-04-17"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VVaCRWEOEemjiqw2DoK6eg" key="Author" value="Jesús Gorroñogoitia"/>
       </eAnnotations>
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2jumgFeFEemxMtse52fEfg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_Fx09QGDaEemlDdyzDhgfdg"/>
+        <references xmi:type="ecore:EPackage" href="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_QOXFYGENEemKstVB93PqIA"/>
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_wW2AAFbhEemeMqmugX5-_g"/>
     </profileApplication>
