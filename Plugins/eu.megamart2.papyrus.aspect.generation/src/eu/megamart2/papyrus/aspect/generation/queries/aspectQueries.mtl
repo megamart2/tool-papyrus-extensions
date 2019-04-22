@@ -1,12 +1,16 @@
 [comment encoding = UTF-8 /]
 [module aspectQueries('http://www.eclipse.org/uml2/5.0.0/UML')]
 
-[query public isAspect(clazz : Class) : Boolean =
-invoke('eu.megamart2.papyrus.aspect.generation.queries.AspectQueries',
-'isAspect(org.eclipse.uml2.uml.Class)',
-Sequence{clazz})/]
+[query public getStereotype(e : Element, sName : String) : Stereotype = e.getAppliedStereotype(sName) /]
 
-[query public aspectAccess(clazz : Class) : String =
-invoke('eu.megamart2.papyrus.aspect.generation.queries.AspectQueries',
-'aspectAccess(org.eclipse.uml2.uml.Class)',
-Sequence{clazz})/]
+[query public hasStereotype(e : Element, sName : String) : OclAny = not e.getAppliedStereotype(sName).oclIsUndefined()/]
+
+[query public isAspect(e : Element) : Boolean = e.hasStereotype('aspectj::Aspect') /]
+
+[query public getStereotypePropertyValue(stereotypedElement : Element, stereotypeName : String, propertyName : String) : OclAny = 
+   let stereotype : Stereotype = stereotypedElement.getAppliedStereotype(stereotypeName) in
+     if not stereotype.oclIsUndefined() then
+       stereotypedElement.getValue(stereotype, propertyName)
+     else 
+       null
+     endif/]

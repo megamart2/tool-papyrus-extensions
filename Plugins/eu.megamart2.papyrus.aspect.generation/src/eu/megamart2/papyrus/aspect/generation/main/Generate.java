@@ -42,7 +42,7 @@ public class Generate extends AbstractAcceleoGenerator {
 	 *
 	 * @generated
 	 */
-	public static final String[] TEMPLATE_NAMES = { "generateElement" };
+	public static final String[] TEMPLATE_NAMES = { "generateAspect" };
 
 	/**
 	 * The list of properties files from the launch parameters (Launch
@@ -346,21 +346,6 @@ public class Generate extends AbstractAcceleoGenerator {
 		if (!isInWorkspace(org.eclipse.uml2.uml.UMLPackage.class)) {
 			resourceSet.getPackageRegistry().put(org.eclipse.uml2.uml.UMLPackage.eINSTANCE.getNsURI(),
 					org.eclipse.uml2.uml.UMLPackage.eINSTANCE);
-		}
-
-		if (!isInWorkspace(org.eclipse.papyrus.aspectj.AspectJPackage.class)) {
-			resourceSet.getPackageRegistry().put(org.eclipse.papyrus.aspectj.AspectJPackage.eINSTANCE.getNsURI(),
-					org.eclipse.papyrus.aspectj.AspectJPackage.eINSTANCE);
-		}
-
-		if (!isInWorkspace(eu.megamart2.papyrus.profiles.alf.ActionLanguage.ActionLanguagePackage.class)) {
-			resourceSet.getPackageRegistry().put(eu.megamart2.papyrus.profiles.alf.ActionLanguage.ActionLanguagePackage.eINSTANCE.getNsURI(),
-					eu.megamart2.papyrus.profiles.alf.ActionLanguage.ActionLanguagePackage.eINSTANCE);
-		}
-		
-		if (!isInWorkspace(eu.megamart2.papyrus.profiles.alf.BackupProfile.BackupProfilePackage.class)) {
-			resourceSet.getPackageRegistry().put(eu.megamart2.papyrus.profiles.alf.BackupProfile.BackupProfilePackage.eINSTANCE.getNsURI(),
-					eu.megamart2.papyrus.profiles.alf.BackupProfile.BackupProfilePackage.eINSTANCE);
 		}
 
 		/*

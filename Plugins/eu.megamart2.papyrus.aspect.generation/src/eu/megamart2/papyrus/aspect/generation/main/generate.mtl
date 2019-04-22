@@ -3,13 +3,15 @@
 
 [import eu::megamart2::papyrus::aspect::generation::queries::aspectQueries/]
 
-[template public generateElement(aClass : Class)]
+[template public generateAspect(aClass : Class) ? (aClass.isAspect())]
 [comment @main/]
-[if (aClass.isAspect())]
-[file (aClass.name.concat('.aj'), false)]
-[aClass.aspectAccess()/] Aspect [aClass.name.toUpperFirst()/]{
-
-}
+[file (aClass.name.concat('.aspect'), false, 'UTF-8')]
+	aspect [aClass.name/] {
+		[let s : Stereotype = aClass.getStereotype('aspectj::Aspect')]
+			[for (p : Property | s.getAllAttributes())]
+				[p.name/]:[aClass.getStereotypePropertyValue('aspectj::Aspect', p.name)/]
+			[/for]
+		[/let]
+	}
 [/file]
-[/if]
-[/template]
+[/template] 

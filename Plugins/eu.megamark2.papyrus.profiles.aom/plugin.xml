@@ -13,13 +13,13 @@
             target="platform:/plugin/eu.megamart2.papyrus.profiles.aom/profiles/">
       </mapping>
    </extension>
-   <extension
+<!--   <extension
          point="org.eclipse.uml2.uml.generated_package">
       <profile
-            location="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#AspectJ"
+            location="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_wW2AAFbhEemeMqmugX5-_g"
             uri="http://megamart2-ecsel.eu/aspectj">
       </profile>
-   </extension>
+   </extension> -->
    <extension
          point="org.eclipse.papyrus.uml.extensionpoints.UMLProfile">
       <profile
@@ -31,12 +31,22 @@
       </profile>
    </extension>
 
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated aspectj.profile -->
+<!--   <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://megamart2-ecsel.eu/aspectj"
             class="org.eclipse.papyrus.aspectj.AspectJPackage"
             genModel="profiles/aspectj.profile.genmodel"/>
-   </extension>
+   </extension> -->
+
+<!--   <extension
+         point="org.eclipse.papyrus.uml.extensionpoints.UMLProfile">
+      <profile
+            description="Test Profile"
+            iconpath="icons/aspect.png"
+            name="Test Profile"
+            path="pathmap://ASPECTJ_PROFILES/test.profile.uml"
+            provider="MegaM@RT Project">
+      </profile>
+   </extension> -->
 
 </plugin>
