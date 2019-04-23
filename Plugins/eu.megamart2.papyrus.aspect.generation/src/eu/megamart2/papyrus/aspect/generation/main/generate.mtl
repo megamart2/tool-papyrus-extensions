@@ -5,13 +5,37 @@
 
 [template public generateAspect(aClass : Class) ? (aClass.isAspect())]
 [comment @main/]
-[file (aClass.name.concat('.aspect'), false, 'UTF-8')]
-	aspect [aClass.name/] {
-		[let s : Stereotype = aClass.getStereotype('aspectj::Aspect')]
+[file (aClass.name.concat('.aj'), false, 'UTF-8')]
+  [let s : Stereotype = aClass.getStereotype('aspectj::Aspect')]
+    [if (aClass.getStereotypePropertyValue('aspectj::Aspect','isPrivileged').toString().contains('true'))]
+privileged aspect [aClass.name/] {
+    [else]
+public aspect [aClass.name/] {
+    [/if]
 			[for (p : Property | s.getAllAttributes())]
 				[p.name/]:[aClass.getStereotypePropertyValue('aspectj::Aspect', p.name)/]
 			[/for]
-		[/let]
+   [/let]
+   
+   [for(p : Property | aClass.getAllAttributes())]
+     
+     [for (s : Stereotype | p.getAppliedStereotypes())]
+         [for(a : Property | s.getAllAttributes())]
+       
+         [/for]
+     [/for]
+   [/for]
+
+   [for(p : Property | aClass.getAllAttributes())]
+
+        [p.name/]
+       [for (st : Stereotype | p.getAppliedStereotypes())]
+          >> [st.toString()/]
+              [for (a : Property | st.getAllAttributes())]
+              >>>> [a.name/]:[p.getStereotypePropertyValue('aspectj::'.concat(st.name),a.name)/]
+             [/for]
+       [/for]
+   [/for]
 	}
 [/file]
 [/template] 
