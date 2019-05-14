@@ -14,3 +14,35 @@
      else 
        null
      endif/]
+
+[query private checkType(type : Type) : String =
+if type.oclIsInvalid() then ''
+else type.name.check0()
+endif/]
+
+[query private check0(sr : String) : String = 
+if sr.contains('Integer') then 'int'
+else sr.check1()
+endif/]
+
+[query private check1(sr : String) : String =
+if sr.contains('Real') then 'double'
+else sr.check2()
+endif/]
+
+[query private check2(sr : String) : String =
+if sr.contains('String') then 'String'
+else sr.check3()
+endif/]
+
+[query private check3(sr : String) : String =
+if sr.equalsIgnoreCase('Boolean') or sr.equalsIgnoreCase('Byte') or sr.equalsIgnoreCase('Long') or sr.equalsIgnoreCase('Char')
+then sr.toLowerFirst()
+else sr.check4()
+endif/]
+
+[query private check4(sr : String) : String =
+if sr.contains('IntegerObject') or sr.equalsIgnoreCase('LongObject') or sr.equalsIgnoreCase('ShortObject')
+then sr.replaceAll('Object','')
+else sr
+endif/]

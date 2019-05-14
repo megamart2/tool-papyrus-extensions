@@ -18,19 +18,26 @@ public aspect [aClass.name/] {
    [/let]
    
    [for(p : Property | aClass.getAllAttributes())]
-     
-     [for (s : Stereotype | p.getAppliedStereotypes())]
-         [for(a : Property | s.getAllAttributes())]
-       
-         [/for]
-     [/for]
+     [if (not p.getAppliedStereotype('aspectj::ArgsPointCut').oclIsUndefined())]
+   pointcut [p.name/] ():
+      args([let collection : OclAny = p.getStereotypePropertyValue('aspectj::ArgsPointCut','argNames')][collection/][/let]);
+[/if]
+     [if (not p.getAppliedStereotype('aspectj::CallPointCut').oclIsUndefined())]
+   pointcut [p.name/]():(
+        [for(o : OclAny | p.getStereotypePropertyValue('aspectj::CallPointCut','operation'))]
+           [let op : Operation = o.oclAsType(Operation)] 
+      call([if(op.datatype.oclIsInvalid())] [op.datatype/] [else] * [/if][if(not op.eContainer().oclIsUndefined())][op.eContainer().oclAsType(Class).name/][else]*[/if].[op.name/]([for(param : Parameter | op.inputParameters())][param.type/][/for])));
+           [for(parameter : Parameter | op.inputParameters())]name : [parameter.name/]type : [parameter.type/][/for]
+           [/let]
+        [/for]
+     [/if]
    [/for]
 
    [for(p : Property | aClass.getAllAttributes())]
 
         [p.name/]
        [for (st : Stereotype | p.getAppliedStereotypes())]
-          >> [st.toString()/]
+          >> [st.name/]
               [for (a : Property | st.getAllAttributes())]
               >>>> [a.name/]:[p.getStereotypePropertyValue('aspectj::'.concat(st.name),a.name)/]
              [/for]
