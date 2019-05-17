@@ -557,19 +557,6 @@
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
     </profileApplication>
-    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_DBi0AESsEemOFZLutyAPOQ">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_DByEkESsEemOFZLutyAPOQ" source="PapyrusVersion">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_DByEkUSsEemOFZLutyAPOQ" key="Version" value="0.1.0"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_DByEkkSsEemOFZLutyAPOQ" key="Comment" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_DByEk0SsEemOFZLutyAPOQ" key="Copyright" value="@Atos Spain S.A."/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_DByElESsEemOFZLutyAPOQ" key="Date" value="2018-09-27"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_DByElUSsEemOFZLutyAPOQ" key="Author" value="Jesús Gorroñogoitia"/>
-      </eAnnotations>
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_DBrW4ESsEemOFZLutyAPOQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_OwFNsMJVEeiYIeUYMCpofw"/>
-      </eAnnotations>
-      <appliedProfile xmi:type="uml:Profile" href="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#AspectJ"/>
-    </profileApplication>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Rkk7YHZLEem9fKmqwdnITQ">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Rk0zAHZLEem9fKmqwdnITQ" source="PapyrusVersion">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Rk0zAXZLEem9fKmqwdnITQ" key="Version" value="0.0.16"/>
