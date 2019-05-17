@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/papyrus/infra/gmfdiag/style" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_LGb58EQcEemmjN2rxYcWhA" type="PapyrusUMLClassDiagram" name="ClassDiagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_lzu3AESgEemPWL1O6Do-4A" type="Class_Shape">
+    <children xmi:type="notation:DecorationNode" xmi:id="_lz0WkESgEemPWL1O6Do-4A" type="Class_NameLabel"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_lz5PEESgEemPWL1O6Do-4A" type="Class_FloatingNameLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_lz52IESgEemPWL1O6Do-4A" y="15"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_lz6dMESgEemPWL1O6Do-4A" type="Class_AttributeCompartment">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0Ul4YESgEemPWL1O6Do-4A" source="PapyrusCSSForceValue">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0UmfcESgEemPWL1O6Do-4A" key="collapsed" value="true"/>
+      </eAnnotations>
+      <children xmi:type="notation:Shape" xmi:id="_7vF7EESgEemPWL1O6Do-4A" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="Ikerland.modelization.uml#_lkXlUESgEemPWL1O6Do-4A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7vF7EUSgEemPWL1O6Do-4A"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_7vJlcESgEemPWL1O6Do-4A" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="Ikerland.modelization.uml#_llmUYESgEemPWL1O6Do-4A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7vJlcUSgEemPWL1O6Do-4A"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_7vMowESgEemPWL1O6Do-4A" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="Ikerland.modelization.uml#_ll_V8ESgEemPWL1O6Do-4A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7vMowUSgEemPWL1O6Do-4A"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_7vN24ESgEemPWL1O6Do-4A" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="Ikerland.modelization.uml#_lnPTIESgEemPWL1O6Do-4A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7vN24USgEemPWL1O6Do-4A"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_7vSvYESgEemPWL1O6Do-4A" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="Ikerland.modelization.uml#_lnlRYESgEemPWL1O6Do-4A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7vSvYUSgEemPWL1O6Do-4A"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_7vXA0ESgEemPWL1O6Do-4A" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="Ikerland.modelization.uml#_lnr_EESgEemPWL1O6Do-4A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7vXA0USgEemPWL1O6Do-4A"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_7vXn4ESgEemPWL1O6Do-4A" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="Ikerland.modelization.uml#_loqPcESgEemPWL1O6Do-4A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7vXn4USgEemPWL1O6Do-4A"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_7vYO8ESgEemPWL1O6Do-4A" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="Ikerland.modelization.uml#_lpFtQESgEemPWL1O6Do-4A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7vdHcESgEemPWL1O6Do-4A"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_7veVkESgEemPWL1O6Do-4A" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="Ikerland.modelization.uml#_lpbEcESgEemPWL1O6Do-4A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7veVkUSgEemPWL1O6Do-4A"/>
+      </children>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_lz6dMUSgEemPWL1O6Do-4A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_lz6dMkSgEemPWL1O6Do-4A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_lz6dM0SgEemPWL1O6Do-4A"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lz6dNESgEemPWL1O6Do-4A"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_lz85cESgEemPWL1O6Do-4A" type="Class_OperationCompartment">
+      <children xmi:type="notation:Shape" xmi:id="_7ve8oESgEemPWL1O6Do-4A" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="Ikerland.modelization.uml#_lqL5cESgEemPWL1O6Do-4A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7ve8oUSgEemPWL1O6Do-4A"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_7vfjsESgEemPWL1O6Do-4A" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="Ikerland.modelization.uml#_lre58ESgEemPWL1O6Do-4A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7vfjsUSgEemPWL1O6Do-4A"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_7vlDQESgEemPWL1O6Do-4A" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="Ikerland.modelization.uml#_lsKPYESgEemPWL1O6Do-4A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7vlDQUSgEemPWL1O6Do-4A"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_7vlqUESgEemPWL1O6Do-4A" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="Ikerland.modelization.uml#_ls6dUESgEemPWL1O6Do-4A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7vlqUUSgEemPWL1O6Do-4A"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_7vmRYESgEemPWL1O6Do-4A" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="Ikerland.modelization.uml#_lthhUESgEemPWL1O6Do-4A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7vmRYUSgEemPWL1O6Do-4A"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_7vm4cESgEemPWL1O6Do-4A" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="Ikerland.modelization.uml#_luET4ESgEemPWL1O6Do-4A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7vm4cUSgEemPWL1O6Do-4A"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_7vsYAESgEemPWL1O6Do-4A" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="Ikerland.modelization.uml#_lvJ5AESgEemPWL1O6Do-4A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7vsYAUSgEemPWL1O6Do-4A"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_7vsYAkSgEemPWL1O6Do-4A" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="Ikerland.modelization.uml#_lwFGEESgEemPWL1O6Do-4A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7vsYA0SgEemPWL1O6Do-4A"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_7vu0QESgEemPWL1O6Do-4A" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="Ikerland.modelization.uml#_lwcScESgEemPWL1O6Do-4A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7vu0QUSgEemPWL1O6Do-4A"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_7vxQgESgEemPWL1O6Do-4A" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="Ikerland.modelization.uml#_lwrjAESgEemPWL1O6Do-4A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7vxQgUSgEemPWL1O6Do-4A"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_7vx3kESgEemPWL1O6Do-4A" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="Ikerland.modelization.uml#_lw7aoESgEemPWL1O6Do-4A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7vx3kUSgEemPWL1O6Do-4A"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_7vx3kkSgEemPWL1O6Do-4A" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="Ikerland.modelization.uml#_lxKrMESgEemPWL1O6Do-4A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7vx3k0SgEemPWL1O6Do-4A"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_7vyeoESgEemPWL1O6Do-4A" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="Ikerland.modelization.uml#_lxn-MESgEemPWL1O6Do-4A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7vyeoUSgEemPWL1O6Do-4A"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_7vzFsESgEemPWL1O6Do-4A" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="Ikerland.modelization.uml#_lyEqIESgEemPWL1O6Do-4A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7vzFsUSgEemPWL1O6Do-4A"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_7v4lQESgEemPWL1O6Do-4A" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="Ikerland.modelization.uml#_lydEoESgEemPWL1O6Do-4A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7v4lQUSgEemPWL1O6Do-4A"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_7v5MUESgEemPWL1O6Do-4A" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="Ikerland.modelization.uml#_lzJBIESgEemPWL1O6Do-4A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7v5MUUSgEemPWL1O6Do-4A"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_7v5MUkSgEemPWL1O6Do-4A" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="Ikerland.modelization.uml#_lzat8ESgEemPWL1O6Do-4A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7v5MU0SgEemPWL1O6Do-4A"/>
+      </children>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_lz85cUSgEemPWL1O6Do-4A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_lz85ckSgEemPWL1O6Do-4A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_lz85c0SgEemPWL1O6Do-4A"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lz85dESgEemPWL1O6Do-4A"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_lz85dUSgEemPWL1O6Do-4A" type="Class_NestedClassifierCompartment">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_lz85dkSgEemPWL1O6Do-4A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_lz85d0SgEemPWL1O6Do-4A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_lz85eESgEemPWL1O6Do-4A"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lz85eUSgEemPWL1O6Do-4A"/>
+    </children>
+    <element xmi:type="uml:Class" href="Ikerland.modelization.uml#_ljI2QESgEemPWL1O6Do-4A"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lzu3AUSgEemPWL1O6Do-4A" x="120" y="60" width="281" height="322"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_7OHfgEShEemPWL1O6Do-4A" type="Class_Shape">
+    <children xmi:type="notation:DecorationNode" xmi:id="_7PSkMEShEemPWL1O6Do-4A" type="Class_NameLabel"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_7PTLQEShEemPWL1O6Do-4A" type="Class_FloatingNameLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_7PTLQUShEemPWL1O6Do-4A" y="15"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_7PTLQkShEemPWL1O6Do-4A" type="Class_AttributeCompartment">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_7PTLQ0ShEemPWL1O6Do-4A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_7PTLREShEemPWL1O6Do-4A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_7PTLRUShEemPWL1O6Do-4A"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7PTLRkShEemPWL1O6Do-4A"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_7PTLR0ShEemPWL1O6Do-4A" type="Class_OperationCompartment">
+      <children xmi:type="notation:Shape" xmi:id="_GvIroESiEemPWL1O6Do-4A" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="Ikerland.modelization.uml#_7NKdQEShEemPWL1O6Do-4A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_GvIroUSiEemPWL1O6Do-4A"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_GvJ5wESiEemPWL1O6Do-4A" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="Ikerland.modelization.uml#_7NP80EShEemPWL1O6Do-4A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_GvJ5wUSiEemPWL1O6Do-4A"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_GvM9EESiEemPWL1O6Do-4A" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="Ikerland.modelization.uml#_7NWDcEShEemPWL1O6Do-4A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_GvM9EUSiEemPWL1O6Do-4A"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_GvNkIESiEemPWL1O6Do-4A" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="Ikerland.modelization.uml#_7NZt0EShEemPWL1O6Do-4A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_GvNkIUSiEemPWL1O6Do-4A"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_GvOLMESiEemPWL1O6Do-4A" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="Ikerland.modelization.uml#_7NiQsEShEemPWL1O6Do-4A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_GvOLMUSiEemPWL1O6Do-4A"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_GvTqwESiEemPWL1O6Do-4A" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="Ikerland.modelization.uml#_7NlUAEShEemPWL1O6Do-4A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_GvTqwUSiEemPWL1O6Do-4A"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_GvU44ESiEemPWL1O6Do-4A" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="Ikerland.modelization.uml#_7Nt24EShEemPWL1O6Do-4A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_GvU44USiEemPWL1O6Do-4A"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_GvWuEESiEemPWL1O6Do-4A" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="Ikerland.modelization.uml#_7N5dEEShEemPWL1O6Do-4A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_GvWuEUSiEemPWL1O6Do-4A"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_GvXVIESiEemPWL1O6Do-4A" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="Ikerland.modelization.uml#_7N7SQUShEemPWL1O6Do-4A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_GvXVIUSiEemPWL1O6Do-4A"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_GvX8MESiEemPWL1O6Do-4A" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="Ikerland.modelization.uml#_7N9ugEShEemPWL1O6Do-4A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_GvX8MUSiEemPWL1O6Do-4A"/>
+      </children>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_7PTLSEShEemPWL1O6Do-4A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_7PTLSUShEemPWL1O6Do-4A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_7PTLSkShEemPWL1O6Do-4A"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7PTLS0ShEemPWL1O6Do-4A"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_7PTLTEShEemPWL1O6Do-4A" type="Class_NestedClassifierCompartment">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_7PTLTUShEemPWL1O6Do-4A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_7PTLTkShEemPWL1O6Do-4A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_7PTLT0ShEemPWL1O6Do-4A"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7PTLUEShEemPWL1O6Do-4A"/>
+    </children>
+    <element xmi:type="uml:Class" href="Ikerland.modelization.uml#_7NGy4EShEemPWL1O6Do-4A"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7OHfgUShEemPWL1O6Do-4A" x="460" y="120" width="241" height="271"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_VMYIgHZLEem9fKmqwdnITQ" type="Class_Shape">
+    <children xmi:type="notation:DecorationNode" xmi:id="_VMby4HZLEem9fKmqwdnITQ" type="Class_NameLabel"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_VMby4XZLEem9fKmqwdnITQ" type="Class_FloatingNameLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_VMby4nZLEem9fKmqwdnITQ" y="15"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_VMby43ZLEem9fKmqwdnITQ" type="Class_AttributeCompartment">
+      <children xmi:type="notation:Shape" xmi:id="_oupjYHZNEem9fKmqwdnITQ" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="Ikerland.modelization.uml#_otfFwHZNEem9fKmqwdnITQ"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oupjYXZNEem9fKmqwdnITQ"/>
+      </children>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_VMby5HZLEem9fKmqwdnITQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_VMby5XZLEem9fKmqwdnITQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_VMby5nZLEem9fKmqwdnITQ"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VMby53ZLEem9fKmqwdnITQ"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_VMby6HZLEem9fKmqwdnITQ" type="Class_OperationCompartment">
+      <children xmi:type="notation:Shape" xmi:id="_Uwq8kHZOEem9fKmqwdnITQ" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="Ikerland.modelization.uml#_UvYjIHZOEem9fKmqwdnITQ"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Uwq8kXZOEem9fKmqwdnITQ"/>
+      </children>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_VMby6XZLEem9fKmqwdnITQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_VMby6nZLEem9fKmqwdnITQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_VMby63ZLEem9fKmqwdnITQ"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VMby7HZLEem9fKmqwdnITQ"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_VMby7XZLEem9fKmqwdnITQ" type="Class_NestedClassifierCompartment">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_VMby7nZLEem9fKmqwdnITQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_VMby73ZLEem9fKmqwdnITQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_VMby8HZLEem9fKmqwdnITQ"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VMby8XZLEem9fKmqwdnITQ"/>
+    </children>
+    <element xmi:type="uml:Class" href="Ikerland.modelization.uml#_VMLUMHZLEem9fKmqwdnITQ"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VMYIgXZLEem9fKmqwdnITQ" x="80" y="400" width="221" height="164"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_cCnAgHZLEem9fKmqwdnITQ" type="StereotypeComment">
+    <styles xmi:type="notation:TitleStyle" xmi:id="_cCnAgXZLEem9fKmqwdnITQ"/>
+    <styles xmi:type="notation:EObjectValueStyle" xmi:id="_cCnnkHZLEem9fKmqwdnITQ" name="BASE_ELEMENT">
+      <eObjectValue xmi:type="uml:Class" href="Ikerland.modelization.uml#_VMLUMHZLEem9fKmqwdnITQ"/>
+    </styles>
+    <element xsi:nil="true"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cCnAgnZLEem9fKmqwdnITQ" x="595" y="448"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_5Bf_cHZQEem9fKmqwdnITQ" type="Class_Shape">
+    <children xmi:type="notation:DecorationNode" xmi:id="_5Bf_cnZQEem9fKmqwdnITQ" type="Class_NameLabel"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_5Bf_c3ZQEem9fKmqwdnITQ" type="Class_FloatingNameLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_5Bf_dHZQEem9fKmqwdnITQ" y="15"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_5Bf_dXZQEem9fKmqwdnITQ" type="Class_AttributeCompartment">
+      <children xmi:type="notation:Shape" xmi:id="_O7OEwHZREem9fKmqwdnITQ" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="Ikerland.modelization.uml#_O5dKMHZREem9fKmqwdnITQ"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_O7OEwXZREem9fKmqwdnITQ"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_pqte0HZUEem9fKmqwdnITQ" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="Ikerland.modelization.uml#_ppq9AHZUEem9fKmqwdnITQ"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_pqte0XZUEem9fKmqwdnITQ"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_4bjAcHZVEem9fKmqwdnITQ" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="Ikerland.modelization.uml#_4a78cHZVEem9fKmqwdnITQ"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_4bjAcXZVEem9fKmqwdnITQ"/>
+      </children>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_5Bf_dnZQEem9fKmqwdnITQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_5Bf_d3ZQEem9fKmqwdnITQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_5Bf_eHZQEem9fKmqwdnITQ"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5Bf_eXZQEem9fKmqwdnITQ"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_5Bjp0HZQEem9fKmqwdnITQ" type="Class_OperationCompartment">
+      <children xmi:type="notation:Shape" xmi:id="_PqVpAHZbEem9fKmqwdnITQ" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="Ikerland.modelization.uml#_PpZ04HZbEem9fKmqwdnITQ"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_PqVpAXZbEem9fKmqwdnITQ"/>
+      </children>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_5Bjp0XZQEem9fKmqwdnITQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_5Bjp0nZQEem9fKmqwdnITQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_5Bjp03ZQEem9fKmqwdnITQ"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5Bjp1HZQEem9fKmqwdnITQ"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_5BkQ4HZQEem9fKmqwdnITQ" type="Class_NestedClassifierCompartment">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_5BkQ4XZQEem9fKmqwdnITQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_5BkQ4nZQEem9fKmqwdnITQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_5BkQ43ZQEem9fKmqwdnITQ"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5BkQ5HZQEem9fKmqwdnITQ"/>
+    </children>
+    <element xmi:type="uml:Class" href="Ikerland.modelization.uml#_5BRV8HZQEem9fKmqwdnITQ"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5Bf_cXZQEem9fKmqwdnITQ" x="360" y="420" width="181" height="161"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_HzGLgHZREem9fKmqwdnITQ" type="StereotypeComment">
+    <styles xmi:type="notation:TitleStyle" xmi:id="_HzGLgXZREem9fKmqwdnITQ"/>
+    <styles xmi:type="notation:EObjectValueStyle" xmi:id="_HzGLg3ZREem9fKmqwdnITQ" name="BASE_ELEMENT">
+      <eObjectValue xmi:type="uml:Class" href="Ikerland.modelization.uml#_5BRV8HZQEem9fKmqwdnITQ"/>
+    </styles>
+    <element xsi:nil="true"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HzGLgnZREem9fKmqwdnITQ" x="609" y="447"/>
+  </children>
+  <styles xmi:type="notation:StringValueStyle" xmi:id="_LGb58UQcEemmjN2rxYcWhA" name="diagram_compatibility_version" stringValue="1.4.0"/>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_LGb58kQcEemmjN2rxYcWhA"/>
+  <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_LGb580QcEemmjN2rxYcWhA" diagramKindId="org.eclipse.papyrus.uml.diagram.class">
+    <owner xmi:type="uml:Model" href="Ikerland.modelization.uml#_CrLk4EQcEemmjN2rxYcWhA"/>
+  </styles>
+  <element xmi:type="uml:Model" href="Ikerland.modelization.uml#_CrLk4EQcEemmjN2rxYcWhA"/>
+  <edges xmi:type="notation:Connector" xmi:id="_cCnnkXZLEem9fKmqwdnITQ" type="StereotypeCommentLink" source="_VMYIgHZLEem9fKmqwdnITQ" target="_cCnAgHZLEem9fKmqwdnITQ">
+    <styles xmi:type="notation:FontStyle" xmi:id="_cCnnknZLEem9fKmqwdnITQ"/>
+    <styles xmi:type="notation:EObjectValueStyle" xmi:id="_cCo1sXZLEem9fKmqwdnITQ" name="BASE_ELEMENT">
+      <eObjectValue xmi:type="uml:Class" href="Ikerland.modelization.uml#_VMLUMHZLEem9fKmqwdnITQ"/>
+    </styles>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_cCnnk3ZLEem9fKmqwdnITQ" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_cCnnlHZLEem9fKmqwdnITQ"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_cCo1sHZLEem9fKmqwdnITQ"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_HzGykHZREem9fKmqwdnITQ" type="StereotypeCommentLink" source="_5Bf_cHZQEem9fKmqwdnITQ" target="_HzGLgHZREem9fKmqwdnITQ">
+    <styles xmi:type="notation:FontStyle" xmi:id="_HzGykXZREem9fKmqwdnITQ"/>
+    <styles xmi:type="notation:EObjectValueStyle" xmi:id="_HzJO0XZREem9fKmqwdnITQ" name="BASE_ELEMENT">
+      <eObjectValue xmi:type="uml:Class" href="Ikerland.modelization.uml#_5BRV8HZQEem9fKmqwdnITQ"/>
+    </styles>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_HzGyknZREem9fKmqwdnITQ" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_HzGyk3ZREem9fKmqwdnITQ"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_HzJO0HZREem9fKmqwdnITQ"/>
+  </edges>
+</notation:Diagram>

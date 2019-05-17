@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:PapyrusJava="http://www.eclipse.org/papyrus/PapyrusJava/1" xmlns:aspectj="http:///schemas/aspectj/_pMtT0GTzEemc8KTgT20mug/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/aspectj/_pMtT0GTzEemc8KTgT20mug/0 pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_pMzacGTzEemc8KTgT20mug">
+  <uml:Model xmi:id="_CrLk4EQcEemmjN2rxYcWhA" name="Ikerland" visibility="public" URI="">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_DbDioEQcEemmjN2rxYcWhA">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_lWF4wESgEemPWL1O6Do-4A" name="IkerlanUCRefactored">
+      <packagedElement xmi:type="uml:Package" xmi:id="_liqVIESgEemPWL1O6Do-4A" name="es">
+        <packagedElement xmi:type="uml:Package" xmi:id="_liumkESgEemPWL1O6Do-4A" name="ikerlan">
+          <packagedElement xmi:type="uml:Package" xmi:id="_li0tMESgEemPWL1O6Do-4A" name="skyline">
+            <packagedElement xmi:type="uml:Package" xmi:id="_li5lsESgEemPWL1O6Do-4A" name="message">
+              <packagedElement xmi:type="uml:Class" xmi:id="_ljI2QESgEemPWL1O6Do-4A" name="MessageManager" visibility="public">
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_lkXlUESgEemPWL1O6Do-4A" name="queue" visibility="private" isStatic="true" type="_ljkUEESgEemPWL1O6Do-4A" isUnique="false">
+                  <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_lkrHUESgEemPWL1O6Do-4A" name="defaultValue">
+                    <language>JAVA</language>
+                    <body>new Vector()</body>
+                  </defaultValue>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_llmUYESgEemPWL1O6Do-4A" name="did" visibility="private" isStatic="true" type="_llF-EESgEemPWL1O6Do-4A" isUnique="false">
+                  <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_llzvwESgEemPWL1O6Do-4A" name="defaultValue">
+                    <language>JAVA</language>
+                    <body>&quot;&quot;</body>
+                  </defaultValue>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_ll_V8ESgEemPWL1O6Do-4A" name="dt" visibility="private" isStatic="true" type="_llF-EESgEemPWL1O6Do-4A" isUnique="false">
+                  <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lmRCwESgEemPWL1O6Do-4A"/>
+                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lmVUMESgEemPWL1O6Do-4A" value="*"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_lnPTIESgEemPWL1O6Do-4A" name="files" visibility="private" isStatic="true" type="_lmz1UESgEemPWL1O6Do-4A" isUnique="false">
+                  <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_lnkDQESgEemPWL1O6Do-4A" name="defaultValue">
+                    <language>JAVA</language>
+                    <body>new JSONArray()</body>
+                  </defaultValue>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_lnlRYESgEemPWL1O6Do-4A" name="lastFid" visibility="public" isStatic="true" type="_llF-EESgEemPWL1O6Do-4A" isUnique="false">
+                  <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_lnl4cESgEemPWL1O6Do-4A" name="defaultValue">
+                    <language>JAVA</language>
+                    <body>&quot;&quot;</body>
+                  </defaultValue>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_lnr_EESgEemPWL1O6Do-4A" name="responseStatus" visibility="private" isStatic="true" type="_llF-EESgEemPWL1O6Do-4A" isUnique="false">
+                  <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_lnz64ESgEemPWL1O6Do-4A" name="defaultValue">
+                    <language>JAVA</language>
+                    <body>&quot;&quot;</body>
+                  </defaultValue>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_loqPcESgEemPWL1O6Do-4A" name="protocol" visibility="private" isStatic="true" isUnique="false">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                  <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_lo4R4ESgEemPWL1O6Do-4A" name="defaultValue">
+                    <language>JAVA</language>
+                    <body>-1</body>
+                  </defaultValue>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_lpFtQESgEemPWL1O6Do-4A" name="type" visibility="private" isStatic="true" isUnique="false">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                  <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_lpQsYESgEemPWL1O6Do-4A" name="defaultValue">
+                    <language>JAVA</language>
+                    <body>-1</body>
+                  </defaultValue>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_lpbEcESgEemPWL1O6Do-4A" name="Fid" visibility="private" isStatic="true" type="_llF-EESgEemPWL1O6Do-4A" isUnique="false">
+                  <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_lpnRsESgEemPWL1O6Do-4A" name="defaultValue">
+                    <language>JAVA</language>
+                    <body>&quot;&quot;</body>
+                  </defaultValue>
+                </ownedAttribute>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_lrMmEESgEemPWL1O6Do-4A" name="handleMessage" specification="_lqL5cESgEemPWL1O6Do-4A">
+                  <language>JAVA</language>
+                  <body>
+    // FIXME Aspect - inject logging traces describing the message type received,
+    // using PrintUtils advice
+    int messageType = -1;
+    try {
+        String messageTypeStr = topic.split(&quot;/&quot;)[2];
+        messageType = Integer.parseInt(messageTypeStr);
+    } catch (Exception e) {
+        PrintUtils.error(&quot;Error parsing message type&quot;);
+    }
+    PrintUtils.step(&quot;Message Received with Type: &quot; + messageType);
+    switch(messageType) {
+        case // Connectivity test
+        MessageType.connectivityMsgType:
+            processConnectivityMsg(message, messageType);
+            break;
+        case // Onboarding
+        MessageType.onboardingMsgType:
+            processOnboardingMsg(message, messageType);
+            break;
+        case // Remote Parameters Updating
+        MessageType.remoteParametersUpdateMsgType:
+            processRemoteParametersUpdateMsg(message, messageType);
+            break;
+        case // After onboarding
+        MessageType.eoMsgType:
+            try {
+                processEoMsg(message, messageType);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            break;
+        case // FOTA v2 message
+        MessageType.fotaMsgType:
+            processFotaMsg(message, messageType);
+            break;
+        default:
+            PrintUtils.warning(&quot;Message type not recognized&quot;);
+    }
+// FIXME Aspect - inject logging traces successful processing of the message
+// type received, using PrintUtils advice
+</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_lr5JoESgEemPWL1O6Do-4A" name="processConnectivityMsg" specification="_lre58ESgEemPWL1O6Do-4A">
+                  <language>JAVA</language>
+                  <body>
+    synchronized (Behavior.receivedConnectivityAck) {
+        if (responseStatus.equals(&quot;OK&quot;) &amp;&amp; protocol == ModemCache.getProtocol() &amp;&amp; type == messageType) {
+            Behavior.receivedConnectivityAck.result = 0;
+            Behavior.receivedConnectivityAck.notify();
+        } else {
+            PrintUtils.warning(&quot;ACK not valid&quot;);
+        }
+    }
+// FIXME Aspect - inject logging traces describing the successful processing of
+// this message, using PrintUtils advice
+</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_lsj4AESgEemPWL1O6Do-4A" name="processOnboardingMsg" specification="_lsKPYESgEemPWL1O6Do-4A">
+                  <language>JAVA</language>
+                  <body>
+    //		}
+    synchronized (Behavior.receivedOnboardingAck) {
+        if (responseStatus.equals(&quot;OK&quot;) &amp;&amp; protocol == ModemCache.getProtocol() &amp;&amp; type == messageType) {
+            Behavior.receivedOnboardingAck.result = 0;
+            Behavior.receivedOnboardingAck.notify();
+        } else {
+            PrintUtils.warning(&quot;ACK not valid&quot;);
+        }
+    }
+// FIXME Aspect - inject logging traces describing the successful processing of
+// this message, using PrintUtils advice
+</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_ltN_UESgEemPWL1O6Do-4A" name="processRemoteParametersUpdateMsg" specification="_ls6dUESgEemPWL1O6Do-4A">
+                  <language>JAVA</language>
+                  <body>
+    int protocol = -1;
+    int type = -1;
+    String Fid = &quot;&quot;;
+    String Fx = &quot;&quot;;
+    // Enqueue message
+    try {
+        if ((protocol == ModemCache.PROTOCOL_ONE || protocol == ModemCache.PROTOCOL_TWO) &amp;&amp; (type == MessageType.remoteParametersUpdateMsgType) &amp;&amp; (Fx.equals(&quot;set&quot;))) {
+            JSONObject enrichedMessage = message.put(MessageCodes.msgCodeKey, MessageCodes.remoteParamUpdateMsgCode);
+            MessageManager.enqueueMessage(enrichedMessage);
+        } else {
+            PrintUtils.warning(&quot;Parameter update message not valid&quot;);
+        }
+    } catch (Exception e) {
+        PrintUtils.error(&quot;Error adding Message Code to the Remote Parameters Updating message&quot;);
+        ErrorWarningEvent.storeError(0, ErrorWarningEvent.ERROR_MALFORMED_JSON);
+        PrintUtils.error(&quot;Error parsing Parameter update message&quot;);
+    }
+// FIXME Aspect - inject logging traces describing the successful processing of
+// this message, using PrintUtils advice
+</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_ltwx4ESgEemPWL1O6Do-4A" name="processFotaMsg" specification="_lthhUESgEemPWL1O6Do-4A">
+                  <language>JAVA</language>
+                  <body>
+    String responseStatus = &quot;&quot;;
+    int protocol = -1;
+    int type = -1;
+    //		}
+    try {
+        synchronized (Behavior.receivedFotaAck) {
+            if (responseStatus.equals(&quot;OK&quot;) &amp;&amp; protocol == Fota.FOTA_PROTOCOL &amp;&amp; type == messageType &amp;&amp; did.length() > 0) {
+                Behavior.receivedFotaAck.result = 0;
+                Behavior.receivedFotaAck.notify();
+                PrintUtils.info(&quot;FOTA message succesfully processed&quot;);
+            } else {
+                PrintUtils.warning(&quot;ACK not valid&quot;);
+            }
+        }
+    } catch (Exception e) {
+        PrintUtils.error(&quot;Error parsing message&quot;);
+    }
+// FIXME Aspect - inject logging traces describing the successful processing of
+// this message, using PrintUtils advice
+</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_lu9rwESgEemPWL1O6Do-4A" name="processEoMsg" specification="_luET4ESgEemPWL1O6Do-4A">
+                  <language>JAVA</language>
+                  <body>
+    //		PrintUtils.info(&quot;After Onboarding Response Message&quot;);
+    // FIXME Aspect - inject logging traces describing the processing of this
+    // message, using PrintUtils advice
+    // FIXME Aspect - inject verification advice
+    // Advice
+    Map&lt;String, Object> values;
+    synchronized (Behavior.receivedEOAck) {
+        if (responseStatus.equals(&quot;OK&quot;) &amp;&amp; protocol == ModemCache.getProtocol() &amp;&amp; type == messageType &amp;&amp; Fid.equals(lastFid)) {
+            //				try {
+            //					JSONVerificationFactory.getVerifier(MessageType.eoMsgType).verify(message);
+            //				} catch (JSONException e) {
+            //					PrintUtils.error(&quot;Error getting status from JSON&quot;);
+            //					throw e;
+            //				}
+            values = JSONVerificationFactory.getVerifier(MessageType.eoMsgType).getValues(message);
+            responseStatus = (String) values.get(&quot;ST&quot;);
+            protocol = (int) values.get(&quot;P&quot;);
+            type = (int) values.get(&quot;T&quot;);
+            Fid = (String) values.get(&quot;FID&quot;);
+        } else {
+            PrintUtils.warning(&quot;ACK not valid&quot;);
+        }
+    }
+// FIXME Aspect - inject logging traces describing the successful processing of
+// this message, using PrintUtils advice
+</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_lv9KQESgEemPWL1O6Do-4A" name="readNextMessage" specification="_lvJ5AESgEemPWL1O6Do-4A">
+                  <language>JAVA</language>
+                  <body>
+    PrintUtils.debug(&quot;Reading next message&quot;);
+    JSONObject message = null;
+    if (queue.size() > 0) {
+        message = (JSONObject) queue.firstElement();
+    }
+    return message;
+</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_lwTvkESgEemPWL1O6Do-4A" name="enqueueMessage" specification="_lwFGEESgEemPWL1O6Do-4A">
+                  <language>JAVA</language>
+                  <body>
+    synchronized (queue) {
+        queue.addElement(message);
+        queue.notify();
+    }
+</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_lwiZEESgEemPWL1O6Do-4A" name="removeNextMessage" specification="_lwcScESgEemPWL1O6Do-4A">
+                  <language>JAVA</language>
+                  <body>
+    PrintUtils.debug(&quot;Removing next message&quot;);
+    if (queue.size() > 0) {
+        queue.removeElementAt(0);
+    }
+</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_lwyQsESgEemPWL1O6Do-4A" name="waitQueueMessage" specification="_lwrjAESgEemPWL1O6Do-4A">
+                  <language>JAVA</language>
+                  <body>
+    PrintUtils.debug(&quot;Waiting for a message&quot;);
+    synchronized (MessageManager.queue) {
+        if (queue.size() == 0) {
+            try {
+                queue.wait();
+            } catch (InterruptedException e) {
+                PrintUtils.error(&quot;Error waiting for queue message&quot;);
+            }
+        }
+    }
+</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_lw_FAESgEemPWL1O6Do-4A" name="clearQueue" specification="_lw7aoESgEemPWL1O6Do-4A">
+                  <language>JAVA</language>
+                  <body>
+    queue.removeAllElements();
+</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_lxcYAESgEemPWL1O6Do-4A" name="checkUpdateEventProfile" specification="_lxKrMESgEemPWL1O6Do-4A">
+                  <language>JAVA</language>
+                  <body>
+    boolean isEventProfile = false;
+    if (parameter.startsWith(&quot;GB_&quot;) || parameter.startsWith(&quot;SB_&quot;))
+        isEventProfile = true;
+    return isEventProfile;
+</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_lx4c4ESgEemPWL1O6Do-4A" name="getQueue" specification="_lxn-MESgEemPWL1O6Do-4A">
+                  <language>JAVA</language>
+                  <body>
+    return queue;
+</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_lyObIESgEemPWL1O6Do-4A" name="getDid" specification="_lyEqIESgEemPWL1O6Do-4A">
+                  <language>JAVA</language>
+                  <body>
+    return did;
+</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_ly37YESgEemPWL1O6Do-4A" name="getDt" specification="_lydEoESgEemPWL1O6Do-4A">
+                  <language>JAVA</language>
+                  <body>
+    return dt;
+</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_lzaG4ESgEemPWL1O6Do-4A" name="getFiles" specification="_lzJBIESgEemPWL1O6Do-4A">
+                  <language>JAVA</language>
+                  <body>
+    return files;
+</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_lzhboESgEemPWL1O6Do-4A" name="setFiles" specification="_lzat8ESgEemPWL1O6Do-4A">
+                  <language>JAVA</language>
+                  <body>
+    MessageManager.files = files;
+</body>
+                </ownedBehavior>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_lqL5cESgEemPWL1O6Do-4A" name="handleMessage" visibility="public" isStatic="true" method="_lrMmEESgEemPWL1O6Do-4A">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_lqWRgESgEemPWL1O6Do-4A" name="message" type="_lpt_YESgEemPWL1O6Do-4A"/>
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_lqeNUESgEemPWL1O6Do-4A" name="topic" type="_llF-EESgEemPWL1O6Do-4A"/>
+                </ownedOperation>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_lre58ESgEemPWL1O6Do-4A" name="processConnectivityMsg" visibility="private" isStatic="true" method="_lr5JoESgEemPWL1O6Do-4A">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_lroD4ESgEemPWL1O6Do-4A" name="message" type="_lpt_YESgEemPWL1O6Do-4A"/>
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_lrx04ESgEemPWL1O6Do-4A" name="messageType">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                  </ownedParameter>
+                </ownedOperation>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_lsKPYESgEemPWL1O6Do-4A" name="processOnboardingMsg" visibility="private" isStatic="true" method="_lsj4AESgEemPWL1O6Do-4A">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_lsTZUESgEemPWL1O6Do-4A" name="message" type="_lpt_YESgEemPWL1O6Do-4A"/>
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_lscjQESgEemPWL1O6Do-4A" name="messageType">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                  </ownedParameter>
+                </ownedOperation>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_ls6dUESgEemPWL1O6Do-4A" name="processRemoteParametersUpdateMsg" visibility="private" isStatic="true" method="_ltN_UESgEemPWL1O6Do-4A">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_ltDAMESgEemPWL1O6Do-4A" name="message" type="_lpt_YESgEemPWL1O6Do-4A"/>
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_ltIfwESgEemPWL1O6Do-4A" name="messageType">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                  </ownedParameter>
+                </ownedOperation>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_lthhUESgEemPWL1O6Do-4A" name="processFotaMsg" visibility="private" isStatic="true" method="_ltwx4ESgEemPWL1O6Do-4A">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_ltoPAESgEemPWL1O6Do-4A" name="message" type="_lpt_YESgEemPWL1O6Do-4A"/>
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_ltsgcESgEemPWL1O6Do-4A" name="messageType">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                  </ownedParameter>
+                </ownedOperation>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_luET4ESgEemPWL1O6Do-4A" name="processEoMsg" visibility="private" isStatic="true" method="_lu9rwESgEemPWL1O6Do-4A" raisedException="_ludVcESgEemPWL1O6Do-4A">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_luLooESgEemPWL1O6Do-4A" name="message" type="_lpt_YESgEemPWL1O6Do-4A"/>
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_luS9YESgEemPWL1O6Do-4A" name="messageType">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                  </ownedParameter>
+                </ownedOperation>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_lvJ5AESgEemPWL1O6Do-4A" name="readNextMessage" visibility="public" isStatic="true" method="_lv9KQESgEemPWL1O6Do-4A">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_lvwV8ESgEemPWL1O6Do-4A" type="_lpt_YESgEemPWL1O6Do-4A" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_lwFGEESgEemPWL1O6Do-4A" name="enqueueMessage" visibility="public" isStatic="true" method="_lwTvkESgEemPWL1O6Do-4A">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_lwO3EESgEemPWL1O6Do-4A" name="message" type="_lpt_YESgEemPWL1O6Do-4A"/>
+                </ownedOperation>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_lwcScESgEemPWL1O6Do-4A" name="removeNextMessage" visibility="public" isStatic="true" method="_lwiZEESgEemPWL1O6Do-4A"/>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_lwrjAESgEemPWL1O6Do-4A" name="waitQueueMessage" visibility="public" isStatic="true" method="_lwyQsESgEemPWL1O6Do-4A"/>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_lw7aoESgEemPWL1O6Do-4A" name="clearQueue" visibility="public" isStatic="true" method="_lw_FAESgEemPWL1O6Do-4A"/>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_lxKrMESgEemPWL1O6Do-4A" name="checkUpdateEventProfile" visibility="public" isStatic="true" method="_lxcYAESgEemPWL1O6Do-4A">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_lxPjsESgEemPWL1O6Do-4A" direction="return">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_lxXfgESgEemPWL1O6Do-4A" name="parameter" type="_llF-EESgEemPWL1O6Do-4A"/>
+                </ownedOperation>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_lxn-MESgEemPWL1O6Do-4A" name="getQueue" visibility="public" isStatic="true" method="_lx4c4ESgEemPWL1O6Do-4A">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_lxvS8ESgEemPWL1O6Do-4A" type="_ljkUEESgEemPWL1O6Do-4A" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_lyEqIESgEemPWL1O6Do-4A" name="getDid" visibility="public" isStatic="true" method="_lyObIESgEemPWL1O6Do-4A">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_lyLX0ESgEemPWL1O6Do-4A" type="_llF-EESgEemPWL1O6Do-4A" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_lydEoESgEemPWL1O6Do-4A" name="getDt" visibility="public" isStatic="true" method="_ly37YESgEemPWL1O6Do-4A">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_lylngESgEemPWL1O6Do-4A" type="_llF-EESgEemPWL1O6Do-4A" direction="return">
+                    <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lyv_kESgEemPWL1O6Do-4A"/>
+                    <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ly04EESgEemPWL1O6Do-4A" value="*"/>
+                  </ownedParameter>
+                </ownedOperation>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_lzJBIESgEemPWL1O6Do-4A" name="getFiles" visibility="public" isStatic="true" method="_lzaG4ESgEemPWL1O6Do-4A">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_lzUAQESgEemPWL1O6Do-4A" type="_lmz1UESgEemPWL1O6Do-4A" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_lzat8ESgEemPWL1O6Do-4A" name="setFiles" visibility="public" isStatic="true" method="_lzhboESgEemPWL1O6Do-4A">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_lzb8EESgEemPWL1O6Do-4A" name="files" type="_lmz1UESgEemPWL1O6Do-4A"/>
+                </ownedOperation>
+              </packagedElement>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Package" xmi:id="_7M-QAEShEemPWL1O6Do-4A" name="utils">
+              <packagedElement xmi:type="uml:Class" xmi:id="_7NGy4EShEemPWL1O6Do-4A" name="PrintUtils" visibility="public">
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_7NPVwUShEemPWL1O6Do-4A" name="log" specification="_7NKdQEShEemPWL1O6Do-4A">
+                  <language>JAVA</language>
+                  <body>
+    System.out.println(&quot;\n--------LOG----------&quot;);
+    System.out.println(text);
+    System.out.println(&quot;--------END LOG----------\n&quot;);
+</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_7NU1UEShEemPWL1O6Do-4A" name="step" specification="_7NP80EShEemPWL1O6Do-4A">
+                  <language>JAVA</language>
+                  <body>
+    System.out.println(&quot;\n----------------------------------------  &quot;);
+    System.out.println(text);
+    System.out.println(&quot;----------------------------------------  &quot;);
+</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_7NZGwEShEemPWL1O6Do-4A" name="start" specification="_7NWDcEShEemPWL1O6Do-4A">
+                  <language>JAVA</language>
+                  <body>
+    System.out.println(&quot;\n&quot;);
+    System.out.println(&quot;----------------------------------------  &quot;);
+    System.out.println(&quot;----------------------------------------  &quot;);
+    System.out.println(text);
+    System.out.println(&quot;----------------------------------------  &quot;);
+    System.out.println(&quot;----------------------------------------  &quot;);
+</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_7NemUEShEemPWL1O6Do-4A" name="debug" specification="_7NZt0EShEemPWL1O6Do-4A">
+                  <language>JAVA</language>
+                  <body>
+    if (ConfigJad.getDebug())
+        System.out.println(&quot;[debug] &quot; + text);
+</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_7Nje0UShEemPWL1O6Do-4A" name="info" specification="_7NiQsEShEemPWL1O6Do-4A">
+                  <language>JAVA</language>
+                  <body>
+    if (ConfigJad.getInfo())
+        System.out.println(&quot;[info] &quot; + text);
+</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_7NplcEShEemPWL1O6Do-4A" name="io" specification="_7NlUAEShEemPWL1O6Do-4A">
+                  <language>JAVA</language>
+                  <body>
+    System.out.println(&quot;[I/0] &quot; + text);
+</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_7NvFAEShEemPWL1O6Do-4A" name="warning" specification="_7Nt24EShEemPWL1O6Do-4A">
+                  <language>JAVA</language>
+                  <body>
+    System.out.println(&quot;[WARNING] &quot; + text);
+</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_7N7SQEShEemPWL1O6Do-4A" name="error" specification="_7N5dEEShEemPWL1O6Do-4A">
+                  <language>JAVA</language>
+                  <body>
+    System.out.println(&quot;\n&quot;);
+    System.out.println(&quot;[ERROR] &quot; + text);
+    System.out.println(&quot;\n&quot;);
+</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_7N75UEShEemPWL1O6Do-4A" name="emptyLine" specification="_7N7SQUShEemPWL1O6Do-4A">
+                  <language>JAVA</language>
+                  <body>
+    System.out.println(&quot;\n&quot;);
+</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_7OFDQEShEemPWL1O6Do-4A" name="printByteArray" specification="_7N9ugEShEemPWL1O6Do-4A">
+                  <language>JAVA</language>
+                  <body>
+//		int convertedByte;
+//		if (num > 0){
+//			try{
+//				System.out.print(&quot;[serial] &quot;);
+//				for(int i=0;i &lt; num;i++){
+//					convertedByte=(int)array[offset+i] &amp; 0xFF;
+//					System.out.print(Integer.toHexString(convertedByte) + &quot; &quot;);
+//				}
+//
+//			}catch (ArrayIndexOutOfBoundsException e){
+//				System.out.println(&quot;ArrayIndexOutOfBoundsException in setATCommandForProcessing&quot;);
+//			}
+//			System.out.println(&quot;&quot;);
+//		}
+</body>
+                </ownedBehavior>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_7NKdQEShEemPWL1O6Do-4A" name="log" visibility="public" isStatic="true" method="_7NPVwUShEemPWL1O6Do-4A">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_7NPVwEShEemPWL1O6Do-4A" name="text" type="_llF-EESgEemPWL1O6Do-4A"/>
+                </ownedOperation>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_7NP80EShEemPWL1O6Do-4A" name="step" visibility="public" isStatic="true" method="_7NU1UEShEemPWL1O6Do-4A">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_7NRyAEShEemPWL1O6Do-4A" name="text" type="_llF-EESgEemPWL1O6Do-4A"/>
+                </ownedOperation>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_7NWDcEShEemPWL1O6Do-4A" name="start" visibility="public" isStatic="true" method="_7NZGwEShEemPWL1O6Do-4A">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_7NYfsEShEemPWL1O6Do-4A" name="text" type="_llF-EESgEemPWL1O6Do-4A"/>
+                </ownedOperation>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_7NZt0EShEemPWL1O6Do-4A" name="debug" visibility="public" isStatic="true" method="_7NemUEShEemPWL1O6Do-4A">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_7Nd_QEShEemPWL1O6Do-4A" name="text" type="_llF-EESgEemPWL1O6Do-4A"/>
+                </ownedOperation>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_7NiQsEShEemPWL1O6Do-4A" name="info" visibility="public" isStatic="true" method="_7Nje0UShEemPWL1O6Do-4A">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_7Nje0EShEemPWL1O6Do-4A" name="text" type="_llF-EESgEemPWL1O6Do-4A"/>
+                </ownedOperation>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_7NlUAEShEemPWL1O6Do-4A" name="io" visibility="public" isStatic="true" method="_7NplcEShEemPWL1O6Do-4A">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_7No-YEShEemPWL1O6Do-4A" name="text" type="_llF-EESgEemPWL1O6Do-4A"/>
+                </ownedOperation>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_7Nt24EShEemPWL1O6Do-4A" name="warning" visibility="public" isStatic="true" method="_7NvFAEShEemPWL1O6Do-4A">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_7Nud8EShEemPWL1O6Do-4A" name="text" type="_llF-EESgEemPWL1O6Do-4A"/>
+                </ownedOperation>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_7N5dEEShEemPWL1O6Do-4A" name="error" visibility="public" isStatic="true" method="_7N7SQEShEemPWL1O6Do-4A">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_7N6EIEShEemPWL1O6Do-4A" name="text" type="_llF-EESgEemPWL1O6Do-4A"/>
+                </ownedOperation>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_7N7SQUShEemPWL1O6Do-4A" name="emptyLine" visibility="public" isStatic="true" method="_7N75UEShEemPWL1O6Do-4A"/>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_7N9ugEShEemPWL1O6Do-4A" name="printByteArray" visibility="public" isStatic="true" method="_7OFDQEShEemPWL1O6Do-4A">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_7OB_8EShEemPWL1O6Do-4A" name="array">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_DxuQ4PaLEeW5KOK8aDMdgA"/>
+                    <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7OCnAEShEemPWL1O6Do-4A"/>
+                    <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7ODOEEShEemPWL1O6Do-4A" value="*"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_7ODOEUShEemPWL1O6Do-4A" name="offset">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_7OEcMEShEemPWL1O6Do-4A" name="num">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                  </ownedParameter>
+                </ownedOperation>
+              </packagedElement>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_ljVqkESgEemPWL1O6Do-4A" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_ljcYQESgEemPWL1O6Do-4A" name="java">
+        <packagedElement xmi:type="uml:Package" xmi:id="_ljgpsESgEemPWL1O6Do-4A" name="util">
+          <packagedElement xmi:type="uml:Class" xmi:id="_ljkUEESgEemPWL1O6Do-4A" name="Vector"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_lk-pUESgEemPWL1O6Do-4A" name="lang">
+          <packagedElement xmi:type="uml:Class" xmi:id="_llF-EESgEemPWL1O6Do-4A" name="String"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_lmeeIESgEemPWL1O6Do-4A" name="importedTypes">
+      <packagedElement xmi:type="uml:Package" xmi:id="_lmnBAESgEemPWL1O6Do-4A" name="org">
+        <packagedElement xmi:type="uml:Package" xmi:id="_lmpdQESgEemPWL1O6Do-4A" name="json">
+          <packagedElement xmi:type="uml:Package" xmi:id="_lmwyAESgEemPWL1O6Do-4A" name="me">
+            <packagedElement xmi:type="uml:Class" xmi:id="_lmz1UESgEemPWL1O6Do-4A" name="JSONArray"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="_lpt_YESgEemPWL1O6Do-4A" name="JSONObject"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="_ludVcESgEemPWL1O6Do-4A" name="JSONException"/>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_VMLUMHZLEem9fKmqwdnITQ" name="LoggingAspect">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_otfFwHZNEem9fKmqwdnITQ" name="logging"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_UvYjIHZOEem9fKmqwdnITQ" name="ArroundLogging"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_5BRV8HZQEem9fKmqwdnITQ" name="VerificationAspect">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_O5dKMHZREem9fKmqwdnITQ" name="verification"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ppq9AHZUEem9fKmqwdnITQ" name="callPointCut"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4a78cHZVEem9fKmqwdnITQ" name="argsPointCut"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_PpZ04HZbEem9fKmqwdnITQ" name="Operation4"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_lb_FYESgEemPWL1O6Do-4A">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_lcIPUESgEemPWL1O6Do-4A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/PapyrusJava/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PapyrusJava_PROFILES/PapyrusJava.profile.uml#_j9REUByGEduN1bTiWJ0lyw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_le8SwESgEemPWL1O6Do-4A">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_lfDngESgEemPWL1O6Do-4A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Codegen/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://Codegen_PROFILES/Codegen.profile.uml#_fPDsIBa-EearhdjjJ6cVzQ"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_lfVUUESgEemPWL1O6Do-4A">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_lffsYESgEemPWL1O6Do-4A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_DBi0AESsEemOFZLutyAPOQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_DByEkESsEemOFZLutyAPOQ" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_DByEkUSsEemOFZLutyAPOQ" key="Version" value="0.1.0"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_DByEkkSsEemOFZLutyAPOQ" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_DByEk0SsEemOFZLutyAPOQ" key="Copyright" value="@Atos Spain S.A."/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_DByElESsEemOFZLutyAPOQ" key="Date" value="2018-09-27"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_DByElUSsEemOFZLutyAPOQ" key="Author" value="Jesús Gorroñogoitia"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_DBrW4ESsEemOFZLutyAPOQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_OwFNsMJVEeiYIeUYMCpofw"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#AspectJ"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Rkk7YHZLEem9fKmqwdnITQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Rk0zAHZLEem9fKmqwdnITQ" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Rk0zAXZLEem9fKmqwdnITQ" key="Version" value="0.0.16"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Rk0zAnZLEem9fKmqwdnITQ" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Rk0zA3ZLEem9fKmqwdnITQ" key="Copyright" value="(c) Atos Spain S.A. 2019"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Rk0zBHZLEem9fKmqwdnITQ" key="Date" value="2019-04-22"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Rk0zBXZLEem9fKmqwdnITQ" key="Author" value="Jesús Gorroñogoitia"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_RkolwHZLEem9fKmqwdnITQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_pMzacGTzEemc8KTgT20mug"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_wW2AAFbhEemeMqmugX5-_g"/>
+    </profileApplication>
+  </uml:Model>
+  <PapyrusJava:External xmi:id="_lkObYESgEemPWL1O6Do-4A" name="java.util.Vector" base_Classifier="_ljkUEESgEemPWL1O6Do-4A"/>
+  <PapyrusJava:External xmi:id="_lldxgESgEemPWL1O6Do-4A" name="java.lang.String" base_Classifier="_llF-EESgEemPWL1O6Do-4A"/>
+  <PapyrusJava:External xmi:id="_lnGJMESgEemPWL1O6Do-4A" name="org.json.me.JSONArray" base_Classifier="_lmz1UESgEemPWL1O6Do-4A"/>
+  <PapyrusJava:External xmi:id="_lqDWkESgEemPWL1O6Do-4A" name="org.json.me.JSONObject" base_Classifier="_lpt_YESgEemPWL1O6Do-4A"/>
+  <PapyrusJava:External xmi:id="_luyFkESgEemPWL1O6Do-4A" name="org.json.me.JSONException" base_Classifier="_ludVcESgEemPWL1O6Do-4A"/>
+  <aspectj:Aspect xmi:id="_cAjyEHZLEem9fKmqwdnITQ" base_Class="_VMLUMHZLEem9fKmqwdnITQ" isPrivileged="true"/>
+  <aspectj:CallPointCut xmi:id="_JDAbkHZOEem9fKmqwdnITQ" base_PointCut_StructuralFeature="_otfFwHZNEem9fKmqwdnITQ" signature="static void MessageManager.*(..)"/>
+  <aspectj:Advice xmi:id="_fMbw0HZOEem9fKmqwdnITQ" base_BehavioralFeature="_UvYjIHZOEem9fKmqwdnITQ" pointcut="_JDAbkHZOEem9fKmqwdnITQ"/>
+  <aspectj:Aspect xmi:id="_HxzyEHZREem9fKmqwdnITQ" base_Class="_5BRV8HZQEem9fKmqwdnITQ" isPrivileged="true"/>
+  <aspectj:CompositePointCut xmi:id="_jWwfYHZSEem9fKmqwdnITQ" base_PointCut_StructuralFeature="_O5dKMHZREem9fKmqwdnITQ" composee="_H7O3AHZVEem9fKmqwdnITQ _-Q97sHZVEem9fKmqwdnITQ"/>
+  <aspectj:CallPointCut xmi:id="_H7O3AHZVEem9fKmqwdnITQ" base_PointCut_StructuralFeature="_ppq9AHZUEem9fKmqwdnITQ" composite="_jWwfYHZSEem9fKmqwdnITQ" signature="void MessageManager.process*(JSONObject,int)"/>
+  <aspectj:ArgsPointCut xmi:id="_-Q97sHZVEem9fKmqwdnITQ" base_StructuralFeature="_4a78cHZVEem9fKmqwdnITQ" base_PointCut_StructuralFeature="_4a78cHZVEem9fKmqwdnITQ" composite="_jWwfYHZSEem9fKmqwdnITQ">
+    <argNames>message</argNames>
+    <argNames>messageType</argNames>
+    <type xmi:type="uml:Class" href="#_lpt_YESgEemPWL1O6Do-4A"/>
+    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </aspectj:ArgsPointCut>
+  <aspectj:Advice xmi:id="_Uvb6kHZbEem9fKmqwdnITQ" base_BehavioralFeature="_PpZ04HZbEem9fKmqwdnITQ"/>
+</xmi:XMI>
