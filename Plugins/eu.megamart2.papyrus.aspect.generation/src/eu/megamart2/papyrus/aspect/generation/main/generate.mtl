@@ -16,7 +16,34 @@ public aspect [aClass.name/] {
    
   [for(p : Property | aClass.getAllAttributes())]
 	[if (not p.getAppliedStereotype('aspectj::CompositePointCut').oclIsUndefined())]
-		pointcut [p.name/]()
+		pointcut [p.name/](
+			[let list : OclAny = p.getStereotypePropertyValue('aspectj::CompositePointCut','composee')]
+				[comment Get ArgsPointCut composee. If exists, generate the list of arguments /]
+				[let argsPointCut : Property = list->flatten()->any(c | 
+					not c.eGet('base_PointCut_StructuralFeature').
+					oclAsType(Property).getAppliedStereotype('aspectj::ArgsPointCut').oclIsUndefined()).
+					eGet('base_PointCut_StructuralFeature')]
+					[if (not argsPointCut.oclIsUndefined())]
+						[let argNames : OclAny = argsPointCut.getStereotypePropertyValue('aspectj::ArgsPointCut', 'argNames')]
+							[let types : OclAny = argsPointCut.getStereotypePropertyValue('aspectj::ArgsPointCut', 'type')]
+								[let indexes : Sequence(Integer) = argNames->flatten()->asSequence()->collect(
+									arg | argNames->flatten()->asSequence()->indexOf(arg))]
+									[let last : OclAny = argNames->asSequence()->flatten()->last()]
+										[last/]
+										[for (index : Integer | indexes)]
+											[argNames->flatten()->asSequence()->at(index)/] [types->flatten()->asSequence()->at(index).oclAsType(NamedElement).name/]
+											[if (last = argNames->flatten()->asSequence()->at(index))]
+												,
+											[/if]
+										[/for]
+									[/let]
+								[/let]
+							[/let]
+						[/let]
+					[/if]
+				[/let]
+			[/let]
+		)
 		[let list : OclAny = p.getStereotypePropertyValue('aspectj::CompositePointCut','composee')]
 			[let last : OclAny = list->asSequence()->flatten()->last()]
 				[for (composee : OclAny | list)]
