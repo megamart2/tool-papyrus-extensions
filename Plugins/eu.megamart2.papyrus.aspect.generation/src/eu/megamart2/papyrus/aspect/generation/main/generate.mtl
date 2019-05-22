@@ -14,34 +14,23 @@ public aspect [aClass.name/] {
     [/if]
   [/let]
    
+[comment Generation of poincuts /]
   [for(p : Property | aClass.getAllAttributes())]
-	[if (p.hasStereotype('aspectj::CompositePointCut'))]
-		pointcut [p.name/](
-			[let argsPointCut : Property = p.getArgsPointCut()]
-				[if (not argsPointCut.oclIsUndefined())]
-					[argsPointCut.fullSignature()/]
-				[/if]
-			[/let]
-		):
+	 [if (p.hasStereotype('aspectj::CompositePointCut'))]
+	pointcut [p.name/]([let argsPointCut : Property = p.getArgsPointCut()][if (not argsPointCut.oclIsUndefined())][argsPointCut.fullSignature()/][/if][/let]):
 		[let list : OclAny = p.getStereotypePropertyValue('aspectj::CompositePointCut','composee')]
 			[let last : OclAny = list->asSequence()->flatten()->last()]
 				[for (composee : OclAny | list)]
 					[let compProp : Property = composee.eGet('base_PointCut_StructuralFeature')]
 						[if (compProp.hasStereotype('aspectj::CallPointCut'))]
-							call (
-								[let signature : String = compProp.getStereotypePropertyValue('aspectj::CallPointCut', 'signature')]
-									[if (not signature.oclIsUndefined())]
-										[signature/] 
-									[/if]
-								[/let]
-								)
+		call ([let signature : String = compProp.getStereotypePropertyValue('aspectj::CallPointCut', 'signature')][if (not signature.oclIsUndefined())][signature/] [/if][/let])
      					[/if]
 						[if (compProp.hasStereotype('aspectj::ArgsPointCut'))]
-     						args([compProp.noTypeSignature()/]);
+     	args([compProp.noTypeSignature()/]);
      					[/if]
 						[if (last <> composee)]
 							[if (p.getStereotypePropertyValue('aspectj::CompositePointCut','type').oclAsType(EnumerationLiteral).name.equalsIgnoreCase('and'))]
-								&&
+		&&
 							[/if]
 						[/if]
 					[/let]
@@ -49,14 +38,12 @@ public aspect [aClass.name/] {
 			[/let]
 		[/let]
      [/if]
-
      [if (p.hasStereotype('aspectj::ArgsPointCut'))]
 		[if (p.getStereotypePropertyValue('aspectj::ArgsPointCut','composite').oclIsUndefined())]
      		pointcut [p.name/] ():
      		args([let collection : OclAny = p.getStereotypePropertyValue('aspectj::ArgsPointCut','argNames')][collection/][/let]);
      	[/if]
      [/if]
-
      [if (p.hasStereotype('aspectj::CallPointCut'))]
 		[if (p.getStereotypePropertyValue('aspectj::CallPointCut','composite').toString().equalsIgnoreCase(''))]
      		pointcut [p.name/](): call (
@@ -70,53 +57,42 @@ public aspect [aClass.name/] {
      [/if]
    [/for]
 
-  [for(o: Operation | aClass.getAllOperations())]
-     [if (o.hasStereotype('aspectj::Advice'))]
+[comment Generation of advices /]
+[for(o: Operation | aClass.getAllOperations())]
+    [if (o.hasStereotype('aspectj::Advice'))]
 		[let argsPointCut : Property = o.getArgsPointCut()]
 			[let adviceExecution : EnumerationLiteral = o.getStereotypePropertyValue('aspectj::Advice', 'adviceExecution')]
-	     		void [adviceExecution.name.toLower()/] (
-					[if (not argsPointCut.oclIsUndefined())]
-						[argsPointCut.fullSignature()/]
-					[/if]
-				):
+	void [adviceExecution.name.toLower()/] ([if (not argsPointCut.oclIsUndefined())][argsPointCut.fullSignature()/][/if]):
 			[/let]
 			[let pointcut : OclAny = o.getStereotypePropertyValue('aspectj::Advice', 'pointcut')]
-	 			[pointcut.eGet('base_PointCut_StructuralFeature').oclAsType(Property).name/](
-					[if (not argsPointCut.oclIsUndefined())]
-							[argsPointCut.noTypeSignature()/]
-					[/if]
-			){
+	 		[pointcut.eGet('base_PointCut_StructuralFeature').oclAsType(Property).name/]([if (not argsPointCut.oclIsUndefined())][argsPointCut.noTypeSignature()/][/if]){
 					[o.method.eGet('body')/]
-				}
+	}
 			[/let]
 		[/let]
      [/if]
   [/for]
-	}
+}
 [/file]
 [/template] 
 
 
-[template public fullSignature(p : Property)]
+[template public fullSignature(p : Property) post(trim())]
 	[let argNames : Sequence(String) = p.getStereotypePropertyValue('aspectj::ArgsPointCut', 'argNames')->flatten()->asSequence()]
 		[let types : Sequence(NamedElement) = p.getStereotypePropertyValue('aspectj::ArgsPointCut', 'type')->flatten()->asSequence()]
 			[let indexes : Sequence(Integer) = argNames->collect(arg | argNames->indexOf(arg))]
 				[let last : OclAny = argNames->last()]
-					[for (index : Integer | indexes)]
-						[types->at(index).oclAsType(NamedElement).name/] [argNames->at(index)/][if (last <> argNames->at(index))],[/if]
-					[/for]
+					[for (index : Integer | indexes)][types->at(index).oclAsType(NamedElement).name/] [argNames->at(index)/][if (last <> argNames->at(index))],[/if][/for]
 				[/let]
 			[/let]
 		[/let]
 	[/let]
 [/template]
 
-[template public noTypeSignature(p : Property)]
+[template public noTypeSignature(p : Property) post(trim())]
 	[let collection : OclAny = p.getStereotypePropertyValue('aspectj::ArgsPointCut','argNames')]
 		[let last : OclAny = collection->asSequence()->flatten()->last()]
-			[for (argName : String | collection)]
-				[argName/][if (last <> argName)],[/if]
-			[/for]
+			[for (argName : String | collection)][argName/][if (last <> argName)],[/if][/for]
 		[/let]
 	[/let]
 [/template]
