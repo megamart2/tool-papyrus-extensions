@@ -3,7 +3,7 @@
 
 [query public getStereotype(e : Element, sName : String) : Stereotype = e.getAppliedStereotype(sName) /]
 
-[query public hasStereotype(e : Element, sName : String) : OclAny = not e.getAppliedStereotype(sName).oclIsUndefined()/]
+[query public hasStereotype(e : Element, sName : String) : Boolean = not e.getAppliedStereotype(sName).oclIsUndefined()/]
 
 [query public isAspect(e : Element) : Boolean = e.hasStereotype('aspectj::Aspect') /]
 
@@ -14,6 +14,16 @@
      else 
        null
      endif/]
+
+[query public getArgsPointCut(p : Property) : OclAny = 
+	if (p.hasStereotype('aspectj::CompositePointCut')) then
+		let list : OclAny = p.getStereotypePropertyValue('aspectj::CompositePointCut','composee') in
+			list->flatten()->any(c | c.eGet('base_PointCut_StructuralFeature').
+				oclAsType(Property).hasStereotype('aspectj::ArgsPointCut')).
+					eGet('base_PointCut_StructuralFeature')
+	else
+		null
+	endif/]
 
 [query private checkType(type : Type) : String =
 if type.oclIsInvalid() then ''
