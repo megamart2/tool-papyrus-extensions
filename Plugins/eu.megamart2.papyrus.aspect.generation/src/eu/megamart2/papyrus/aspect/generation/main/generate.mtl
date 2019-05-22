@@ -72,13 +72,23 @@ public aspect [aClass.name/] {
 
   [for(o: Operation | aClass.getAllOperations())]
      [if (o.hasStereotype('aspectj::Advice'))]
-		[let adviceExecution : EnumerationLiteral = o.getStereotypePropertyValue('aspectj::Advice', 'adviceExecution')]
-     		void [adviceExecution.name.toLower()/] ():
-		[/let]
-		[let pointcut : OclAny = o.getStereotypePropertyValue('aspectj::Advice', 'pointcut')]
- 			[pointcut.eGet('base_PointCut_StructuralFeature').oclAsType(Property).name/](){
-				[o.method.eGet('body')/]
-			}
+		[let argsPointCut : Property = o.getArgsPointCut()]
+			[let adviceExecution : EnumerationLiteral = o.getStereotypePropertyValue('aspectj::Advice', 'adviceExecution')]
+	     		void [adviceExecution.name.toLower()/] (
+					[if (not argsPointCut.oclIsUndefined())]
+						[argsPointCut.fullSignature()/]
+					[/if]
+				):
+			[/let]
+			[let pointcut : OclAny = o.getStereotypePropertyValue('aspectj::Advice', 'pointcut')]
+	 			[pointcut.eGet('base_PointCut_StructuralFeature').oclAsType(Property).name/](
+					[if (not argsPointCut.oclIsUndefined())]
+							[argsPointCut.noTypeSignature()/]
+					[/if]
+			){
+					[o.method.eGet('body')/]
+				}
+			[/let]
 		[/let]
      [/if]
   [/for]

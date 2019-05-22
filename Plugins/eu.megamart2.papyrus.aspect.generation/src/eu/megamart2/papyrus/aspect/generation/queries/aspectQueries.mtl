@@ -25,6 +25,15 @@
 		null
 	endif/]
 
+[query public getArgsPointCut(o : Operation) : OclAny = 
+	if (o.hasStereotype('aspectj::Advice')) then
+		let p : Property = o.getStereotypePropertyValue('aspectj::Advice','pointcut')
+			->asSequence()->flatten()->first().eGet('base_PointCut_StructuralFeature').oclAsType(Property) in
+			p.getArgsPointCut()
+	else
+		null
+	endif/]
+
 [query private checkType(type : Type) : String =
 if type.oclIsInvalid() then ''
 else type.name.check0()
