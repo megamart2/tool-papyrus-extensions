@@ -66,19 +66,17 @@ public aspect [aClass.name/] {
    [/for]
 
 [comment Generation of advices /]
-[for(o: Operation | aClass.getAllOperations())]
+  [for(o: Operation | aClass.getAllOperations())]
     [if (o.hasStereotype('aspectj::Advice'))]
-		[let argsPointCut : Property = o.getArgsPointCut()]
-			[let adviceExecution : EnumerationLiteral = o.getStereotypePropertyValue('aspectj::Advice', 'adviceExecution')]
-	void [adviceExecution.name.toLower()/] ([if (not argsPointCut.oclIsUndefined())][argsPointCut.fullSignature()/][/if]):
-			[/let]
+		[let adviceExecution : EnumerationLiteral = o.getStereotypePropertyValue('aspectj::Advice', 'adviceExecution')]
+	void [adviceExecution.name.toLower()/] ([let argsPointCut : Property = o.getArgsPointCut()][if (not argsPointCut.oclIsUndefined())][argsPointCut.fullSignature()/][/if][/let]):
 			[let pointcut : OclAny = o.getStereotypePropertyValue('aspectj::Advice', 'pointcut')]
-	 		[pointcut.eGet('base_PointCut_StructuralFeature').oclAsType(Property).name/]([if (not argsPointCut.oclIsUndefined())][argsPointCut.noTypeSignature()/][/if]){
+	 	[pointcut.eGet('base_PointCut_StructuralFeature').oclAsType(Property).name/]([let argsPointCut : Property = o.getArgsPointCut()][if (not argsPointCut.oclIsUndefined())][argsPointCut.noTypeSignature()/][/if][/let]){
 					[o.method.eGet('body')/]
 	}
 			[/let]
 		[/let]
-     [/if]
+    [/if]
   [/for]
 }
 [/file]
