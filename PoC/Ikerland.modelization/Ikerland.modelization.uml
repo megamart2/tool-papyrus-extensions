@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:PapyrusJava="http://www.eclipse.org/papyrus/PapyrusJava/1" xmlns:aspectj="http:///schemas/aspectj/_pMtT0GTzEemc8KTgT20mug/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/aspectj/_pMtT0GTzEemc8KTgT20mug/0 pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_pMzacGTzEemc8KTgT20mug">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aspectj="http:///schemas/aspectj/_pMtT0GTzEemc8KTgT20mug/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/aspectj/_pMtT0GTzEemc8KTgT20mug/0 pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_pMzacGTzEemc8KTgT20mug">
   <uml:Model xmi:id="_CrLk4EQcEemmjN2rxYcWhA" name="Ikerland" visibility="public" URI="">
     <packageImport xmi:type="uml:PackageImport" xmi:id="_DbDioEQcEemmjN2rxYcWhA">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
@@ -571,11 +571,6 @@
       <appliedProfile xmi:type="uml:Profile" href="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_wW2AAFbhEemeMqmugX5-_g"/>
     </profileApplication>
   </uml:Model>
-  <PapyrusJava:External xmi:id="_lkObYESgEemPWL1O6Do-4A" name="java.util.Vector" base_Classifier="_ljkUEESgEemPWL1O6Do-4A"/>
-  <PapyrusJava:External xmi:id="_lldxgESgEemPWL1O6Do-4A" name="java.lang.String" base_Classifier="_llF-EESgEemPWL1O6Do-4A"/>
-  <PapyrusJava:External xmi:id="_lnGJMESgEemPWL1O6Do-4A" name="org.json.me.JSONArray" base_Classifier="_lmz1UESgEemPWL1O6Do-4A"/>
-  <PapyrusJava:External xmi:id="_lqDWkESgEemPWL1O6Do-4A" name="org.json.me.JSONObject" base_Classifier="_lpt_YESgEemPWL1O6Do-4A"/>
-  <PapyrusJava:External xmi:id="_luyFkESgEemPWL1O6Do-4A" name="org.json.me.JSONException" base_Classifier="_ludVcESgEemPWL1O6Do-4A"/>
   <aspectj:Aspect xmi:id="_cAjyEHZLEem9fKmqwdnITQ" base_Class="_VMLUMHZLEem9fKmqwdnITQ" isPrivileged="true"/>
   <aspectj:CallPointCut xmi:id="_JDAbkHZOEem9fKmqwdnITQ" base_PointCut_StructuralFeature="_otfFwHZNEem9fKmqwdnITQ" signature="static void MessageManager.*(..)"/>
   <aspectj:Advice xmi:id="_fMbw0HZOEem9fKmqwdnITQ" base_BehavioralFeature="_UvYjIHZOEem9fKmqwdnITQ" pointcut="_JDAbkHZOEem9fKmqwdnITQ"/>
