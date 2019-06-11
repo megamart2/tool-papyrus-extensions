@@ -38,6 +38,9 @@ public aspect [aClass.name/] {
 							[if (p.getStereotypePropertyValue('aspectj::CompositePointCut','type').oclAsType(EnumerationLiteral).name.equalsIgnoreCase('and'))]
 		&&
 							[/if]
+                          [if(p.getStereotypePropertyValue('aspectj::CompositePointCut','type').oclAsType(EnumerationLiteral).name.equalsIgnoreCase('or'))]
+        ||                 
+                        [/if]
 						[/if]
 					[/let]
 				[/for]
@@ -63,6 +66,18 @@ public aspect [aClass.name/] {
 			);
 		[/if]
      [/if]
+     [comment SetPointCut/]
+       [if(p.hasStereotype('aspectj::SetPointCut'))]
+
+          pointcut [p.name/](): (
+            [p.setPointCutSignature()/]);
+
+       [/if]
+     [comment GetpointCut/]
+       [if(p.hasStereotype('aspectj::GetPointCut'))]
+          pointcut [p.name/](): (
+           [p.getPointCutSignature()/]);
+       [/if]
    [/for]
 
 [comment Generation of advices /]
@@ -102,4 +117,22 @@ public aspect [aClass.name/] {
 			[for (argName : String | collection)][argName/][if (last <> argName)],[/if][/for]
 		[/let]
 	[/let]
+[/template]
+
+[comment This template generates the set poincut signature/]
+[template public setPointCutSignature(p : Property) post(trim())]
+    [let collection : OclAny = p.getStereotypePropertyValue('aspectj::SetPointCut','field')]
+       [let last : OclAny = collection->asSequence()->flatten()->last()]
+             [for (field : Property | collection)]set([field.visibility.toString().toUpperFirst()/] [field.type.name/] [field.eContainer().oclAsType(NamedElement).name/].[field.name/])[if(last <> field)] || [/if][/for]
+        [/let]
+    [/let]
+[/template]
+
+[comment This template generates the get poincut signature/]
+[template public getPointCutSignature(p : Property) post(trim())]
+    [let collection : OclAny = p.getStereotypePropertyValue('aspectj::PropertyPointCut','field')]
+        [let last : OclAny = collection->asSequence()->flatten()->last()]
+             [for (field : Property | collection)]get([field.visibility.toString().toUpperFirst()/] [field.type.name/] [field.eContainer().eClass().name/].[field.name/])[if(last <> field)] || [/if][/for]
+        [/let]
+    [/let]
 [/template]
