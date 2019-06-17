@@ -54,6 +54,20 @@ public aspect [aClass.name/] {
      		args([let collection : OclAny = p.getStereotypePropertyValue('aspectj::ArgsPointCut','argNames')][collection/][/let]);
      	[/if]
      [/if]
+     [comment TargetPointCut/]
+     [if(p.hasStereotype('aspectj::TargetPointCut'))]
+ 
+              pointcut [p.name/] ([p.generalFullSignature('aspectj::TargetPointCut')/]):
+                 target([p.generalNoTypeSignature('aspectj::TargetPointCut')/]);
+         
+     [/if]
+     [comment ThisPointCut /]
+     [if(p.hasStereotype('aspectj::ThisPointCut'))]
+
+             pointcut [p.name/] ([p.generalFullSignature('aspectj::ThisPointCut')/]):
+                this([p.generalNoTypeSignature('aspectj::ThispointCut')/]);
+
+     [/if]
 	 [comment CallPointCut. This template is only applied if found pointcut is not part of a composition (managed above/]
      [if (p.hasStereotype('aspectj::CallPointCut'))]
 		[if (p.getStereotypePropertyValue('aspectj::CallPointCut','composite').toString().equalsIgnoreCase(''))]
@@ -75,9 +89,26 @@ public aspect [aClass.name/] {
        [/if]
      [comment GetpointCut/]
        [if(p.hasStereotype('aspectj::GetPointCut'))]
+
           pointcut [p.name/](): (
            [p.getPointCutSignature()/]);
+
        [/if]
+      [comment WithinPointCut/]
+        [if(p.hasStereotype('aspectj::WithinPointCut'))]
+      
+           pointcut [p.name/](): (
+              [p.getWithinPointSignature()/]);
+
+        [/if]
+
+       [comment TargetPointCut/]
+          [if(p.hasStereotype('aspectj::TargetPointCut'))]
+
+             pointcut [p.name/](): (
+              );
+
+          [/if]
    [/for]
 
 [comment Generation of advices /]
@@ -101,11 +132,23 @@ public aspect [aClass.name/] {
 [template public fullSignature(p : Property) post(trim())]
 	[let argNames : Sequence(String) = p.getStereotypePropertyValue('aspectj::ArgsPointCut', 'argNames')->flatten()->asSequence()]
 		[let types : Sequence(NamedElement) = p.getStereotypePropertyValue('aspectj::ArgsPointCut', 'type')->flatten()->asSequence()]
-			[let indexes : Sequence(Integer) = argNames->collect(arg | argNames->indexOf(arg))]
-				[let last : OclAny = argNames->last()]
-					[for (index : Integer | indexes)][types->at(index).oclAsType(NamedElement).name/] [argNames->at(index)/][if (last <> argNames->at(index))],[/if][/for]
-				[/let]
-			[/let]
+    [let indexes : Sequence(Integer) = argNames->collect(arg | argNames->indexOf(arg))]
+	    [let last : OclAny = argNames->last()]
+		    [for (index : Integer | indexes)][types->at(index).oclAsType(NamedElement).name/] [argNames->at(index)/][if (last <> argNames->at(index))],[/if][/for]
+        [/let]
+    [/let]
+		[/let]
+	[/let]
+[/template]
+
+[template public generalFullSignature(p : Property,type : String) post(trim())]
+	[let argNames : Sequence(String) = p.getStereotypePropertyValue(type, 'argNames')->flatten()->asSequence()]
+		[let types : Sequence(NamedElement) = p.getStereotypePropertyValue(type, 'type')->flatten()->asSequence()]
+    [let indexes : Sequence(Integer) = argNames->collect(arg | argNames->indexOf(arg))]
+	    [let last : OclAny = argNames->last()]
+		    [for (index : Integer | indexes)][types->at(index).oclAsType(NamedElement).name/] [argNames->at(index)/][if (last <> argNames->at(index))],[/if][/for]
+        [/let]
+    [/let]
 		[/let]
 	[/let]
 [/template]
@@ -113,6 +156,14 @@ public aspect [aClass.name/] {
 [comment This template generates a parameter name signature for ArgsPointCut: parameter1, parameter2, ... /]
 [template public noTypeSignature(p : Property) post(trim())]
 	[let collection : OclAny = p.getStereotypePropertyValue('aspectj::ArgsPointCut','argNames')]
+		[let last : OclAny = collection->asSequence()->flatten()->last()]
+			[for (argName : String | collection)][argName/][if (last <> argName)],[/if][/for]
+		[/let]
+	[/let]
+[/template]
+
+[template public generalNoTypeSignature(p : Property,type : String) post(trim())]
+  	[let collection : OclAny = p.getStereotypePropertyValue(type,'argNames')]
 		[let last : OclAny = collection->asSequence()->flatten()->last()]
 			[for (argName : String | collection)][argName/][if (last <> argName)],[/if][/for]
 		[/let]
@@ -134,5 +185,14 @@ public aspect [aClass.name/] {
         [let last : OclAny = collection->asSequence()->flatten()->last()]
              [for (field : Property | collection)]get([field.visibility.toString().toUpperFirst()/] [field.type.name/] [field.eContainer().eClass().name/].[field.name/])[if(last <> field)] || [/if][/for]
         [/let]
+    [/let]
+[/template]
+
+[comment WithinPointCut/]
+[template public getWithinPointSignature(p : Property) post(trim())]
+    [let collection : OclAny = p.getStereotypePropertyValue('aspectj::WithinPointCut','type')]
+       [let last : OclAny = collection ->asSequence()->flatten()->last()]
+           [for(typ : Type | collection)]within([typ.name/])[if(last <> typ)] || [/if][/for]
+       [/let]
     [/let]
 [/template]
