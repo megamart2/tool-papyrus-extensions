@@ -105,8 +105,14 @@ public aspect [aClass.name/] {
        [comment TargetPointCut/]
           [if(p.hasStereotype('aspectj::TargetPointCut'))]
 
-             pointcut [p.name/](): (
-              );
+             pointcut [p.name/]([p.generalFullSignature('aspectj::TargetPointCut')/]): (
+              [p.generalNoTypeSignature('aspectj::TargetPointCut')/]);
+
+          [/if]
+          [comment CFlowPointCut/]
+          [if(p.hasStereotype('aspectj::CFlowPointCut'))]
+
+          [p.getCFlowPointCutSignature()/]
 
           [/if]
    [/for]
@@ -195,4 +201,8 @@ public aspect [aClass.name/] {
            [for(typ : Type | collection)]within([typ.name/])[if(last <> typ)] || [/if][/for]
        [/let]
     [/let]
+[/template]
+
+[template public getCFlowPointCutSignature(p : Property) post(trim())]
+    pointcut [p.name/]() : cflow([p.getStereotypePropertyValue('aspectj::CFlowPointCut','selectedPointCut').toString()/]);
 [/template]
