@@ -115,6 +115,13 @@ public aspect [aClass.name/] {
           [p.getCFlowPointCutSignature()/]
 
           [/if]
+          
+          [if(p.hasStereotype('aspectj::StaticCrossCuttingFeature'))]
+            [for(t : OclAny | p.getStereotypePropertyValue('aspectj::StaticCrossCuttingFeature','onType') ->flatten()->asSequence())]
+             [p.visibility.toString()/] [p.type.name/] [t.oclAsType(NamedElement).name/].[p.name/];
+            [/for]
+          [/if]
+
    [/for]
 
 [comment Generation of advices /]
