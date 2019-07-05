@@ -56,17 +56,17 @@ public aspect [aClass.name/] {
      [/if]
      [comment TargetPointCut/]
      [if(p.hasStereotype('aspectj::TargetPointCut'))]
- 
+         [if(p.getStereotypePropertyValue('aspectj::TargetpointCut','composite').oclIsUndefined())]
               pointcut [p.name/] ([p.generalFullSignature('aspectj::TargetPointCut')/]):
                  target([p.generalNoTypeSignature('aspectj::TargetPointCut')/]);
-         
+        [/if]
      [/if]
      [comment ThisPointCut /]
      [if(p.hasStereotype('aspectj::ThisPointCut'))]
-
+         [if(p.getStereotypePropertyValue('aspectj::ThisPointCut','composite').oclIsUndefined())]
              pointcut [p.name/] ([p.generalFullSignature('aspectj::ThisPointCut')/]):
                 this([p.generalNoTypeSignature('aspectj::ThispointCut')/]);
-
+       [/if]
      [/if]
 	 [comment CallPointCut. This template is only applied if found pointcut is not part of a composition (managed above/]
      [if (p.hasStereotype('aspectj::CallPointCut'))]
