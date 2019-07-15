@@ -1,6 +1,6 @@
 [comment encoding = UTF-8 /]
 [module generate('http://www.eclipse.org/uml2/5.0.0/UML')]
-
+ 
 [import eu::megamart2::papyrus::aspect::generation::queries::aspectQueries/]
 
 [template public generateAspect(aClass : Class) ? (aClass.isAspect())]
@@ -29,7 +29,7 @@ public aspect [aClass.name/] {
 					[let compProp : Property = composee.eGet('base_PointCut_StructuralFeature')]
 						[comment We proceed for each composee pointcut depending on its type. Currently supported: CallPointCut, ArgsPointCut. To be completed /]
 						[if (compProp.hasStereotype('aspectj::CallPointCut'))]
-		call ([let signature : String = compProp.getStereotypePropertyValue('aspectj::CallPointCut', 'signature')][if (not signature.oclIsUndefined())][signature/] [/if][/let])
+		[compProp.callSignature()/]
      					[/if]
 						[if (compProp.hasStereotype('aspectj::ArgsPointCut'))]
      	args([compProp.noTypeSignature()/]);
@@ -140,6 +140,23 @@ public aspect [aClass.name/] {
 }
 [/file]
 [/template] 
+
+[template public callSignature(p : Property) post(trim())]
+[let signature : String = p.getStereotypePropertyValue('aspectj::CallPointCut', 'signature').toString()]
+[if ((not signature.oclIsUndefined()) and (not signature.equalsIgnoreCase('')))]call([signature/])[else][let operations : Sequence(Operation) = p.getStereotypePropertyValue('aspectj::CallPointCut','operation')->flatten()->asSequence()]
+    [let indexes : Sequence(Integer) = operations->collect(op | operations->indexOf(op))]
+        [let last : Operation = operations->last()]
+            [for(index : Integer | indexes)]
+              [let operation : Operation = operations->at(index)]
+                call([if(operation.checkOcl())][operation.visibility.toString()/] [/if][if(operation.name.checkString())][operation.name/][/if])
+              [/let]
+            [/for]
+        [/let]
+    [/let]
+[/let]
+[/if]
+[/let]
+[/template]
 
 [comment  This template generates the complete fullSignature associated to a call ArgsPoinCut, which signature: parameter Type, .../]
 [template public fullSignature(p : Property) post(trim())]

@@ -367,7 +367,7 @@ class Aspect1 {
         <ownedAttribute xmi:type="uml:Property" xmi:id="_JVElgGBhEemi18UyQIEVwA" name="Line.setP1_pointcut"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_NxbcEGBhEemi18UyQIEVwA" name="Line.setP2_pointcut"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_QL4FQGBhEemi18UyQIEVwA" name="FigureElement.setXY_pointcut"/>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_S7JH4GBhEemi18UyQIEVwA" name="move_pointcut"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_S7JH4GBhEemi18UyQIEVwA" name="move_pointcut" visibility="public"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_2sx_QGBhEemi18UyQIEVwA" name="Figure.make_pointcut"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_WmSHcGBiEemi18UyQIEVwA" name="move_cflow"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_OtjFoGDbEemlDdyzDhgfdg" name="figureElement_pointcut"/>

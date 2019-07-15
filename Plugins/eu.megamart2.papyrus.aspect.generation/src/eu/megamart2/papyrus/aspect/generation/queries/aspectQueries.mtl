@@ -25,6 +25,14 @@
 		null
 	endif/]
 
+[query public checkString(sr : String) : Boolean =
+not (sr.oclIsUndefined() or sr.oclIsInvalid() or sr.equalsIgnoreCase(''))
+/]
+
+[query public checkOcl(ocl : OclAny) : Boolean =
+not (ocl.oclIsUndefined() or ocl.oclIsInvalid())
+/]
+
 [query public getArgsPointCut(o : Operation) : OclAny = 
 	if (o.hasStereotype('aspectj::Advice')) then
 		let p : Property = o.getStereotypePropertyValue('aspectj::Advice','pointcut')
