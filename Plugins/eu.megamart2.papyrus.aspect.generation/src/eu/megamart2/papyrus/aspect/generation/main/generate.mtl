@@ -71,13 +71,7 @@ public aspect [aClass.name/] {
 	 [comment CallPointCut. This template is only applied if found pointcut is not part of a composition (managed above/]
      [if (p.hasStereotype('aspectj::CallPointCut'))]
 		[if (p.getStereotypePropertyValue('aspectj::CallPointCut','composite').toString().equalsIgnoreCase(''))]
-     		pointcut [p.name/](): call (
-				[let signature : String = p.getStereotypePropertyValue('aspectj::CallPointCut', 'signature')]
-					[if (not signature.oclIsUndefined())]
-						[signature/] 
-					[/if]
-				[/let]
-			);
+     		pointcut [p.name/](): [p.callSignature()/];
 		[/if]
      [/if]
      [comment SetPointCut/]
@@ -148,14 +142,23 @@ public aspect [aClass.name/] {
         [let last : Operation = operations->last()]
             [for(index : Integer | indexes)]
               [let operation : Operation = operations->at(index)]
-                call([if(operation.checkOcl())][operation.visibility.toString()/] [/if][if(operation.name.checkString())][operation.name/][/if])
+                call([if(operation.checkOcl())][operation.visibility.toString()/] [/if]
+[if(operation.returnResult().oclIsUndefined()->includes(false))][operation.returnResult().name/] [/if][if(operation.name.checkString())][operation.name/][/if]
+[if(operation.inputParameters().oclIsUndefined()->includes(false))](
+  [let indexes : Sequence(Integer) = operation.inputParameters()->collect(pa | operation.inputParameters()->indexOf(pa))]
+      [let last : Parameter = operation.inputParameters()->last()]
+         ([for(index : Integer | indexes)]
+           [operation.inputParameters()->at(index).type.name/]
+         [/for]
+      [/let]
+  [/let][else]..)[/if])	
               [/let]
             [/for]
         [/let]
     [/let]
-[/let]
-[/if]
-[/let]
+   [/let]
+  [/if]
+ [/let]
 [/template]
 
 [comment  This template generates the complete fullSignature associated to a call ArgsPoinCut, which signature: parameter Type, .../]

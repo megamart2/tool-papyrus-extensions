@@ -25,8 +25,20 @@
 		null
 	endif/]
 
+[query public checkInTypes(op : Operation) : Boolean =
+  if(op.inputParameters().oclIsUndefined()->includes(false)) then true
+  else false
+  endif
+/]
+
+[query public checkCollection(collection : OclAny) : Boolean = 
+  if(collection.oclIsUndefined()->includes(false))then true
+  else false
+  endif
+/]
+
 [query public checkString(sr : String) : Boolean =
-not (sr.oclIsUndefined() or sr.oclIsInvalid() or sr.equalsIgnoreCase(''))
+not (sr.oclIsUndefined() or sr.equalsIgnoreCase(''))
 /]
 
 [query public checkOcl(ocl : OclAny) : Boolean =
