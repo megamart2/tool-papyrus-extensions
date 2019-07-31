@@ -142,16 +142,8 @@ public aspect [aClass.name/] {
         [let last : Operation = operations->last()]
             [for(index : Integer | indexes)]
               [let operation : Operation = operations->at(index)]
-                call([if(operation.checkOcl())][operation.visibility.toString()/] [/if]
-[if(operation.returnResult().oclIsUndefined()->includes(false))][operation.returnResult().name/] [/if][if(operation.name.checkString())][operation.name/][/if]
-[if(operation.inputParameters().oclIsUndefined()->includes(false))](
-  [let indexes : Sequence(Integer) = operation.inputParameters()->collect(pa | operation.inputParameters()->indexOf(pa))]
-      [let last : Parameter = operation.inputParameters()->last()]
-         ([for(index : Integer | indexes)]
-           [operation.inputParameters()->at(index).type.name/]
-         [/for]
-      [/let]
-  [/let][else]..)[/if])	
+                call([if(operation.checkOcl())][operation.visibility.toString()/] [operation.returnResult().type.name/] [/if][if(operation.returnResult().oclIsUndefined()->includes(false))][operation.returnResult().name/] [/if][if(operation.name.checkString())] [operation.name/][/if]
+[if(operation.inputParameters().oclIsUndefined()->includes(false))]([let indexes : Sequence(Integer) = operation.inputParameters()->collect(pa | operation.inputParameters()->indexOf(pa))][let last : Parameter = operation.inputParameters()->last()]([for(index : Integer | indexes)][operation.inputParameters()->at(index).type.name/][if(operation.inputParameters()->at(index) <> last)],[/if][/for][/let][/let][else](..[/if]))	
               [/let]
             [/for]
         [/let]
