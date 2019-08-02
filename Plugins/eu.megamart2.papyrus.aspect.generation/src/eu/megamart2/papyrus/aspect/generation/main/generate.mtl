@@ -49,9 +49,8 @@ public aspect [aClass.name/] {
      [/if]
 	 [comment ArgsPointCut. This template is only applied if found pointcut is not part of a composition (managed above)/]
      [if (p.hasStereotype('aspectj::ArgsPointCut'))]
-		[if (p.getStereotypePropertyValue('aspectj::ArgsPointCut','composite').oclIsUndefined())]
-     		pointcut [p.name/] ():
-     		args([let collection : OclAny = p.getStereotypePropertyValue('aspectj::ArgsPointCut','argNames')][collection/][/let]);
+		[if (p.getStereotypePropertyValue('aspectj::ArgsPointCut','composite').oclIsUndefined() or p.getStereotypePropertyValue('aspectj::ArgsPointCut','composite').toString().equalsIgnoreCase(''))]
+[p.argsPointCutFullSignature()/]
      	[/if]
      [/if]
      [comment TargetPointCut/]
@@ -135,9 +134,22 @@ public aspect [aClass.name/] {
 [/file]
 [/template] 
 
+[template public argsPointCutFullSignature(p : Property) post(trim())]
+[let names : Sequence(OclAny) = p.getStereotypePropertyValue('aspectj::ArgsPointCut','argNames')->asSequence()->flatten()]
+  [let types : Sequence(OclAny) = p.getStereotypePropertyValue('aspectj::TypePointCut','types')->asSequence()->flatten()]
+    [let indexes : Sequence(Integer) = names->collect(sr | names->indexOf(sr))]
+      [let last : OclAny = names->last()]
+pointcut [p.name/]([for(index : Integer | indexes)][types->at(index).toString()/] [names->at(index)/][if(names->at(index) <> last)], [/if][/for]): args([for(index : Integer | indexes)][names->at(index)/][if(names->at(index) <> last)], [/if][/for]);
+       [/let]
+     [/let]
+  [/let]
+[/let]
+[/template]
+
 [template public callSignature(p : Property) post(trim())]
-[let signature : String = p.getStereotypePropertyValue('aspectj::CallPointCut', 'signature').toString()]
-[if ((not signature.oclIsUndefined()) and (not signature.equalsIgnoreCase('')))]call([signature/])[else][let operations : Sequence(Operation) = p.getStereotypePropertyValue('aspectj::CallPointCut','operation')->flatten()->asSequence()]
+[let pointType : String = 'aspectj::CallPointCut']
+[let signature : String = p.getStereotypePropertyValue(pointType, 'signature').toString()]
+[if ((not signature.oclIsUndefined()) and (not signature.equalsIgnoreCase('')))]call([signature/])[else][let operations : Sequence(Operation) = p.getStereotypePropertyValue(pointType,'operation')->flatten()->asSequence()]
     [let indexes : Sequence(Integer) = operations->collect(op | operations->indexOf(op))]
         [let last : Operation = operations->last()]
             [for(index : Integer | indexes)]
@@ -148,9 +160,10 @@ public aspect [aClass.name/] {
             [/for]
         [/let]
     [/let]
-   [/let]
+[/let]
   [/if]
  [/let]
+[/let]
 [/template]
 
 [comment  This template generates the complete fullSignature associated to a call ArgsPoinCut, which signature: parameter Type, .../]

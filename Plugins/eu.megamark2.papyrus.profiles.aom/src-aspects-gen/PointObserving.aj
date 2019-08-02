@@ -1,5 +1,11 @@
 public aspect PointObserving {
    
+	pointcut changes_poincut():
+		call(void Point.set*(int))
+		&&
+
+          
+
      		pointcut PointSet_pointcut(): call(void Point.set*(int));
 
           
@@ -7,12 +13,6 @@ public aspect PointObserving {
 
           
              public Vector Point.observers;
-
-	pointcut changes_poincut():
-		call(void Point.set*(int))
-		&&
-
-          
 
               pointcut PointTarget_pointcut (Point p):
                  target(p);
