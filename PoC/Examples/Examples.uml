@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aspectj="http:///schemas/aspectj/_pMtT0GTzEemc8KTgT20mug/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/aspectj/_pMtT0GTzEemc8KTgT20mug/0 pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_pMzacGTzEemc8KTgT20mug">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aspectj="http:///schemas/aspectj/_GmCtILUIEemNhtcr8D-8jQ/2" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/aspectj/_GmCtILUIEemNhtcr8D-8jQ/2 pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_GmJa0LUIEemNhtcr8D-8jQ">
   <uml:Model xmi:id="_0R-ZoLN3Eem_XcT9mP2n9A" name="Examples" visibility="public">
     <packageImport xmi:type="uml:PackageImport" xmi:id="_0lrYwLN3Eem_XcT9mP2n9A">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
@@ -33,23 +33,31 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_uj-0sLN6Eem_XcT9mP2n9A" name="callpoint1"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_dOLCoLN-Eem_XcT9mP2n9A" name="CallOp1"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_a8DZkLN_Eem_XcT9mP2n9A" name="CallSuma"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ZYHoILRwEemjX-2TtQLbzg" name="ArgsPoint"/>
+      <nestedClassifier xmi:type="uml:Enumeration" xmi:id="_6K-OYLUZEem5uJ7Czqkucw" name="Enumeration5"/>
     </packagedElement>
-    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_OJfKMLN4Eem_XcT9mP2n9A">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OJtzsLN4Eem_XcT9mP2n9A" source="PapyrusVersion">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_OJtzsbN4Eem_XcT9mP2n9A" key="Version" value="0.0.16"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_OJtzsrN4Eem_XcT9mP2n9A" key="Comment" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_OJtzs7N4Eem_XcT9mP2n9A" key="Copyright" value="(c) Atos Spain S.A. 2019"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_OJtztLN4Eem_XcT9mP2n9A" key="Date" value="2019-04-22"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_OJtztbN4Eem_XcT9mP2n9A" key="Author" value="Jesús Gorroñogoitia"/>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_3dbDALUZEem5uJ7Czqkucw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3di-0LUZEem5uJ7Czqkucw" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3di-0bUZEem5uJ7Czqkucw" key="Version" value="0.0.18"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3di-0rUZEem5uJ7Czqkucw" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3di-07UZEem5uJ7Czqkucw" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3di-1LUZEem5uJ7Czqkucw" key="Date" value="2019-08-02"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3di-1bUZEem5uJ7Czqkucw" key="Author" value=""/>
       </eAnnotations>
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OJo7MLN4Eem_XcT9mP2n9A" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_pMzacGTzEemc8KTgT20mug"/>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3detYLUZEem5uJ7Czqkucw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_GmJa0LUIEemNhtcr8D-8jQ"/>
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_wW2AAFbhEemeMqmugX5-_g"/>
     </profileApplication>
   </uml:Model>
-  <aspectj:Aspect xmi:id="_rLnKsLN6Eem_XcT9mP2n9A" base_Class="_nkujkLN6Eem_XcT9mP2n9A"/>
-  <aspectj:CallPointCut xmi:id="_wbvnkLN6Eem_XcT9mP2n9A" base_PointCut_StructuralFeature="_uj-0sLN6Eem_XcT9mP2n9A" signature=" ExampleObject.Operation* (..)"/>
-  <aspectj:CallPointCut xmi:id="_idu3wLN-Eem_XcT9mP2n9A" base_PointCut_StructuralFeature="_dOLCoLN-Eem_XcT9mP2n9A" operation="_poZWYLN4Eem_XcT9mP2n9A"/>
-  <aspectj:CallPointCut xmi:id="_eG16kLN_Eem_XcT9mP2n9A" base_PointCut_StructuralFeature="_a8DZkLN_Eem_XcT9mP2n9A" operation="_xHiBcLN4Eem_XcT9mP2n9A"/>
+  <aspectj:Aspect xmi:id="_5TudULUZEem5uJ7Czqkucw" base_Class="_nkujkLN6Eem_XcT9mP2n9A"/>
+  <aspectj:CallPointCut xmi:id="_7rwrsLUZEem5uJ7Czqkucw" base_PointCut_StructuralFeature="_uj-0sLN6Eem_XcT9mP2n9A" signature=" *.Oper* (..)"/>
+  <aspectj:CallPointCut xmi:id="_-vN1oLUZEem5uJ7Czqkucw" base_PointCut_StructuralFeature="_dOLCoLN-Eem_XcT9mP2n9A" operation="_poZWYLN4Eem_XcT9mP2n9A"/>
+  <aspectj:CallPointCut xmi:id="_HAnOoLUbEem5uJ7Czqkucw" base_PointCut_StructuralFeature="_a8DZkLN_Eem_XcT9mP2n9A" operation="_xHiBcLN4Eem_XcT9mP2n9A"/>
+  <aspectj:ArgsPointCut xmi:id="_NuRZcLUbEem5uJ7Czqkucw" base_StructuralFeature="_ZYHoILRwEemjX-2TtQLbzg" base_PointCut_StructuralFeature="_ZYHoILRwEemjX-2TtQLbzg">
+    <argNames>x</argNames>
+    <argNames>y</argNames>
+    <types xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    <types xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+  </aspectj:ArgsPointCut>
 </xmi:XMI>

@@ -5,12 +5,16 @@ public aspect CallAspect {
 
           
 
-     		pointcut CallOp1(): call(public   Operation1
-     		(..));
+pointcut ArgsPoint(invalid x, invalid y): args(x, y);
 
           
 
-     		pointcut callpoint1(): call( ExampleObject.Operation* (..));
+     		pointcut callpoint1(): call( *.Oper* (..));
+
+          
+
+     		pointcut CallOp1(): call(public   Operation1
+     		(..));
 
           
 

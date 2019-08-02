@@ -1,7 +1,17 @@
 privileged aspect SampleAspect {
    
-     		pointcut makeLine_PointCut(): call(public  makeLine
-     		..));
+
+          
+             public MyObserver Point.observers;
+             public MyObserver Line.observers;
+
+
+          
+
+
+          pointcut setXY_PointCut(): (
+            set(Private Integer Point.x) || set(Private Integer Point.y));
+
 
           
 
@@ -11,28 +21,18 @@ privileged aspect SampleAspect {
 
           
 
-
-          
-             public MyObserver Line.observers;
-             public MyObserver Point.observers;
-
-
-          pointcut setXY_PointCut(): (
-            set(Private Integer Point.x) || set(Private Integer Point.y));
-
+     		pointcut makeLine_PointCut(): call(public Line   makeLine
+     		(..));
 
           
 
 
-          
-
-
-	void before (Integer inX,invalid inY):
-	 	observePoint_PointCut(inX,inY){
-					
-	}
 	void after ():
 	 	makeLine_PointCut(){
+					
+	}
+	void before (Integer inX,invalid inY):
+	 	observePoint_PointCut(inX,inY){
 					
 	}
 }
