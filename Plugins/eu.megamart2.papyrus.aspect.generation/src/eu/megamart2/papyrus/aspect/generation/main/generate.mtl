@@ -47,77 +47,111 @@ public aspect [aClass.name/] {
 			[/let]
 		[/let]
      [/if]
-	 [comment ArgsPointCut. This template is only applied if found pointcut is not part of a composition (managed above)/]
+     [comment end of the composite /]
+[comment **********************************************************************************************************************/]
+[comment   ----- SIMPLE POINTCUTS -----   This templates are only applied if found pointcut is not part of a composition (managed above)/]
+[comment              ** ARGS **                     /]
      [if (p.hasStereotype('aspectj::ArgsPointCut'))]
+
 		[if (p.getStereotypePropertyValue('aspectj::ArgsPointCut','composite').oclIsUndefined() or p.getStereotypePropertyValue('aspectj::ArgsPointCut','composite').toString().equalsIgnoreCase(''))]
 [p.argsPointCutFullSignature()/]
      	[/if]
      [/if]
-     [comment TargetPointCut/]
+[comment --------------------------------------------------------------------------------------------------------------------/]
+[comment             ** TARGET **                     /]
      [if(p.hasStereotype('aspectj::TargetPointCut'))]
+
          [if(p.getStereotypePropertyValue('aspectj::TargetpointCut','composite').oclIsUndefined())]
               pointcut [p.name/] ([p.generalFullSignature('aspectj::TargetPointCut')/]):
                  target([p.generalNoTypeSignature('aspectj::TargetPointCut')/]);
         [/if]
      [/if]
-     [comment ThisPointCut /]
+[comment ---------------------------------------------------------------------------------------------------------------------/]
+[comment             ** THIS **                      /]
      [if(p.hasStereotype('aspectj::ThisPointCut'))]
+
          [if(p.getStereotypePropertyValue('aspectj::ThisPointCut','composite').oclIsUndefined())]
              pointcut [p.name/] ([p.generalFullSignature('aspectj::ThisPointCut')/]):
                 this([p.generalNoTypeSignature('aspectj::ThispointCut')/]);
        [/if]
      [/if]
-	 [comment CallPointCut. This template is only applied if found pointcut is not part of a composition (managed above/]
+[comment ---------------------------------------------------------------------------------------------------------------------/]
+[comment             ** CALL **                        /]
      [if (p.hasStereotype('aspectj::CallPointCut'))]
+
 		[if (p.getStereotypePropertyValue('aspectj::CallPointCut','composite').toString().equalsIgnoreCase(''))]
      		pointcut [p.name/](): [p.callSignature()/];
 		[/if]
      [/if]
-     [comment SetPointCut/]
+[comment ---------------------------------------------------------------------------------------------------------------------/]
+[comment           ** WITHINCODE **                       /]
+     [if(p.hasStereotype('aspectj::WithinCodePointCut'))]
+
+   pointcut [p.name/](): [p.withinCodeSignature()/];
+     [/if]
+[comment ---------------------------------------------------------------------------------------------------------------------/]
+[comment           ** EXECUTION **                        /]
+     [if(p.hasStereotype('aspectj::ExecutionPointCut'))]
+
+   pointcut [p.name/](): [p.executionSignature()/];
+     [/if]
+[comment ----------------------------------------------------------------------------------------------------------------------/]
+[comment            ** INITIALIZATION **                      /]
+     [if(p.hasStereotype('aspectj::InitializationPointCut'))]
+
+   pointcut [p.name/](): [p.initializationSignature()/];
+     [/if]
+[comment ----------------------------------------------------------------------------------------------------------------------/]
+[comment            ** PRE-INITIALIZATION **                     /]
+     [if(p.hasStereotype('aspectj::PreInitializationPointCut'))]
+
+    pointcut [p.name/](): [p.preInitializationSignature()/];
+     [/if]
+[comment ----------------------------------------------------------------------------------------------------------------------/]
+[comment            ** SET **                         /]
        [if(p.hasStereotype('aspectj::SetPointCut'))]
 
           pointcut [p.name/](): (
             [p.setPointCutSignature()/]);
-
        [/if]
-     [comment GetpointCut/]
+[comment ----------------------------------------------------------------------------------------------------------------------/]
+[comment            ** GET **                        /]
        [if(p.hasStereotype('aspectj::GetPointCut'))]
 
           pointcut [p.name/](): (
            [p.getPointCutSignature()/]);
-
        [/if]
-      [comment WithinPointCut/]
+[comment ----------------------------------------------------------------------------------------------------------------------/]
+[comment             ** WITHIN **                         /]
         [if(p.hasStereotype('aspectj::WithinPointCut'))]
       
            pointcut [p.name/](): (
               [p.getWithinPointSignature()/]);
-
         [/if]
-
-       [comment TargetPointCut/]
+[comment ----------------------------------------------------------------------------------------------------------------------/]
+[comment             ** TARGET **                          /]
           [if(p.hasStereotype('aspectj::TargetPointCut'))]
 
              pointcut [p.name/]([p.generalFullSignature('aspectj::TargetPointCut')/]): (
               [p.generalNoTypeSignature('aspectj::TargetPointCut')/]);
-
           [/if]
-          [comment CFlowPointCut/]
+[comment ----------------------------------------------------------------------------------------------------------------------/]
+[comment             ** CFLOW **                          /]
           [if(p.hasStereotype('aspectj::CFlowPointCut'))]
 
           [p.getCFlowPointCutSignature()/]
-
           [/if]
-          
+[comment ----------------------------------------------------------------------------------------------------------------------/]
+[comment           ** STATIC CROSS-CUTTING FEATURE **                  /]  
           [if(p.hasStereotype('aspectj::StaticCrossCuttingFeature'))]
+
             [for(t : OclAny | p.getStereotypePropertyValue('aspectj::StaticCrossCuttingFeature','onType') ->flatten()->asSequence())]
              [p.visibility.toString()/] [p.type.name/] [t.oclAsType(NamedElement).name/].[p.name/];
             [/for]
           [/if]
-
    [/for]
-
-[comment Generation of advices /]
+[comment ***********************************************************************************************************************/]
+[comment             ----- GENERATION OF ADVICES ----- /]
   [for(o: Operation | aClass.getAllOperations())]
     [if (o.hasStereotype('aspectj::Advice'))]
 		[let adviceExecution : EnumerationLiteral = o.getStereotypePropertyValue('aspectj::Advice', 'adviceExecution')]
@@ -147,15 +181,14 @@ pointcut [p.name/]([for(index : Integer | indexes)][types->at(index).toString()/
 [/template]
 
 [template public callSignature(p : Property) post(trim())]
-[let pointType : String = 'aspectj::CallPointCut']
-[let signature : String = p.getStereotypePropertyValue(pointType, 'signature').toString()]
-[if ((not signature.oclIsUndefined()) and (not signature.equalsIgnoreCase('')))]call([signature/])[else][let operations : Sequence(Operation) = p.getStereotypePropertyValue(pointType,'operation')->flatten()->asSequence()]
+[let signature : String = p.getStereotypePropertyValue('aspectj::CallPointCut', 'signature').toString()]
+[if ((not signature.oclIsUndefined()) and (not signature.equalsIgnoreCase('')))]call([signature/])[else][let operations : Sequence(Operation) = p.getStereotypePropertyValue('aspectj::CallPointCut','operation')->flatten()->asSequence()]
     [let indexes : Sequence(Integer) = operations->collect(op | operations->indexOf(op))]
         [let last : Operation = operations->last()]
             [for(index : Integer | indexes)]
               [let operation : Operation = operations->at(index)]
                 call([if(operation.checkOcl())][operation.visibility.toString()/] [operation.returnResult().type.name/] [/if][if(operation.returnResult().oclIsUndefined()->includes(false))][operation.returnResult().name/] [/if][if(operation.name.checkString())] [operation.name/][/if]
-[if(operation.inputParameters().oclIsUndefined()->includes(false))]([let indexes : Sequence(Integer) = operation.inputParameters()->collect(pa | operation.inputParameters()->indexOf(pa))][let last : Parameter = operation.inputParameters()->last()]([for(index : Integer | indexes)][operation.inputParameters()->at(index).type.name/][if(operation.inputParameters()->at(index) <> last)],[/if][/for][/let][/let][else](..[/if]))	
+[if(operation.inputParameters().oclIsUndefined()->includes(false))]([let indexes : Sequence(Integer) = operation.inputParameters()->collect(pa | operation.inputParameters()->indexOf(pa))][let last : Parameter = operation.inputParameters()->last()][for(index : Integer | indexes)][operation.inputParameters()->at(index).type.name/][if(operation.inputParameters()->at(index) <> last)],[/if][/for][/let][/let][else](..[/if]))	
               [/let]
             [/for]
         [/let]
@@ -163,8 +196,79 @@ pointcut [p.name/]([for(index : Integer | indexes)][types->at(index).toString()/
 [/let]
   [/if]
  [/let]
-[/let]
 [/template]
+
+[template public executionSignature(p : Property) post(trim())]
+[let signature : String = p.getStereotypePropertyValue('aspectj::ExecutionPointCut', 'signature').toString()]
+[if ((not signature.oclIsUndefined()) and (not signature.equalsIgnoreCase('')))]execution([signature/])[else][let operations : Sequence(Operation) = p.getStereotypePropertyValue('aspectj::ExecutionPointCut','operation')->flatten()->asSequence()]
+    [let indexes : Sequence(Integer) = operations->collect(op | operations->indexOf(op))]
+        [let last : Operation = operations->last()]
+            [for(index : Integer | indexes)]
+              [let operation : Operation = operations->at(index)]
+                execution([if(operation.checkOcl())][operation.visibility.toString()/] [operation.returnResult().type.name/] [/if][if(operation.returnResult().oclIsUndefined()->includes(false))][operation.returnResult().name/] [/if][if(operation.name.checkString())] [operation.name/][/if]
+[if(operation.inputParameters().oclIsUndefined()->includes(false))]([let indexes : Sequence(Integer) = operation.inputParameters()->collect(pa | operation.inputParameters()->indexOf(pa))][let last : Parameter = operation.inputParameters()->last()][for(index : Integer | indexes)][operation.inputParameters()->at(index).type.name/][if(operation.inputParameters()->at(index) <> last)],[/if][/for][/let][/let][else](..[/if]))	
+              [/let]
+            [/for]
+        [/let]
+    [/let]
+[/let]
+  [/if]
+ [/let]
+[/template]
+
+[template public withinCodeSignature(p : Property) post(trim())]
+[let signature : String = p.getStereotypePropertyValue('aspectj::WithinCodePointCut', 'signature').toString()]
+[if ((not signature.oclIsUndefined()) and (not signature.equalsIgnoreCase('')))]withiCode([signature/])[else][let operations : Sequence(Operation) = p.getStereotypePropertyValue('aspectj::WithinCodePointCut','operation')->flatten()->asSequence()]
+    [let indexes : Sequence(Integer) = operations->collect(op | operations->indexOf(op))]
+        [let last : Operation = operations->last()]
+            [for(index : Integer | indexes)]
+              [let operation : Operation = operations->at(index)]
+                withinCode([if(operation.checkOcl())][operation.visibility.toString()/] [operation.returnResult().type.name/] [/if][if(operation.returnResult().oclIsUndefined()->includes(false))][operation.returnResult().name/] [/if][if(operation.name.checkString())] [operation.name/][/if]
+[if(operation.inputParameters().oclIsUndefined()->includes(false))]([let indexes : Sequence(Integer) = operation.inputParameters()->collect(pa | operation.inputParameters()->indexOf(pa))][let last : Parameter = operation.inputParameters()->last()][for(index : Integer | indexes)][operation.inputParameters()->at(index).type.name/][if(operation.inputParameters()->at(index) <> last)],[/if][/for][/let][/let][else](..[/if]))	
+              [/let]
+            [/for]
+        [/let]
+    [/let]
+[/let]
+  [/if]
+ [/let]
+[/template]
+
+[template public initializationSignature(p : Property) post(trim())]
+[let signature : String = p.getStereotypePropertyValue('aspectj::InitializationPointCut', 'signature').toString()]
+[if ((not signature.oclIsUndefined()) and (not signature.equalsIgnoreCase('')))]initialization([signature/])[else][let operations : Sequence(Operation) = p.getStereotypePropertyValue('aspectj::InitializationPointCut','operation')->flatten()->asSequence()]
+ [let indexes : Sequence(Integer) = operations->collect(op | operations->indexOf(op))]
+      [let last : Operation = operations->last()]
+            [for(index : Integer | indexes)]
+              [let operation : Operation = operations->at(index)]
+                initialization([if(operation.checkOcl())][operation.visibility.toString()/] [/if][operation.class.name/].new[if(operation.inputParameters().oclIsUndefined()->includes(false))]([let indexes : Sequence(Integer) = operation.inputParameters()->collect(pa | operation.inputParameters()->indexOf(pa))][let last : Parameter = operation.inputParameters()->last()][for(index : Integer | indexes)][operation.inputParameters()->at(index).type.name/][if(operation.inputParameters()->at(index) <> last)],[/if][/for][/let][/let][else](..[/if]))	
+              [/let]
+            [/for]
+        [/let]
+    [/let]
+[/let]
+  [/if]
+ [/let]
+[/template]
+
+[template public preInitializationSignature(p : Property) post(trim())]
+[let signature : String = p.getStereotypePropertyValue('aspectj::PreInitializationPointCut', 'signature').toString()]
+[if ((not signature.oclIsUndefined()) and (not signature.equalsIgnoreCase('')))]preinitialization([signature/])[else][let operations : Sequence(Operation) = p.getStereotypePropertyValue('aspectj::PreInitializationPointCut','operation')->flatten()->asSequence()]
+ [let indexes : Sequence(Integer) = operations->collect(op | operations->indexOf(op))]
+      [let last : Operation = operations->last()]
+            [for(index : Integer | indexes)]
+              [let operation : Operation = operations->at(index)]
+                preinitialization([if(operation.checkOcl())][operation.visibility.toString()/] [/if][operation.class.name/].new[if(operation.inputParameters().oclIsUndefined()->includes(false))]([let indexes : Sequence(Integer) = operation.inputParameters()->collect(pa | operation.inputParameters()->indexOf(pa))][let last : Parameter = operation.inputParameters()->last()][for(index : Integer | indexes)][operation.inputParameters()->at(index).type.name/][if(operation.inputParameters()->at(index) <> last)],[/if][/for][/let][/let][else](..[/if]))	
+              [/let]
+            [/for]
+        [/let]
+    [/let]
+[/let]
+  [/if]
+ [/let]
+[/template]
+
+
 
 [comment  This template generates the complete fullSignature associated to a call ArgsPoinCut, which signature: parameter Type, .../]
 [template public fullSignature(p : Property) post(trim())]
