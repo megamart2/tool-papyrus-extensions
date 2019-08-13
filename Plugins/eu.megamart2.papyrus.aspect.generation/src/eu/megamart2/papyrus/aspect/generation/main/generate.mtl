@@ -62,17 +62,15 @@ public aspect [aClass.name/] {
      [if(p.hasStereotype('aspectj::TargetPointCut'))]
 
          [if(p.getStereotypePropertyValue('aspectj::TargetpointCut','composite').oclIsUndefined())]
-              pointcut [p.name/] ([p.generalFullSignature('aspectj::TargetPointCut')/]):
-                 target([p.generalNoTypeSignature('aspectj::TargetPointCut')/]);
+ pointcut [p.name/] ([p.generalFullSignature('aspectj::TargetPointCut')/]): target([p.generalNoTypeSignature('aspectj::TargetPointCut')/]);
         [/if]
      [/if]
 [comment ---------------------------------------------------------------------------------------------------------------------/]
 [comment             ** THIS **                      /]
      [if(p.hasStereotype('aspectj::ThisPointCut'))]
+         [if(p.getStereotypePropertyValue('aspectj::ThisPointCut','composite').oclIsUndefined() or p.getStereotypePropertyValue('aspectj::ThisPointCut','composite').toString().equalsIgnoreCase(''))]
 
-         [if(p.getStereotypePropertyValue('aspectj::ThisPointCut','composite').oclIsUndefined())]
-             pointcut [p.name/] ([p.generalFullSignature('aspectj::ThisPointCut')/]):
-                this([p.generalNoTypeSignature('aspectj::ThispointCut')/]);
+pointcut [p.name/] ([p.generalFullSignature('aspectj::ThisPointCut')/]): this([p.getStereotypePropertyValue('aspectj::ThisPointCut','typesNames')->flatten()-> asSequence().toString() /]) && target([p.generalNoTypeSignature('aspectj::ThisPointCut')/]);
        [/if]
      [/if]
 [comment ---------------------------------------------------------------------------------------------------------------------/]
@@ -129,13 +127,6 @@ public aspect [aClass.name/] {
               [p.getWithinPointSignature()/]);
         [/if]
 [comment ----------------------------------------------------------------------------------------------------------------------/]
-[comment             ** TARGET **                          /]
-          [if(p.hasStereotype('aspectj::TargetPointCut'))]
-
-             pointcut [p.name/]([p.generalFullSignature('aspectj::TargetPointCut')/]): (
-              [p.generalNoTypeSignature('aspectj::TargetPointCut')/]);
-          [/if]
-[comment ----------------------------------------------------------------------------------------------------------------------/]
 [comment             ** CFLOW **                          /]
           [if(p.hasStereotype('aspectj::CFlowPointCut'))]
 
@@ -170,10 +161,10 @@ public aspect [aClass.name/] {
 
 [template public argsPointCutFullSignature(p : Property) post(trim())]
 [let names : Sequence(OclAny) = p.getStereotypePropertyValue('aspectj::ArgsPointCut','argNames')->asSequence()->flatten()]
-  [let types : Sequence(OclAny) = p.getStereotypePropertyValue('aspectj::TypePointCut','types')->asSequence()->flatten()]
+  [let types : Sequence(String) = p.getStereotypePropertyValue('aspectj::ArgsPointCut','typesNames')->asSequence()->flatten()]
     [let indexes : Sequence(Integer) = names->collect(sr | names->indexOf(sr))]
       [let last : OclAny = names->last()]
-pointcut [p.name/]([for(index : Integer | indexes)][types->at(index).toString()/] [names->at(index)/][if(names->at(index) <> last)], [/if][/for]): args([for(index : Integer | indexes)][names->at(index)/][if(names->at(index) <> last)], [/if][/for]);
+pointcut [p.name/]([for(index : Integer | indexes)][types->at(index)/] [names->at(index)/][if(names->at(index) <> last)], [/if][/for]): args([for(index : Integer | indexes)][names->at(index)/][if(names->at(index) <> last)], [/if][/for]);
        [/let]
      [/let]
   [/let]
@@ -273,10 +264,10 @@ pointcut [p.name/]([for(index : Integer | indexes)][types->at(index).toString()/
 [comment  This template generates the complete fullSignature associated to a call ArgsPoinCut, which signature: parameter Type, .../]
 [template public fullSignature(p : Property) post(trim())]
 	[let argNames : Sequence(String) = p.getStereotypePropertyValue('aspectj::ArgsPointCut', 'argNames')->flatten()->asSequence()]
-		[let types : Sequence(NamedElement) = p.getStereotypePropertyValue('aspectj::ArgsPointCut', 'type')->flatten()->asSequence()]
+		[let types : Sequence(String) = p.getStereotypePropertyValue('aspectj::ArgsPointCut', 'typesNames')->flatten()->asSequence()]
     [let indexes : Sequence(Integer) = argNames->collect(arg | argNames->indexOf(arg))]
 	    [let last : OclAny = argNames->last()]
-		    [for (index : Integer | indexes)][types->at(index).oclAsType(NamedElement).name/] [argNames->at(index)/][if (last <> argNames->at(index))],[/if][/for]
+		    [for (index : Integer | indexes)][types->at(index)/] [argNames->at(index)/][if (last <> argNames->at(index))],[/if][/for]
         [/let]
     [/let]
 		[/let]
@@ -285,10 +276,10 @@ pointcut [p.name/]([for(index : Integer | indexes)][types->at(index).toString()/
 
 [template public generalFullSignature(p : Property,type : String) post(trim())]
 	[let argNames : Sequence(String) = p.getStereotypePropertyValue(type, 'argNames')->flatten()->asSequence()]
-		[let types : Sequence(NamedElement) = p.getStereotypePropertyValue(type, 'type')->flatten()->asSequence()]
+		[let types : Sequence(String) = p.getStereotypePropertyValue(type, 'typesNames')->flatten()->asSequence()]
     [let indexes : Sequence(Integer) = argNames->collect(arg | argNames->indexOf(arg))]
 	    [let last : OclAny = argNames->last()]
-		    [for (index : Integer | indexes)][types->at(index).oclAsType(NamedElement).name/] [argNames->at(index)/][if (last <> argNames->at(index))],[/if][/for]
+		    [for (index : Integer | indexes)][types->at(index)/] [argNames->at(index)/][if (last <> argNames->at(index))],[/if][/for]
         [/let]
     [/let]
 		[/let]
@@ -340,5 +331,5 @@ pointcut [p.name/]([for(index : Integer | indexes)][types->at(index).toString()/
 [/template]
 
 [template public getCFlowPointCutSignature(p : Property) post(trim())]
-    pointcut [p.name/]() : cflow([p.getStereotypePropertyValue('aspectj::CFlowPointCut','selectedPointCut').toString()/]);
+    pointcut [p.name/]() : cflow([p.getStereotypePropertyValue('aspectj::CFlowPointCut','selectedPointCut')/]);
 [/template]
