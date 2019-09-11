@@ -25,9 +25,12 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.jface.action.IAction;
+import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.operation.IRunnableWithProgress;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.swt.widgets.Display;
+
 import eu.megamart2.papyrus.aspect.generation.launcher.Activator;
 import eu.megamart2.papyrus.aspect.generation.launcher.common.GenerateAll;
 import org.eclipse.ui.IActionDelegate;
@@ -101,6 +104,13 @@ public class AcceleoGenerateAspectJCodeAction extends ActionDelegate implements 
 				Activator.getDefault().getLog().log(status);
 			}
 		}
+		
+		Display.getDefault().syncExec(new Runnable() {
+			public void run() {
+				MessageDialog.openInformation(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell(), 
+						"AspectJ code generated", "AspectJ files were generated and stored in folder src-gen");
+			}
+		});
 	}
 
 	/**

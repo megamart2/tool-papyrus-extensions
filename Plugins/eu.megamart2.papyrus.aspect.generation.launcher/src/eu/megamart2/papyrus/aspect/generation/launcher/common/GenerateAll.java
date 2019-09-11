@@ -19,6 +19,9 @@ import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.jface.dialogs.MessageDialog;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.ui.PlatformUI;
 
 import eu.megamart2.papyrus.aspect.generation.main.Generate;
 
@@ -94,7 +97,6 @@ public class GenerateAll {
 			gen1.setGenerationID(generationID);
 			gen1.doGenerate(BasicMonitor.toMonitor(monitor));
 		}
-			
 		
 	}
 
