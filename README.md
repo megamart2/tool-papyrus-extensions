@@ -60,6 +60,16 @@ The *MegaM@Rt AspectJ* profile can be apply to model aspects and pointcut/jointp
 *Evermann, J. (2007, March). A meta-level specification and profile for AspectJ in UML. In Proceedings of the 10th international workshop on Aspect-oriented modeling (pp. 21-27). ACM.*. 
 Consult this work as a reference for the semantics of the AspectJ profile.
 
+## Generating AspectJ code from a model
+
+The *MegaM@RT Acceleo generator plugin* supports the authomatic generation of AspectJ code from an uml model (made using the megaM@RT AspectJ profile).
+
+Generating code is very simple, rigt click on your .uml file in the Eclipse project explorer, and click on the menu item Acceleo Model to Text >> Generate AspectJ Code.
+
+After code generation a dialog will inform you about the location of the generated files (usually a src-gen folder into the project folder).
+
+ ![Code generation](images/AspectGeneration.png)
+
 Main contact: Jesús Gorroñogoitia <jesus.gorronogoitia@atos.net>
 
 ![Project funded by the European Union](images/european.union.logo.png)
