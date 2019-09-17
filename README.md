@@ -62,9 +62,9 @@ Consult this work as a reference for the semantics of the AspectJ profile.
 
 ## Generating AspectJ code from a model
 
-The *MegaM@RT Acceleo generator plugin* supports the authomatic generation of AspectJ code from an uml model (made using the megaM@RT AspectJ profile).
+The *MegaM@RT Acceleo generator plugin* supports the authomatic generation of AspectJ code from an uml model (made using the megaM@RT AspectJ profile), the generator is installed with the *MegaM@RT extensions*.
 
-Generating code is very simple, rigt click on your .uml file in the Eclipse project explorer, and click on the menu item Acceleo Model to Text >> Generate AspectJ Code.
+Generating code is very simple, right click on your .uml file in the Eclipse project explorer, and click on the menu item Acceleo Model to Text >> Generate AspectJ Code.
 
 After code generation a dialog will inform you about the location of the generated files (usually a src-gen folder into the project folder).
 
