@@ -126,4 +126,11 @@ You may add additional accurate notices of copyright ownership.
          version="0.0.0"
          unpack="false"/>
 
+   <plugin
+         id="eu.megamart2.papyrus.aspect.generation.launcher"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
 </feature>
