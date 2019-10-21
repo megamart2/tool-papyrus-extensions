@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aspectj="http:///schemas/aspectj/_pMtT0GTzEemc8KTgT20mug/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/aspectj/_pMtT0GTzEemc8KTgT20mug/0 pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_pMzacGTzEemc8KTgT20mug">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aspectj="http:///schemas/aspectj/_oTctENuCEemTmqbnimAvuQ/6" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/aspectj/_oTctENuCEemTmqbnimAvuQ/6 pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_oTjawNuCEemTmqbnimAvuQ">
   <uml:Model xmi:id="_CrLk4EQcEemmjN2rxYcWhA" name="Ikerland" visibility="public" URI="">
     <packageImport xmi:type="uml:PackageImport" xmi:id="_DbDioEQcEemmjN2rxYcWhA">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
@@ -558,30 +558,28 @@
       <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
     </profileApplication>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Rkk7YHZLEem9fKmqwdnITQ">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Rk0zAHZLEem9fKmqwdnITQ" source="PapyrusVersion">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Rk0zAXZLEem9fKmqwdnITQ" key="Version" value="0.0.16"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Rk0zAnZLEem9fKmqwdnITQ" key="Comment" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Rk0zA3ZLEem9fKmqwdnITQ" key="Copyright" value="(c) Atos Spain S.A. 2019"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Rk0zBHZLEem9fKmqwdnITQ" key="Date" value="2019-04-22"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Rk0zBXZLEem9fKmqwdnITQ" key="Author" value="Jesús Gorroñogoitia"/>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_7QzjYPP2EemEZ6LdJWVYCQ" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_7QzjYfP2EemEZ6LdJWVYCQ" key="Version" value="0.0.22"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_7QzjYvP2EemEZ6LdJWVYCQ" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_7QzjY_P2EemEZ6LdJWVYCQ" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_7QzjZPP2EemEZ6LdJWVYCQ" key="Date" value="2019-09-20"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_7QzjZfP2EemEZ6LdJWVYCQ" key="Author" value=""/>
       </eAnnotations>
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_RkolwHZLEem9fKmqwdnITQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_pMzacGTzEemc8KTgT20mug"/>
+        <references xmi:type="ecore:EPackage" href="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_oTjawNuCEemTmqbnimAvuQ"/>
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="pathmap://ASPECTJ_PROFILES/aspectj.profile.uml#_wW2AAFbhEemeMqmugX5-_g"/>
     </profileApplication>
   </uml:Model>
   <aspectj:Aspect xmi:id="_cAjyEHZLEem9fKmqwdnITQ" base_Class="_VMLUMHZLEem9fKmqwdnITQ" isPrivileged="true"/>
-  <aspectj:CallPointCut xmi:id="_JDAbkHZOEem9fKmqwdnITQ" base_PointCut_StructuralFeature="_otfFwHZNEem9fKmqwdnITQ" signature="static void MessageManager.*(..)"/>
+  <aspectj:CallPointCut xmi:id="_JDAbkHZOEem9fKmqwdnITQ" base_PointCut_StructuralFeature="_otfFwHZNEem9fKmqwdnITQ"/>
   <aspectj:Advice xmi:id="_fMbw0HZOEem9fKmqwdnITQ" base_BehavioralFeature="_UvYjIHZOEem9fKmqwdnITQ" pointcut="_JDAbkHZOEem9fKmqwdnITQ"/>
   <aspectj:Aspect xmi:id="_HxzyEHZREem9fKmqwdnITQ" base_Class="_5BRV8HZQEem9fKmqwdnITQ" isPrivileged="true"/>
   <aspectj:CompositePointCut xmi:id="_jWwfYHZSEem9fKmqwdnITQ" base_PointCut_StructuralFeature="_O5dKMHZREem9fKmqwdnITQ" composee="_H7O3AHZVEem9fKmqwdnITQ _-Q97sHZVEem9fKmqwdnITQ"/>
-  <aspectj:CallPointCut xmi:id="_H7O3AHZVEem9fKmqwdnITQ" base_PointCut_StructuralFeature="_ppq9AHZUEem9fKmqwdnITQ" composite="_jWwfYHZSEem9fKmqwdnITQ" signature="void MessageManager.process*(JSONObject,int)"/>
+  <aspectj:CallPointCut xmi:id="_H7O3AHZVEem9fKmqwdnITQ" base_PointCut_StructuralFeature="_ppq9AHZUEem9fKmqwdnITQ" composite="_jWwfYHZSEem9fKmqwdnITQ"/>
   <aspectj:ArgsPointCut xmi:id="_-Q97sHZVEem9fKmqwdnITQ" base_StructuralFeature="_4a78cHZVEem9fKmqwdnITQ" base_PointCut_StructuralFeature="_4a78cHZVEem9fKmqwdnITQ" composite="_jWwfYHZSEem9fKmqwdnITQ">
     <argNames>message</argNames>
     <argNames>messageType</argNames>
-    <type xmi:type="uml:Class" href="#_lpt_YESgEemPWL1O6Do-4A"/>
-    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
   </aspectj:ArgsPointCut>
   <aspectj:Advice xmi:id="_Uvb6kHZbEem9fKmqwdnITQ" base_BehavioralFeature="_PpZ04HZbEem9fKmqwdnITQ"/>
 </xmi:XMI>

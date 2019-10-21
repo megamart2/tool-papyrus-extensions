@@ -275,21 +275,21 @@
     <element xmi:type="uml:Class" href="Ikerland.modelization.uml#_5BRV8HZQEem9fKmqwdnITQ"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5Bf_cXZQEem9fKmqwdnITQ" x="460" y="620" width="321" height="161"/>
   </children>
-  <children xmi:type="notation:Shape" xmi:id="_3ymP4HrQEemQkOybBcGrOA" type="StereotypeComment">
-    <styles xmi:type="notation:TitleStyle" xmi:id="_3ymP4XrQEemQkOybBcGrOA"/>
-    <styles xmi:type="notation:EObjectValueStyle" xmi:id="_3ym28HrQEemQkOybBcGrOA" name="BASE_ELEMENT">
+  <children xmi:type="notation:Shape" xmi:id="_8Ua8gPP2EemEZ6LdJWVYCQ" type="StereotypeComment">
+    <styles xmi:type="notation:TitleStyle" xmi:id="_8Ua8gfP2EemEZ6LdJWVYCQ"/>
+    <styles xmi:type="notation:EObjectValueStyle" xmi:id="_8Ua8g_P2EemEZ6LdJWVYCQ" name="BASE_ELEMENT">
       <eObjectValue xmi:type="uml:Class" href="Ikerland.modelization.uml#_VMLUMHZLEem9fKmqwdnITQ"/>
     </styles>
     <element xsi:nil="true"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3ymP4nrQEemQkOybBcGrOA" x="340" y="423"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8Ua8gvP2EemEZ6LdJWVYCQ" x="340" y="623"/>
   </children>
-  <children xmi:type="notation:Shape" xmi:id="_3zV2wHrQEemQkOybBcGrOA" type="StereotypeComment">
-    <styles xmi:type="notation:TitleStyle" xmi:id="_3zV2wXrQEemQkOybBcGrOA"/>
-    <styles xmi:type="notation:EObjectValueStyle" xmi:id="_3zWd0HrQEemQkOybBcGrOA" name="BASE_ELEMENT">
+  <children xmi:type="notation:Shape" xmi:id="_8VeFYPP2EemEZ6LdJWVYCQ" type="StereotypeComment">
+    <styles xmi:type="notation:TitleStyle" xmi:id="_8VeFYfP2EemEZ6LdJWVYCQ"/>
+    <styles xmi:type="notation:EObjectValueStyle" xmi:id="_8VeFY_P2EemEZ6LdJWVYCQ" name="BASE_ELEMENT">
       <eObjectValue xmi:type="uml:Class" href="Ikerland.modelization.uml#_5BRV8HZQEem9fKmqwdnITQ"/>
     </styles>
     <element xsi:nil="true"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3zV2wnrQEemQkOybBcGrOA" x="660" y="420"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8VeFYvP2EemEZ6LdJWVYCQ" x="660" y="620"/>
   </children>
   <styles xmi:type="notation:StringValueStyle" xmi:id="_LGb58UQcEemmjN2rxYcWhA" name="diagram_compatibility_version" stringValue="1.4.0"/>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_LGb58kQcEemmjN2rxYcWhA"/>
@@ -297,24 +297,24 @@
     <owner xmi:type="uml:Model" href="Ikerland.modelization.uml#_CrLk4EQcEemmjN2rxYcWhA"/>
   </styles>
   <element xmi:type="uml:Model" href="Ikerland.modelization.uml#_CrLk4EQcEemmjN2rxYcWhA"/>
-  <edges xmi:type="notation:Connector" xmi:id="_3yneAHrQEemQkOybBcGrOA" type="StereotypeCommentLink" source="_VMYIgHZLEem9fKmqwdnITQ" target="_3ymP4HrQEemQkOybBcGrOA">
-    <styles xmi:type="notation:FontStyle" xmi:id="_3yneAXrQEemQkOybBcGrOA"/>
-    <styles xmi:type="notation:EObjectValueStyle" xmi:id="_3yoFEHrQEemQkOybBcGrOA" name="BASE_ELEMENT">
+  <edges xmi:type="notation:Connector" xmi:id="_8Uem4PP2EemEZ6LdJWVYCQ" type="StereotypeCommentLink" source="_VMYIgHZLEem9fKmqwdnITQ" target="_8Ua8gPP2EemEZ6LdJWVYCQ">
+    <styles xmi:type="notation:FontStyle" xmi:id="_8Uem4fP2EemEZ6LdJWVYCQ"/>
+    <styles xmi:type="notation:EObjectValueStyle" xmi:id="_8UfN8PP2EemEZ6LdJWVYCQ" name="BASE_ELEMENT">
       <eObjectValue xmi:type="uml:Class" href="Ikerland.modelization.uml#_VMLUMHZLEem9fKmqwdnITQ"/>
     </styles>
     <element xsi:nil="true"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_3yneAnrQEemQkOybBcGrOA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3yneA3rQEemQkOybBcGrOA"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3yneBHrQEemQkOybBcGrOA"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_8Uem4vP2EemEZ6LdJWVYCQ" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8Uem4_P2EemEZ6LdJWVYCQ"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8Uem5PP2EemEZ6LdJWVYCQ"/>
   </edges>
-  <edges xmi:type="notation:Connector" xmi:id="_3zWd0XrQEemQkOybBcGrOA" type="StereotypeCommentLink" source="_5Bf_cHZQEem9fKmqwdnITQ" target="_3zV2wHrQEemQkOybBcGrOA">
-    <styles xmi:type="notation:FontStyle" xmi:id="_3zWd0nrQEemQkOybBcGrOA"/>
-    <styles xmi:type="notation:EObjectValueStyle" xmi:id="_3zWd1nrQEemQkOybBcGrOA" name="BASE_ELEMENT">
+  <edges xmi:type="notation:Connector" xmi:id="_8VescPP2EemEZ6LdJWVYCQ" type="StereotypeCommentLink" source="_5Bf_cHZQEem9fKmqwdnITQ" target="_8VeFYPP2EemEZ6LdJWVYCQ">
+    <styles xmi:type="notation:FontStyle" xmi:id="_8VescfP2EemEZ6LdJWVYCQ"/>
+    <styles xmi:type="notation:EObjectValueStyle" xmi:id="_8Vi94PP2EemEZ6LdJWVYCQ" name="BASE_ELEMENT">
       <eObjectValue xmi:type="uml:Class" href="Ikerland.modelization.uml#_5BRV8HZQEem9fKmqwdnITQ"/>
     </styles>
     <element xsi:nil="true"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_3zWd03rQEemQkOybBcGrOA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3zWd1HrQEemQkOybBcGrOA"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3zWd1XrQEemQkOybBcGrOA"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_8VescvP2EemEZ6LdJWVYCQ" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8VhvwPP2EemEZ6LdJWVYCQ"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8VhvwfP2EemEZ6LdJWVYCQ"/>
   </edges>
 </notation:Diagram>
